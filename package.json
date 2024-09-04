@@ -12,13 +12,16 @@
     "lint": "eslint .",
     "format": "npx prettier --write .",
     "preview": "vite preview",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "gen:theme-typings": "chakra-cli tokens src/theme.ts",
+    "postinstall": "npm run gen:theme-typings"
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": "yarn run eslint"
   },
   "dependencies": {
     "@chakra-ui/react": "^2.8.2",
+    "@chakra-ui/styled-system": "^2.9.2",
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
     "framer-motion": "^11.4.0",
@@ -29,6 +32,7 @@
     "vite": "5.3.5"
   },
   "devDependencies": {
+    "@chakra-ui/cli": "^2.4.1",
     "@eslint/js": "^9.9.0",
     "@ianvs/prettier-plugin-sort-imports": "^4.3.1",
     "@types/lint-staged": "^13.3.0",

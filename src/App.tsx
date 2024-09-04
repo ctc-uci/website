@@ -1,11 +1,13 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
 import { CatchAll } from "./components/CatchAll";
+import { Header } from "./components/Header";
 import { Hero } from "./components/hero/Hero";
 
 export const App = () => {
   return (
     <Router>
+      <Header />
       <Routes>
         <Route
           path="/"
