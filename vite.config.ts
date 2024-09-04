@@ -8,6 +8,6 @@ export default ({ mode }: { mode: string }) => {
   return defineConfig({
     plugins: [react()],
 
-    base: process.env.PROD ? "/website/" : undefined,
+    base: "",
   });
 };
