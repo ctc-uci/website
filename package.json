@@ -12,7 +12,7 @@
     "lint": "eslint .",
     "format": "npx prettier --write .",
     "preview": "vite preview",
-    "prepare": "husky install",
+    "prepare": "husky",
     "gen:theme-typings": "chakra-cli tokens src/theme.ts",
     "postinstall": "npm run gen:theme-typings"
   },
