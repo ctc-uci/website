@@ -1,6 +1,6 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
-import { CatchAll } from "./components/CatchAll";
+// import { CatchAll } from "./components/CatchAll";
 import { Header } from "./components/header/Header";
 import { Hero } from "./components/hero/Hero";
 
@@ -14,10 +14,10 @@ export const App = () => {
           element={<Hero />}
         />
 
-        <Route
+        {/* <Route
           path="*"
           element={<CatchAll />}
-        />
+        /> */}
       </Routes>
     </Router>
   );
