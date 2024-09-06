@@ -19,6 +19,24 @@ export const theme = extendTheme({
       subtitle: "#4D4D4D",
     },
   },
+  components: {
+    Button: {
+      variants: {
+        ctc: {
+          bg: "ctc.purple",
+          color: "ctc.gray",
+          _hover: {
+            bg: "ctc.purple",
+            opacity: 0.9,
+          },
+          _active: {
+            bg: "ctc.purple",
+            opacity: 0.8,
+          },
+        },
+      },
+    },
+  },
   styles: {
     global: {
       body: {
