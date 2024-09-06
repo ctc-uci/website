@@ -19,7 +19,7 @@ export function DesktopNav({ links }: MobileNavProps) {
         {links.map((link) => (
           <ChakraLink
             as={Link}
-            id={link.label}
+            key={link.label}
             to={link.href}
             sx={{ fontSize: "xl" }}
           >

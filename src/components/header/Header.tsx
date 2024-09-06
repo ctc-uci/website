@@ -61,9 +61,9 @@ export const Header = () => {
           justifyContent: "space-between",
           flex: 1,
           minHeight: 70,
-          borderBottom: "0.3px solid",
-          borderColor: "ctc.subtitle",
           paddingX: { base: "20px", lg: "100px" },
+          boxShadow: "md",
+          zIndex: "docked",
         }}
       >
         <Image
@@ -100,7 +100,11 @@ export const Header = () => {
         in={isOpen}
         animateOpacity
       >
-        <MobileNav links={LINKS} />
+        <MobileNav
+          links={LINKS}
+          isOpen={isOpen}
+          onToggle={onToggle}
+        />
       </Collapse>
     </Flex>
   );
