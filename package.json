@@ -20,6 +20,7 @@
     "**/*.{js,jsx,ts,tsx}": "yarn run eslint"
   },
   "dependencies": {
+    "@chakra-ui/icons": "^2.1.1",
     "@chakra-ui/react": "^2.8.2",
     "@chakra-ui/styled-system": "^2.9.2",
     "@emotion/react": "^11.13.3",
