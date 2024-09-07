@@ -5,6 +5,7 @@ import {
   IconProps,
 } from "@chakra-ui/icons";
 import {
+  Center,
   Collapse,
   ComponentWithAs,
   Flex,
@@ -47,65 +48,75 @@ export const Header = () => {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
-    <Flex
+    <Center
       sx={{
-        minHeight: 70,
-        flexDirection: "column",
-        justifyContent: "space-between",
-        alignItems: "stretch",
-        backdropFilter: 0.4,
+        backgroundColor: "ctc.gray",
+        boxShadow: "md",
+        position: "sticky",
+        top: 0,
+        height: 70,
+        zIndex: "docked",
       }}
     >
-      <HStack
+      <Flex
         sx={{
+          flexDirection: "column",
           justifyContent: "space-between",
-          flex: 1,
-          minHeight: 70,
-          paddingX: { base: "20px", lg: "100px" },
-          boxShadow: "md",
-          zIndex: "docked",
+          alignItems: "stretch",
+          backgroundColor: "ctc.gray",
+          width: "100%",
+          maxWidth: 1500,
         }}
       >
-        <Image
-          src="./ctc.svg"
-          alt="ctc logo"
-          sx={{ height: 7 }}
-        />
-
-        <DesktopNav links={LINKS} />
-
-        <Flex display={{ base: "flex", md: "none" }}>
-          <IconButton
-            onClick={onToggle}
-            icon={
-              isOpen ? (
-                <CloseIcon
-                  w={3}
-                  h={3}
-                />
-              ) : (
-                <HamburgerIcon
-                  w={5}
-                  h={5}
-                />
-              )
-            }
-            variant={"ghost"}
-            aria-label={"Toggle Navigation"}
+        <HStack
+          sx={{
+            justifyContent: "space-between",
+            flex: 1,
+            minHeight: 70,
+            paddingX: { base: "20px", lg: "100px" },
+          }}
+        >
+          <Image
+            src="./ctc.svg"
+            alt="ctc logo"
+            sx={{ height: 7 }}
           />
-        </Flex>
-      </HStack>
 
-      <Collapse
-        in={isOpen}
-        animateOpacity
-      >
-        <MobileNav
-          links={LINKS}
-          isOpen={isOpen}
-          onToggle={onToggle}
-        />
-      </Collapse>
-    </Flex>
+          <DesktopNav links={LINKS} />
+
+          <Flex display={{ base: "flex", md: "none" }}>
+            <IconButton
+              onClick={onToggle}
+              icon={
+                isOpen ? (
+                  <CloseIcon
+                    w={3}
+                    h={3}
+                  />
+                ) : (
+                  <HamburgerIcon
+                    w={5}
+                    h={5}
+                  />
+                )
+              }
+              variant={"ghost"}
+              aria-label={"Toggle Navigation"}
+            />
+          </Flex>
+        </HStack>
+
+        <Collapse
+          in={isOpen}
+          animateOpacity
+        >
+          <MobileNav
+            links={LINKS}
+            isOpen={isOpen}
+            onToggle={onToggle}
+          />
+        </Collapse>
+      </Flex>
+    </Center>
   );
 };

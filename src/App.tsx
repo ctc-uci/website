@@ -1,3 +1,5 @@
+import { Center } from "@chakra-ui/react";
+
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
 import { Footer } from "./components/Footer";
@@ -9,17 +11,18 @@ export const App = () => {
   return (
     <Router>
       <Header />
-      <Routes>
-        <Route
-          path="/"
-          element={<Landing />}
-        />
-
-        {/* <Route
-          path="*"
-          element={<CatchAll />}
-        /> */}
-      </Routes>
+      <Center sx={{ maxWidth: 1500, width: "100%", marginX: "auto" }}>
+        <Routes>
+          <Route
+            path="/"
+            element={<Landing />}
+          />
+          {/* <Route
+            path="*"
+            element={<CatchAll />}
+          /> */}
+        </Routes>
+      </Center>
       <Footer />
     </Router>
   );

@@ -65,11 +65,14 @@ export function MobileNav({ links, isOpen, onToggle }: MobileNavProps) {
 
       {/* This is bad code! */}
       <Box
-        position={"absolute"}
-        top={326}
-        width="100dvw"
-        height="calc(100dvh - 326px)"
-        bg="blackAlpha.400"
+        sx={{
+          position: "absolute",
+          top: 326,
+          width: "100dvw",
+          height: "calc(100dvh - 326px)",
+          bg: "blackAlpha.400",
+          display: { base: "flex", md: "none" },
+        }}
         onClick={onToggle}
       />
     </>

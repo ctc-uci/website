@@ -1,4 +1,5 @@
 import {
+  Center,
   Link as ChakraLink,
   Grid,
   HStack,
@@ -20,70 +21,72 @@ import { Link } from "react-router-dom";
 
 export function Footer() {
   return (
-    <HStack
-      sx={{
-        paddingX: { base: 5, xl: 100 },
-        paddingY: 10,
-        backgroundColor: "ctc.purple",
-        justifyContent: { base: "center", md: "space-between" },
-        alignItems: "center",
-      }}
-    >
-      <Stack
-        spacing={0}
+    <Center sx={{ backgroundColor: "ctc.purple" }}>
+      <HStack
         sx={{
-          color: "ctc.gray",
-          fontWeight: "medium",
-          display: { base: "none", md: "flex" },
+          paddingX: { base: 5, xl: 100 },
+          paddingY: 10,
+          backgroundColor: "ctc.purple",
+          justifyContent: { base: "center", md: "space-between" },
+          alignItems: "center",
+          width: "100%",
+          maxWidth: 1500,
         }}
       >
-        <Text>&copy; Commit the Change</Text>
-        <Text>Created in Irvine, CA</Text>
-        <Text>Est. 2020</Text>
-      </Stack>
-
-      <VStack spacing={6}>
-        <Image
-          src={"./ctc-white.svg"}
-          sx={{ height: 50 }}
-          alt="ctc logo"
-        />
-        <Text
-          sx={{ fontWeight: "semibold", fontSize: "2xl", color: "ctc.white" }}
+        <Stack
+          spacing={0}
+          sx={{
+            color: "ctc.gray",
+            fontWeight: "medium",
+            display: { base: "none", md: "flex" },
+          }}
         >
-          Tech with Purpose.
-        </Text>
-        <HStack spacing={2.5}>
-          {ICONS.map((icon, index) => (
-            <Icon
-              key={index}
-              as={icon.icon}
-              sx={{ width: 30, height: 30, color: "white" }}
-            />
-          ))}
-        </HStack>
-      </VStack>
-
-      <Grid
-        templateColumns="1fr auto"
-        columnGap={5}
-        sx={{
-          color: "ctc.white",
-          fontWeight: "medium",
-          display: { base: "none", md: "grid" },
-        }}
-      >
-        {LINKS.map((link) => (
-          <ChakraLink
-            key={link.label}
-            as={Link}
-            to={link.href}
+          <Text>&copy; Commit the Change</Text>
+          <Text>Created in Irvine, CA</Text>
+          <Text>Est. 2020</Text>
+        </Stack>
+        <VStack spacing={6}>
+          <Image
+            src={"./ctc-white.svg"}
+            sx={{ height: 50 }}
+            alt="ctc logo"
+          />
+          <Text
+            sx={{ fontWeight: "semibold", fontSize: "2xl", color: "ctc.white" }}
           >
-            {link.label}
-          </ChakraLink>
-        ))}
-      </Grid>
-    </HStack>
+            Tech with Purpose.
+          </Text>
+          <HStack spacing={2.5}>
+            {ICONS.map((icon, index) => (
+              <Icon
+                key={index}
+                as={icon.icon}
+                sx={{ width: 30, height: 30, color: "white" }}
+              />
+            ))}
+          </HStack>
+        </VStack>
+        <Grid
+          templateColumns="1fr auto"
+          columnGap={5}
+          sx={{
+            color: "ctc.white",
+            fontWeight: "medium",
+            display: { base: "none", md: "grid" },
+          }}
+        >
+          {LINKS.map((link) => (
+            <ChakraLink
+              key={link.label}
+              as={Link}
+              to={link.href}
+            >
+              {link.label}
+            </ChakraLink>
+          ))}
+        </Grid>
+      </HStack>
+    </Center>
   );
 }
 
