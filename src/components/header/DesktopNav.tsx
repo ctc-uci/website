@@ -2,7 +2,7 @@ import { Link as ChakraLink, HStack, Icon, Text } from "@chakra-ui/react";
 
 import { Link } from "react-router-dom";
 
-import { ApplyButton } from "./ApplyButton";
+import { ApplyButton } from "../shared/ApplyButton";
 import { NavLink } from "./Header";
 
 interface MobileNavProps {

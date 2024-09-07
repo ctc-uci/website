@@ -5,7 +5,7 @@ import { Box, Link as ChakraLink, HStack, Icon, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
-import { ApplyButton } from "./ApplyButton";
+import { ApplyButton } from "../shared/ApplyButton";
 import type { NavLink } from "./Header";
 
 interface MobileNavProps {
@@ -60,7 +60,7 @@ export function MobileNav({ links, isOpen, onToggle }: MobileNavProps) {
             </HStack>
           </ChakraLink>
         ))}
-        <ApplyButton />
+        <ApplyButton width={{ base: "75%", md: "unset" }} />
       </HStack>
 
       {/* This is bad code! */}

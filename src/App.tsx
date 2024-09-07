@@ -2,7 +2,7 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
 // import { CatchAll } from "./components/CatchAll";
 import { Header } from "./components/header/Header";
-import { Hero } from "./components/hero/Hero";
+import { Landing } from "./components/Landing";
 
 export const App = () => {
   return (
@@ -11,7 +11,7 @@ export const App = () => {
       <Routes>
         <Route
           path="/"
-          element={<Hero />}
+          element={<Landing />}
         />
 
         {/* <Route

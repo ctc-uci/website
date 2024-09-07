@@ -34,6 +34,17 @@ export const theme = extendTheme({
             opacity: 0.8,
           },
         },
+        "ctc.secondary": {
+          backgroundColor: "#DADADA",
+          _hover: {
+            bg: "#DADADA",
+            opacity: 0.9,
+          },
+          _active: {
+            bg: "#DADADA",
+            opacity: 0.8,
+          },
+        },
       },
     },
   },

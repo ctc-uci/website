@@ -1,20 +1,12 @@
-import {
-  Box,
-  Button,
-  Flex,
-  Heading,
-  HStack,
-  Stack,
-  Text,
-} from "@chakra-ui/react";
+import { Box, Flex, Heading, HStack, Stack, Text } from "@chakra-ui/react";
 
-import { ApplyButton } from "../header/ApplyButton";
+import { ApplyButton } from "../shared/ApplyButton";
+import { LearnMoreButton } from "../shared/LearnMoreButton";
 
 export const Hero = () => {
   return (
     <Flex
       sx={{
-        paddingX: { base: "20px", lg: "100px" },
         paddingY: 150,
         justifyContent: "space-between",
         height: 750,
@@ -31,24 +23,9 @@ export const Hero = () => {
         </Heading>
         <Text sx={{ fontSize: "4xl" }}>Creating tech for social good.</Text>
 
-        <HStack>
+        <HStack spacing={5}>
           <ApplyButton />
-          <Button
-            variant={"solid"}
-            sx={{
-              backgroundColor: "#DADADA",
-              _hover: {
-                bg: "#DADADA",
-                opacity: 0.9,
-              },
-              _active: {
-                bg: "#DADADA",
-                opacity: 0.8,
-              },
-            }}
-          >
-            Learn More
-          </Button>
+          <LearnMoreButton />
         </HStack>
       </Stack>
 
