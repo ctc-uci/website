@@ -15,6 +15,7 @@ export const theme = extendTheme({
       lilac: "#E2DBF2",
       gray: "#F4F4F4",
       grey: "#F4F4F4",
+      white: "#FFFFFF",
       text: "#1B1B1B",
       subtitle: "#4D4D4D",
     },
