@@ -2,10 +2,11 @@ import { Center } from "@chakra-ui/react";
 
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
+import { AboutPage } from "./components/about/AboutPage";
 import { Footer } from "./components/Footer";
 // import { CatchAll } from "./components/CatchAll";
 import { Header } from "./components/header/Header";
-import { Landing } from "./components/Landing";
+import { LandingPage } from "./components/landing/LandingPage";
 
 export const App = () => {
   return (
@@ -21,7 +22,11 @@ export const App = () => {
         <Routes>
           <Route
             path="/"
-            element={<Landing />}
+            element={<LandingPage />}
+          />
+          <Route
+            path="/about"
+            element={<AboutPage />}
           />
           {/* <Route
             path="*"
