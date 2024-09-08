@@ -2,6 +2,7 @@ import { Box, Heading, Image, Stack, Text, VStack } from "@chakra-ui/react";
 
 import alumni from "../../../public/alumni.jpg";
 import companyLogos from "../../../public/company-logos.png";
+import { headingStyle } from "../../styles/shared";
 
 export function Alumni() {
   return (
@@ -32,7 +33,9 @@ export function Alumni() {
             transform: "translate(-50%, -50%)",
           }}
         >
-          <Heading sx={{ fontSize: "4xl" }}>Where do our alumni work?</Heading>
+          <Heading sx={{ ...headingStyle, color: "ctc.white" }}>
+            Where do our alumni work?
+          </Heading>
           <Text sx={{ fontSize: "lg" }}>
             Commit the Change alumni pursue careers in tech fields, including
             software engineering, computer science, UI/UX design, product

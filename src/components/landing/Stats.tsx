@@ -1,5 +1,7 @@
 import { Heading, Stack, Text, VStack, Wrap } from "@chakra-ui/react";
 
+import { headingStyle } from "../../styles/shared";
+
 const STATS = [
   {
     stat: "14",
@@ -21,9 +23,7 @@ export function Stats() {
       spacing={10}
       sx={{ paddingY: 16 }}
     >
-      <Heading sx={{ fontSize: "4xl", color: "ctc.purple" }}>
-        By the Numbers
-      </Heading>
+      <Heading sx={headingStyle}>By the Numbers</Heading>
       <Wrap
         spacing={{ base: 5, lg: 10 }}
         sx={{ marginX: "auto", justifyContent: "center" }}

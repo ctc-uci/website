@@ -1,6 +1,7 @@
 import { Box, Heading, Image, Stack, Text } from "@chakra-ui/react";
 
 import about from "../../../public/about.jpeg";
+import { headingStyle } from "../../styles/shared";
 
 export function About() {
   return (
@@ -14,9 +15,7 @@ export function About() {
       spacing={{ base: 10, mdlg: 20 }}
     >
       <Stack spacing={5}>
-        <Heading sx={{ color: "ctc.purple", fontSize: "4xl" }}>
-          About Us
-        </Heading>
+        <Heading sx={headingStyle}>About Us</Heading>
         <Text sx={{ fontSize: "lg" }}>
           Founded in 2020, Commit the Change started as a small group of
           undergraduate students with a shared love for coding and volunteering

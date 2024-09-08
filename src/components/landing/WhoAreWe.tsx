@@ -1,6 +1,7 @@
 import { Heading, Image, Stack, Text } from "@chakra-ui/react";
 
 import whoAreWe from "../../../public/who-are-we.jpeg";
+import { headingStyle } from "../../styles/shared";
 import { LearnMoreButton } from "../shared/LearnMoreButton";
 
 export function WhoAreWe() {
@@ -15,9 +16,7 @@ export function WhoAreWe() {
     >
       <Stack spacing={{ base: 5, mdlg: 10 }}>
         <Stack spacing={5}>
-          <Heading sx={{ fontSize: "4xl", color: "ctc.purple" }}>
-            Who Are We?
-          </Heading>
+          <Heading sx={headingStyle}>Who Are We?</Heading>
           <Text sx={{ color: "ctc.text", fontSize: "lg" }}>
             Commit the Change is a UC Irvine club focused on creating end-to-end
             products for Southern California non-profit organizations.
