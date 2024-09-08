@@ -1,5 +1,6 @@
 import { Box, Heading, Image, Stack, Text, VStack } from "@chakra-ui/react";
 
+import alumni from "../../public/alumni.jpg";
 import companyLogos from "../../public/company-logos.png";
 
 export function Alumni() {
@@ -12,8 +13,7 @@ export function Alumni() {
             justifyContent: "center",
             alignItems: "center",
             borderRadius: "lg",
-            background:
-              "linear-gradient(0deg, rgba(62, 48, 97, 0.60) 0%, rgba(62, 48, 97, 0.60) 100%), rgb(211, 211, 211, 1) url('../../public/alumni.jpg') no-repeat center/cover",
+            background: `linear-gradient(0deg, rgba(62, 48, 97, 0.60) 0%, rgba(62, 48, 97, 0.60) 100%), rgb(211, 211, 211, 1) url(${alumni}) no-repeat center/cover`,
             filter: "blur(1px)",
           }}
           aria-label="Image of CTC alumni (21-22)" // used in place of Image for the filter / image effects
