@@ -1,12 +1,19 @@
-import { Heading, HStack, Image, Stack, Text } from "@chakra-ui/react";
+import { Heading, Image, Stack, Text } from "@chakra-ui/react";
 
 import whoAreWe from "../../public/who-are-we.jpeg";
 import { LearnMoreButton } from "./shared/LearnMoreButton";
 
 export function WhoAreWe() {
   return (
-    <HStack spacing={150}>
-      <Stack spacing={10}>
+    <Stack
+      spacing={{ base: 10, mdlg: 75, xl: 150 }}
+      sx={{
+        flexDirection: { base: "column", mdlg: "row" },
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      <Stack spacing={{ base: 5, mdlg: 10 }}>
         <Stack spacing={5}>
           <Heading sx={{ fontSize: "4xl", color: "ctc.purple" }}>
             Who Are We?
@@ -26,10 +33,15 @@ export function WhoAreWe() {
       </Stack>
 
       <Image
-        sx={{ height: 700, objectFit: "cover", borderRadius: "lg" }}
+        sx={{
+          height: { base: 250, md: 400, mdlg: 500, xl: 600, "2xl": 700 },
+          width: "100%",
+          objectFit: "cover",
+          borderRadius: "lg",
+        }}
         src={whoAreWe}
         alt="CTC members at the beach"
       />
-    </HStack>
+    </Stack>
   );
 }
