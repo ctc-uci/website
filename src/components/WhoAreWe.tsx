@@ -1,6 +1,6 @@
 import { Heading, HStack, Image, Stack, Text } from "@chakra-ui/react";
 
-import { LearnMoreButton } from "../shared/LearnMoreButton";
+import { LearnMoreButton } from "./shared/LearnMoreButton";
 
 export function WhoAreWe() {
   return (
@@ -24,11 +24,11 @@ export function WhoAreWe() {
         <LearnMoreButton variant="ctc" />
       </Stack>
 
-      <Image
+      {/* <Image
         sx={{ width: 700, height: "100%", objectFit: "cover" }}
         src="https://bit.ly/dan-abramov"
         alt="CTC members at the beach"
-      />
+      /> */}
     </HStack>
   );
 }

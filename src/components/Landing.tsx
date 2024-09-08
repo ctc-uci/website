@@ -1,8 +1,9 @@
 import { Stack } from "@chakra-ui/react";
 
+import { Alumni } from "./Alumni";
 import { Hero } from "./hero/Hero";
-import { WhoAreWe } from "./hero/WhoAreWe";
 import { Stats } from "./Stats";
+import { WhoAreWe } from "./WhoAreWe";
 
 export function Landing() {
   return (
@@ -10,6 +11,7 @@ export function Landing() {
       <Hero />
       <Stats />
       <WhoAreWe />
+      <Alumni />
     </Stack>
   );
 }

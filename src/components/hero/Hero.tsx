@@ -29,7 +29,7 @@ export const Hero = () => {
         </HStack>
       </Stack>
 
-      <Box sx={{ width: 700, backgroundColor: "ctc.purple", height: 600 }} />
+      {/* <Box sx={{ width: 700, backgroundColor: "ctc.purple", height: 600 }} /> */}
     </Flex>
   );
 };
