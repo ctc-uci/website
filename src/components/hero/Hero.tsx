@@ -1,23 +1,40 @@
-import { Box, Flex, Heading, HStack, Stack, Text } from "@chakra-ui/react";
+import { ChevronDownIcon } from "@chakra-ui/icons";
+import {
+  Heading,
+  HStack,
+  Icon,
+  Image,
+  Stack,
+  Text,
+  VStack,
+} from "@chakra-ui/react";
 
+import { motion } from "framer-motion";
+
+import hero from "../../../public/hero.png";
 import { ApplyButton } from "../shared/ApplyButton";
 import { LearnMoreButton } from "../shared/LearnMoreButton";
 
 export const Hero = () => {
   return (
-    <Flex
+    <HStack
+      spacing={50}
       sx={{
-        paddingY: 150,
         justifyContent: "space-between",
         height: 750,
+        position: "relative",
       }}
     >
       <Stack
         spacing={5}
-        sx={{ maxWidth: "50%" }}
+        sx={{ maxWidth: "50%", paddingY: 0 }}
       >
         <Heading
-          sx={{ color: "ctc.purple", fontSize: "8xl", lineHeight: "normal" }}
+          sx={{
+            color: "ctc.purple",
+            fontSize: { base: "4xl", lg: "7xl", xl: "8xl" },
+            lineHeight: "normal",
+          }}
         >
           Commit the Change
         </Heading>
@@ -29,7 +46,35 @@ export const Hero = () => {
         </HStack>
       </Stack>
 
-      {/* <Box sx={{ width: 700, backgroundColor: "ctc.purple", height: 600 }} /> */}
-    </Flex>
+      <Image
+        src={hero}
+        alt="Hero Image"
+        sx={{ maxWidth: "45%", height: "80%", objectFit: "contain" }}
+      />
+
+      <VStack
+        sx={{
+          position: "absolute",
+          bottom: 10,
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+        }}
+      >
+        <Text>Learn More</Text>
+        <motion.div
+          animate={{
+            y: [-5, 0, -5], // Animates the element up and down
+          }}
+          transition={{
+            duration: 1.5,
+            repeat: Infinity,
+            repeatType: "loop",
+            ease: "easeInOut",
+          }}
+        >
+          <Icon as={ChevronDownIcon} />
+        </motion.div>
+      </VStack>
+    </HStack>
   );
 };

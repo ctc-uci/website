@@ -9,7 +9,7 @@ import { WhoAreWe } from "./WhoAreWe";
 export function Landing() {
   return (
     <Stack sx={{ paddingX: { base: "20px", lg: "100px" } }}>
-      {/* <Hero /> */}
+      <Hero />
       <Stats />
       <WhoAreWe />
       <Projects />
