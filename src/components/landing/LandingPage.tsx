@@ -10,7 +10,7 @@ import { WhoAreWe } from "./WhoAreWe";
 export function LandingPage() {
   return (
     <Stack sx={pageStyle}>
-      <Hero />
+      {/* <Hero /> */}
       <Stats />
       <WhoAreWe />
       <Projects />
