@@ -6,6 +6,7 @@ import {
 } from "@chakra-ui/icons";
 import {
   Center,
+  Link as ChakraLink,
   Collapse,
   ComponentWithAs,
   Flex,
@@ -14,6 +15,8 @@ import {
   Image,
   useDisclosure,
 } from "@chakra-ui/react";
+
+import { Link } from "react-router-dom";
 
 import { DesktopNav } from "./DesktopNav";
 import { MobileNav } from "./MobileNav";
@@ -76,11 +79,16 @@ export const Header = () => {
             paddingX: { base: "20px", lg: "100px" },
           }}
         >
-          <Image
-            src="./ctc.svg"
-            alt="ctc logo"
-            sx={{ height: 7 }}
-          />
+          <ChakraLink
+            as={Link}
+            to={"/"}
+          >
+            <Image
+              src="./ctc.svg"
+              alt="ctc logo"
+              sx={{ height: 7 }}
+            />
+          </ChakraLink>
 
           <DesktopNav links={LINKS} />
 

@@ -11,7 +11,13 @@ export const App = () => {
   return (
     <Router>
       <Header />
-      <Center sx={{ maxWidth: 1500, width: "100%", marginX: "auto" }}>
+      <Center
+        sx={{
+          maxWidth: 1500,
+          width: "100%",
+          marginX: "auto",
+        }}
+      >
         <Routes>
           <Route
             path="/"
