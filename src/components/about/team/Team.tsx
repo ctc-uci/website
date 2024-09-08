@@ -29,20 +29,22 @@ export function Team() {
       <Stack spacing={10}>
         <Stack spacing={5}>
           <Heading sx={headingStyle}>Meet the Team</Heading>
-          <HStack
+          <Stack
             spacing={2.5}
             sx={{
+              flexDirection: { base: "column", lg: "row" },
               padding: 1,
               borderRadius: "10px",
               backgroundColor: "ctc.secondary",
               width: "fit-content",
+              marginX: { base: "auto", lg: "unset" },
             }}
           >
             {TABS.map((tab, index) => (
               <Button
                 key={tab}
                 sx={{
-                  paddingX: 10,
+                  paddingX: { base: 5, lg: 10 },
                   paddingY: 2,
                   fontSize: "lg",
                   borderRadius: "lg",
@@ -54,7 +56,7 @@ export function Team() {
                 {tab}
               </Button>
             ))}
-          </HStack>
+          </Stack>
         </Stack>
 
         <Wrap

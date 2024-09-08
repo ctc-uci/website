@@ -41,8 +41,7 @@ export function About() {
           sx={{
             minWidth: "100%",
             width: "100%",
-            height: "100%",
-            maxHeight: { base: 300, mdlg: 400 },
+            height: { base: 300, mdlg: 400 },
             objectFit: "cover",
             objectPosition: "bottom",
             borderRadius: "lg",
