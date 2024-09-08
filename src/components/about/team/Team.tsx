@@ -6,7 +6,6 @@ import {
   Heading,
   HStack,
   Icon,
-  SimpleGrid,
   Stack,
   Text,
   Wrap,
@@ -58,7 +57,10 @@ export function Team() {
           </HStack>
         </Stack>
 
-        <Wrap spacing={5}>
+        <Wrap
+          spacing={5}
+          justify={"center"}
+        >
           {TeamData.filter((profile) => filterByTeam(profile, activeTab)).map(
             (profile) => (
               <Stack

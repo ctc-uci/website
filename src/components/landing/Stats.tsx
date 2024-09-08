@@ -26,9 +26,9 @@ export function Stats() {
       <Heading sx={headingStyle}>By the Numbers</Heading>
       <Wrap
         spacing={{ base: 5, lg: 10 }}
-        sx={{ marginX: "auto", justifyContent: "center" }}
+        justify={"center"}
       >
-        {STATS.map((stat, index) => (
+        {STATS.map((stat) => (
           <VStack
             key={stat.stat}
             bg="ctc.purple"
@@ -38,16 +38,7 @@ export function Stats() {
               paddingY: 4,
               textAlign: "center",
               borderRadius: "lg",
-              // the below is bad styling!
-              width: { base: "100%", xs: 350, mdlg: 375 },
-              marginLeft: {
-                base: "auto",
-                mdlg: index === 1 ? "unset" : "auto",
-              },
-              marginRight: {
-                base: "auto",
-                mdlg: index === 0 ? "unset" : "auto",
-              },
+              width: { base: "100%", sm: 500, md: 350, mdlg: 350, xl: 400 },
             }}
           >
             <Text
