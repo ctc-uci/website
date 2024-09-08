@@ -20,6 +20,7 @@ export const theme = extendTheme({
       white: "#FFFFFF",
       text: "#1B1B1B",
       subtitle: "#4D4D4D",
+      secondary: "#DADADA",
     },
   },
   components: {
@@ -38,9 +39,9 @@ export const theme = extendTheme({
           },
         },
         "ctc.secondary": {
-          backgroundColor: "#DADADA",
+          backgroundColor: "ctc.secondary",
           _hover: {
-            bg: "#DADADA",
+            bg: "ctc.secondary",
             opacity: 0.9,
           },
           _active: {
