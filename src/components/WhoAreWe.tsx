@@ -34,7 +34,7 @@ export function WhoAreWe() {
 
       <Image
         sx={{
-          height: { base: 250, md: 400, mdlg: 500, xl: 600, "2xl": 700 },
+          height: { base: 300, md: 350, mdlg: 500, xl: 600, "2xl": 700 },
           width: "100%",
           objectFit: "cover",
           borderRadius: "lg",

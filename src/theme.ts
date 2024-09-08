@@ -3,6 +3,7 @@ import { extendTheme, ThemeOverride } from "@chakra-ui/react";
 export const theme = extendTheme({
   // https://tailwindcss.com/docs/screens
   breakpoints: {
+    xs: "475px",
     sm: "640px",
     md: "768px",
     mdlg: "896px",

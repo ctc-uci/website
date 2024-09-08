@@ -1,4 +1,4 @@
-import { Heading, SimpleGrid, Stack, Text, VStack } from "@chakra-ui/react";
+import { Heading, Stack, Text, VStack, Wrap } from "@chakra-ui/react";
 
 const STATS = [
   {
@@ -7,7 +7,7 @@ const STATS = [
   },
   {
     stat: "2000+",
-    text: "Total hours volunteered",
+    text: "Cumulative hours volunteered",
   },
   {
     stat: "4000+",
@@ -24,21 +24,30 @@ export function Stats() {
       <Heading sx={{ fontSize: "4xl", color: "ctc.purple" }}>
         By the Numbers
       </Heading>
-      <SimpleGrid
-        columns={{ base: 1, xl: 3 }}
-        spacing={10}
-        sx={{ marginX: "auto" }}
+      <Wrap
+        spacing={{ base: 5, lg: 10 }}
+        sx={{ marginX: "auto", justifyContent: "center" }}
       >
-        {STATS.map((stat) => (
+        {STATS.map((stat, index) => (
           <VStack
             key={stat.stat}
             bg="ctc.purple"
             spacing={2}
             sx={{
-              paddingX: 20,
+              paddingX: { base: 10, md: 20 },
               paddingY: 4,
               textAlign: "center",
               borderRadius: "lg",
+              // the below is bad styling!
+              width: { base: "100%", xs: 350, mdlg: 375 },
+              marginLeft: {
+                base: "auto",
+                mdlg: index === 1 ? "unset" : "auto",
+              },
+              marginRight: {
+                base: "auto",
+                mdlg: index === 0 ? "unset" : "auto",
+              },
             }}
           >
             <Text
@@ -63,7 +72,7 @@ export function Stats() {
             </Text>
           </VStack>
         ))}
-      </SimpleGrid>
+      </Wrap>
     </Stack>
   );
 }
