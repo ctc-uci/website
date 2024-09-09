@@ -1,5 +1,6 @@
 import { Heading, Image, Stack, Text, VStack, Wrap } from "@chakra-ui/react";
 
+import mission from "../../../../public/mission.jpeg";
 import { headingStyle } from "../../../styles/shared";
 import { Values } from "./mission-values";
 
@@ -16,7 +17,7 @@ export function Mission() {
       spacing={10}
     >
       <Image
-        src={"../../../public/mission.jpeg"}
+        src={mission}
         sx={{
           position: "absolute",
           top: 0,
