@@ -19,6 +19,8 @@ import {
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
+import { MAX_WIDTH } from "../styles/shared";
+
 export function Footer() {
   return (
     <Center sx={{ backgroundColor: "ctc.purple" }}>
@@ -30,7 +32,7 @@ export function Footer() {
           justifyContent: { base: "center", md: "space-between" },
           alignItems: "center",
           width: "100%",
-          maxWidth: 1500,
+          maxWidth: MAX_WIDTH,
         }}
       >
         <Stack

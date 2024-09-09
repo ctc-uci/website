@@ -8,3 +8,5 @@ export const headingStyle = {
   color: "ctc.purple",
   fontSize: "4xl",
 } satisfies SystemStyleObject;
+
+export const MAX_WIDTH = 1500;

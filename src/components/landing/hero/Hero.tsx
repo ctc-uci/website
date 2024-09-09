@@ -11,9 +11,9 @@ import {
 
 import { motion } from "framer-motion";
 
-import hero from "../../../../public/hero.png";
 import { ApplyButton } from "../../shared/ApplyButton";
 import { LearnMoreButton } from "../../shared/LearnMoreButton";
+import hero from "/public/hero.png";
 
 export const Hero = () => {
   return (

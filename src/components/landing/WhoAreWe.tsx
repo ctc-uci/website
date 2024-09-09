@@ -1,8 +1,8 @@
 import { Heading, Image, Stack, Text } from "@chakra-ui/react";
 
-import whoAreWe from "../../../public/who-are-we.jpeg";
 import { headingStyle } from "../../styles/shared";
 import { LearnMoreButton } from "../shared/LearnMoreButton";
+import whoAreWe from "/public/who-are-we.jpeg";
 
 export function WhoAreWe() {
   return (

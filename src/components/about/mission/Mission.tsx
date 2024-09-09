@@ -1,8 +1,8 @@
 import { Heading, Image, Stack, Text, VStack, Wrap } from "@chakra-ui/react";
 
-import mission from "../../../../public/mission.jpeg";
 import { headingStyle } from "../../../styles/shared";
 import { Values } from "./mission-values";
+import mission from "/public/mission.jpeg";
 
 export function Mission() {
   return (

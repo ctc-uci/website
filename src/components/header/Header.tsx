@@ -18,6 +18,7 @@ import {
 
 import { Link } from "react-router-dom";
 
+import { MAX_WIDTH } from "../../styles/shared";
 import { DesktopNav } from "./DesktopNav";
 import { MobileNav } from "./MobileNav";
 
@@ -68,7 +69,7 @@ export const Header = () => {
           alignItems: "stretch",
           backgroundColor: "ctc.gray",
           width: "100%",
-          maxWidth: 1500,
+          maxWidth: MAX_WIDTH,
         }}
       >
         <HStack

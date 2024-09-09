@@ -1,19 +1,18 @@
 import { Box, Heading, Image, Stack, Text, VStack } from "@chakra-ui/react";
 
-import alumni from "../../../public/alumni.jpg";
-import companyLogos from "../../../public/company-logos.png";
 import { headingStyle } from "../../styles/shared";
+import alumni from "/public/alumni.jpg";
+import companyLogos from "/public/company-logos.png";
 
 export function Alumni() {
   return (
-    <Stack>
+    <Stack spacing={5}>
       <Stack sx={{ position: "relative" }}>
         <Box
           sx={{
             height: 350,
             justifyContent: "center",
             alignItems: "center",
-            borderRadius: "lg",
             background: `linear-gradient(0deg, rgba(62, 48, 97, 0.60) 0%, rgba(62, 48, 97, 0.60) 100%), rgb(211, 211, 211, 1) url(${alumni}) no-repeat center/cover`,
             filter: "blur(1px)",
             marginX: { base: "-20px", lg: "-100px" },

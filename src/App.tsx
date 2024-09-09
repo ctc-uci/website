@@ -7,6 +7,7 @@ import { Footer } from "./components/Footer";
 // import { CatchAll } from "./components/CatchAll";
 import { Header } from "./components/header/Header";
 import { LandingPage } from "./components/landing/LandingPage";
+import { MAX_WIDTH } from "./styles/shared";
 
 export const App = () => {
   return (
@@ -14,7 +15,7 @@ export const App = () => {
       <Header />
       <Center
         sx={{
-          maxWidth: 1500,
+          maxWidth: MAX_WIDTH,
           width: "100%",
           marginX: "auto",
         }}
