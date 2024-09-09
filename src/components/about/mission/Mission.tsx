@@ -22,6 +22,8 @@ export function Mission() {
           top: 0,
           zIndex: -1,
           width: "100%",
+          height: "100%",
+          maxHeight: { base: "100%", xl: 1250 },
           objectFit: "cover",
           borderRadius: "lg",
         }}
@@ -42,7 +44,7 @@ export function Mission() {
       </VStack>
 
       <VStack
-        sx={{ maxWidth: "66%", textAlign: "center" }}
+        sx={{ maxWidth: "80%", textAlign: "center" }}
         spacing={5}
       >
         <Heading sx={{ ...headingStyle, color: "ctc.gray" }}>
