@@ -1,59 +1,126 @@
-export type Profile = {
+export interface Profile {
   name: string;
-  role: string;
+  role: "Tech Lead" | "Design Lead" | "Developer" | "Designer" | (string & {}); // https://x.com/mattpocockuk/status/1821926395380986219 <- goat
   linkedin?: string;
   image: string;
-  team: "board" | "cch" | "ww" | "lp";
-};
+}
 
-export const TeamData: Profile[] = [
+export const BOARD_DATA: Profile[] = [
   {
     name: "Kaylee Doliente",
     role: "President",
     linkedin: "https://www.linkedin.com/in/kayleedoliente/",
     image: "../../../../public/people/kaylee-doliente.png",
-    team: "board",
   },
   {
     name: "Gayathri Yedavilli",
     role: "Internal Vice President",
     linkedin: "https://www.linkedin.com/in/gayathri-yedavilli/",
     image: "../../../../public/people/kaylee-doliente.png",
-    team: "board",
   },
   {
     name: "Emmy Chen",
     role: "External Vice President",
     linkedin: "https://www.linkedin.com/in/emmy-y-chen/",
     image: "../../../../public/people/kaylee-doliente.png",
-    team: "board",
   },
   {
     name: "Ostend Suryajaya",
     role: "Technical Director",
     linkedin: "https://www.linkedin.com/in/ostend-suryajaya/",
     image: "../../../../public/people/kaylee-doliente.png",
-    team: "board",
   },
   {
     name: "Kevin Wu",
     role: "Technical Director",
     linkedin: "https://www.linkedin.com/in/kevinwu098/",
     image: "../../../../public/people/kaylee-doliente.png",
-    team: "board",
   },
   {
     name: "Elise Alinsug",
-    role: "Technical Director",
+    role: "Design Director",
     linkedin: "https://www.linkedin.com/in/elise-alinsug/",
     image: "../../../../public/people/kaylee-doliente.png",
-    team: "board",
   },
   {
     name: "Kaitlyn Tran",
     role: "Marketing Director",
     linkedin: "https://www.linkedin.com/in/kaitlyn-tran-888832272/",
     image: "../../../../public/people/kaylee-doliente.png",
-    team: "board",
+  },
+];
+
+export const CCH_DATA: Profile[] = [
+  {
+    name: "Ostend Suryajaya",
+    role: "Tech Lead",
+    linkedin: "https://www.linkedin.com/in/ostend-suryajaya/",
+    image: "../../../../public/people/kaylee-doliente.png",
+  },
+  {
+    name: "Kevin Wu",
+    role: "Tech Lead",
+    linkedin: "https://www.linkedin.com/in/kevinwu098/",
+    image: "../../../../public/people/kaylee-doliente.png",
+  },
+  {
+    name: "Elise Alinsug",
+    role: "Design Lead",
+    linkedin: "https://www.linkedin.com/in/elise-alinsug/",
+    image: "../../../../public/people/kaylee-doliente.png",
+  },
+  {
+    name: "Petr Anteater",
+    role: "Developer",
+    linkedin: "https://www.linkedin.com/in/kevinwu098/",
+    image: "../../../../public/people/kaylee-doliente.png",
+  },
+  {
+    name: "Matt Podock",
+    role: "Designer",
+    linkedin: "https://www.linkedin.com/in/elise-alinsug/",
+    image: "../../../../public/people/kaylee-doliente.png",
+  },
+];
+
+export const WW_DATA: Profile[] = [
+  {
+    name: "Ostend Suryajaya",
+    role: "Tech Lead",
+    linkedin: "https://www.linkedin.com/in/ostend-suryajaya/",
+    image: "../../../../public/people/kaylee-doliente.png",
+  },
+  {
+    name: "Kevin Wu",
+    role: "Tech Lead",
+    linkedin: "https://www.linkedin.com/in/kevinwu098/",
+    image: "../../../../public/people/kaylee-doliente.png",
+  },
+  {
+    name: "Elise Alinsug",
+    role: "Design Lead",
+    linkedin: "https://www.linkedin.com/in/elise-alinsug/",
+    image: "../../../../public/people/kaylee-doliente.png",
+  },
+];
+
+export const LP_DATA: Profile[] = [
+  {
+    name: "Ostend Suryajaya",
+    role: "Tech Lead",
+    linkedin: "https://www.linkedin.com/in/ostend-suryajaya/",
+    image: "../../../../public/people/kaylee-doliente.png",
+  },
+  {
+    name: "Kevin Wu",
+    role: "Tech Lead",
+    linkedin: "https://www.linkedin.com/in/kevinwu098/",
+    image: "../../../../public/people/kaylee-doliente.png",
+  },
+  {
+    name: "Elise Alinsug",
+    role: "Design Lead",
+    linkedin: "https://www.linkedin.com/in/elise-alinsug/",
+    image: "../../../../public/people/kaylee-doliente.png",
   },
 ];

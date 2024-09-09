@@ -12,7 +12,6 @@ interface ProfileCardProps {
 export function ProfileCard({ profile }: ProfileCardProps) {
   return (
     <Stack
-      key={profile.name + profile.role + profile.team + profile.linkedin}
       sx={{
         width: 60,
         height: 60,
