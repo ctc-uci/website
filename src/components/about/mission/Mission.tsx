@@ -4,7 +4,7 @@ import { Heading, Image, Stack, Text, VStack, Wrap } from "@chakra-ui/react";
 
 import { motion } from "framer-motion";
 
-import { headingStyle } from "../../../styles/shared";
+import { headingStyle, negativeMarginStyle } from "../../../styles/shared";
 import { Values } from "./mission-values";
 import mission from "/public/mission.jpeg";
 
@@ -31,8 +31,8 @@ export function Mission() {
   return (
     <Stack
       sx={{
+        ...negativeMarginStyle,
         paddingY: 100,
-        marginX: { base: -5, lg: -100 },
         justifyContent: "center",
         alignItems: "center",
         position: "relative",

@@ -1,6 +1,6 @@
 import { Box, Heading, Image, Stack, Text, VStack } from "@chakra-ui/react";
 
-import { headingStyle } from "../../styles/shared";
+import { headingStyle, negativeMarginStyle } from "../../styles/shared";
 import alumni from "/public/alumni.jpg";
 import companyLogos from "/public/company-logos.png";
 
@@ -10,12 +10,12 @@ export function Alumni() {
       <Stack sx={{ position: "relative" }}>
         <Box
           sx={{
+            ...negativeMarginStyle,
             height: 350,
             justifyContent: "center",
             alignItems: "center",
             background: `linear-gradient(0deg, rgba(62, 48, 97, 0.60) 0%, rgba(62, 48, 97, 0.60) 100%), rgb(211, 211, 211, 1) url(${alumni}) no-repeat center/cover`,
             filter: "blur(1px)",
-            marginX: { base: "-20px", lg: "-100px" },
           }}
           aria-label="Image of CTC alumni (21-22)" // used in place of Image for the filter / image effects
         />
