@@ -18,6 +18,7 @@ export const theme = extendTheme({
       gray: "#F4F4F4",
       grey: "#F4F4F4",
       white: "#FFFFFF",
+      offWhite: "#F9F9F9",
       text: "#1B1B1B",
       subtitle: "#4D4D4D",
       secondary: "#DADADA",
