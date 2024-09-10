@@ -46,55 +46,66 @@ export function Team() {
             ))}
           </ProfileCardGrid>
         ) : (
-          <Stack spacing={10}>
-            <Stack spacing={5}>
-              <Text sx={{ fontSize: "xl", fontWeight: "semibold" }}>Leads</Text>
-              <ProfileCardGrid>
-                {getData(activeTab)
-                  .filter(
-                    (profile) =>
-                      profile.role === "Tech Lead" ||
-                      profile.role === "Design Lead"
-                  )
-                  .map((profile) => (
-                    <ProfileCard
-                      profile={profile}
-                      key={profile.name + profile.role + profile.linkedin}
-                    />
-                  ))}
-              </ProfileCardGrid>
-            </Stack>
-            <Stack spacing={5}>
-              <Text sx={{ fontSize: "xl", fontWeight: "semibold" }}>
-                Designers
-              </Text>
-              <ProfileCardGrid>
-                {getData(activeTab)
-                  .filter((profile) => profile.role === "Designer")
-                  .map((profile) => (
-                    <ProfileCard
-                      profile={profile}
-                      key={profile.name + profile.role + profile.linkedin}
-                    />
-                  ))}
-              </ProfileCardGrid>
-            </Stack>
-            <Stack spacing={5}>
-              <Text sx={{ fontSize: "xl", fontWeight: "semibold" }}>
-                Developers
-              </Text>
-              <ProfileCardGrid>
-                {getData(activeTab)
-                  .filter((profile) => profile.role === "Developer")
-                  .map((profile) => (
-                    <ProfileCard
-                      profile={profile}
-                      key={profile.name + profile.role + profile.linkedin}
-                    />
-                  ))}
-              </ProfileCardGrid>
-            </Stack>
-          </Stack>
+          <ProfileCardGrid>
+            {getData(activeTab).map((profile) => (
+              <ProfileCard
+                profile={profile}
+                key={profile.name + profile.role + profile.linkedin}
+              />
+            ))}
+          </ProfileCardGrid>
+
+          // to be uncommented once there are devs and designers
+
+          // <Stack spacing={10}>
+          //   <Stack spacing={5}>
+          //     <Text sx={{ fontSize: "xl", fontWeight: "semibold" }}>Leads</Text>
+          //     <ProfileCardGrid>
+          //       {getData(activeTab)
+          //         .filter(
+          //           (profile) =>
+          //             profile.role === "Tech Lead" ||
+          //             profile.role === "Design Lead"
+          //         )
+          //         .map((profile) => (
+          //           <ProfileCard
+          //             profile={profile}
+          //             key={profile.name + profile.role + profile.linkedin}
+          //           />
+          //         ))}
+          //     </ProfileCardGrid>
+          //   </Stack>
+          //   <Stack spacing={5}>
+          //     <Text sx={{ fontSize: "xl", fontWeight: "semibold" }}>
+          //       Designers
+          //     </Text>
+          //     <ProfileCardGrid>
+          //       {getData(activeTab)
+          //         .filter((profile) => profile.role === "Designer")
+          //         .map((profile) => (
+          //           <ProfileCard
+          //             profile={profile}
+          //             key={profile.name + profile.role + profile.linkedin}
+          //           />
+          //         ))}
+          //     </ProfileCardGrid>
+          //   </Stack>
+          //   <Stack spacing={5}>
+          //     <Text sx={{ fontSize: "xl", fontWeight: "semibold" }}>
+          //       Developers
+          //     </Text>
+          //     <ProfileCardGrid>
+          //       {getData(activeTab)
+          //         .filter((profile) => profile.role === "Developer")
+          //         .map((profile) => (
+          //           <ProfileCard
+          //             profile={profile}
+          //             key={profile.name + profile.role + profile.linkedin}
+          //           />
+          //         ))}
+          //     </ProfileCardGrid>
+          //   </Stack>
+          // </Stack>
         )}
       </Stack>
     </Stack>
