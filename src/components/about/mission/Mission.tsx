@@ -95,6 +95,7 @@ export function Mission() {
                   backgroundColor: "rgba(249, 249, 249, 0.8)",
                   justifyContent: "center",
                   alignItems: "center",
+                  cursor: "pointer",
                 }}
               >
                 <motion.div
