@@ -34,7 +34,8 @@ export function MobileNav({ links, isOpen, onToggle }: MobileNavProps) {
         as={motion.div}
         initial={false}
         animate={isOpen ? { y: 0, opacity: 1 } : { y: "-20px", opacity: 0.25 }}
-        transition={{ duration: isOpen ? 0.5 : 0.75 }} // ! FIX ME
+        // @ts-expect-error conflict between Chakra and Framer )=
+        transition={{ duration: isOpen ? 0.5 : 0.75 }}
         sx={{
           position: "fixed",
           display: { base: "flex", md: "none" },

@@ -44,7 +44,7 @@ const LINKS: NavLink[] = [
   },
   {
     label: "Work with Us",
-    href: "/",
+    href: "/contact",
   },
 ];
 

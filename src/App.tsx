@@ -3,10 +3,12 @@ import { Center } from "@chakra-ui/react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
 import { AboutPage } from "./components/about/AboutPage";
+import { CatchAll } from "./components/CatchAll";
+import { ContactPage } from "./components/contact/ContactPage";
 import { Footer } from "./components/Footer";
-// import { CatchAll } from "./components/CatchAll";
 import { Header } from "./components/header/Header";
 import { LandingPage } from "./components/landing/LandingPage";
+import { ProjectsPage } from "./components/projects/ProjectsPage";
 import { MAX_WIDTH } from "./styles/shared";
 
 export const App = () => {
@@ -29,10 +31,18 @@ export const App = () => {
             path="/about"
             element={<AboutPage />}
           />
-          {/* <Route
+          <Route
+            path="/projects"
+            element={<ProjectsPage />}
+          />
+          <Route
+            path="/contact"
+            element={<ContactPage />}
+          />
+          <Route
             path="*"
             element={<CatchAll />}
-          /> */}
+          />
         </Routes>
       </Center>
       <Footer />
