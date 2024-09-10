@@ -1,10 +1,33 @@
+import { useState } from "react";
+
 import { Heading, Image, Stack, Text, VStack, Wrap } from "@chakra-ui/react";
+
+import { motion } from "framer-motion";
 
 import { headingStyle } from "../../../styles/shared";
 import { Values } from "./mission-values";
 import mission from "/public/mission.jpeg";
 
+type FiveBooleans = [boolean, boolean, boolean, boolean, boolean];
+
 export function Mission() {
+  const [flip, setFlip] = useState<FiveBooleans>([
+    false,
+    false,
+    false,
+    false,
+    false,
+  ]);
+
+  /**
+   * @see {@link https://codesandbox.io/p/sandbox/flip-card-framer-motion-or7kv} for where the flipping code was sourced
+   */
+  const handleFlip = (index: number) => {
+    const newFlip = [...flip];
+    newFlip[index] = !flip[index];
+    setFlip(newFlip as FiveBooleans);
+  };
+
   return (
     <Stack
       sx={{
@@ -56,28 +79,82 @@ export function Mission() {
           spacing={5}
           justify={"center"}
         >
-          {Values.map((value) => (
-            <VStack
-              sx={{
-                width: 300,
-                height: 400,
-                borderRadius: "lg",
-                padding: 10,
-                backgroundColor: "rgba(249, 249, 249, 0.8)",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-              spacing={6}
-              key={value.value}
-            >
-              <Image
-                src={value.icon}
-                alt={value.value}
-                sx={{ width: 120, height: 120 }}
-              />
-              <Text sx={{ fontSize: "2xl" }}>{value.value}</Text>
-            </VStack>
-          ))}
+          {Values.map((value, index) => {
+            const isFlipped = flip[index];
+
+            return (
+              <motion.div
+                transition={{ duration: 0.7 }}
+                animate={{ rotateY: isFlipped ? 180 : 0 }}
+                key={value.value}
+                style={{
+                  width: 300,
+                  height: 400,
+                  borderRadius: 8,
+                  padding: 10,
+                  backgroundColor: "rgba(249, 249, 249, 0.8)",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <motion.div
+                  transition={{ duration: 0.7 }}
+                  animate={{ rotateY: isFlipped ? 180 : 0 }}
+                  onClick={() => handleFlip(index)}
+                  style={{
+                    position: "relative",
+                    height: "100%",
+                    width: "100%",
+                  }}
+                >
+                  <motion.div
+                    transition={{ duration: 0.7 }}
+                    animate={{ rotateY: isFlipped ? 180 : 0 }}
+                    style={{
+                      position: "absolute",
+                      backfaceVisibility: "hidden",
+                      display: "flex",
+                      flexDirection: "column",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      gap: 24,
+                      width: "100%",
+                      height: "100%",
+                      padding: 40,
+                    }}
+                  >
+                    <Image
+                      src={value.icon}
+                      alt={value.value}
+                      sx={{ width: 120, height: 120, pointerEvents: "none" }}
+                    />
+                    <Text sx={{ fontSize: "2xl" }}>{value.value}</Text>
+                  </motion.div>
+
+                  <motion.div
+                    initial={{ rotateY: 180 }}
+                    animate={{ rotateY: isFlipped ? 0 : 180 }}
+                    transition={{ duration: 0.7 }}
+                    style={{
+                      position: "absolute",
+                      backfaceVisibility: "hidden",
+                      display: "flex",
+                      flexDirection: "column",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      gap: 24,
+                      width: "100%",
+                      height: "100%",
+                      padding: 40,
+                    }}
+                  >
+                    <Text sx={{ fontSize: "2xl" }}>{value.value}</Text>
+                    <Text sx={{ fontSize: "lg" }}>{value.description}</Text>
+                  </motion.div>
+                </motion.div>
+              </motion.div>
+            );
+          })}
         </Wrap>
       </VStack>
     </Stack>
