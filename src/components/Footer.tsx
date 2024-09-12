@@ -11,12 +11,12 @@ import {
 } from "@chakra-ui/react";
 
 import {
-  FaEnvelope,
-  FaFacebook,
-  FaInstagramSquare,
-  FaLinkedin,
-  FaMedium,
-} from "react-icons/fa";
+  BsEnvelopeFill,
+  BsFacebook,
+  BsInstagram,
+  BsLinkedin,
+  BsMedium,
+} from "react-icons/bs";
 import { Link } from "react-router-dom";
 
 import { MAX_WIDTH } from "../styles/shared";
@@ -58,13 +58,18 @@ export function Footer() {
           >
             Tech with Purpose.
           </Text>
-          <HStack spacing={2.5}>
-            {ICONS.map((icon, index) => (
-              <Icon
-                key={index}
-                as={icon.icon}
-                sx={{ width: 30, height: 30, color: "white" }}
-              />
+          <HStack spacing={5}>
+            {ICONS.map((icon) => (
+              <ChakraLink
+                key={icon.href}
+                as={Link}
+                to={icon.href}
+              >
+                <Icon
+                  as={icon.icon}
+                  sx={{ width: 6, height: 6, color: "white" }}
+                />
+              </ChakraLink>
             ))}
           </HStack>
         </VStack>
@@ -94,19 +99,24 @@ export function Footer() {
 
 const ICONS = [
   {
-    icon: FaEnvelope,
+    icon: BsEnvelopeFill,
+    href: "mailto:ctc@uci.edu",
   },
   {
-    icon: FaFacebook,
+    icon: BsLinkedin,
+    href: "https://www.linkedin.com/company/commit-the-change-uci/",
   },
   {
-    icon: FaInstagramSquare,
+    icon: BsFacebook,
+    href: "https://www.facebook.com/ctc.uci/",
   },
   {
-    icon: FaLinkedin,
+    icon: BsInstagram,
+    href: "https://www.instagram.com/ctc.uci/",
   },
   {
-    icon: FaMedium,
+    icon: BsMedium,
+    href: "https://medium.com/@committhechange.uci",
   },
 ];
 
