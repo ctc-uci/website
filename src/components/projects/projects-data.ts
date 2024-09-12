@@ -14,7 +14,7 @@ export const PROJECT_DATA: Project[] = [
       "Description of the organization, and what they do. The description could potentially be very long, so there needs to be room to accommodate.",
   },
   {
-    name: "Working Wardrobes",
+    name: "Feeding Pets of the Homeless",
     startYear: "2024",
     endYear: "2025",
     description:
