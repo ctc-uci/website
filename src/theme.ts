@@ -4,6 +4,7 @@ export const theme = extendTheme({
   // https://tailwindcss.com/docs/screens
   breakpoints: {
     xs: "475px",
+    xssm: "555px",
     sm: "640px",
     md: "768px",
     mdlg: "896px",
@@ -46,7 +47,7 @@ export const theme = extendTheme({
             opacity: 0.9,
           },
           _active: {
-            bg: "#DADADA",
+            bg: "ctc.secondary",
             opacity: 0.8,
           },
         },
@@ -56,8 +57,8 @@ export const theme = extendTheme({
   styles: {
     global: {
       body: {
-        textColor: "#1B1B1B",
-        backgroundColor: "#F4F4F4",
+        textColor: "ctc.text",
+        backgroundColor: "ctc.gray",
       },
     },
   },

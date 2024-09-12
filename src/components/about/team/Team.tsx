@@ -1,17 +1,17 @@
-import { useCallback, useState } from "react";
+import { ChangeEvent, useCallback, useState } from "react";
 
-import { Stack, Text } from "@chakra-ui/react";
+import { Box, Heading, Select, Stack, Text } from "@chakra-ui/react";
 
+import { headingStyle } from "../../../styles/shared";
 import { ProfileCard } from "./ProfileCard";
 import { ProfileCardGrid } from "./ProfileCardGrid";
 import { BOARD_DATA, CCH_DATA, LP_DATA, WW_DATA } from "./team-data";
-import { TeamTabs } from "./TeamTabs";
 
 export function Team() {
   const [activeTab, setActiveTab] = useState(0);
 
-  function handleClick(index: number) {
-    setActiveTab(index);
+  function handleTeamChange(e: ChangeEvent<HTMLSelectElement>) {
+    setActiveTab(Number(e.currentTarget.value));
   }
 
   const getData = useCallback((activeTab: number) => {
@@ -29,13 +29,39 @@ export function Team() {
   }, []);
 
   return (
-    <Stack sx={{ paddingY: 100, marginX: "auto" }}>
-      <Stack spacing={10}>
-        <TeamTabs
-          activeTab={activeTab}
-          handleClick={handleClick}
-        />
+    <Stack
+      spacing={10}
+      sx={{ width: "100%", paddingY: 100, marginX: "auto" }}
+    >
+      <Stack
+        sx={{
+          flexDirection: { base: "column", sm: "row" },
+          justifyContent: "space-between",
+        }}
+      >
+        <Heading sx={headingStyle}>Meet the Team</Heading>
 
+        <Box sx={{ maxWidth: "fit-content" }}>
+          <Select
+            defaultValue={0}
+            value={activeTab}
+            onChange={handleTeamChange}
+            sx={{
+              backgroundColor: "ctc.secondary",
+              _focus: { backgroundColor: "ctc.lilac", color: "ctc.text" },
+              _hover: { backgroundColor: "ctc.lilac", color: "ctc.text" },
+            }}
+            variant={"filled"}
+          >
+            <option value={0}>Board</option>
+            <option value={1}>Collete's Childrens Home</option>
+            <option value={2}>La Peña</option>
+            <option value={3}>Feeding Pets of the Homeless</option>
+          </Select>
+        </Box>
+      </Stack>
+
+      <Box sx={{ width: "fit-content", marginX: "auto" }}>
         {activeTab === 0 ? (
           <ProfileCardGrid>
             {BOARD_DATA.map((profile) => (
@@ -54,9 +80,7 @@ export function Team() {
               />
             ))}
           </ProfileCardGrid>
-
           // to be uncommented once there are devs and designers
-
           // <Stack spacing={10}>
           //   <Stack spacing={5}>
           //     <Text sx={{ fontSize: "xl", fontWeight: "semibold" }}>Leads</Text>
@@ -107,7 +131,7 @@ export function Team() {
           //   </Stack>
           // </Stack>
         )}
-      </Stack>
+      </Box>
     </Stack>
   );
 }
