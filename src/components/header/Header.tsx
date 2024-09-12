@@ -39,12 +39,12 @@ const LINKS: NavLink[] = [
   },
   {
     label: "Blog",
-    href: "https://www.medium.com", // ! FIXME: should go to CTC medium
+    href: "https://medium.com/@committhechange.uci",
     icon: ExternalLinkIcon,
   },
   {
     label: "Work with Us",
-    href: "/contact",
+    href: "/work-with-us",
   },
 ];
 

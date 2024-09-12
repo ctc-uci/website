@@ -135,10 +135,10 @@ const LINKS = [
   },
   {
     label: "Blog",
-    href: "https://medium.com",
+    href: "https://medium.com/@committhechange.uci",
   },
   {
     label: "Work with Us",
-    href: "/contact",
+    href: "/work-with-us",
   },
 ];

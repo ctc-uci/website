@@ -4,11 +4,11 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
 import { AboutPage } from "./components/about/AboutPage";
 import { CatchAll } from "./components/CatchAll";
-import { ContactPage } from "./components/contact/ContactPage";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/header/Header";
 import { LandingPage } from "./components/landing/LandingPage";
 import { ProjectsPage } from "./components/projects/ProjectsPage";
+import { WorkWithUsPage } from "./components/work-with-us/WorkWithUsPage";
 import { MAX_WIDTH } from "./styles/shared";
 
 export const App = () => {
@@ -36,8 +36,8 @@ export const App = () => {
             element={<ProjectsPage />}
           />
           <Route
-            path="/contact"
-            element={<ContactPage />}
+            path="/work-with-us"
+            element={<WorkWithUsPage />}
           />
           <Route
             path="*"

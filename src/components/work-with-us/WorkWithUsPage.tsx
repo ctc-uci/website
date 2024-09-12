@@ -1,9 +1,9 @@
 import { Stack } from "@chakra-ui/react";
 
-export function ContactPage() {
+export function WorkWithUsPage() {
   return (
     <Stack>
-      <div>Contact</div>
+      <div>Work With Us</div>
     </Stack>
   );
 }
