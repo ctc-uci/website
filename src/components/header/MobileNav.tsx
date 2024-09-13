@@ -54,6 +54,7 @@ export function MobileNav({ links, isOpen, onToggle }: MobileNavProps) {
             key={link.label}
             to={link.href}
             sx={{ fontSize: "xl" }}
+            onClick={onToggle}
           >
             <HStack>
               <Text>{link.label}</Text>

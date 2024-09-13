@@ -1,13 +1,15 @@
 import { SystemStyleObject } from "@chakra-ui/styled-system";
 
 export const pageStyle = {
-  paddingX: { base: "20px", lg: "100px" },
+  paddingLeft: { base: "20px", lg: "100px" },
+  paddingRight: { base: "20px", lg: "100px" },
   width: "100%",
 } satisfies SystemStyleObject;
 
 export const negativeMarginStyle = {
-  marginX: { base: "-20px", lg: "-100px" },
-};
+  marginLeft: { base: "-20px", lg: "-100px" },
+  marginRight: { base: "-20px", lg: "-100px" },
+} satisfies SystemStyleObject;
 
 export const headingStyle = {
   color: "ctc.purple",
