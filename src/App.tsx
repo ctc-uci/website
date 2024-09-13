@@ -3,6 +3,7 @@ import { Center } from "@chakra-ui/react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
 import { AboutPage } from "./components/about/AboutPage";
+import { ApplyPage } from "./components/apply/ApplyPage";
 import { CatchAll } from "./components/CatchAll";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/header/Header";
@@ -38,6 +39,10 @@ export const App = () => {
           <Route
             path="/work-with-us"
             element={<WorkWithUsPage />}
+          />
+          <Route
+            path="/apply"
+            element={<ApplyPage />}
           />
           <Route
             path="*"
