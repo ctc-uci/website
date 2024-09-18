@@ -14,7 +14,10 @@ import { QUESTIONS } from "./questions-data";
 
 export function Questions() {
   return (
-    <Stack spacing={8}>
+    <Stack
+      spacing={8}
+      sx={{ paddingY: 6 }}
+    >
       <Stack spacing={5}>
         <Heading sx={headingStyle}>Questions?</Heading>
         <Text sx={{ fontSize: "lg", color: "ctc.text" }}>

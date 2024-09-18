@@ -1,10 +1,14 @@
 import { Button, Heading, Image, Stack, Text } from "@chakra-ui/react";
 
 import { headingStyle, pageStyle } from "../../styles/shared";
+import { Questions } from "./questions/Questions";
 
 export function ApplyPage() {
   return (
-    <Stack sx={pageStyle}>
+    <Stack
+      sx={pageStyle}
+      spacing={6}
+    >
       <Stack>Apply</Stack>
 
       <Stack spacing={10}>
@@ -32,6 +36,8 @@ export function ApplyPage() {
           </Stack>
         </Stack>
       </Stack>
+
+      <Questions />
     </Stack>
   );
 }
