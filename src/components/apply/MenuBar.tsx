@@ -8,7 +8,7 @@ export function MenuBar({ children }: { children: React.ReactNode }) {
     >
       <Stack
         sx={{
-          backgroundColor: "ctc.lightMagenta",
+          backgroundColor: "#D7CAF6",
           borderTopRadius: "lg",
           height: 10,
           flexDirection: "row",

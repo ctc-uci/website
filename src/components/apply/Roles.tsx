@@ -86,7 +86,7 @@ function RoleCard({
             borderColor: "ctc.purple",
             borderWidth: "0.5px",
             borderRadius: "lg",
-            backgroundColor: "ctc.magnolia",
+            backgroundColor: "#F5F2FD",
           }}
         >
           <Image

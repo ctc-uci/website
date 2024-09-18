@@ -3,6 +3,7 @@ import { Stack } from "@chakra-ui/react";
 import { pageStyle } from "../../styles/shared";
 import { Questions } from "./questions/Questions";
 import { Roles } from "./Roles";
+import { Timeline } from "./Timeline";
 
 export function ApplyPage() {
   return (
@@ -13,6 +14,7 @@ export function ApplyPage() {
       <Stack>Apply</Stack>
 
       <Roles />
+      <Timeline />
       <Questions />
     </Stack>
   );
