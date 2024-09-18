@@ -17,6 +17,7 @@ export const theme = extendTheme({
       purple: "#5457AF",
       lilac: "#E2DBF2",
       magnolia: "#F5F2FD",
+      lightMagenta: "#D7CAF6",
       gray: "#F4F4F4",
       grey: "#F4F4F4",
       white: "#FFFFFF",
