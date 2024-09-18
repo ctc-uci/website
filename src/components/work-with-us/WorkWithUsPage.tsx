@@ -13,6 +13,7 @@ import { Link } from "react-router-dom";
 
 import {
   headingStyle,
+  imageStyle,
   negativeMarginStyle,
   pageStyle,
 } from "../../styles/shared";
@@ -76,6 +77,7 @@ export function WorkWithUsPage() {
         src={workWithUs}
         alt="large ctc logo"
         sx={{
+          ...imageStyle,
           marginLeft: "auto",
           marginRight: { ...negativeMarginStyle["marginRight"], xl: "unset" },
           width: "80%",

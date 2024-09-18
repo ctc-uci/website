@@ -1,6 +1,6 @@
 import { Heading, Image, Stack, Text } from "@chakra-ui/react";
 
-import { headingStyle } from "../../styles/shared";
+import { headingStyle, imageStyle } from "../../styles/shared";
 import { LearnMoreButton } from "../shared/LearnMoreButton";
 import whoAreWe from "/public/who-are-we.jpeg";
 
@@ -33,6 +33,7 @@ export function WhoAreWe() {
 
       <Image
         sx={{
+          ...imageStyle,
           height: { base: 300, md: 350, mdlg: 500, xl: 600, "2xl": 700 },
           width: "100%",
           objectFit: "cover",

@@ -1,6 +1,10 @@
 import { Box, Heading, Image, Stack, Text, VStack } from "@chakra-ui/react";
 
-import { headingStyle, negativeMarginStyle } from "../../styles/shared";
+import {
+  headingStyle,
+  imageStyle,
+  negativeMarginStyle,
+} from "../../styles/shared";
 import alumni from "/public/alumni.jpg";
 import companyLogos from "/public/company-logos.png";
 
@@ -48,6 +52,7 @@ export function Alumni() {
       <Image
         src={companyLogos}
         sx={{
+          ...imageStyle,
           backgroundSize: "cover",
           paddingX: { base: 0, md: 20 },
           paddingY: { base: 4, md: 12 },

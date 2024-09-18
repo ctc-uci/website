@@ -18,7 +18,7 @@ import {
 
 import { Link } from "react-router-dom";
 
-import { MAX_WIDTH } from "../../styles/shared";
+import { imageStyle, MAX_WIDTH } from "../../styles/shared";
 import { DesktopNav } from "./DesktopNav";
 import { MobileNav } from "./MobileNav";
 
@@ -87,7 +87,7 @@ export const Header = () => {
             <Image
               src="./ctc.svg"
               alt="ctc logo"
-              sx={{ height: 7 }}
+              sx={{ ...imageStyle, height: 7 }}
             />
           </ChakraLink>
 

@@ -1,6 +1,6 @@
 import { Box, Heading, Image, Stack, Text } from "@chakra-ui/react";
 
-import { headingStyle } from "../../styles/shared";
+import { headingStyle, imageStyle } from "../../styles/shared";
 import about from "/public/about.jpeg";
 
 export function About() {
@@ -39,6 +39,7 @@ export function About() {
           src={about}
           alt="CTC members, in formal attire"
           sx={{
+            ...imageStyle,
             minWidth: "100%",
             width: "100%",
             height: { base: 300, mdlg: 400 },

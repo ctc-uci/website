@@ -16,4 +16,8 @@ export const headingStyle = {
   fontSize: "4xl",
 } satisfies SystemStyleObject;
 
+export const imageStyle = {
+  pointerEvents: "none",
+} satisfies SystemStyleObject;
+
 export const MAX_WIDTH = 1500;

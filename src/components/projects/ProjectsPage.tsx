@@ -1,6 +1,6 @@
 import { Box, Heading, HStack, Image, Stack, Text } from "@chakra-ui/react";
 
-import { headingStyle, pageStyle } from "../../styles/shared";
+import { headingStyle, imageStyle, pageStyle } from "../../styles/shared";
 import { PROJECT_DATA } from "./projects-data";
 
 export function ProjectsPage() {
@@ -41,6 +41,7 @@ export function ProjectsPage() {
                     src="/people/kaylee-doliente.png"
                     alt={`image of ${project.name}`}
                     sx={{
+                      ...imageStyle,
                       width: "100%",
                       objectFit: "cover",
                       borderRadius: "lg",
@@ -84,6 +85,7 @@ export function ProjectsPage() {
                     src="/people/kaylee-doliente.png"
                     alt={`image of ${project.name}`}
                     sx={{
+                      ...imageStyle,
                       width: "100%",
                       objectFit: "cover",
                       borderRadius: "lg",

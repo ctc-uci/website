@@ -19,7 +19,7 @@ import {
 } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
-import { MAX_WIDTH } from "../styles/shared";
+import { imageStyle, MAX_WIDTH } from "../styles/shared";
 
 export function Footer() {
   return (
@@ -50,7 +50,7 @@ export function Footer() {
         <VStack spacing={6}>
           <Image
             src={"./ctc-white.svg"}
-            sx={{ height: 50 }}
+            sx={{ ...imageStyle, height: 50 }}
             alt="ctc logo"
           />
           <Text

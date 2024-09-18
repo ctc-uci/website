@@ -11,6 +11,7 @@ import {
 
 import { motion } from "framer-motion";
 
+import { imageStyle } from "../../../styles/shared";
 import { ApplyButton } from "../../shared/ApplyButton";
 import { LearnMoreButton } from "../../shared/LearnMoreButton";
 import hero from "/public/hero.png";
@@ -49,7 +50,12 @@ export const Hero = () => {
       <Image
         src={hero}
         alt="Hero Image"
-        sx={{ maxWidth: "45%", height: "80%", objectFit: "contain" }}
+        sx={{
+          ...imageStyle,
+          maxWidth: "45%",
+          height: "80%",
+          objectFit: "contain",
+        }}
       />
 
       <VStack

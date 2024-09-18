@@ -4,7 +4,11 @@ import { Heading, Image, Stack, Text, VStack, Wrap } from "@chakra-ui/react";
 
 import { motion } from "framer-motion";
 
-import { headingStyle, negativeMarginStyle } from "../../../styles/shared";
+import {
+  headingStyle,
+  imageStyle,
+  negativeMarginStyle,
+} from "../../../styles/shared";
 import { Values } from "./mission-values";
 import mission from "/public/mission.jpeg";
 
@@ -42,6 +46,7 @@ export function Mission() {
       <Image
         src={mission}
         sx={{
+          ...imageStyle,
           position: "absolute",
           top: 0,
           zIndex: -1,
