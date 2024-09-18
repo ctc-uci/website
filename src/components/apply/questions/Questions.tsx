@@ -26,11 +26,7 @@ export function Questions() {
         </Text>
       </Stack>
 
-      <Accordion
-        defaultIndex={[0]}
-        allowMultiple
-        allowToggle
-      >
+      <Accordion allowToggle>
         {QUESTIONS.map((question) => (
           <AccordionItem key={question.question}>
             <AccordionButton sx={{ display: "flex", gap: 5, paddingY: 3 }}>

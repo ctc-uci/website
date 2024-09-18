@@ -16,6 +16,7 @@ export const theme = extendTheme({
     ctc: {
       purple: "#5457AF",
       lilac: "#E2DBF2",
+      magnolia: "#F5F2FD",
       gray: "#F4F4F4",
       grey: "#F4F4F4",
       white: "#FFFFFF",
