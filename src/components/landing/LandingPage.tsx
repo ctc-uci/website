@@ -9,7 +9,10 @@ import { WhoAreWe } from "./WhoAreWe";
 
 export function LandingPage() {
   return (
-    <Stack sx={pageStyle}>
+    <Stack
+      sx={pageStyle}
+      spacing={16}
+    >
       {/* <Hero /> */}
       <Stats />
       <WhoAreWe />
