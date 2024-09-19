@@ -3,6 +3,7 @@ export interface Project {
   startYear: string;
   endYear: string;
   description: string;
+  image: string;
 }
 
 export const PROJECT_DATA: Project[] = [
@@ -12,6 +13,7 @@ export const PROJECT_DATA: Project[] = [
     endYear: "2025",
     description:
       "Description of the organization, and what they do. The description could potentially be very long, so there needs to be room to accommodate.",
+    image: "CTC-Placeholder.png",
   },
   {
     name: "Center Stage",
@@ -19,6 +21,7 @@ export const PROJECT_DATA: Project[] = [
     endYear: "2025",
     description:
       "Description of the organization, and what they do. The description could potentially be very long, so there needs to be room to accommodate.",
+    image: "CTC-Placeholder.png",
   },
   {
     name: "La Peña",
@@ -26,6 +29,7 @@ export const PROJECT_DATA: Project[] = [
     endYear: "2025",
     description:
       "Description of the organization, and what they do. The description could potentially be very long, so there needs to be room to accommodate.",
+    image: "CTC-Placeholder.png",
   },
 ];
 
@@ -36,6 +40,7 @@ export const PREVIOUS_DATA: Project[] = [
     endYear: "2024",
     description:
       "A college readiness program catered towards high-achieving, economically disadvantaged high school students interested in pursuing a STEM career.",
+    image: "Achievement-Institute-Of-STEM-Scholars.png",
   },
   {
     name: "Stand Up To Trash",
@@ -43,6 +48,7 @@ export const PREVIOUS_DATA: Project[] = [
     endYear: "2024",
     description:
       "This NPO's mission is to protect ocean ecosystems by raising awareness of the negative effects caused by plastic pollution through environmental education for future generations.",
+    image: "Stand-Up-To-Trash.png",
   },
   {
     name: "Feeding Pets of the Homeless",
@@ -50,6 +56,7 @@ export const PREVIOUS_DATA: Project[] = [
     endYear: "2024",
     description:
       "This NPO's mission is to feed and provide basic emergency veterinary care to the pets of the homeless.",
+    image: "Feeding-Pets-Of-The-Homeless.png",
   },
   {
     name: "Get Inspired",
@@ -57,6 +64,7 @@ export const PREVIOUS_DATA: Project[] = [
     endYear: "2023",
     description:
       "We built a new database system for them to better organize and report their Pismo Clam restoration data!",
+    image: "Get-Inspired.png",
   },
   {
     name: "Cell Dogs",
@@ -64,6 +72,7 @@ export const PREVIOUS_DATA: Project[] = [
     endYear: "2023",
     description:
       "We created a canine tracker for them to manage their trainee dogs in correctional programs and adoption!",
+    image: "Cell-Dogs.png",
   },
   {
     name: "Patriots and Paws",
@@ -71,6 +80,7 @@ export const PREVIOUS_DATA: Project[] = [
     endYear: "2023",
     description:
       "We designed a system for them to manage and schedule pickups for their furniture donations for veterans!",
+    image: "Patriots-and-Paws.png",
   },
   {
     name: "OC Habitats",
@@ -78,6 +88,7 @@ export const PREVIOUS_DATA: Project[] = [
     endYear: "2022",
     description:
       "We constructed digital forms for their habitat overseers to provide them with better data on their conservation efforts!",
+    image: "OC-Habitats.png",
   },
   {
     name: "The Literacy Project",
@@ -85,6 +96,7 @@ export const PREVIOUS_DATA: Project[] = [
     endYear: "2022",
     description:
       "We created a platform to manage literacy scorecards for children enrolled in their award-winning reading program!",
+    image: "The-Literacy-Project.png",
   },
   {
     name: "Find Your Anchor",
@@ -92,6 +104,7 @@ export const PREVIOUS_DATA: Project[] = [
     endYear: "2022",
     description:
       "We made a map for them to track where their mental health anchor boxes are traveling throughout the world!",
+    image: "Find-Your-Anchor.png",
   },
   {
     name: "Abound Food Care",
@@ -99,6 +112,7 @@ export const PREVIOUS_DATA: Project[] = [
     endYear: "2022",
     description:
       "We created a digital system for them to better connect with their volunteers and engage them in events!",
+    image: "Abound-Food-Care.png",
   },
   {
     name: "Justice for Families",
@@ -106,6 +120,7 @@ export const PREVIOUS_DATA: Project[] = [
     endYear: "2021",
     description:
       "We created a mobile application for the families of incarcerated loved ones to find community and support!",
+    image: "Justice-For-Families.png",
   },
   {
     name: "Waymakers",
@@ -113,6 +128,7 @@ export const PREVIOUS_DATA: Project[] = [
     endYear: "2021",
     description:
       "We created a platform to electronically capture volunteer and inventory data about their different programs!",
+    image: "Waymakers.png",
   },
   {
     name: "Child Creativity Lab",
@@ -120,6 +136,7 @@ export const PREVIOUS_DATA: Project[] = [
     endYear: "2021",
     description:
       "We created an online waiver system and a platform to sell educational kits with instructional videos for children!",
+    image: "Child-Creativity-Lab.png",
   },
   {
     name: "Crime Survivors",
@@ -127,5 +144,6 @@ export const PREVIOUS_DATA: Project[] = [
     endYear: "2020",
     description:
       "We created a website to replace their paper pamphlets with resources and information for crime victims!",
+    image: "Crime-Survivors.png",
   },
 ];

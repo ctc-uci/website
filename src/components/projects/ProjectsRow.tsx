@@ -39,12 +39,14 @@ export function ProjectsRow({ data }: ProjectsRowProps) {
             key={project.name + project.startYear + project.endYear}
           >
             <Image
-              src="/people/kaylee-doliente.png"
+              src={`/projects/${project.image}`}
               alt={`image of ${project.name}`}
               sx={{
                 ...imageStyle,
-                width: "100%",
-                objectFit: "cover",
+                height: 250,
+                paddingX: 25,
+                paddingY: 20,
+                objectFit: "contain",
                 borderRadius: "lg",
               }}
             />
