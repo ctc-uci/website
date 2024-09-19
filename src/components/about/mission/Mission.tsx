@@ -1,14 +1,18 @@
 import { useState } from "react";
 
-import { Heading, Image, Stack, Text, VStack, Wrap } from "@chakra-ui/react";
+import {
+  Box,
+  Heading,
+  Image,
+  Stack,
+  Text,
+  VStack,
+  Wrap,
+} from "@chakra-ui/react";
 
 import { motion } from "framer-motion";
 
-import {
-  headingStyle,
-  imageStyle,
-  negativeMarginStyle,
-} from "../../../styles/shared";
+import { headingStyle, negativeMarginStyle } from "../../../styles/shared";
 import { Values } from "./mission-values";
 import mission from "/public/mission.jpeg";
 
@@ -43,7 +47,7 @@ export function Mission() {
       }}
       spacing={10}
     >
-      <Image
+      {/* <Image
         src={mission}
         sx={{
           ...imageStyle,
@@ -54,8 +58,25 @@ export function Mission() {
           height: "100%",
           maxHeight: { base: "100%", xl: 1250 },
           objectFit: "cover",
-          borderRadius: "lg",
         }}
+      /> */}
+
+      <Box
+        sx={{
+          ...negativeMarginStyle,
+          position: "absolute",
+          top: 0,
+          zIndex: -1,
+          width: "100%",
+          height: "100%",
+          maxHeight: { base: "100%", xl: 1250 },
+          objectFit: "cover",
+          justifyContent: "center",
+          alignItems: "center",
+          background: `linear-gradient(0deg, rgba(62, 48, 97, 0.50) 0%, rgba(62, 48, 97, 0.50) 100%), rgb(211, 211, 211, 1) url(${mission}) no-repeat center/cover`,
+          filter: "blur(1px)",
+        }}
+        aria-label="Image of CTC alumni (21-22)" // used in place of Image for the filter / image effects
       />
 
       <VStack
