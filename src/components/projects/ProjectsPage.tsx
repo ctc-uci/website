@@ -1,7 +1,8 @@
-import { Box, Heading, HStack, Image, Stack, Text } from "@chakra-ui/react";
+import { Heading, Stack, Text } from "@chakra-ui/react";
 
-import { headingStyle, imageStyle, pageStyle } from "../../styles/shared";
+import { headingStyle, pageStyle } from "../../styles/shared";
 import { PROJECT_DATA } from "./projects-data";
+import { ProjectsRow } from "./ProjectsRow";
 
 export function ProjectsPage() {
   return (
@@ -19,91 +20,14 @@ export function ProjectsPage() {
               2024-2025
             </Text>
           </Stack>
-          <Box sx={{ overflowX: "scroll" }}>
-            <HStack
-              spacing={5}
-              minWidth={"fit-content"}
-            >
-              {PROJECT_DATA.map((project) => (
-                <Stack
-                  sx={{
-                    borderRadius: "lg",
-                    padding: 10,
-                    width: 400,
-                    borderWidth: 0.5,
-                    borderColor: "ctc.lilac",
-                    backgroundColor: "ctc.offWhite",
-                    boxShadow: "5px 3px 20px 0px rgba(9, 7, 105, 0.20)",
-                  }}
-                  key={project.name + project.startYear + project.endYear}
-                >
-                  <Image
-                    src="/people/kaylee-doliente.png"
-                    alt={`image of ${project.name}`}
-                    sx={{
-                      ...imageStyle,
-                      width: "100%",
-                      objectFit: "cover",
-                      borderRadius: "lg",
-                    }}
-                  />
-                  <Stack>
-                    <Stack spacing={1}>
-                      <Text sx={{ fontSize: "xl" }}>{project.name}</Text>
-                      <Text sx={{ fontSize: "md", color: "ctc.subtitle" }}>
-                        {project.startYear}-{project.endYear}
-                      </Text>
-                    </Stack>
-                    <Text sx={{ fontSize: "lg" }}>{project.description}</Text>
-                  </Stack>
-                </Stack>
-              ))}
-            </HStack>
-          </Box>
+
+          <ProjectsRow data={PROJECT_DATA} />
         </Stack>
+
         <Stack spacing={5}>
           <Text sx={{ fontSize: "xl" }}>Previous Projects</Text>
-          <Box sx={{ overflowX: "scroll" }}>
-            <HStack
-              spacing={5}
-              minWidth={"fit-content"}
-            >
-              {PROJECT_DATA.map((project) => (
-                <Stack
-                  sx={{
-                    borderRadius: "lg",
-                    padding: 10,
-                    width: 400,
-                    borderWidth: 0.5,
-                    borderColor: "ctc.lilac",
-                    backgroundColor: "ctc.offWhite",
-                    boxShadow: "5px 3px 20px 0px rgba(9, 7, 105, 0.20)",
-                  }}
-                  key={project.name + project.startYear + project.endYear}
-                >
-                  <Image
-                    src="/people/kaylee-doliente.png"
-                    alt={`image of ${project.name}`}
-                    sx={{
-                      ...imageStyle,
-                      width: "100%",
-                      objectFit: "cover",
-                      borderRadius: "lg",
-                    }}
-                  />
-                  <Stack>
-                    <Stack spacing={1}>
-                      <Text sx={{ fontSize: "xl" }}>{project.name}</Text>
-                      <Text sx={{ fontSize: "md", color: "ctc.subtitle" }}>
-                        {project.startYear}-{project.endYear}
-                      </Text>
-                    </Stack>
-                    <Text sx={{ fontSize: "lg" }}>{project.description}</Text>
-                  </Stack>
-                </Stack>
-              ))}
-            </HStack>
-          </Box>
+
+          <ProjectsRow data={PROJECT_DATA} />
         </Stack>
       </Stack>
     </Stack>
