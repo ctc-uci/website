@@ -17,10 +17,16 @@ export function ProjectsRow({ data }: ProjectsRowProps) {
     >
       <HStack
         spacing={5}
-        sx={{ minWidth: "fit-content", paddingX: 2, paddingY: 4 }}
+        sx={{
+          minWidth: "fit-content",
+          paddingX: 2,
+          paddingY: 4,
+          alignItems: "stretch",
+        }}
       >
         {data.map((project) => (
           <Stack
+            spacing={5}
             sx={{
               borderRadius: "lg",
               padding: 10,
@@ -42,13 +48,17 @@ export function ProjectsRow({ data }: ProjectsRowProps) {
                 borderRadius: "lg",
               }}
             />
+
             <Stack>
               <Stack spacing={1}>
-                <Text sx={{ fontSize: "xl" }}>{project.name}</Text>
+                <Text sx={{ fontSize: "xl", lineHeight: "normal" }}>
+                  {project.name}
+                </Text>
                 <Text sx={{ fontSize: "md", color: "ctc.subtitle" }}>
                   {project.startYear}-{project.endYear}
                 </Text>
               </Stack>
+
               <Text sx={{ fontSize: "lg" }}>{project.description}</Text>
             </Stack>
           </Stack>

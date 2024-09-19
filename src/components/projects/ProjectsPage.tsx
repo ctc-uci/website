@@ -1,7 +1,7 @@
 import { Heading, Stack, Text } from "@chakra-ui/react";
 
 import { headingStyle, pageStyle } from "../../styles/shared";
-import { PROJECT_DATA } from "./projects-data";
+import { PREVIOUS_DATA, PROJECT_DATA } from "./projects-data";
 import { ProjectsRow } from "./ProjectsRow";
 
 export function ProjectsPage() {
@@ -27,7 +27,7 @@ export function ProjectsPage() {
         <Stack spacing={5}>
           <Text sx={{ fontSize: "xl" }}>Previous Projects</Text>
 
-          <ProjectsRow data={PROJECT_DATA} />
+          <ProjectsRow data={PREVIOUS_DATA} />
         </Stack>
       </Stack>
     </Stack>
