@@ -35,9 +35,9 @@ export function IconCarousel() {
       {[...PROJECT_DATA, ...PREVIOUS_DATA].map((project) => (
         <SplideSlide
           key={project.name + project.startYear + project.endYear}
-          style={{ minWidth: "fit-content" }}
+          style={{ minWidth: "fit-content", width: "fit-content" }}
         >
-          <HStack>
+          <HStack spacing={0}>
             <Tooltip label={project.name}>
               <Image
                 src={`/projects/${project.image}`}
@@ -45,9 +45,10 @@ export function IconCarousel() {
                 sx={{
                   height: 100,
                   maxHeight: 100,
-                  minWidth: "fit-content",
+                  width: "fit-content",
+                  maxWidth: 250,
                   objectFit: "contain",
-                  paddingX: 20,
+                  paddingX: { base: 5, md: 20 },
                 }}
               />
             </Tooltip>
