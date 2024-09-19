@@ -16,11 +16,11 @@ export function Questions() {
   return (
     <Stack
       spacing={8}
-      sx={{ paddingY: 6 }}
+      sx={{ paddingBottom: 16 }}
     >
       <Stack spacing={5}>
         <Heading sx={headingStyle}>Questions?</Heading>
-        <Text sx={{ fontSize: "lg", color: "ctc.text" }}>
+        <Text sx={{ fontSize: "lg" }}>
           Couldn’t find your answer? Email us at ctc@uci.edu, or reach out to us
           on any of our socials.
         </Text>
@@ -34,9 +34,7 @@ export function Questions() {
                 sx={{ color: "ctc.purple", width: 6, height: 6 }}
               />
 
-              <Text sx={{ fontSize: "lg", color: "ctc.text" }}>
-                {question.question}
-              </Text>
+              <Text sx={{ fontSize: "lg" }}>{question.question}</Text>
             </AccordionButton>
             <AccordionPanel sx={{ whiteSpace: "pre-wrap", paddingBottom: 6 }}>
               <Text sx={{ fontSize: "md", lineHeight: 4 }}>

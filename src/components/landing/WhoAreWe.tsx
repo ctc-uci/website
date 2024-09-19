@@ -17,11 +17,11 @@ export function WhoAreWe() {
       <Stack spacing={{ base: 5, mdlg: 10 }}>
         <Stack spacing={5}>
           <Heading sx={headingStyle}>Who Are We?</Heading>
-          <Text sx={{ color: "ctc.text", fontSize: "lg" }}>
+          <Text sx={{ fontSize: "lg" }}>
             Commit the Change is a UC Irvine club focused on creating end-to-end
             products for Southern California non-profit organizations.
           </Text>
-          <Text sx={{ color: "ctc.text", fontSize: "lg" }}>
+          <Text sx={{ fontSize: "lg" }}>
             Each year, we partner with these nonprofits to design & develop
             mobile and web applications that enhance their ability to serve our
             communities.
