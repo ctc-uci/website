@@ -9,12 +9,15 @@ import { Footer } from "./components/Footer";
 import { Header } from "./components/header/Header";
 import { LandingPage } from "./components/landing/LandingPage";
 import { ProjectsPage } from "./components/projects/ProjectsPage";
+import { ScrollToTop } from "./components/ScrollToTop";
 import { WorkWithUsPage } from "./components/work-with-us/WorkWithUsPage";
 import { MAX_WIDTH } from "./styles/shared";
 
 export const App = () => {
   return (
     <Router>
+      <ScrollToTop />
+
       <Header />
       <Center
         sx={{
