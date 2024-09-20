@@ -17,6 +17,7 @@ export function ApplyButton(props: ButtonProps) {
         sx={{
           paddingX: 8,
           paddingY: 2.5,
+          minWidth: "100%",
           ...props,
         }}
         variant={"ctc"}
