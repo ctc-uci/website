@@ -12,8 +12,6 @@ import { PREVIOUS_DATA, PROJECT_DATA } from "../../projects/projects-data";
 
 const SPLIDE_OPTIONS = {
   type: "loop",
-  perPage: 4,
-  perMove: 1,
   rewind: true,
   pagination: false,
   pauseOnHover: true,
@@ -24,6 +22,7 @@ const SPLIDE_OPTIONS = {
   },
   arrows: false,
   drag: false,
+  autoWidth: true,
 };
 
 export function IconCarousel() {
@@ -33,10 +32,7 @@ export function IconCarousel() {
       extensions={{ AutoScroll }}
     >
       {[...PROJECT_DATA, ...PREVIOUS_DATA].map((project) => (
-        <SplideSlide
-          key={project.name + project.startYear + project.endYear}
-          style={{ minWidth: "fit-content", width: "fit-content" }}
-        >
+        <SplideSlide key={project.name + project.startYear + project.endYear}>
           <HStack spacing={0}>
             <Tooltip label={project.name}>
               <Image
@@ -46,7 +42,6 @@ export function IconCarousel() {
                   height: 100,
                   maxHeight: 100,
                   width: "fit-content",
-                  maxWidth: 250,
                   objectFit: "contain",
                   paddingX: { base: 5, md: 20 },
                 }}
