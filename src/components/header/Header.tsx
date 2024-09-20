@@ -66,7 +66,6 @@ export const Header = () => {
         sx={{
           flexDirection: "column",
           justifyContent: "space-between",
-          alignItems: "stretch",
           backgroundColor: "ctc.gray",
           width: "100%",
           maxWidth: MAX_WIDTH,

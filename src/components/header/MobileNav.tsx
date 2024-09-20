@@ -38,6 +38,7 @@ export function MobileNav({ links, isOpen, onToggle }: MobileNavProps) {
         transition={{ duration: isOpen ? 0.5 : 0.75 }}
         sx={{
           position: "fixed",
+          top: 70,
           display: { base: "flex", md: "none" },
           flexDirection: "column",
           width: "100%",
@@ -45,6 +46,7 @@ export function MobileNav({ links, isOpen, onToggle }: MobileNavProps) {
           paddingY: 4,
           backgroundColor: "ctc.gray",
           boxShadow: "md",
+          zIndex: 10,
         }}
         spacing={4}
       >
@@ -68,9 +70,9 @@ export function MobileNav({ links, isOpen, onToggle }: MobileNavProps) {
       {/* This is bad code! */}
       <Box
         sx={{
-          position: "absolute",
-          top: 326,
+          position: "fixed",
           width: "100dvw",
+          top: 326,
           height: "calc(100dvh - 326px)",
           bg: "blackAlpha.400",
           display: { base: "flex", md: "none" },
