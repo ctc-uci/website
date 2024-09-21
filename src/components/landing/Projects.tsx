@@ -1,4 +1,10 @@
-import { Button, Link as ChakraLink, Heading, Stack } from "@chakra-ui/react";
+import {
+  Button,
+  Link as ChakraLink,
+  Heading,
+  Stack,
+  Text,
+} from "@chakra-ui/react";
 
 import { Link } from "react-router-dom";
 
@@ -21,7 +27,12 @@ export function Projects() {
           as={Link}
           to={"/projects"}
         >
-          <Button variant={"ctc"}>View all Projects</Button>
+          <Button
+            variant={"ctc"}
+            sx={{ paddingX: 8, paddingY: 2.5, width: "fit-content" }}
+          >
+            <Text sx={{ fontSize: "lg" }}>View all Projects</Text>
+          </Button>
         </ChakraLink>
       </Stack>
     </Stack>
