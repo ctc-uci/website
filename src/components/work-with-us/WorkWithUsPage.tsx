@@ -67,6 +67,7 @@ export function WorkWithUsPage() {
           <ChakraLink
             as={Link}
             target="_blank"
+            to={"/portfolio/CTC 2024-25 Outreach Portfolio.pdf"}
           >
             <Button variant={"ctc.secondary"}>View our Portfolio</Button>
           </ChakraLink>
