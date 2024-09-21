@@ -12,24 +12,25 @@ export const PROJECT_DATA: Project[] = [
     startYear: "2024",
     endYear: "2025",
     description:
-      "Description of the organization, and what they do. The description could potentially be very long, so there needs to be room to accommodate.",
-    image: "CTC-Placeholder.png",
+      "CTC will be creating a digital system to replace CCH's paper-based processes for client intake and data management",
+    image: "colletes-childrens-home.png",
   },
   {
     name: "Center Stage",
     startYear: "2024",
     endYear: "2025",
     description:
-      "Description of the organization, and what they do. The description could potentially be very long, so there needs to be room to accommodate.",
-    image: "CTC-Placeholder.png",
+      "CTC will develop a class platform that streamlines student registration, class management, and progress tracking, providing a centralized and efficient system for students and instructors",
+    image: "center-stage.png",
   },
   {
     name: "La Peña",
     startYear: "2024",
     endYear: "2025",
     description:
-      "Description of the organization, and what they do. The description could potentially be very long, so there needs to be room to accommodate.",
-    image: "CTC-Placeholder.png",
+      "CTC will be developing a room management and scheduling system for La Peña to help with booking, cancellations, tracking associated fees, and room usage.",
+
+    image: "la-pena.png",
   },
 ];
 

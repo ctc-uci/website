@@ -45,9 +45,12 @@ export function ProjectsRow({ data }: ProjectsRowProps) {
                 ...imageStyle,
                 height: 250,
                 paddingX: 25,
-                paddingY: 20,
+                paddingY: 12,
                 objectFit: "contain",
                 borderRadius: "lg",
+                borderWidth: "0.5px",
+                borderStyle: "solid",
+                borderColor: "ctc.text",
               }}
             />
 
