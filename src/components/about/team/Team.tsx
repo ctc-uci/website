@@ -5,7 +5,7 @@ import { Box, Heading, Select, Stack, Text } from "@chakra-ui/react";
 import { headingStyle } from "../../../styles/shared";
 import { ProfileCard } from "./ProfileCard";
 import { ProfileCardGrid } from "./ProfileCardGrid";
-import { BOARD_DATA, CCH_DATA, LP_DATA, WW_DATA } from "./team-data";
+import { BOARD_DATA, CCH_DATA, CSE_DATA, LPA_DATA } from "./team-data";
 
 export function Team() {
   const [activeTab, setActiveTab] = useState(0);
@@ -19,9 +19,9 @@ export function Team() {
       case 1:
         return CCH_DATA;
       case 2:
-        return WW_DATA;
+        return CSE_DATA;
       case 3:
-        return LP_DATA;
+        return LPA_DATA;
       default:
         // this should never happen
         return [];
@@ -55,8 +55,8 @@ export function Team() {
           >
             <option value={0}>Board</option>
             <option value={1}>Collete's Childrens Home</option>
-            <option value={2}>La Peña</option>
-            <option value={3}>Feeding Pets of the Homeless</option>
+            <option value={2}>Center Stage</option>
+            <option value={3}>La Peña</option>
           </Select>
         </Box>
       </Stack>
