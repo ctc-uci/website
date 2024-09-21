@@ -12,7 +12,7 @@ export const PROJECT_DATA: Project[] = [
     startYear: "2024",
     endYear: "2025",
     description:
-      "CTC will be creating a digital system to replace CCH's paper-based processes for client intake and data management",
+      "Colette’s Children’s Home provides emergency housing for homeless women/children and assist in maintaining employment. They aim to provide the resources needed to achieve self-sufficiency.",
     image: "colletes-childrens-home.png",
   },
   {
@@ -20,7 +20,7 @@ export const PROJECT_DATA: Project[] = [
     startYear: "2024",
     endYear: "2025",
     description:
-      "CTC will develop a class platform that streamlines student registration, class management, and progress tracking, providing a centralized and efficient system for students and instructors",
+      "Center Stage’s mission is to elevate the art of Chinese dance through passionate teaching, immersive performances, and cultural exchange, to nurture appreciation for Chinese heritage.",
     image: "center-stage.png",
   },
   {
@@ -28,7 +28,7 @@ export const PROJECT_DATA: Project[] = [
     startYear: "2024",
     endYear: "2025",
     description:
-      "CTC will be developing a room management and scheduling system for La Peña to help with booking, cancellations, tracking associated fees, and room usage.",
+      "La Pena is a central site for Latinx, Caribbean, and Indigenous diasporic communities of the Bay Area, preserving cultural traditions and nurturing grassroots social justice movements",
 
     image: "la-pena.png",
   },
@@ -48,7 +48,7 @@ export const PREVIOUS_DATA: Project[] = [
     startYear: "2023",
     endYear: "2024",
     description:
-      "This NPO's mission is to protect ocean ecosystems by raising awareness of the negative effects caused by plastic pollution through environmental education for future generations.",
+      "Stand Up to Trash is an org that protects ocean ecosystems by raising awareness of the negative effects caused by plastic pollution through environmental education for future generations.",
     image: "Stand-Up-To-Trash.png",
   },
   {
@@ -56,7 +56,7 @@ export const PREVIOUS_DATA: Project[] = [
     startYear: "2023",
     endYear: "2024",
     description:
-      "This NPO's mission is to feed and provide basic emergency veterinary care to the pets of the homeless.",
+      "Feeding Pets of the Homeless is dedicated to providing basic emergency veterinary care and food for the pets for those suffering from homelessness.",
     image: "Feeding-Pets-Of-The-Homeless.png",
   },
   {
