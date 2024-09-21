@@ -1,17 +1,31 @@
 import { ChangeEvent, useCallback, useState } from "react";
 
-import { Box, Heading, Select, Stack, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Heading,
+  HStack,
+  Select,
+  Stack,
+  Text,
+} from "@chakra-ui/react";
 
 import { headingStyle } from "../../../styles/shared";
 import { ProfileCard } from "./ProfileCard";
 import { ProfileCardGrid } from "./ProfileCardGrid";
 import { BOARD_DATA, CCH_DATA, CSE_DATA, LPA_DATA } from "./team-data";
 
+const TABS = ["Board", "Collete's Childrens Home", "Center Stage", "La Peña"];
+
 export function Team() {
   const [activeTab, setActiveTab] = useState(0);
 
   function handleTeamChange(e: ChangeEvent<HTMLSelectElement>) {
     setActiveTab(Number(e.currentTarget.value));
+  }
+
+  function handleClick(index: number) {
+    setActiveTab(index);
   }
 
   const getData = useCallback((activeTab: number) => {
@@ -35,13 +49,19 @@ export function Team() {
     >
       <Stack
         sx={{
-          flexDirection: { base: "column", sm: "row" },
+          flexDirection: { base: "column", sm: "row", lg: "column" },
           justifyContent: "space-between",
         }}
+        spacing={{ base: 2.5, sm: 5 }}
       >
         <Heading sx={headingStyle}>Meet the Team</Heading>
 
-        <Box sx={{ maxWidth: "fit-content" }}>
+        <Box
+          sx={{
+            maxWidth: "fit-content",
+            display: { base: "flex", lg: "none" },
+          }}
+        >
           <Select
             defaultValue={0}
             value={activeTab}
@@ -59,6 +79,34 @@ export function Team() {
             <option value={3}>La Peña</option>
           </Select>
         </Box>
+
+        <HStack
+          spacing={2.5}
+          sx={{
+            padding: 1,
+            borderRadius: "10px",
+            backgroundColor: "ctc.secondary",
+            width: "fit-content",
+            display: { base: "none", lg: "flex" },
+          }}
+        >
+          {TABS.map((tab, index) => (
+            <Button
+              key={tab}
+              sx={{
+                paddingX: 10,
+                paddingY: 2,
+                fontSize: "lg",
+                borderRadius: "lg",
+                fontWeight: "normal",
+              }}
+              variant={activeTab === index ? "ctc" : "ctc.secondary"}
+              onClick={() => handleClick(index)}
+            >
+              {tab}
+            </Button>
+          ))}
+        </HStack>
       </Stack>
 
       <Box sx={{ width: "fit-content", marginX: "auto" }}>
