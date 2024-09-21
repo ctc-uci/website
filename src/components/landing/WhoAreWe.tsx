@@ -2,7 +2,7 @@ import { Heading, Image, Stack, Text } from "@chakra-ui/react";
 
 import { headingStyle, imageStyle } from "../../styles/shared";
 import { LearnMoreButton } from "../shared/LearnMoreButton";
-import whoAreWe from "/public/who-are-we.jpeg";
+import whoAreWe from "/public/who-are-we.jpg";
 
 export function WhoAreWe() {
   return (

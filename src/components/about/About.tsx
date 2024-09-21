@@ -1,7 +1,7 @@
 import { Box, Heading, Image, Stack, Text } from "@chakra-ui/react";
 
 import { headingStyle, imageStyle } from "../../styles/shared";
-import about from "/public/about.jpeg";
+import about from "/public/about.jpg";
 
 export function About() {
   return (

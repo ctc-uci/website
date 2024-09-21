@@ -14,7 +14,7 @@ import { motion } from "framer-motion";
 
 import { headingStyle, negativeMarginStyle } from "../../../styles/shared";
 import { Values } from "./mission-values";
-import mission from "/public/mission.jpeg";
+import mission from "/public/mission.jpg";
 
 type FiveBooleans = [boolean, boolean, boolean, boolean, boolean];
 
