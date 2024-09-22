@@ -3,7 +3,6 @@ import {
   Link as ChakraLink,
   Grid,
   Heading,
-  HStack,
   Image,
   Stack,
   Text,
@@ -12,6 +11,7 @@ import {
 import { Link } from "react-router-dom";
 
 import {
+  buttonStyle,
   headingStyle,
   imageStyle,
   negativeMarginStyle,
@@ -49,7 +49,10 @@ export function WorkWithUsPage() {
             Email us at{" "}
             <Text
               as={"span"}
-              sx={{ textDecoration: "underline", textUnderlineOffset: 2 }}
+              sx={{
+                textDecoration: "underline",
+                textUnderlineOffset: 2,
+              }}
             >
               ctc@uci.edu
             </Text>
@@ -57,21 +60,35 @@ export function WorkWithUsPage() {
           </Text>
         </Stack>
 
-        <HStack spacing={5}>
+        <Stack
+          spacing={{ base: 2.5, md: 5 }}
+          sx={{ flexDirection: { base: "column", md: "row" } }}
+        >
           <ChakraLink
             as={Link}
             to={"mailto:ctc@uci.edu"}
           >
-            <Button variant={"ctc"}>Contact Us</Button>
+            <Button
+              variant={"ctc"}
+              sx={buttonStyle}
+            >
+              Contact Us
+            </Button>
           </ChakraLink>
+
           <ChakraLink
             as={Link}
             target="_blank"
             to={"/portfolio/CTC 2024-25 Outreach Portfolio.pdf"}
           >
-            <Button variant={"ctc.secondary"}>View our Portfolio</Button>
+            <Button
+              variant={"ctc.secondary"}
+              sx={buttonStyle}
+            >
+              View our Portfolio
+            </Button>
           </ChakraLink>
-        </HStack>
+        </Stack>
       </Stack>
 
       <Image

@@ -5,6 +5,7 @@ import { Box, Link as ChakraLink, HStack, Icon, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
+import { HEADER_HEIGHT } from "../../styles/shared";
 import { ApplyButton } from "../shared/ApplyButton";
 import type { NavLink } from "./Header";
 
@@ -38,7 +39,7 @@ export function MobileNav({ links, isOpen, onToggle }: MobileNavProps) {
         transition={{ duration: isOpen ? 0.5 : 0.75 }}
         sx={{
           position: "fixed",
-          top: 70,
+          top: HEADER_HEIGHT,
           display: { base: "flex", md: "none" },
           flexDirection: "column",
           width: "100%",
@@ -64,7 +65,7 @@ export function MobileNav({ links, isOpen, onToggle }: MobileNavProps) {
             </HStack>
           </ChakraLink>
         ))}
-        <ApplyButton width={{ base: "75%", md: "unset" }} />
+        <ApplyButton />
       </HStack>
 
       {/* This is bad code! */}

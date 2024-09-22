@@ -7,6 +7,8 @@ import {
 
 import { Link } from "react-router-dom";
 
+import { buttonStyle } from "../../styles/shared";
+
 interface LearnMoreButtonProps extends ButtonProps {
   variant?: "ctc" | "ctc.secondary";
 }
@@ -21,11 +23,7 @@ export function LearnMoreButton({
     >
       <Button
         variant={variant}
-        sx={{
-          paddingX: 8,
-          paddingY: 2.5,
-          width: "fit-content",
-        }}
+        sx={buttonStyle}
       >
         <Text sx={{ fontWeight: 600, fontSize: "xl" }}>Learn More</Text>
       </Button>

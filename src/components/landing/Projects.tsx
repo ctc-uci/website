@@ -8,7 +8,7 @@ import {
 
 import { Link } from "react-router-dom";
 
-import { headingStyle } from "../../styles/shared";
+import { buttonStyle, headingStyle } from "../../styles/shared";
 import { PROJECT_DATA } from "../projects/projects-data";
 import { ProjectsRow } from "../projects/ProjectsRow";
 import { IconCarousel } from "./projects/IconCarousel";
@@ -29,7 +29,7 @@ export function Projects() {
         >
           <Button
             variant={"ctc"}
-            sx={{ paddingX: 8, paddingY: 2.5, width: "fit-content" }}
+            sx={buttonStyle}
           >
             <Text sx={{ fontSize: "lg" }}>View all Projects</Text>
           </Button>

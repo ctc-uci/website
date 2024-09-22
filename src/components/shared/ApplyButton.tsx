@@ -7,6 +7,8 @@ import {
 
 import { Link } from "react-router-dom";
 
+import { buttonStyle } from "../../styles/shared";
+
 export function ApplyButton(props: ButtonProps) {
   return (
     <ChakraLink
@@ -15,9 +17,7 @@ export function ApplyButton(props: ButtonProps) {
     >
       <Button
         sx={{
-          paddingX: 8,
-          paddingY: 2.5,
-          minWidth: "100%",
+          ...buttonStyle,
           ...props,
         }}
         variant={"ctc"}

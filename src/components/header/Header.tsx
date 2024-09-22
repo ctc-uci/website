@@ -18,7 +18,7 @@ import {
 
 import { Link } from "react-router-dom";
 
-import { imageStyle, MAX_WIDTH } from "../../styles/shared";
+import { HEADER_HEIGHT, imageStyle, MAX_WIDTH } from "../../styles/shared";
 import { DesktopNav } from "./DesktopNav";
 import { MobileNav } from "./MobileNav";
 
@@ -58,7 +58,7 @@ export const Header = () => {
         boxShadow: "md",
         position: "sticky",
         top: 0,
-        height: 70,
+        height: HEADER_HEIGHT,
         zIndex: "docked",
       }}
     >
@@ -75,7 +75,7 @@ export const Header = () => {
           sx={{
             justifyContent: "space-between",
             flex: 1,
-            minHeight: 70,
+            minHeight: HEADER_HEIGHT,
             paddingX: { base: "20px", lg: "100px" },
           }}
         >

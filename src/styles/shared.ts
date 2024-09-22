@@ -20,4 +20,14 @@ export const imageStyle = {
   pointerEvents: "none",
 } satisfies SystemStyleObject;
 
+export const buttonStyle = {
+  paddingX: 8,
+  paddingY: 2.5,
+  fontSize: "lg",
+  width: "fit-content",
+} satisfies SystemStyleObject;
+
+export const HEADER_HEIGHT = 70;
+
 export const MAX_WIDTH = 1500;
+export const MIN_HEIGHT = `calc(100dvh - ${HEADER_HEIGHT}px)`;

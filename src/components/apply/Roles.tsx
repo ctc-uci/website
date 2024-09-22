@@ -11,7 +11,7 @@ import {
 import { BsCodeSlash, BsPen } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
-import { headingStyle } from "../../styles/shared";
+import { buttonStyle, headingStyle } from "../../styles/shared";
 import { MenuBar } from "./MenuBar";
 import designer from "/public/designer.svg";
 import developer from "/public/developer.svg";
@@ -106,7 +106,12 @@ function RoleCard({
           <Button
             variant={"ctc"}
             leftIcon={buttonIcon}
-            sx={{ width: "fit-content", marginLeft: "auto", marginTop: "auto" }}
+            sx={{
+              ...buttonStyle,
+              width: "fit-content",
+              marginLeft: "auto",
+              marginTop: "auto",
+            }}
           >
             Apply as {role}
           </Button>

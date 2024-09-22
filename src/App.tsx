@@ -11,7 +11,7 @@ import { LandingPage } from "./components/landing/LandingPage";
 import { ProjectsPage } from "./components/projects/ProjectsPage";
 import { ScrollToTop } from "./components/ScrollToTop";
 import { WorkWithUsPage } from "./components/work-with-us/WorkWithUsPage";
-import { MAX_WIDTH } from "./styles/shared";
+import { MAX_WIDTH, MIN_HEIGHT } from "./styles/shared";
 
 export const App = () => {
   return (
@@ -23,6 +23,7 @@ export const App = () => {
         sx={{
           maxWidth: MAX_WIDTH,
           width: "100%",
+          minHeight: MIN_HEIGHT,
           marginX: "auto",
         }}
       >
