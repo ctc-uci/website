@@ -9,7 +9,7 @@ import apply from "/public/apply.svg";
 
 export function Apply() {
   return (
-    <VStack>
+    <VStack sx={{ position: "relative" }}>
       <Stack
         sx={{
           textAlign: "center",
@@ -52,11 +52,30 @@ export function Apply() {
           alt={"members of CTC smiling for a group photo"}
           sx={{
             ...imageStyle,
-            paddingLeft: "4%", // ! this is bad code
-            objectFit: "contain",
+            paddingLeft: { base: "unset", sm: "4%" }, // ! this is bad code
+            minHeight: 300,
+            objectFit: "cover",
           }}
         />
       </Box>
+
+      <Box
+        sx={{
+          width: 1942,
+          height: 471,
+          maxWidth: "100%",
+          maxHeight: "20%",
+
+          flexShrink: 0,
+          borderRadius: 1942,
+          background: "rgba(210, 194, 249, 0.60)",
+          filter: "blur(200px)",
+
+          position: "absolute",
+          bottom: 0,
+          zIndex: -10,
+        }}
+      />
     </VStack>
   );
 }

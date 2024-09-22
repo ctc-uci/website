@@ -11,6 +11,7 @@ export function About() {
         flexDirection: { base: "column", mdlg: "row" },
         justifyContent: "center",
         alignItems: "center",
+        position: "relative",
       }}
       spacing={{ base: 10, mdlg: 20 }}
     >
@@ -49,6 +50,44 @@ export function About() {
           }}
         />
       </Box>
+
+      <Box
+        sx={{
+          width: 867,
+          height: 785,
+          maxWidth: "100%",
+          maxHeight: "20%",
+
+          flexShrink: 0,
+          borderRadius: 867,
+          background: "rgba(190, 169, 239, 0.40)",
+          filter: "blur(250px)",
+
+          position: "absolute",
+          top: 0,
+          left: 0,
+          zIndex: -10,
+        }}
+      />
+
+      <Box
+        sx={{
+          width: 867,
+          height: 785,
+          maxWidth: "100%",
+          maxHeight: "20%",
+
+          flexShrink: 0,
+          borderRadius: 867,
+          background: "rgba(190, 169, 239, 0.40)",
+          filter: "blur(200px)",
+
+          position: "absolute",
+          bottom: 0,
+          right: 0,
+          zIndex: -10,
+        }}
+      />
     </Stack>
   );
 }

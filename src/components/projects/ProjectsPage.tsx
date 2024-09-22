@@ -1,4 +1,4 @@
-import { Heading, Stack, Text } from "@chakra-ui/react";
+import { Box, Heading, Stack, Text } from "@chakra-ui/react";
 
 import { headingStyle, pageStyle } from "../../styles/shared";
 import { PREVIOUS_DATA, PROJECT_DATA } from "./projects-data";
@@ -7,7 +7,7 @@ import { ProjectsRow } from "./ProjectsRow";
 export function ProjectsPage() {
   return (
     <Stack
-      sx={{ ...pageStyle, paddingY: 20 }}
+      sx={{ ...pageStyle, paddingY: 20, position: "relative" }}
       spacing={{ base: 2.5, md: 5 }}
     >
       <Heading sx={headingStyle}>Projects</Heading>
@@ -30,6 +30,44 @@ export function ProjectsPage() {
           <ProjectsRow data={PREVIOUS_DATA} />
         </Stack>
       </Stack>
+
+      <Box
+        sx={{
+          width: 867,
+          height: 785,
+          maxWidth: "100%",
+          maxHeight: "20%",
+
+          flexShrink: 0,
+          borderRadius: 867,
+          background: "rgba(190, 169, 239, 0.40)",
+          filter: "blur(250px)",
+
+          position: "absolute",
+          top: -350,
+          left: 0,
+          zIndex: -10,
+        }}
+      />
+
+      <Box
+        sx={{
+          width: 665,
+          height: 602,
+          maxWidth: "100%",
+          maxHeight: "20%",
+
+          flexShrink: 0,
+          borderRadius: 665,
+          background: "rgba(190, 169, 239, 0.40)",
+          filter: "blur(250px)",
+
+          position: "absolute",
+          bottom: 0,
+          right: 0,
+          zIndex: -10,
+        }}
+      />
     </Stack>
   );
 }
