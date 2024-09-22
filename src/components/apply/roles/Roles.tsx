@@ -24,7 +24,7 @@ export function Roles() {
             description={`Designers will work in a cross functional team, using Figma and the design process (research, wireframing, prototyping, usability testing) to create innovative designs for non-profit organizations.`}
             image={designer}
             buttonIcon={<BsPen />}
-            href={"/"}
+            href={"https://forms.gle/dFm8GBjP1dAg5oKLA"}
           />
         </MenuBar>
 
@@ -34,7 +34,7 @@ export function Roles() {
             description={`Developers will utilize frontend technologies (React, Javascript/Typescript, HTML, and CSS/SASS) and backend technologies (APIs, databases, & middleware) to implement real-life applications.`}
             image={developer}
             buttonIcon={<BsCodeSlash />}
-            href={"/"}
+            href={"https://forms.gle/mHDaB7YXsZ5FXusw6"}
           />
         </MenuBar>
       </SimpleGrid>

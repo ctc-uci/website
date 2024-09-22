@@ -65,12 +65,13 @@ export function RoleCard({
 
       <ChakraLink
         as={Link}
-        href={href}
+        to={href}
         sx={{
           width: { base: "100%", md: "fit-content" },
           marginLeft: "auto",
           marginTop: "auto",
         }}
+        target="_blank"
       >
         <Button
           variant={"ctc"}
