@@ -3,7 +3,7 @@ import { Stack } from "@chakra-ui/react";
 import { pageStyle } from "../../styles/shared";
 import { Apply } from "./Apply";
 import { Questions } from "./questions/Questions";
-import { Roles } from "./Roles";
+import { Roles } from "./roles/Roles";
 import { Timeline } from "./timeline/Timeline";
 
 export function ApplyPage() {
