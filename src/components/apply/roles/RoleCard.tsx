@@ -66,12 +66,20 @@ export function RoleCard({
       <ChakraLink
         as={Link}
         href={href}
-        sx={{ width: "fit-content", marginLeft: "auto", marginTop: "auto" }}
+        sx={{
+          width: { base: "100%", md: "fit-content" },
+          marginLeft: "auto",
+          marginTop: "auto",
+        }}
       >
         <Button
           variant={"ctc"}
           leftIcon={buttonIcon}
-          sx={buttonStyle}
+          sx={{
+            ...buttonStyle,
+            paddingX: { base: "unset", md: 8 },
+            width: "100%",
+          }}
         >
           Apply as {role}
         </Button>

@@ -3,7 +3,7 @@ import { Circle, Stack } from "@chakra-ui/react";
 export function MenuBar({ children }: { children: React.ReactNode }) {
   return (
     <Stack
-      sx={{ justifyContent: "column", width: "fit-content" }}
+      sx={{ justifyContent: "column", width: "fit-content", maxWidth: "100%" }}
       spacing={0}
     >
       <Stack
