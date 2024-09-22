@@ -52,7 +52,7 @@ export function Apply() {
           alt={"members of CTC smiling for a group photo"}
           sx={{
             ...imageStyle,
-            paddingLeft: { base: "unset", sm: "4%" }, // ! this is bad code
+            paddingLeft: { base: "unset", xs: "4%" }, // ! this is bad code
             minHeight: 300,
             objectFit: "cover",
           }}
