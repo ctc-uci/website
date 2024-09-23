@@ -1,5 +1,6 @@
 // import { ChevronDownIcon } from "@chakra-ui/icons";
 import {
+  Box,
   Heading,
   HStack,
   // Icon,
@@ -80,6 +81,24 @@ export const Hero = () => {
           }}
         />
       </HStack>
+
+      <Box
+        sx={{
+          width: 1942,
+          height: 471,
+          maxWidth: "100%",
+          maxHeight: "20%",
+
+          flexShrink: 0,
+          borderRadius: 1942,
+          background: "rgba(210, 194, 249, 0.60)",
+          filter: "blur(200px)",
+
+          position: "absolute",
+          bottom: 0,
+          zIndex: -10,
+        }}
+      />
 
       {/* <VStack
         sx={{
