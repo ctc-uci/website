@@ -65,7 +65,8 @@ export function MobileNav({ links, isOpen, onToggle }: MobileNavProps) {
             </HStack>
           </ChakraLink>
         ))}
-        <ApplyButton />
+
+        <ApplyButton onToggle={onToggle} />
       </HStack>
 
       {/* This is bad code! */}

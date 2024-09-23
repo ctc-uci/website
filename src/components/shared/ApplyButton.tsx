@@ -9,16 +9,21 @@ import { Link } from "react-router-dom";
 
 import { buttonStyle } from "../../styles/shared";
 
-export function ApplyButton(props: ButtonProps) {
+interface ApplyButtonProps extends ButtonProps {
+  onToggle?: VoidFunction;
+}
+
+export function ApplyButton({ onToggle, ...rest }: ApplyButtonProps) {
   return (
     <ChakraLink
       as={Link}
       to="/apply"
+      onClick={onToggle}
     >
       <Button
         sx={{
           ...buttonStyle,
-          ...props,
+          ...rest,
         }}
         variant={"ctc"}
       >
