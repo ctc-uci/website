@@ -24,7 +24,7 @@ export function Projects() {
 
       <Box
         sx={{
-          // display: { base: "none", md: "flex" },
+          display: { base: "none", md: "flex" },
           maxWidth: "100%",
           overflow: "hidden",
         }}
