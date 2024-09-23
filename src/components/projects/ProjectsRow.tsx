@@ -30,7 +30,7 @@ export function ProjectsRow({ data }: ProjectsRowProps) {
             sx={{
               borderRadius: "lg",
               padding: 10,
-              width: 400,
+              width: { base: 350, md: 400 },
               borderWidth: 0.5,
               borderColor: "ctc.lilac",
               backgroundColor: "ctc.offWhite",
