@@ -1,6 +1,6 @@
 // https://levelup.gitconnected.com/implementing-an-infinite-autoplay-carousel-in-react-with-splide-cac6355ba435
 
-import { Center, Divider, HStack, Image, Tooltip } from "@chakra-ui/react";
+import { Circle, HStack, Image, Tooltip } from "@chakra-ui/react";
 
 // @ts-expect-error trust me bro
 import { Splide, SplideSlide } from "@splidejs/react-splide";
@@ -48,16 +48,9 @@ export function IconCarousel() {
               />
             </Tooltip>
 
-            <Center sx={{ height: 4 }}>
-              <Divider
-                orientation="vertical"
-                sx={{
-                  width: 1,
-                  backgroundColor: "#5457AF",
-                  borderRadius: "lg",
-                }}
-              />
-            </Center>
+            <Circle
+              sx={{ height: 1.5, width: 1.5, backgroundColor: "#5457AF" }}
+            />
           </HStack>
         </SplideSlide>
       ))}
