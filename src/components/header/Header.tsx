@@ -51,6 +51,12 @@ const LINKS: NavLink[] = [
 export const Header = () => {
   const { isOpen, onToggle } = useDisclosure();
 
+  const handleClickLink = () => {
+    if (isOpen) {
+      onToggle();
+    }
+  };
+
   return (
     <Center
       sx={{
@@ -82,6 +88,7 @@ export const Header = () => {
           <ChakraLink
             as={Link}
             to={"/"}
+            onClick={handleClickLink}
           >
             <Image
               src="./ctc.svg"
@@ -121,7 +128,7 @@ export const Header = () => {
           <MobileNav
             links={LINKS}
             isOpen={isOpen}
-            onToggle={onToggle}
+            handleClickLink={handleClickLink}
           />
         </Collapse>
       </Flex>

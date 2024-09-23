@@ -10,15 +10,15 @@ import { Link } from "react-router-dom";
 import { buttonStyle } from "../../styles/shared";
 
 interface ApplyButtonProps extends ButtonProps {
-  onToggle?: VoidFunction;
+  handleClickLink?: VoidFunction;
 }
 
-export function ApplyButton({ onToggle, ...rest }: ApplyButtonProps) {
+export function ApplyButton({ handleClickLink, ...rest }: ApplyButtonProps) {
   return (
     <ChakraLink
       as={Link}
       to="/apply"
-      onClick={onToggle}
+      onClick={handleClickLink}
     >
       <Button
         sx={{

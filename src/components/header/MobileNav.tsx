@@ -12,10 +12,10 @@ import type { NavLink } from "./Header";
 interface MobileNavProps {
   links: NavLink[];
   isOpen: boolean;
-  onToggle: VoidFunction;
+  handleClickLink: VoidFunction;
 }
 
-export function MobileNav({ links, isOpen, onToggle }: MobileNavProps) {
+export function MobileNav({ links, isOpen, handleClickLink }: MobileNavProps) {
   // prevent scroll when open
   useEffect(() => {
     if (isOpen) {
@@ -57,7 +57,7 @@ export function MobileNav({ links, isOpen, onToggle }: MobileNavProps) {
             key={link.label}
             to={link.href}
             sx={{ fontSize: "xl" }}
-            onClick={onToggle}
+            onClick={handleClickLink}
           >
             <HStack>
               <Text>{link.label}</Text>
@@ -66,7 +66,7 @@ export function MobileNav({ links, isOpen, onToggle }: MobileNavProps) {
           </ChakraLink>
         ))}
 
-        <ApplyButton onToggle={onToggle} />
+        <ApplyButton handleClickLink={handleClickLink} />
       </HStack>
 
       {/* This is bad code! */}
@@ -79,7 +79,7 @@ export function MobileNav({ links, isOpen, onToggle }: MobileNavProps) {
           bg: "blackAlpha.400",
           display: { base: "flex", md: "none" },
         }}
-        onClick={onToggle}
+        onClick={handleClickLink}
       />
     </>
   );
