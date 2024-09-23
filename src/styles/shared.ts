@@ -30,4 +30,4 @@ export const buttonStyle = {
 export const HEADER_HEIGHT = 70;
 
 export const MAX_WIDTH = 1500;
-export const MIN_HEIGHT = `calc(100dvh - ${HEADER_HEIGHT}px)`;
+export const MIN_HEIGHT = `calc(100vh - ${HEADER_HEIGHT}px)`;

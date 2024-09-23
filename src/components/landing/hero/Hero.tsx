@@ -12,7 +12,7 @@ import {
 
 // import { motion } from "framer-motion";
 
-import { HEADER_HEIGHT, imageStyle, MIN_HEIGHT } from "../../../styles/shared";
+import { imageStyle, MIN_HEIGHT } from "../../../styles/shared";
 import { ApplyButton } from "../../shared/ApplyButton";
 import { LearnMoreButton } from "../../shared/LearnMoreButton";
 import hero from "/public/hero.webp";
@@ -32,7 +32,6 @@ export const Hero = () => {
         sx={{
           flexDirection: { base: "column-reverse", lg: "row" },
           justifyContent: { base: "center", lg: "space-between" },
-          marginTop: { base: HEADER_HEIGHT, lg: "unset" },
         }}
       >
         <Stack
