@@ -38,7 +38,7 @@ export const Hero = () => {
           sx={{
             maxWidth: { base: "unset", lg: "50%" },
             paddingY: 0,
-            textAlign: { base: "unset", md: "center", lg: "unset" },
+            textAlign: { base: "unset", sm: "center", lg: "unset" },
           }}
         >
           <Heading
@@ -57,7 +57,7 @@ export const Hero = () => {
           <HStack
             spacing={{ base: 2.5, lg: 5 }}
             marginTop={{ base: 8, lg: "unset" }}
-            marginX={{ base: "unset", md: "auto", lg: "unset" }}
+            marginX={{ base: "unset", sm: "auto", lg: "unset" }}
           >
             <ApplyButton />
             <LearnMoreButton />
@@ -71,7 +71,7 @@ export const Hero = () => {
             ...imageStyle,
             maxWidth: {
               base: "100%",
-              xs: "65%",
+              xs: "90%",
               xssm: "70%",
               sm: "60%",
               lg: "42.5%",
