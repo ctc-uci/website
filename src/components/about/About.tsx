@@ -43,7 +43,7 @@ export function About() {
             ...imageStyle,
             minWidth: "100%",
             width: "100%",
-            height: { base: 300, mdlg: 400 },
+            height: { base: 200, xs: 250, sm: 300, mdlg: 350 },
             objectFit: "cover",
             objectPosition: "bottom",
             borderRadius: "lg",
