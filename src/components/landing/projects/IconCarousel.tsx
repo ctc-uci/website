@@ -1,6 +1,6 @@
 // https://levelup.gitconnected.com/implementing-an-infinite-autoplay-carousel-in-react-with-splide-cac6355ba435
 
-import { Circle, HStack, Image, Tooltip } from "@chakra-ui/react";
+import { Box, Circle, HStack, Image, Tooltip } from "@chakra-ui/react";
 
 // @ts-expect-error trust me bro
 import { Splide, SplideSlide } from "@splidejs/react-splide";
@@ -36,18 +36,23 @@ export function IconCarousel() {
         <SplideSlide key={project.name + project.startYear + project.endYear}>
           <HStack spacing={0}>
             <Tooltip label={project.name}>
-              <Image
-                src={`/projects/${project.image}`}
-                alt={`image of ${project.name}`}
+              <Box
                 sx={{
                   height: 100,
                   maxHeight: 100,
-                  width: "100%",
-                  maxWidth: "100%",
-                  objectFit: "contain",
-                  paddingX: { base: 5, md: 20 },
+                  width: "fit-content",
+                  maxWidth: "fit-content",
                 }}
-              />
+              >
+                <Image
+                  src={`/projects/${project.image}`}
+                  alt={`image of ${project.name}`}
+                  sx={{
+                    objectFit: "contain",
+                    paddingX: { base: 5, md: 20 },
+                  }}
+                />
+              </Box>
             </Tooltip>
 
             <Circle
