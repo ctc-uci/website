@@ -66,7 +66,15 @@ export function MobileNav({ links, isOpen, handleClickLink }: MobileNavProps) {
           </ChakraLink>
         ))}
 
-        <ApplyButton handleClickLink={handleClickLink} />
+        <ApplyButton
+          handleClickLink={handleClickLink}
+          linkProps={{
+            width: "100%",
+            display: "flex",
+            justifyContent: "center",
+          }}
+          buttonSx={{ width: "100%", maxWidth: 500 }}
+        />
       </HStack>
 
       {/* This is bad code! */}
