@@ -5,7 +5,7 @@ import {
   imageStyle,
   negativeMarginStyle,
 } from "../../styles/shared";
-import apply from "/public/apply.svg";
+import apply from "/public/apply-hero.png";
 
 export function Apply() {
   return (
