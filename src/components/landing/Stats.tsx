@@ -12,8 +12,8 @@ const STATS = [
     text: "Cumulative hours volunteered",
   },
   {
-    stat: "4000+",
-    text: "Hours on League of Legends",
+    stat: "70+",
+    text: "Designers and developers",
   },
 ];
 
