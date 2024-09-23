@@ -15,7 +15,10 @@ import { IconCarousel } from "./projects/IconCarousel";
 
 export function Projects() {
   return (
-    <Stack spacing={10}>
+    <Stack
+      spacing={10}
+      sx={{ paddingY: 10 }}
+    >
       <Heading sx={headingStyle}>Our Projects</Heading>
 
       <IconCarousel />
