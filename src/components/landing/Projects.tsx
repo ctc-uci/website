@@ -1,4 +1,5 @@
 import {
+  Box,
   Button,
   Link as ChakraLink,
   Heading,
@@ -21,7 +22,15 @@ export function Projects() {
     >
       <Heading sx={headingStyle}>Our Projects</Heading>
 
-      <IconCarousel />
+      <Box
+        sx={{
+          // display: { base: "none", md: "flex" },
+          maxWidth: "100%",
+          overflow: "hidden",
+        }}
+      >
+        <IconCarousel />
+      </Box>
 
       <Stack spacing={5}>
         <ProjectsRow data={PROJECT_DATA} />
