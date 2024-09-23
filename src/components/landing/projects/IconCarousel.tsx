@@ -11,6 +11,7 @@ import "@splidejs/react-splide/css";
 import { PREVIOUS_DATA, PROJECT_DATA } from "../../projects/projects-data";
 
 const SPLIDE_OPTIONS = {
+  perPage: 1,
   type: "loop",
   rewind: true,
   pagination: false,
