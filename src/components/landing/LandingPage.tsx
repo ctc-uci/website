@@ -13,7 +13,7 @@ export function LandingPage() {
       sx={pageStyle}
       spacing={16}
     >
-      {/* <Hero /> */}
+      <Hero />
       <Stats />
       <WhoAreWe />
       <Projects />

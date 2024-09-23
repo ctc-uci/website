@@ -21,7 +21,7 @@ export function Stats() {
   return (
     <Stack
       spacing={10}
-      sx={{ paddingY: 16 }}
+      sx={{ paddingBottom: 16 }}
     >
       <Heading sx={headingStyle}>By the Numbers</Heading>
       <Wrap

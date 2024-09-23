@@ -1,17 +1,17 @@
-import { ChevronDownIcon } from "@chakra-ui/icons";
+// import { ChevronDownIcon } from "@chakra-ui/icons";
 import {
   Heading,
   HStack,
-  Icon,
+  // Icon,
   Image,
   Stack,
   Text,
-  VStack,
+  // VStack,
 } from "@chakra-ui/react";
 
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 
-import { imageStyle } from "../../../styles/shared";
+import { imageStyle, MIN_HEIGHT } from "../../../styles/shared";
 import { ApplyButton } from "../../shared/ApplyButton";
 import { LearnMoreButton } from "../../shared/LearnMoreButton";
 import hero from "/public/hero.png";
@@ -19,46 +19,69 @@ import hero from "/public/hero.png";
 export const Hero = () => {
   return (
     <HStack
-      spacing={20}
+      spacing={10}
       sx={{
-        justifyContent: "space-between",
-        height: 750,
+        justifyContent: "center",
+        height: MIN_HEIGHT,
         position: "relative",
       }}
     >
-      <Stack
-        spacing={5}
-        sx={{ maxWidth: "50%", paddingY: 0 }}
+      <HStack
+        spacing={0}
+        sx={{
+          flexDirection: { base: "column-reverse", lg: "row" },
+          justifyContent: { base: "center", lg: "space-between" },
+        }}
       >
-        <Heading
+        <Stack
+          spacing={{ base: 3, lg: 5 }}
           sx={{
-            color: "ctc.purple",
-            fontSize: { base: "4xl", lg: "7xl", xl: "8xl" },
-            lineHeight: "normal",
+            maxWidth: { base: "unset", lg: "50%" },
+            paddingY: 0,
+            textAlign: { base: "unset", md: "center", lg: "unset" },
           }}
         >
-          Commit the Change
-        </Heading>
-        <Text sx={{ fontSize: "4xl" }}>Creating tech for social good.</Text>
+          <Heading
+            sx={{
+              color: "ctc.purple",
+              fontSize: { base: "55px", lg: "7xl", xl: "8xl" },
+              lineHeight: "normal",
+            }}
+          >
+            Commit the Change
+          </Heading>
+          <Text sx={{ fontSize: { base: "22px", lg: "3xl", xl: "4xl" } }}>
+            Creating tech for social good.
+          </Text>
 
-        <HStack spacing={5}>
-          <ApplyButton />
-          <LearnMoreButton />
-        </HStack>
-      </Stack>
+          <HStack
+            spacing={{ base: 2.5, lg: 5 }}
+            marginTop={{ base: 8, lg: "unset" }}
+            marginX={{ base: "unset", md: "auto", lg: "unset" }}
+          >
+            <ApplyButton />
+            <LearnMoreButton />
+          </HStack>
+        </Stack>
 
-      <Image
-        src={hero}
-        alt="Hero Image"
-        sx={{
-          ...imageStyle,
-          maxWidth: "45%",
-          height: "80%",
-          objectFit: "contain",
-        }}
-      />
+        <Image
+          src={hero}
+          alt="Hero Image"
+          sx={{
+            ...imageStyle,
+            maxWidth: {
+              base: "100%",
+              xs: "65%",
+              xssm: "70%",
+              sm: "60%",
+              lg: "42.5%",
+            },
+            objectFit: "contain",
+          }}
+        />
+      </HStack>
 
-      <VStack
+      {/* <VStack
         sx={{
           position: "absolute",
           bottom: 10,
@@ -80,7 +103,7 @@ export const Hero = () => {
         >
           <Icon as={ChevronDownIcon} />
         </motion.div>
-      </VStack>
+      </VStack> */}
     </HStack>
   );
 };
