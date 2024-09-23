@@ -15,7 +15,7 @@ import {
 import { imageStyle, MIN_HEIGHT } from "../../../styles/shared";
 import { ApplyButton } from "../../shared/ApplyButton";
 import { LearnMoreButton } from "../../shared/LearnMoreButton";
-import hero from "/public/hero.png";
+import hero from "/public/hero.webp";
 
 export const Hero = () => {
   return (
