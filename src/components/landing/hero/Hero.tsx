@@ -32,6 +32,7 @@ export const Hero = () => {
         sx={{
           flexDirection: { base: "column-reverse", lg: "row" },
           justifyContent: { base: "center", lg: "space-between" },
+          minWidth: { base: "unset", lg: "100%" },
         }}
       >
         <Stack
