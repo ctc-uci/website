@@ -20,7 +20,7 @@ export const QUESTIONS: Question[] = [
   {
     question:
       "How much time will I need to commit to Commit the Change per week?",
-    answer: `You should be prepared to commit 8-10 hours a week for the entire school year (October 2023 - June 2024), excluding school breaks and certain periods such as finals week.`,
+    answer: `You should be prepared to commit 8-10 hours a week for the entire school year (October 2024 - June 2025), excluding school breaks and certain periods such as finals week.`,
   },
   {
     question: "What is a Coffee Chat?",

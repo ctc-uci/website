@@ -22,7 +22,7 @@ export const TIMELINE_EVENTS: TimelineEvent[] = [
     date: "Sep 26th 6 PM - 9 PM",
     event: "Meet the Club @ Engineering Plaza",
     description:
-      "Learn about CTC and what projects we will be working on in the upcoming year, as well as socialize with and ask questions to board members",
+      "Learn about CTC and what projects we will be working on in the upcoming year, as well as socialize with and ask questions to board members.",
   },
   {
     date: "Oct 4th 6:30 PM - 8:30 PM",
