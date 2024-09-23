@@ -49,7 +49,12 @@ export function IconCarousel() {
             </Tooltip>
 
             <Circle
-              sx={{ height: 1.5, width: 1.5, backgroundColor: "#5457AF" }}
+              sx={{
+                height: 1.5,
+                width: 1.5,
+                backgroundColor: "#5457AF",
+                paddingX: 0,
+              }}
             />
           </HStack>
         </SplideSlide>
