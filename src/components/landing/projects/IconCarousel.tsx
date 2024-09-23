@@ -41,12 +41,11 @@ export function IconCarousel() {
                 sx={{
                   height: 100,
                   maxHeight: 100,
-                  width: "fit-content",
-                  maxWidth: "fit-content",
+                  width: "100%",
+                  maxWidth: "100%",
                   objectFit: "contain",
                   paddingX: { base: 5, md: 20 },
                 }}
-                width={"fit-content"}
               />
             </Tooltip>
 
