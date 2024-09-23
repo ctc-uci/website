@@ -46,6 +46,7 @@ export function IconCarousel() {
                   objectFit: "contain",
                   paddingX: { base: 5, md: 20 },
                 }}
+                width={"fit-content"}
               />
             </Tooltip>
 
