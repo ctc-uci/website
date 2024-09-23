@@ -42,6 +42,7 @@ export function IconCarousel() {
                   height: 100,
                   maxHeight: 100,
                   width: "fit-content",
+                  maxWidth: "fit-content",
                   objectFit: "contain",
                   paddingX: { base: 5, md: 20 },
                 }}
