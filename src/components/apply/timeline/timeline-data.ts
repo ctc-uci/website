@@ -50,9 +50,9 @@ export const TIMELINE_EVENTS: TimelineEvent[] = [
   },
   {
     majorEvent: true,
-    date: "Oct 21st",
+    date: "Late October",
     event: "Final Decisions",
     description:
-      "You will receive an email with final acceptance decisions on Oct 21st. Regardless of final decisions, we want to thank you for your time and dedication!",
+      "You will receive an email with final acceptance decisions in late October. Regardless of final decisions, we want to thank you for your time and dedication!",
   },
 ];
