@@ -12,7 +12,6 @@ export function ProjectsRow({ data }: ProjectsRowProps) {
     <Box
       sx={{
         overflowX: "scroll",
-        scrollbarColor: "transparent transparent",
       }}
     >
       <HStack
