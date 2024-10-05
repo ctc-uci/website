@@ -1,8 +1,8 @@
-import { Box, Heading, Stack, Text } from "@chakra-ui/react";
+import { Box, Heading, Stack, Text, Wrap } from "@chakra-ui/react";
 
 import { headingStyle, pageStyle } from "../../styles/shared";
+import { ProjectCard } from "./ProjectCard";
 import { PREVIOUS_DATA, PROJECT_DATA } from "./projects-data";
-import { ProjectsRow } from "./ProjectsRow";
 
 export function ProjectsPage() {
   return (
@@ -21,13 +21,33 @@ export function ProjectsPage() {
             </Text>
           </Stack>
 
-          <ProjectsRow data={PROJECT_DATA} />
+          <Wrap
+            spacing={5}
+            justify={"center"}
+          >
+            {PROJECT_DATA.map((project) => (
+              <ProjectCard
+                project={project}
+                key={project.name + project.startYear + project.endYear}
+              />
+            ))}
+          </Wrap>
         </Stack>
 
         <Stack spacing={5}>
           <Text sx={{ fontSize: "xl" }}>Previous Projects</Text>
 
-          <ProjectsRow data={PREVIOUS_DATA} />
+          <Wrap
+            spacing={5}
+            justify={"center"}
+          >
+            {PREVIOUS_DATA.map((project) => (
+              <ProjectCard
+                project={project}
+                key={project.name + project.startYear + project.endYear}
+              />
+            ))}
+          </Wrap>
         </Stack>
       </Stack>
 
