@@ -68,6 +68,8 @@ export function ProfileCard({ profile }: ProfileCardProps) {
             as={Link}
             to={profile.linkedin}
             sx={{ height: 5 }}
+            target="_blank"
+            referrerPolicy="no-referrer"
           >
             <Icon
               as={FaLinkedin}
