@@ -49,14 +49,8 @@ export const BOARD_DATA: Profile[] = [
     image: "/people/kaitlyn-tran.jpg",
   },
   {
-    name: "Philip Jian",
-    role: "Treasurer",
-    linkedin: "https://www.linkedin.com/in/philip-jian",
-    image: "/people/philip-jian.jpg",
-  },
-  {
     name: "Priska Kunaidy",
-    role: "Recruitment Director",
+    role: "Treasurer",
     linkedin: "https://www.linkedin.com/in/priskakunaidy/",
     image: "/people/priska-kunaidy.jpg",
   },
