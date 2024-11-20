@@ -147,4 +147,10 @@ export const LPA_DATA: Profile[] = [
     linkedin: "https://www.linkedin.com/in/nathanlp/",
     image: "/people/nathan-pietrantonio.jpg",
   },
+  {
+    name: "Yihong Yu",
+    role: "Developer",
+    linkedin: "https://www.linkedin.com/in/yihong-yu-hazel/",
+    image: "/people/yihong-yu.jpg",
+  },
 ];
