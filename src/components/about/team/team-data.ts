@@ -105,6 +105,12 @@ export const CCH_DATA: Profile[] = [
     linkedin: "https://www.linkedin.com/in/sean-kelman-633057211/",
     image: "/people/sean-kelman.jpg",
   },
+  {
+    name: "Lindsay Lim",
+    role: "Developer",
+    linkedin: "https://www.linkedin.com/in/lindsay-lim-4b29332a2/",
+    image: "/people/lindsay-lim.jpg",
+  },
 ];
 
 export const CSE_DATA: Profile[] = [
