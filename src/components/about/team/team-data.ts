@@ -105,6 +105,12 @@ export const CCH_DATA: Profile[] = [
     linkedin: "https://www.linkedin.com/in/sean-kelman-633057211/",
     image: "/people/sean-kelman.jpg",
   },
+  {
+    name: "Arnav Kanekar",
+    role: "Developer",
+    linkedin: "https://www.linkedin.com/in/arnav-kanekar-a108b2279/",
+    image: "/people/arnav-kanekar.jpg",
+  },
 ];
 
 export const CSE_DATA: Profile[] = [
