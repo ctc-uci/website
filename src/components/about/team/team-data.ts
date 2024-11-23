@@ -147,4 +147,10 @@ export const LPA_DATA: Profile[] = [
     linkedin: "https://www.linkedin.com/in/nathanlp/",
     image: "/people/nathan-pietrantonio.jpg",
   },
+  {
+    name: "Margaret Galvez",
+    role: "Developer",
+    linkedin: "https://www.linkedin.com/in/margaretgalvez/",
+    image: "/people/margaret-galvez.jpg",
+  },
 ];
