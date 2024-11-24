@@ -126,6 +126,12 @@ export const CSE_DATA: Profile[] = [
     linkedin: "https://www.linkedin.com/in/stevzhou/",
     image: "/people/steven-zhou.jpg",
   },
+  {
+    name: "Joshua Sullivan",
+    role: "Developer",
+    linkedin: "https://www.linkedin.com/in/joshua-micah-sullivan/",
+    image: "/people/joshua-sullivan.jpg",
+  },
 ];
 
 export const LPA_DATA: Profile[] = [
