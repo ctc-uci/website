@@ -105,6 +105,12 @@ export const CCH_DATA: Profile[] = [
     linkedin: "https://www.linkedin.com/in/sean-kelman-633057211/",
     image: "/people/sean-kelman.jpg",
   },
+  {
+    name: "Isaac Nguyen",
+    role: "Developer",
+    linkedin: "https://www.linkedin.com/in/isaacnguyen33/",
+    image: "/people/isaac-nguyen.jpg",
+  },
 ];
 
 export const CSE_DATA: Profile[] = [
