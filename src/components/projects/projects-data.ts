@@ -8,12 +8,12 @@ export interface Project {
 
 export const PROJECT_DATA: Project[] = [
   {
-    name: "Collete's Childrens Home",
+    name: "Colette's Childrens Home",
     startYear: "2024",
     endYear: "2025",
     description:
       "Colette’s Children’s Home provides emergency housing for homeless women/children and assist in maintaining employment. They aim to provide the resources needed to achieve self-sufficiency.",
-    image: "colletes-childrens-home.png",
+    image: "colettes-childrens-home.png",
   },
   {
     name: "Center Stage",
