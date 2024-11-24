@@ -147,4 +147,10 @@ export const LPA_DATA: Profile[] = [
     linkedin: "https://www.linkedin.com/in/nathanlp/",
     image: "/people/nathan-pietrantonio.jpg",
   },
+  {
+    name: "Daiki Narimoto",
+    role: "Developer",
+    linkedin: "https://www.linkedin.com/in/daiki-narimoto-a51675254/",
+    image: "/people/daiki-narimoto.jpg",
+  },
 ];
