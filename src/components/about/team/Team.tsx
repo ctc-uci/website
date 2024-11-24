@@ -15,7 +15,7 @@ import { ProfileCard } from "./ProfileCard";
 import { ProfileCardGrid } from "./ProfileCardGrid";
 import { BOARD_DATA, CCH_DATA, CSE_DATA, LPA_DATA } from "./team-data";
 
-const TABS = ["Board", "Collete's Childrens Home", "Center Stage", "La Peña"];
+const TABS = ["Board", "Colette's Childrens Home", "Center Stage", "La Peña"];
 
 export function Team() {
   const [activeTab, setActiveTab] = useState(0);
@@ -74,7 +74,7 @@ export function Team() {
             variant={"filled"}
           >
             <option value={0}>Board</option>
-            <option value={1}>Collete's Childrens Home</option>
+            <option value={1}>Colette's Childrens Home</option>
             <option value={2}>Center Stage</option>
             <option value={3}>La Peña</option>
           </Select>
