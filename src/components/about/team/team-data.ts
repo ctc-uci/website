@@ -105,6 +105,12 @@ export const CCH_DATA: Profile[] = [
     linkedin: "https://www.linkedin.com/in/sean-kelman-633057211/",
     image: "/people/sean-kelman.jpg",
   },
+  {
+    name: "Aditya Vemuri",
+    role: "Developer",
+    linkedin: "https://www.linkedin.com/in/aditya-vemuri-571838214/",
+    image: "/people/aditya-vemuri.jpg",
+  },
 ];
 
 export const CSE_DATA: Profile[] = [
