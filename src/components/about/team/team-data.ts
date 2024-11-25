@@ -126,12 +126,6 @@ export const CSE_DATA: Profile[] = [
     linkedin: "https://www.linkedin.com/in/stevzhou/",
     image: "/people/steven-zhou.jpg",
   },
-  {
-    name: "Raymond Yan",
-    role: "Developer",
-    linkedin: "https://www.linkedin.com/in/yan-raymond/",
-    image: "/people/raymond-yan.png",
-  },
 ];
 
 export const LPA_DATA: Profile[] = [
