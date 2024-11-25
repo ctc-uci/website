@@ -126,6 +126,12 @@ export const CSE_DATA: Profile[] = [
     linkedin: "https://www.linkedin.com/in/stevzhou/",
     image: "/people/steven-zhou.jpg",
   },
+  {
+    name: "Adarsh Venkateswaran",
+    role: "Developer",
+    linkedin: "https://www.linkedin.com/in/adarsh-venkateswaran/",
+    image: "/people/adarsh-venkateswaran.jpg",
+  },
 ];
 
 export const LPA_DATA: Profile[] = [
