@@ -105,6 +105,12 @@ export const CCH_DATA: Profile[] = [
     linkedin: "https://www.linkedin.com/in/sean-kelman-633057211/",
     image: "/people/sean-kelman.jpg",
   },
+  {
+    name: "Mehek Bhatnagar",
+    role: "Developer",
+    linkedin: "https://www.linkedin.com/in/mehek-bhatnagar-b81504245/",
+    image: "/people/mehek-bhatnagar.jpg",
+  },
 ];
 
 export const CSE_DATA: Profile[] = [
