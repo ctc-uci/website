@@ -105,6 +105,102 @@ export const CCH_DATA: Profile[] = [
     linkedin: "https://www.linkedin.com/in/sean-kelman-633057211/",
     image: "/people/sean-kelman.jpg",
   },
+  {
+    name: "Aditya Vemuri",
+    role: "Developer",
+    linkedin: "https://www.linkedin.com/in/aditya-vemuri-571838214",
+    image: "/people/aditya-vemuri.jpg",
+  },
+  {
+    name: "Alex Yin",
+    role: "Developer",
+    linkedin: "https://www.linkedin.com/in/alexander-yin",
+    image: "/people/alex-yin.jpg",
+  },
+  {
+    name: "Arnav Kanekar",
+    role: "Developer",
+    linkedin: "https://www.linkedin.com/in/arnav-kanekar-a108b2279/",
+    image: "/people/arnav-kanekar.jpg",
+  },
+  {
+    name: "Colin Kwon",
+    role: "Developer",
+    linkedin: "https://www.linkedin.com/in/colin-kwon-22a190324",
+    image: "/people/colin-kwon.jpg",
+  },
+  {
+    name: "Dommenick Lacuata",
+    role: "Developer",
+    linkedin: "https://www.linkedin.com/in/dommenick-lacuata/",
+    image: "/people/dommenick-lacuata.jpg",
+  },
+  {
+    name: "Isaac Nguyen",
+    role: "Developer",
+    linkedin: "https://www.linkedin.com/in/isaacnguyen33/",
+    image: "/people/isaac-nguyen.jpg",
+  },
+  {
+    name: "Jerry Nguyen",
+    role: "Designer",
+    linkedin: "https://www.linkedin.com/in/duyjerry",
+    image: "/people/jerry-nguyen.jpg",
+  },
+  {
+    name: "Jolene Chou",
+    role: "Designer",
+    linkedin: "https://www.linkedin.com/in/jolene-chou-225127241/",
+    image: "/people/jolene-chou.jpg",
+  },
+  {
+    name: "Leilani Bascos",
+    role: "Designer",
+    linkedin: "https://www.linkedin.com/in/leilani-bascos-026554305/",
+    image: "/people/leilani-bascos.jpg",
+  },
+  {
+    name: "Lindsay Lim",
+    role: "Developer",
+    linkedin: "https://www.linkedin.com/in/lindsay-lim-4b29332a2",
+    image: "/people/lindsay-lim.jpg",
+  },
+  {
+    name: "Maithy Le",
+    role: "Developer",
+    linkedin: "https://www.linkedin.com/in/maithy-le",
+    image: "/people/maithy-le.jpg",
+  },
+  {
+    name: "Matthew Chang",
+    role: "Developer",
+    linkedin: "https://www.linkedin.com/in/matthew-chang-39754a216",
+    image: "/people/matthew-chang.jpg",
+  },
+  {
+    name: "Mehek Bhatnagar",
+    role: "Developer",
+    linkedin: "https://www.linkedin.com/in/mehek-bhatnagar-b81504245/",
+    image: "/people/mehek-bhatnagar.jpg",
+  },
+  {
+    name: "Nathan Che",
+    role: "Developer",
+    linkedin: "https://www.linkedin.com/in/nathan-che1/",
+    image: "/people/nathan-che.jpg",
+  },
+  {
+    name: "Nathan Nguyen",
+    role: "Developer",
+    linkedin: "https://www.linkedin.com/in/nathnguyen7631/",
+    image: "/people/nathan-nguyen.jpg",
+  },
+  {
+    name: "Showmen Talukder",
+    role: "Developer",
+    linkedin: "https://www.linkedin.com/in/showmen-talukder-91b58820b/",
+    image: "/people/showmen-talukder.jpg",
+  },
 ];
 
 export const CSE_DATA: Profile[] = [
