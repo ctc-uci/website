@@ -154,6 +154,12 @@ export const CCH_DATA: Profile[] = [
     image: "/people/jolene-chou.jpg",
   },
   {
+    name: "Kainoa Nishida",
+    role: "Developer",
+    linkedin: "https://www.linkedin.com/in/kainoa-nishida/",
+    image: "/people/kainoa-nishida.jpg",
+  },
+  {
     name: "Leilani Bascos",
     role: "Designer",
     linkedin: "https://www.linkedin.com/in/leilani-bascos-026554305/",
@@ -201,6 +207,12 @@ export const CCH_DATA: Profile[] = [
     linkedin: "https://www.linkedin.com/in/showmen-talukder-91b58820b/",
     image: "/people/showmen-talukder.jpg",
   },
+  {
+    name: "Vy Vu",
+    role: "Designer",
+    linkedin: "https://www.linkedin.com/in/quynhvyvu/",
+    image: "/people/vy-vu.jpg",
+  },
 ];
 
 export const CSE_DATA: Profile[] = [
@@ -222,6 +234,115 @@ export const CSE_DATA: Profile[] = [
     linkedin: "https://www.linkedin.com/in/stevzhou/",
     image: "/people/steven-zhou.jpg",
   },
+
+  {
+    name: "Adarsh Venkateswaran",
+    role: "Developer",
+    linkedin: "https://www.linkedin.com/in/adarsh-venkateswaran",
+    image: "/people/adarsh-venkateswaran.jpg",
+  },
+  {
+    name: "Aditya Agrawal",
+    role: "Developer",
+    linkedin: "https://www.linkedin.com/in/aagrawal05",
+    image: "/people/aditya-agrawal.jpg",
+  },
+  {
+    name: "Alex Espejo",
+    role: "Developer",
+    linkedin: "https://www.linkedin.com/in/alex-espejo-4a604920a/",
+    image: "/people/alex-espejo.jpg",
+  },
+  {
+    name: "Alyssia Tan",
+    role: "Developer",
+    linkedin: "https://www.linkedin.com/in/alyssia-tan/",
+    image: "/people/alyssia-tan.jpg",
+  },
+  {
+    name: "Angelina Wang",
+    role: "Developer",
+    linkedin: "https://www.linkedin.com/in/angelina-wangg/",
+    image: "/people/angelina-wang.jpg",
+  },
+  {
+    name: "Bowen Wang",
+    role: "Developer",
+    linkedin: "https://www.linkedin.com/in/bowenwang0815/",
+    image: "/people/bowen-wang.jpg",
+  },
+  {
+    name: "Boyuan Liu",
+    role: "Developer",
+    linkedin: "https://www.linkedin.com/in/Boyuan-Liu",
+    image: "/people/boyuan-liu.jpg",
+  },
+  {
+    name: "Brandon Peng",
+    role: "Developer",
+    linkedin: "https://www.linkedin.com/in/brandonp-uci",
+    image: "/people/brandon-peng.jpg",
+  },
+  {
+    name: "Claire Phan",
+    role: "Designer",
+    linkedin: "https://www.linkedin.com/in/claire-phan427/",
+    image: "/people/claire-phan.jpg",
+  },
+  {
+    name: "Dang Nguyen",
+    role: "Developer",
+    linkedin: "https://www.linkedin.com/in/nwin/",
+    image: "/people/dang-nguyen.jpg",
+  },
+  {
+    name: "Elliott Escalante",
+    role: "Developer",
+    linkedin: "https://www.linkedin.com/in/elliott-escalante-97510324a",
+    image: "/people/elliott-escalante.jpg",
+  },
+  {
+    name: "Jocelyn Phan",
+    role: "Designer",
+    linkedin: "https://www.linkedin.com/in/jocelyn-phan-b3489525a",
+    image: "/people/jocelyn-phan.jpg",
+  },
+  {
+    name: "Joshua Sullivan",
+    role: "Developer",
+    linkedin: "https://www.linkedin.com/in/joshua-micah-sullivan",
+    image: "/people/joshua-sullivan.jpg",
+  },
+  {
+    name: "Noah Tizon",
+    role: "Designer",
+    linkedin: "https://www.linkedin.com/in/noah-tizon",
+    image: "/people/noah-tizon.jpg",
+  },
+  {
+    name: "Priyansh Shah",
+    role: "Developer",
+    linkedin: "https://www.linkedin.com/in/priyansh-shah-569b3b224/",
+    image: "/people/priyansh-shah.jpg",
+  },
+  {
+    name: "Raymond Yan",
+    role: "Developer",
+    linkedin: "https://www.linkedin.com/in/yan-raymond/",
+    image: "/people/raymond-yan.jpg",
+  },
+  {
+    name: "Ryan Su",
+    role: "Developer",
+    linkedin: "https://www.linkedin.com/in/ryan-m-su/",
+    image: "/people/ryan-su.jpg",
+  },
+  {
+    name: "Shayla Ho",
+    role: "Designer",
+    linkedin: "https://www.linkedin.com/in/shayla-ho/",
+    image: "/people/shayla-ho.jpg",
+  },
 ];
 
 export const LPA_DATA: Profile[] = [
@@ -242,5 +363,101 @@ export const LPA_DATA: Profile[] = [
     role: "Tech Lead",
     linkedin: "https://www.linkedin.com/in/nathanlp/",
     image: "/people/nathan-pietrantonio.jpg",
+  },
+  {
+    name: "Anthony Suh",
+    role: "Developer",
+    linkedin: "www.linkedin.com/in/anthony-suh-b1132928a",
+    image: "/people/anthony-suh.jpg",
+  },
+  {
+    name: "Aston Chan",
+    role: "Developer",
+    linkedin: "https://www.linkedin.com/in/aston-chan/",
+    image: "/people/aston-chan.jpg",
+  },
+  {
+    name: "Brendan Lieu",
+    role: "Developer",
+    linkedin: "https://www.linkedin.com/in/blieu/",
+    image: "/people/brendan-lieu.jpg",
+  },
+  {
+    name: "Cole Thompson",
+    role: "Developer",
+    linkedin: "https://www.linkedin.com/in/cole-thompson-991682251/",
+    image: "/people/cole-thompson.jpg",
+  },
+  {
+    name: "Cortney Ngo",
+    role: "Designer",
+    linkedin: "https://www.linkedin.com/in/cortneynngo/",
+    image: "/people/cortney-ngo.jpg",
+  },
+  {
+    name: "Daiki Narimoto",
+    role: "Developer",
+    linkedin: "https://www.linkedin.com/in/daiki-narimoto-a51675254/",
+    image: "/people/daiki-narimoto.jpg",
+  },
+  {
+    name: "Darian Woolley",
+    role: "Designer",
+    linkedin: "https://www.linkedin.com/in/darian-woolley/",
+    image: "/people/darian-woolley.jpg",
+  },
+  {
+    name: "Kaitlin Leung",
+    role: "Developer",
+    linkedin: "https://hwww.linkedin.com/in/kaitlin-leung-467a35209",
+    image: "/people/kaitlin-leung.jpg",
+  },
+  {
+    name: "Lana Ramadan",
+    role: "Developer",
+    linkedin: "www.linkedin.com/in/lanamramadan",
+    image: "/people/lana-ramadan.jpg",
+  },
+  {
+    name: "Margaret Galvez",
+    role: "Developer",
+    linkedin: "https://www.linkedin.com/in/margaretgalvez/",
+    image: "/people/margaret-galvez.jpg",
+  },
+  {
+    name: "Priska Kunaidy",
+    role: "Developer",
+    linkedin: "https://www.linkedin.com/in/priskakunaidy/",
+    image: "/people/priska-kunaidy.jpg",
+  },
+  {
+    name: "Sindhuja Gorti",
+    role: "Developer",
+    linkedin: "https://hwww.linkedin.com/in/sindhujagorti",
+    image: "/people/sindhuja-gorti.jpg",
+  },
+  {
+    name: "Tiffany Jiang Yan",
+    role: "Designer",
+    linkedin: "https://www.linkedin.com/in/tiffanyjiangyan",
+    image: "/people/tiffany-jiang-yan.jpg",
+  },
+  {
+    name: "Winston Lee",
+    role: "Designer",
+    linkedin: "https://www.linkedin.com/in/winstonylee",
+    image: "/people/winston-lee.jpg",
+  },
+  {
+    name: "Yihong Yu",
+    role: "Developer",
+    linkedin: "https://www.linkedin.com/in/yihong-yu-hazel/",
+    image: "/people/yihong-yu.jpg",
+  },
+  {
+    name: "Zion Mateo",
+    role: "Developer",
+    linkedin: "https://www.linkedin.com/in/zionmateo/",
+    image: "/people/zion-mateo.jpg",
   },
 ];
