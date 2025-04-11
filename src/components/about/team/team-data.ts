@@ -217,10 +217,10 @@ export const CCH_DATA: Profile[] = [
 
 export const CSE_DATA: Profile[] = [
   {
-    name: "Jasmine Wu",
+    name: "Shayla Ho",
     role: "Design Lead",
-    linkedin: "https://www.linkedin.com/in/jaslavie/",
-    image: "/people/jasmine-wu.jpg",
+    linkedin: "https://www.linkedin.com/in/shayla-ho/",
+    image: "/people/shayla-ho.jpg",
   },
   {
     name: "Ethan Ho",
@@ -336,12 +336,6 @@ export const CSE_DATA: Profile[] = [
     role: "Developer",
     linkedin: "https://www.linkedin.com/in/ryan-m-su/",
     image: "/people/ryan-su.jpg",
-  },
-  {
-    name: "Shayla Ho",
-    role: "Designer",
-    linkedin: "https://www.linkedin.com/in/shayla-ho/",
-    image: "/people/shayla-ho.jpg",
   },
 ];
 
