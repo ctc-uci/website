@@ -274,7 +274,7 @@ export const CSE_DATA: Profile[] = [
   {
     name: "Boyuan Liu",
     role: "Developer",
-    linkedin: "https://www.linkedin.com/in/Boyuan-Liu",
+    linkedin: "https://www.linkedin.com/in/Boyuan-Liu/",
     image: "/people/boyuan-liu.jpg",
   },
   {
