@@ -361,7 +361,7 @@ export const LPA_DATA: Profile[] = [
   {
     name: "Anthony Suh",
     role: "Developer",
-    linkedin: "www.linkedin.com/in/anthony-suh-b1132928a",
+    linkedin: "https://www.linkedin.com/in/anthony-suh-b1132928a",
     image: "/people/anthony-suh.jpg",
   },
   {
@@ -409,7 +409,7 @@ export const LPA_DATA: Profile[] = [
   {
     name: "Lana Ramadan",
     role: "Developer",
-    linkedin: "www.linkedin.com/in/lanamramadan",
+    linkedin: "https://www.linkedin.com/in/lanamramadan",
     image: "/people/lana-ramadan.jpg",
   },
   {
