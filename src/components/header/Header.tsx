@@ -34,14 +34,22 @@ const LINKS: NavLink[] = [
     href: "/about",
   },
   {
-    label: "Projects",
-    href: "/projects",
+    label: "Team",
+    href: "/team",
   },
   {
-    label: "Blog",
-    href: "https://medium.com/@committhechange.uci",
-    icon: ExternalLinkIcon,
+    label: "Career",
+    href: "/career",
   },
+  {
+    label: "Recruitment",
+    href: "/recruitment",
+  },
+  // {
+  //   label: "Blog",
+  //   href: "https://medium.com/@committhechange.uci",
+  //   icon: ExternalLinkIcon,
+  // },
   {
     label: "Work with Us",
     href: "/work-with-us",
@@ -60,29 +68,31 @@ export const Header = () => {
   return (
     <Center
       sx={{
-        backgroundColor: "ctc.gray",
-        boxShadow: "md",
-        position: "sticky",
-        top: 0,
+        backgroundColor: "none",
+        position: "absolute",
+        top: "1%",
         height: HEADER_HEIGHT,
+        width: "100%",
         zIndex: "docked",
       }}
     >
       <Flex
+        backgroundColor="purple.100"
+        rounded="full"
         sx={{
           flexDirection: "column",
           justifyContent: "space-between",
-          backgroundColor: "ctc.gray",
-          width: "100%",
-          maxWidth: MAX_WIDTH,
+          // maxWidth: MAX_WIDTH,
         }}
       >
         <HStack
+          spacing={100}
           sx={{
             justifyContent: "space-between",
             flex: 1,
-            minHeight: HEADER_HEIGHT,
-            paddingX: { base: "20px", lg: "100px" },
+            paddingY: 2.5,
+            paddingX: { base: "20px", lg: "50px" },
+            fontSize: "sm",
           }}
         >
           <ChakraLink

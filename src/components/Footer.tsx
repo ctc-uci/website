@@ -27,7 +27,7 @@ export function Footer() {
       <HStack
         sx={{
           paddingX: { base: 5, xl: 100 },
-          paddingY: 10,
+          paddingY: 16,
           backgroundColor: "ctc.purple",
           justifyContent: { base: "center", md: "space-between" },
           alignItems: "center",
@@ -35,30 +35,18 @@ export function Footer() {
           maxWidth: MAX_WIDTH,
         }}
       >
-        <Stack
-          spacing={0}
-          sx={{
-            color: "ctc.gray",
-            fontWeight: "medium",
-            display: { base: "none", md: "flex" },
-          }}
-        >
-          <Text>&copy; Commit the Change</Text>
-          <Text>Created in Irvine, CA</Text>
-          <Text>Est. 2020</Text>
-        </Stack>
         <VStack spacing={6}>
           <Image
             src={"./ctc-white.svg"}
-            sx={{ ...imageStyle, height: 50 }}
+            sx={{ ...imageStyle, height: 20 }}
             alt="ctc logo"
           />
           <Text
-            sx={{ fontWeight: "semibold", fontSize: "2xl", color: "ctc.white" }}
+            sx={{ fontWeight: "semibold", fontSize: "xl", color: "ctc.white" }}
           >
             Tech with Purpose.
           </Text>
-          <HStack spacing={5}>
+          {/* <HStack spacing={5}>
             {ICONS.map((icon) => (
               <ChakraLink
                 key={icon.href}
@@ -71,10 +59,31 @@ export function Footer() {
                 />
               </ChakraLink>
             ))}
-          </HStack>
+          </HStack> */}
         </VStack>
-        <Grid
-          templateColumns="1fr auto"
+
+        <VStack
+          sx={{
+            color: "ctc.gray",
+            fontWeight: "medium",
+            // display: { base: "none", md: "flex" },
+            alignItems: "start",
+            justifyContent: "start",
+            height: "100%",
+          }}
+        >
+          <Text fontWeight={700}>CONTACT US</Text>
+          <Text
+            as="a"
+            href="mailto:ctc@uci.edu"
+            color="white"
+            _hover={{ textDecoration: "underline" }}
+          >
+            ctc@uci.edu
+          </Text>
+        </VStack>
+
+        <VStack
           columnGap={5}
           sx={{
             color: "ctc.white",
@@ -91,7 +100,22 @@ export function Footer() {
               {link.label}
             </ChakraLink>
           ))}
-        </Grid>
+        </VStack>
+
+        <VStack>
+          {ICONS.map((icon) => (
+            <ChakraLink
+              key={icon.href}
+              as={Link}
+              to={icon.href}
+            >
+              <Icon
+                as={icon.icon}
+                sx={{ width: 5, height: 5, color: "white" }}
+              />
+            </ChakraLink>
+          ))}
+        </VStack>
       </HStack>
     </Center>
   );
@@ -134,8 +158,8 @@ const LINKS = [
     href: "/projects",
   },
   {
-    label: "Blog",
-    href: "https://medium.com/@committhechange.uci",
+    label: "Apply",
+    href: "/apply",
   },
   {
     label: "Work with Us",

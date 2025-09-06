@@ -24,7 +24,6 @@ export const App = () => {
           maxWidth: MAX_WIDTH,
           width: "100%",
           minHeight: MIN_HEIGHT,
-          marginX: "auto",
         }}
       >
         <Routes>

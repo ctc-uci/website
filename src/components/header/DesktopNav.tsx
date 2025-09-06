@@ -15,13 +15,13 @@ export function DesktopNav({ links }: MobileNavProps) {
       spacing={10}
       sx={{ display: { base: "none", md: "flex" } }}
     >
-      <HStack spacing={10}>
+      <HStack spacing={100}>
         {links.map((link) => (
           <ChakraLink
             as={Link}
             key={link.label}
             to={link.href}
-            sx={{ fontSize: "xl" }}
+            sx={{ fontSize: "sm" }}
           >
             <HStack>
               <Text>{link.label}</Text>
@@ -29,9 +29,8 @@ export function DesktopNav({ links }: MobileNavProps) {
             </HStack>
           </ChakraLink>
         ))}
+        {/* <ApplyButton /> */}
       </HStack>
-
-      <ApplyButton />
     </HStack>
   );
 }

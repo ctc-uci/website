@@ -1,8 +1,6 @@
 import { SystemStyleObject } from "@chakra-ui/styled-system";
 
 export const pageStyle = {
-  paddingLeft: { base: "20px", lg: "100px" },
-  paddingRight: { base: "20px", lg: "100px" },
   width: "100%",
 } satisfies SystemStyleObject;
 
@@ -27,7 +25,14 @@ export const buttonStyle = {
   width: "fit-content",
 } satisfies SystemStyleObject;
 
+export const heroSize = {
+  minHeight: "100vh",
+  width: "100%",
+} satisfies SystemStyleObject;
+
 export const HEADER_HEIGHT = 70;
 
 export const MAX_WIDTH = 1500;
 export const MIN_HEIGHT = `calc(100vh - ${HEADER_HEIGHT}px)`;
+export const HERO_GRADIENT =
+  "linear-gradient(180deg, var(--whiteAlpha-0, #FFF) 0%, var(--purple-200, #E9D5FF) 100%)";

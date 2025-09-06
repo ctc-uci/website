@@ -1,69 +1,124 @@
+import { useEffect, useRef, useState } from "react";
+
 import { Heading, Stack, Text, VStack, Wrap } from "@chakra-ui/react";
+
+import { useInView } from "framer-motion";
 
 import { headingStyle } from "../../styles/shared";
 
 const STATS = [
   {
-    stat: "14",
-    text: "Partner non-profit organizations",
-  },
-  {
     stat: "2000+",
-    text: "Cumulative hours volunteered",
+    text: "Hours volunteered",
+    numericValue: 2000,
   },
   {
-    stat: "70+",
-    text: "Designers and developers",
+    stat: "17",
+    text: "Software solutions",
+    numericValue: 17,
   },
 ];
 
+interface CountUpProps {
+  end: number;
+  duration?: number;
+  suffix?: string;
+  isInView: boolean;
+}
+
+const CountUp = ({
+  end,
+  duration = 2,
+  suffix = "",
+  isInView,
+}: CountUpProps) => {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (!isInView) return;
+
+    let startTime: number;
+    let animationFrame: number;
+
+    const animate = (currentTime: number) => {
+      if (!startTime) startTime = currentTime;
+      const progress = Math.min(
+        (currentTime - startTime) / (duration * 600),
+        1
+      );
+
+      setCount(Math.floor(progress * end));
+
+      if (progress < 1) {
+        animationFrame = requestAnimationFrame(animate);
+      }
+    };
+
+    animationFrame = requestAnimationFrame(animate);
+
+    return () => {
+      if (animationFrame) {
+        cancelAnimationFrame(animationFrame);
+      }
+    };
+  }, [end, duration, isInView]);
+
+  return (
+    <>
+      {count}
+      {suffix}
+    </>
+  );
+};
+
 export function Stats() {
+  const statsRef = useRef(null);
+  const isInView = useInView(statsRef, { once: true });
+
   return (
     <Stack
       spacing={10}
-      sx={{ paddingBottom: 16 }}
+      ref={statsRef}
     >
-      <Heading sx={headingStyle}>By the Numbers</Heading>
-      <Wrap
-        spacing={{ base: 5, lg: 10 }}
-        justify={"center"}
-      >
-        {STATS.map((stat) => (
-          <VStack
-            key={stat.stat}
-            bg="ctc.purple"
-            spacing={2}
+      {STATS.map((stat) => (
+        <VStack
+          key={stat.stat}
+          bg="ctc.purple"
+          spacing={2}
+          sx={{
+            paddingX: { base: 10, md: 20 },
+            paddingY: 4,
+            textAlign: "center",
+            borderRadius: "lg",
+            width: { base: "100%", sm: 500, md: 350, mdlg: 350, xl: 400 },
+          }}
+        >
+          <Text
             sx={{
-              paddingX: { base: 10, md: 20 },
-              paddingY: 4,
-              textAlign: "center",
-              borderRadius: "lg",
-              width: { base: "100%", sm: 500, md: 350, mdlg: 350, xl: 400 },
+              fontSize: "7xl",
+              fontWeight: "semibold",
+              lineHeight: "normal",
+              color: "ctc.gray",
             }}
           >
-            <Text
-              sx={{
-                fontSize: "4xl",
-                fontWeight: "semibold",
-                lineHeight: "normal",
-                color: "ctc.gray",
-              }}
-            >
-              {stat.stat}
-            </Text>
-            <Text
-              sx={{
-                fontSize: "2xl",
-                lineHeight: "normal",
-                color: "ctc.gray",
-                marginY: "auto",
-              }}
-            >
-              {stat.text}
-            </Text>
-          </VStack>
-        ))}
-      </Wrap>
+            <CountUp
+              end={stat.numericValue}
+              suffix={stat.stat.includes("+") ? "+" : ""}
+              isInView={isInView}
+            />
+          </Text>
+          <Text
+            sx={{
+              fontSize: "xl",
+              lineHeight: "normal",
+              color: "ctc.gray",
+              marginY: "auto",
+            }}
+          >
+            {stat.text}
+          </Text>
+        </VStack>
+      ))}
     </Stack>
   );
 }
