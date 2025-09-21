@@ -8,6 +8,33 @@ export interface Project {
 
 export const PROJECT_DATA: Project[] = [
   {
+    name: "Celebrating Life Community Health Center",
+    startYear: "2025",
+    endYear: "2026",
+    description:
+      "Celebrating Life Community Health Center is a community health center that provides primary care, mental health care, and social services to the community.",
+    image: "celebrating-life-community-health-center.svg",
+  },
+  {
+    name: "Global Creation Foundation",
+    startYear: "2025",
+    endYear: "2026",
+    description:
+      "Global Creation Foundation is a non-profit organization that provides education and training to the community.",
+    image: "global-creation-foundation.png",
+  },
+  {
+    name: "Elder Law & Disability Rights Center",
+    startYear: "2025",
+    endYear: "2026",
+    description:
+      "Elder Law & Disability Rights Center is a non-profit organization that provides legal services to the community.",
+    image: "elder-law-and-disability-rights-center-modified.png",
+  },
+];
+
+export const PREVIOUS_DATA: Project[] = [
+  {
     name: "Colette's Childrens Home",
     startYear: "2024",
     endYear: "2025",
@@ -32,9 +59,6 @@ export const PROJECT_DATA: Project[] = [
 
     image: "la-pena.png",
   },
-];
-
-export const PREVIOUS_DATA: Project[] = [
   {
     name: "Achievement Institute for STEM Scholars",
     startYear: "2023",

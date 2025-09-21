@@ -30,7 +30,7 @@ export const theme = extendTheme({
       variants: {
         ctc: {
           bg: "ctc.purple",
-          color: "ctc.gray",
+          color: "ctc.white",
           _hover: {
             bg: "ctc.purple",
             opacity: 0.9,

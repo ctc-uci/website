@@ -43,7 +43,7 @@ export function Timeline() {
           }}
         >
           <Text sx={{ fontWeight: "bold" }}>Applications Close:&nbsp;</Text>
-          <Text>Sunday, Sept 29th @ 11:59 PM</Text>
+          <Text>Sunday, Sept 28th @ 11:59 PM</Text>
         </Text>
       </Stack>
 
