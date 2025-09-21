@@ -15,7 +15,7 @@ export const TIMELINE_EVENTS: TimelineEvent[] = [
       "The initial application will consist of short response questions that will help us learn about your experience and your goals.",
   },
   {
-    date: "Sep 22rd 11 AM - 4 PM",
+    date: "Sep 22nd 11 AM - 4 PM",
     event: "AIF @ Aldrich Park",
   },
   {
