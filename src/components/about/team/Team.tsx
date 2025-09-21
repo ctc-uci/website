@@ -13,9 +13,14 @@ import {
 import { headingStyle } from "../../../styles/shared";
 import { ProfileCard } from "./ProfileCard";
 import { ProfileCardGrid } from "./ProfileCardGrid";
-import { BOARD_DATA, CCH_DATA, CSE_DATA, LPA_DATA } from "./team-data";
+import { BOARD_DATA, CLCHC_DATA, ELDR_DATA, GCF_DATA } from "./team-data";
 
-const TABS = ["Board", "Colette's Childrens Home", "Center Stage", "La Peña"];
+const TABS = [
+  "Board",
+  "Celebrating Life Community Health Center",
+  "Global Creation Foundation",
+  "Elder Law & Disability Rights Center",
+];
 
 export function Team() {
   const [activeTab, setActiveTab] = useState(0);
@@ -31,11 +36,11 @@ export function Team() {
   const getData = useCallback((activeTab: number) => {
     switch (activeTab) {
       case 1:
-        return CCH_DATA;
+        return CLCHC_DATA;
       case 2:
-        return CSE_DATA;
+        return GCF_DATA;
       case 3:
-        return LPA_DATA;
+        return ELDR_DATA;
       default:
         // this should never happen
         return [];

@@ -17,7 +17,7 @@ export function ProjectsPage() {
           <Stack spacing={0}>
             <Text sx={{ fontSize: "xl" }}>Current Projects</Text>
             <Text sx={{ fontSize: "md", color: "ctc.subtitle" }}>
-              2024-2025
+              2025-2026
             </Text>
           </Stack>
 
