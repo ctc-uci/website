@@ -31,7 +31,7 @@ export function Timeline() {
           }}
         >
           <Text sx={{ fontWeight: "bold" }}>Applications Open:&nbsp;</Text>
-          <Text>Sunday, Sept 22nd @ 12:00 AM</Text>
+          <Text>Sunday, Sept 21st @ 12:00 AM</Text>
         </Text>
         <Text
           as={"span"}

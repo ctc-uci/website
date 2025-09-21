@@ -9,7 +9,7 @@ export type TimelineEvent = {
 export const TIMELINE_EVENTS: TimelineEvent[] = [
   {
     majorEvent: true,
-    date: "Sep 21nd",
+    date: "Sep 21st",
     event: "Applications Open",
     description:
       "The initial application will consist of short response questions that will help us learn about your experience and your goals.",
@@ -20,7 +20,7 @@ export const TIMELINE_EVENTS: TimelineEvent[] = [
   },
   {
     date: "Sep 25th 4 PM - 6 PM",
-    event: "Meet the Club @ TBD",
+    event: "Meet the Club @ ICS Quad",
     description:
       "Learn about CTC and what projects we will be working on in the upcoming year, as well as socialize with and ask questions to board members.",
   },
