@@ -4,7 +4,7 @@ import { headingStyle } from "../../styles/shared";
 
 const STATS = [
   {
-    stat: "14",
+    stat: "17",
     text: "Partner non-profit organizations",
   },
   {
