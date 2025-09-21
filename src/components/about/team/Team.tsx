@@ -74,9 +74,9 @@ export function Team() {
             variant={"filled"}
           >
             <option value={0}>Board</option>
-            <option value={1}>Colette's Childrens Home</option>
-            <option value={2}>Center Stage</option>
-            <option value={3}>La Peña</option>
+            <option value={1}>CLCHC</option>
+            <option value={2}>GCF</option>
+            <option value={3}>ELDR</option>
           </Select>
         </Box>
 
