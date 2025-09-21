@@ -12,7 +12,7 @@ export const PROJECT_DATA: Project[] = [
     startYear: "2025",
     endYear: "2026",
     description:
-      "Celebrating Life Community Health Center is a community health center that provides primary care, mental health care, and social services to the community.",
+      "Celebrating Life Community Health Center is dedicated to delivering high-quality medical care and social services to Orange County’s most vulnerable populations. As a family practice with specialized programs in heart screening and behavioral health, they believe healthcare is more than a service—it is a sacred mission.",
     image: "celebrating-life-community-health-center.svg",
   },
   {
@@ -20,7 +20,7 @@ export const PROJECT_DATA: Project[] = [
     startYear: "2025",
     endYear: "2026",
     description:
-      "Global Creation Foundation is a non-profit organization that provides education and training to the community.",
+      "Global Creation Foundation's mission is “Arts Education For Every Nation.” They partner with schools, churches, and orphanages to launch sustainable programs using donated instruments and video-based lessons, helping students heal, grow, and express themselves through creativity.",
     image: "global-creation-foundation.png",
   },
   {
@@ -28,7 +28,7 @@ export const PROJECT_DATA: Project[] = [
     startYear: "2025",
     endYear: "2026",
     description:
-      "Elder Law & Disability Rights Center is a non-profit organization that provides legal services to the community.",
+      "Elder Law & Disability Rights Center works to ensure dignity and justice for elderly individuals, people with disabilities, and those experiencing homelessness. They do this through advocacy, education, and providing free or low-cost legal services to underserved communities",
     image: "elder-law-and-disability-rights-center-modified.png",
   },
 ];

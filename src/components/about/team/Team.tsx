@@ -15,12 +15,7 @@ import { ProfileCard } from "./ProfileCard";
 import { ProfileCardGrid } from "./ProfileCardGrid";
 import { BOARD_DATA, CLCHC_DATA, ELDR_DATA, GCF_DATA } from "./team-data";
 
-const TABS = [
-  "Board",
-  "Celebrating Life Community Health Center",
-  "Global Creation Foundation",
-  "Elder Law & Disability Rights Center",
-];
+const TABS = ["Board", "CLCHC", "GCF", "ELDR"];
 
 export function Team() {
   const [activeTab, setActiveTab] = useState(0);
