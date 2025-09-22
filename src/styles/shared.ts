@@ -10,8 +10,8 @@ export const negativeMarginStyle = {
 } satisfies SystemStyleObject;
 
 export const headingStyle = {
-  color: "ctc.purple",
-  fontSize: "4xl",
+  fontSize: "7xl",
+  fontWeight: "semibold",
 } satisfies SystemStyleObject;
 
 export const imageStyle = {

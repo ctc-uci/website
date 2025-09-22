@@ -1,4 +1,4 @@
-import { ReactNode, useRef } from "react";
+import { ReactNode, useEffect, useRef, useState } from "react";
 
 import {
   Box,
@@ -13,11 +13,198 @@ import {
 
 import { motion, useInView } from "framer-motion";
 
-import { HERO_GRADIENT, pageStyle } from "../../styles/shared";
+import { HERO_GRADIENT, imageStyle, pageStyle } from "../../styles/shared";
 import { FadeInText_BottomUp } from "../animated/FadeInText_BottomUp";
+import { ProjectCard } from "../projects/ProjectCard";
+import {
+  PREVIOUS_DATA,
+  Project,
+  PROJECT_DATA,
+} from "../projects/projects-data";
 import { SideSection } from "../section/SideSection";
 import { Hero } from "./hero/Hero";
 import { Stats } from "./Stats";
+
+interface VerticalInfiniteScrollProps {
+  iconSize?: number;
+  speed?: number;
+  containerHeight?: number;
+}
+
+const VerticalInfiniteScroll = ({
+  iconSize = 200,
+  speed = 1,
+  containerHeight = 400,
+}: VerticalInfiniteScrollProps) => {
+  // Company icons in order
+  const companyIcons = [
+    "amazon.png",
+    "khan-academy.png",
+    "meta.png",
+    "cisco.png",
+    "visa.png",
+    "tableu.png",
+    "airtable.png",
+    "google.png",
+    "microsoft.png",
+    "zillow.png",
+    "cox-automotive.png",
+    "qualtrics.png",
+  ];
+
+  // Duplicate the list for seamless infinite scroll
+  const duplicatedIcons = [...companyIcons, ...companyIcons];
+
+  return (
+    <Box
+      width={`${iconSize}px`}
+      height={`${containerHeight}px`}
+      overflow="hidden"
+      position="relative"
+    >
+      <motion.div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+        }}
+        animate={{
+          y: [0, -companyIcons.length * (iconSize + 20)],
+        }}
+        transition={{
+          duration: speed * 100,
+          ease: "linear",
+          repeat: Infinity,
+        }}
+      >
+        {duplicatedIcons.map((icon, index) => (
+          <Box
+            key={`${icon}-${index}`}
+            width={`${iconSize}px`}
+            height={`${iconSize}px`}
+            display="flex"
+            alignItems="center"
+            justifyContent="center"
+          >
+            <Image
+              src={`/alumni/careers/${icon}`}
+              alt={`${icon.replace(".png", "")} logo`}
+              width={`${iconSize - 16}px`}
+              height={`${iconSize - 16}px`}
+              objectFit="contain"
+            />
+          </Box>
+        ))}
+      </motion.div>
+    </Box>
+  );
+};
+
+interface HorizontalScrollCardsProps {
+  data: Project[];
+  visibleCards?: number;
+  cardWidth?: number;
+  cardHeight?: number;
+}
+
+const HorizontalScrollCards = ({
+  data,
+  visibleCards = 3,
+  cardWidth = 280,
+  cardHeight = 380,
+}: HorizontalScrollCardsProps) => {
+  return (
+    <Box
+      width="100%"
+      overflowX="auto"
+      overflowY="hidden"
+      sx={{
+        scrollSnapType: "x mandatory",
+        "&::-webkit-scrollbar": {
+          height: "8px",
+        },
+        "&::-webkit-scrollbar-track": {
+          backgroundColor: "gray.100",
+          borderRadius: "4px",
+        },
+        "&::-webkit-scrollbar-thumb": {
+          backgroundColor: "gray.400",
+          borderRadius: "4px",
+          "&:hover": {
+            backgroundColor: "gray.500",
+          },
+        },
+      }}
+    >
+      <HStack
+        spacing={4}
+        paddingY={2}
+        minWidth={`${data.length * (cardWidth + 16)}px`}
+      >
+        {data.map((project, index) => (
+          <Box
+            key={`${project.name}-${index}`}
+            width={`${cardWidth}px`}
+            height={`${cardHeight}px`}
+            flexShrink={0}
+            sx={{
+              scrollSnapAlign: "start",
+            }}
+          >
+            <Stack
+              height="100%"
+              backgroundColor="white"
+              borderRadius="lg"
+              padding={4}
+              boxShadow="md"
+              border="1px solid"
+              borderColor="gray.200"
+              justifyContent="space-between"
+              _hover={{
+                boxShadow: "lg",
+                transform: "translateY(-2px)",
+                transition: "all 0.2s ease",
+              }}
+            >
+              <Image
+                src={`/projects/${project.image}`}
+                alt={`image of ${project.name}`}
+                sx={{
+                  ...imageStyle,
+                  height: 200,
+                  objectFit: "contain",
+                }}
+              />
+              <Stack spacing={2}>
+                <Text
+                  fontSize="xs"
+                  color="gray.500"
+                  fontWeight={500}
+                >
+                  {project.startYear}-{project.endYear}
+                </Text>
+                <Text
+                  fontSize="lg"
+                  fontWeight={600}
+                  lineHeight="shorter"
+                >
+                  {project.name}
+                </Text>
+                <Text
+                  fontSize="sm"
+                  color="gray.600"
+                  noOfLines={3}
+                  lineHeight="1.4"
+                >
+                  {project.description}
+                </Text>
+              </Stack>
+            </Stack>
+          </Box>
+        ))}
+      </HStack>
+    </Box>
+  );
+};
 
 interface LandingPageIconBoxProps extends BoxProps {
   children: ReactNode;
@@ -88,6 +275,7 @@ export function LandingPage() {
     <Stack
       sx={pageStyle}
       spacing={0}
+      width="100%"
     >
       <Hero>
         <VStack spacing={"20px"}>
@@ -188,6 +376,11 @@ export function LandingPage() {
       </SideSection>
 
       <SideSection>
+        <VerticalInfiniteScroll
+          iconSize={144}
+          speed={100}
+          containerHeight={400}
+        />
         <FadeInText_BottomUp>
           <Stack
             fontSize="7xl"
@@ -207,24 +400,39 @@ export function LandingPage() {
       </SideSection>
 
       <SideSection>
-        <Stack
-          fontSize="7xl"
-          spacing={0}
-          letterSpacing="-0.4px"
-          lineHeight="92px"
+        <HStack
+          alignItems="center"
+          justifyContent="center"
+          width="97vw"
         >
-          <FadeInText_BottomUp>
-            <Text>Our</Text>
-            <Text
-              color="ctc.purple"
-              fontWeight={600}
-            >
-              Work.
-            </Text>
-          </FadeInText_BottomUp>
-        </Stack>
+          <Stack
+            fontSize="7xl"
+            spacing={0}
+            letterSpacing="-0.4px"
+            lineHeight="92px"
+            width="50%"
+            justifyContent="end"
+            alignItems="center"
+          >
+            <FadeInText_BottomUp>
+              <Text>Our</Text>
+              <Text
+                color="ctc.purple"
+                fontWeight={600}
+              >
+                Work.
+              </Text>
+            </FadeInText_BottomUp>
+          </Stack>
+          <Box width="45%">
+            <HorizontalScrollCards
+              data={PREVIOUS_DATA}
+              cardWidth={300}
+              cardHeight={380}
+            />
+          </Box>
+        </HStack>
       </SideSection>
-
       <Box
         sx={{
           background: HERO_GRADIENT,

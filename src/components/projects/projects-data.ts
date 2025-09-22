@@ -36,6 +36,31 @@ export const PROJECT_DATA: Project[] = [
 
 export const PREVIOUS_DATA: Project[] = [
   {
+    name: "Colette's Childrens Home",
+    startYear: "2024",
+    endYear: "2025",
+    description:
+      "Colette’s Children’s Home provides emergency housing for homeless women/children and assist in maintaining employment. They aim to provide the resources needed to achieve self-sufficiency.",
+    image: "colettes-childrens-home.png",
+  },
+  {
+    name: "Center Stage",
+    startYear: "2024",
+    endYear: "2025",
+    description:
+      "Center Stage’s mission is to elevate the art of Chinese dance through passionate teaching, immersive performances, and cultural exchange, to nurture appreciation for Chinese heritage.",
+    image: "center-stage.png",
+  },
+  {
+    name: "La Peña",
+    startYear: "2024",
+    endYear: "2025",
+    description:
+      "La Pena is a central site for Latinx, Caribbean, and Indigenous diasporic communities of the Bay Area, preserving cultural traditions and nurturing grassroots social justice movements",
+
+    image: "la-pena.png",
+  },
+  {
     name: "Achievement Institute for STEM Scholars",
     startYear: "2023",
     endYear: "2024",

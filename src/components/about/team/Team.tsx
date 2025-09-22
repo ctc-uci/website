@@ -15,7 +15,7 @@ import { ProfileCard } from "./ProfileCard";
 import { ProfileCardGrid } from "./ProfileCardGrid";
 import { BOARD_DATA, CCH_DATA, CSE_DATA, LPA_DATA } from "./team-data";
 
-const TABS = ["Board", "Colette's Childrens Home", "Center Stage", "La Peña"];
+const TABS = ["Board", "CLCHC", "GFC", "ELDR"];
 
 export function Team() {
   const [activeTab, setActiveTab] = useState(0);
@@ -45,12 +45,14 @@ export function Team() {
   return (
     <Stack
       spacing={10}
-      sx={{ width: "100%", paddingY: 100, marginX: "auto" }}
+      alignItems="center"
+      paddingY={10}
     >
       <Stack
         sx={{
           flexDirection: { base: "column", sm: "row", lg: "column" },
           justifyContent: "space-between",
+          alignItems: "center",
         }}
         spacing={{ base: 2.5, sm: 5 }}
       >
@@ -74,9 +76,9 @@ export function Team() {
             variant={"filled"}
           >
             <option value={0}>Board</option>
-            <option value={1}>Colette's Childrens Home</option>
-            <option value={2}>Center Stage</option>
-            <option value={3}>La Peña</option>
+            <option value={1}>CLCHC</option>
+            <option value={2}>GFC</option>
+            <option value={3}>ELDR</option>
           </Select>
         </Box>
 
@@ -85,9 +87,7 @@ export function Team() {
           sx={{
             padding: 1,
             borderRadius: "10px",
-            backgroundColor: "ctc.secondary",
             width: "fit-content",
-            display: { base: "none", lg: "flex" },
           }}
         >
           {TABS.map((tab, index) => (
@@ -96,11 +96,11 @@ export function Team() {
               sx={{
                 paddingX: 10,
                 paddingY: 2,
-                fontSize: "lg",
+                fontSize: "md",
                 borderRadius: "lg",
                 fontWeight: "normal",
               }}
-              variant={activeTab === index ? "ctc" : "ctc.secondary"}
+              variant={activeTab === index ? "ctc.secondary" : ""}
               onClick={() => handleClick(index)}
             >
               {tab}

@@ -12,6 +12,7 @@ export function ProjectsRow({ data }: ProjectsRowProps) {
     <Box
       sx={{
         overflowX: "scroll",
+        width: "100%",
       }}
     >
       <HStack

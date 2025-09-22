@@ -37,10 +37,10 @@ const LINKS: NavLink[] = [
     label: "Team",
     href: "/team",
   },
-  {
-    label: "Career",
-    href: "/career",
-  },
+  // {
+  //   label: "Career",
+  //   href: "/career",
+  // },
   {
     label: "Recruitment",
     href: "/recruitment",
@@ -70,7 +70,7 @@ export const Header = () => {
       sx={{
         backgroundColor: "none",
         position: "absolute",
-        top: "1%",
+        top: "5",
         height: HEADER_HEIGHT,
         width: "100%",
         zIndex: "docked",

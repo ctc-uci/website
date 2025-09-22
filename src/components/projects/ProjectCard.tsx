@@ -11,10 +11,11 @@ export function ProjectCard({ project }: ProjectsRowProps) {
   return (
     <Stack
       spacing={5}
+      width="1000px"
       sx={{
         borderRadius: "lg",
         padding: 10,
-        width: { base: 350, md: 400 },
+        height: "inherit",
         borderWidth: 0.5,
         borderColor: "ctc.lilac",
         backgroundColor: "ctc.offWhite",

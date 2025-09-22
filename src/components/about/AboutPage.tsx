@@ -9,8 +9,6 @@ export function AboutPage() {
   return (
     <Stack sx={pageStyle}>
       <About />
-      <Mission />
-      <Team />
     </Stack>
   );
 }

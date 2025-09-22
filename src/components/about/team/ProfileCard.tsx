@@ -13,8 +13,8 @@ export function ProfileCard({ profile }: ProfileCardProps) {
   return (
     <Stack
       sx={{
-        width: 60,
-        height: 60,
+        width: 52,
+        height: 52,
         paddingX: 3,
         paddingY: 4,
         borderRadius: "lg",
