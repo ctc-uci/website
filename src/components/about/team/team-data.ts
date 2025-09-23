@@ -10,7 +10,7 @@ export const BOARD_DATA: Profile[] = [
     name: "Nathan Pietrantonio",
     role: "President",
     linkedin: "https://www.linkedin.com/in/nathanlp/",
-    image: "/people/nathan-pietrantonio.jpg",
+    image: "/people/nathan-pietrantonio.png",
   },
   {
     name: "Ryan Su",
@@ -64,7 +64,7 @@ export const BOARD_DATA: Profile[] = [
     name: "Margaret Galvez",
     role: "Recruitment Director",
     linkedin: "https://www.linkedin.com/in/margaretgalvez/",
-    image: "/people/margaret-galvez.jpg",
+    image: "/people/margaret-galvez.png",
   },
   {
     name: "Noah Tizon",
