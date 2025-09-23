@@ -109,7 +109,7 @@ export const CLCHC_DATA: Profile[] = [
     name: "Elliott Escalante",
     role: "Tech Lead",
     linkedin: "https://www.linkedin.com/in/elliott-escalante-97510324a/",
-    image: "/people/elliott-escalante.jpg",
+    image: "/people/elliott-escalante.png",
   },
   {
     name: "Nathan Nguyen",
