@@ -121,7 +121,7 @@ export const CLCHC_DATA: Profile[] = [
 
 export const GCF_DATA: Profile[] = [
   {
-    name: "Lelani Bascos",
+    name: "Leilani Bascos",
     role: "Design Lead",
     linkedin: "https://www.linkedin.com/in/lelanibasco/",
     image: "/people/leilani-bascos.jpg",
