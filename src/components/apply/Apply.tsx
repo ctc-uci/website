@@ -36,12 +36,12 @@ export function Apply() {
 
         <Stack spacing={0}>
           <Text sx={{ fontSize: { base: "lg", md: "xl" }, fontWeight: "bold" }}>
-            Recruitment is open!
+            Recruitment is now closed!
           </Text>
           <Text sx={{ fontSize: { base: "lg", md: "xl" } }}>
-            We recruit new developers and designers at the beginning of every
-            school year. Learn more about the roles and application process
-            below.
+            We will be recruiting new developers and designers at the beginning
+            of every school year. Learn more about the roles and application
+            process below.
           </Text>
         </Stack>
       </Stack>
