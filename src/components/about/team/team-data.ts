@@ -130,7 +130,7 @@ export const GCF_DATA: Profile[] = [
     name: "Alex Yin",
     role: "Tech Lead",
     linkedin: "https://www.linkedin.com/in/alexander-yin",
-    image: "/people/alex-yin.jpg",
+    image: "/people/alex-yin.png",
   },
   {
     name: "Isaac Nguyen",
