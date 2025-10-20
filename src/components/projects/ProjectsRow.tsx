@@ -9,11 +9,7 @@ interface ProjectsRowProps {
 
 export function ProjectsRow({ data }: ProjectsRowProps) {
   return (
-    <Box
-      sx={{
-        overflowX: "scroll",
-      }}
-    >
+    <Box>
       <HStack
         spacing={5}
         sx={{
