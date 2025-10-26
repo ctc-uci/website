@@ -1,8 +1,9 @@
 "use client";
-import Hero from "@/utils/components/Hero";
 import { VStack, Text, Box, Grid, GridItem, Image } from "@chakra-ui/react";
-import MeetTheTeam from "@/utils/components/PageTeam/MeetTheTeam";
+
 import { Footer } from "@/utils/components/Footer";
+import MeetTheTeam from "@/utils/components/PageTeam/MeetTheTeam";
+import ParallaxHero from "@/utils/components/ParallaxHero";
 
 export default function TeamPage() {
  const textContent = {
@@ -14,7 +15,7 @@ export default function TeamPage() {
  const imageAlt = "lol";
  return (
   <VStack spacing={0}>
-   <Hero>
+   <ParallaxHero>
     {" "}
     <Grid
      templateColumns={{ base: "1fr", md: "1fr 2fr" }}
@@ -91,7 +92,7 @@ export default function TeamPage() {
       </Box>
      </GridItem>
     </Grid>
-   </Hero>
+   </ParallaxHero>
    <MeetTheTeam />
    <Footer />
   </VStack>

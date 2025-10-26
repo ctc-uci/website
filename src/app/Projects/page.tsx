@@ -1,7 +1,9 @@
 "use client";
 import { VStack, Text, Button } from "@chakra-ui/react";
 
+import { Footer } from "@/utils/components/Footer";
 import Hero from "@/utils/components/Hero";
+import CurrentProjects from "@/utils/components/PageProjects/CurrentProjects";
 import PastProjects from "@/utils/components/PageProjects/PastProjects";
 
 export default function OurWorkPage() {
@@ -27,7 +29,9 @@ export default function OurWorkPage() {
      </Button>
     </VStack>
    </Hero>
+   <CurrentProjects />
    <PastProjects />
+   <Footer />
   </VStack>
  );
 }

@@ -4,33 +4,33 @@ import { Project } from "../../ProjectData";
 
 interface ProjectCardProps {
  project: Project;
+ presentationDisplay?: boolean;
 }
 
-export default function ProjectCard({ project }: ProjectCardProps) {
+export default function ProjectCard({
+ project,
+ presentationDisplay = false,
+}: ProjectCardProps) {
  return (
   <Box
-   minWidth="300px"
-   maxWidth="300px"
+   minWidth={"300px"}
+   maxWidth={"325px"}
+   width={{ base: "100%", md: "300px" }}
    backgroundColor="white"
    borderRadius="12px"
    boxShadow="0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)"
-   padding={6}
+   p={6}
    cursor="pointer"
    transition="all 0.2s ease-in-out"
    css={{
     scrollSnapAlign: "start",
-   }}
-   _hover={{
-    transform: "translateY(-2px)",
-    boxShadow:
-     "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
    }}
   >
    <VStack spacing={4} align="start" height="100%">
     {/* Project Image */}
     <Box
      width="100%"
-     height="120px"
+     height={presentationDisplay ? "160px" : "120px"}
      display="flex"
      justifyContent="center"
      borderRadius="8px"
@@ -47,11 +47,11 @@ export default function ProjectCard({ project }: ProjectCardProps) {
 
     {/* Project Name */}
     <Text
-     fontSize="lg"
+     fontSize="md"
      fontWeight="bold"
      color="gray.800"
      lineHeight="1.3"
-     noOfLines={2}
+     noOfLines={3}
     >
      {project.name}
     </Text>
@@ -67,7 +67,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
      color="gray.700"
      lineHeight="1.5"
      textAlign="left"
-     noOfLines={4}
+     noOfLines={presentationDisplay ? 10 : 6}
     >
      {project.description}
     </Text>

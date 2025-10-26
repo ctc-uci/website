@@ -2,7 +2,7 @@ import { Text, VStack } from "@chakra-ui/react";
 
 import { PREVIOUS_DATA } from "@/utils/ProjectData";
 
-import ProjectsList from "../CardUtils/ProjectsList";
+import { ProjectsList } from "../CardUtils";
 import { SectionGrid, SectionGridItem } from "../GridUtils";
 
 export default function PastProjects() {

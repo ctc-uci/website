@@ -1,10 +1,7 @@
-import React from "react";
-
 import { PROJECT_DATA, PREVIOUS_DATA } from "../../ProjectData";
+import { ProjectsList } from "../CardUtils";
 import { SectionGrid, SectionGridItem } from "../GridUtils";
 import SectionText from "../TextUtils/SectionText";
-
-import ProjectsList from "./ProjectsList";
 
 export default function WorkSection() {
  return (

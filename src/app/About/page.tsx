@@ -1,9 +1,10 @@
 "use client";
 import { VStack, Text } from "@chakra-ui/react";
 
-import { AnimatedTyping, ValuesSection } from "@/utils/components";
+import { AnimatedTyping } from "@/utils/components";
 import { Footer } from "@/utils/components/Footer";
 import Hero from "@/utils/components/Hero";
+import { ValuesSection } from "@/utils/components/PageAbout";
 import HistorySection from "@/utils/components/PageAbout/HistorySection";
 import MissionSection from "@/utils/components/PageAbout/MissionSection";
 
@@ -18,7 +19,7 @@ export default function AboutPage() {
       color="black"
       fontFamily="Inter, sans-serif"
      >
-      <AnimatedTyping text="Nice to meet you!" speed={90} />
+      <AnimatedTyping text="Nice to meet you!" speed={80} />
      </Text>
 
      <Text

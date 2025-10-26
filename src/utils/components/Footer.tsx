@@ -9,7 +9,6 @@ import {
  Text,
  VStack,
 } from "@chakra-ui/react";
-
 import {
  BsEnvelopeFill,
  BsFacebook,

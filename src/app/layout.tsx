@@ -1,9 +1,12 @@
+import { ChakraProvider } from "@chakra-ui/react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { ChakraProvider } from "@chakra-ui/react";
-import { theme } from "../theme";
-import "./globals.css";
+
 import EmotionRegistry from "@/app/registry";
+
+import { theme } from "../theme";
+
+import "./globals.css";
 
 const inter = Inter({
  variable: "--font-inter",
@@ -14,6 +17,11 @@ export const metadata: Metadata = {
  title: "Commit the Change",
  description:
   "Commit the Change is a community of software engineers and designers who are passionate about building software that helps people live better lives.",
+ icons: {
+  icon: "/assets/ctc.svg",
+  shortcut: "/assets/ctc.svg",
+  apple: "/assets/ctc.svg",
+ },
 };
 
 export default function RootLayout({

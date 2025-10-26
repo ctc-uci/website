@@ -14,4 +14,5 @@ export { AnimatedTyping } from "./AnimationUtils";
 // Existing components
 export { Footer } from "./Footer";
 export { default as Hero } from "./Hero";
+export { default as ParallaxHero } from "./ParallaxHero";
 export { default as Navbar } from "./Navbar";

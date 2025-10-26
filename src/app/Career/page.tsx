@@ -1,5 +1,8 @@
 "use client";
 import { VStack, Text } from "@chakra-ui/react";
+
+import { CareersMarque } from "@/utils/components/AnimationUtils";
+import { Footer } from "@/utils/components/Footer";
 import Hero from "@/utils/components/Hero";
 
 export default function CareerPage() {
@@ -12,6 +15,7 @@ export default function CareerPage() {
      </Text>
     </VStack>
    </Hero>
+   <CareersMarque orientation="horizontal" height="120px" /> <Footer />
   </VStack>
  );
 }

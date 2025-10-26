@@ -52,9 +52,9 @@ export default function HorizontalProjectScroll({
    <HStack
     spacing={6}
     align="stretch"
-    minWidth="450px"
+    minWidth="300px"
     position="relative"
-    width={{ base: "450px", md: width }}
+    width={{ base: "300px", sm: "400px", md: "350px", lg: width }}
     overflowX="auto"
     paddingY={4}
     paddingX={2}
