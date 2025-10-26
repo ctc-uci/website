@@ -1,4 +1,10 @@
+import { COMPANY_LOGOS } from "./CompanyLogos";
+
 const RECRUITMENT_OPEN: boolean = false;
+
+const DESIGNER_FORM: string = "";
+
+const DEVELOPER_FORM: string = "";
 
 const IMPACT_STATS: {
  NPOS_SERVED: number;
@@ -8,83 +14,10 @@ const IMPACT_STATS: {
  HOURS_VOLUNTEERED: 2000,
 };
 
-interface Logo {
- id: string;
- src: string;
- alt: string;
-}
-
-const COMPANY_LOGOS: Logo[] = [
- {
-  id: "1",
-  src: "/companies/microsoft.png",
-  alt: "Microsoft",
- },
- {
-  id: "2",
-  src: "/companies/visa.png",
-  alt: "Visa",
- },
- {
-  id: "3",
-  src: "/companies/coinbase.png",
-  alt: "Coinbase",
- },
- {
-  id: "4",
-  src: "/companies/stripe.png",
-  alt: "Stripe",
- },
- {
-  id: "5",
-  src: "/companies/zillow.png",
-  alt: "Zillow",
- },
- {
-  id: "6",
-  src: "/companies/google.png",
-  alt: "Google",
- },
- {
-  id: "7",
-  src: "/companies/meta.png",
-  alt: "Meta",
- },
- {
-  id: "8",
-  src: "/companies/amazon.png",
-  alt: "Amazon",
- },
- {
-  id: "9",
-  src: "/companies/cisco.png",
-  alt: "Cisco",
- },
- {
-  id: "10",
-  src: "/companies/airtable.png",
-  alt: "Airtable",
- },
- {
-  id: "11",
-  src: "/companies/kahn_academy.png",
-  alt: "Khan Academy",
- },
- {
-  id: "12",
-  src: "/companies/tableu.png",
-  alt: "Tableau",
- },
- {
-  id: "13",
-  src: "/companies/veeva.png",
-  alt: "Veeva",
- },
- {
-  id: "14",
-  src: "/companies/salesforce.png",
-  alt: "Salesforce",
- },
-];
-
-export { RECRUITMENT_OPEN, IMPACT_STATS, COMPANY_LOGOS };
+export {
+ RECRUITMENT_OPEN,
+ IMPACT_STATS,
+ COMPANY_LOGOS,
+ DESIGNER_FORM,
+ DEVELOPER_FORM,
+};

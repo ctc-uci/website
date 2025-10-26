@@ -1,4 +1,5 @@
 import { Box, Button, Text, VStack } from "@chakra-ui/react";
+import { RECRUITMENT_OPEN } from "@/utils/Settings";
 export default function ClosingMessage() {
  return (
   <Box
@@ -16,7 +17,9 @@ export default function ClosingMessage() {
      Create Tech With Us!
     </Text>
     <Text fontSize="xl" textAlign="center">
-     Applications only open in the Fall!
+     {RECRUITMENT_OPEN
+      ? "Applications are currently open!"
+      : "*Applications are currently closed and will reopen in the Fall"}
     </Text>
     <Button
      backgroundColor="ctc.purple"

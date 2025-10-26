@@ -4,9 +4,14 @@ import { Stack, Text, Hide, Show, Spacer } from "@chakra-ui/react";
 type SectionTextProps = {
  topText: string;
  bottomText: string;
+ animated?: boolean;
 };
 
-export default function SectionText({ topText, bottomText }: SectionTextProps) {
+export default function SectionText({
+ topText,
+ bottomText,
+ animated = true,
+}: SectionTextProps) {
  return (
   <Stack
    direction={{ md: "column" }}
@@ -14,22 +19,41 @@ export default function SectionText({ topText, bottomText }: SectionTextProps) {
    spacing={0}
   >
    <Hide below="md">
-    <FadeInUp delay={0.1}>
-     <Text fontSize="6xl" lineHeight="1.5" letterSpacing="-0.025rem">
-      {topText}
-     </Text>
-    </FadeInUp>
-    <FadeInUp delay={0.2}>
-     <Text
-      fontSize="7xl"
-      fontWeight="bold"
-      textColor="ctc.purple"
-      lineHeight="1"
-      letterSpacing="-0.025rem"
-     >
-      {bottomText}
-     </Text>
-    </FadeInUp>
+    {animated ? (
+     <>
+      <FadeInUp delay={0.1}>
+       <Text fontSize="6xl" lineHeight="1.5" letterSpacing="-0.025rem">
+        {topText}
+       </Text>
+      </FadeInUp>
+      <FadeInUp delay={0.2}>
+       <Text
+        fontSize="7xl"
+        fontWeight="bold"
+        textColor="ctc.purple"
+        lineHeight="1"
+        letterSpacing="-0.025rem"
+       >
+        {bottomText}
+       </Text>
+      </FadeInUp>
+     </>
+    ) : (
+     <>
+      <Text fontSize="6xl" lineHeight="1.5" letterSpacing="-0.025rem">
+       {topText}
+      </Text>
+      <Text
+       fontSize="7xl"
+       fontWeight="bold"
+       textColor="ctc.purple"
+       lineHeight="1"
+       letterSpacing="-0.025rem"
+      >
+       {bottomText}
+      </Text>
+     </>
+    )}
    </Hide>
 
    <Show below="md">

@@ -2,7 +2,7 @@ import React from "react";
 import { SectionGrid, SectionGridItem } from "../GridUtils";
 import ProjectsList from "./ProjectsList";
 import SectionText from "../TextUtils/SectionText";
-import { PREVIOUS_DATA } from "../../ProjectData";
+import { PROJECT_DATA, PREVIOUS_DATA } from "../../ProjectData";
 
 export default function WorkSection() {
  return (
@@ -12,7 +12,7 @@ export default function WorkSection() {
    </SectionGridItem>
 
    <SectionGridItem>
-    <ProjectsList projects={PREVIOUS_DATA} />
+    <ProjectsList projects={[...PROJECT_DATA, ...PREVIOUS_DATA]} />
    </SectionGridItem>
   </SectionGrid>
  );

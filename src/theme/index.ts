@@ -67,6 +67,27 @@ export const theme = extendTheme({
     textColor: "gray.800",
     backgroundColor: "white",
    },
+   // Custom scrollbar styling
+   "::-webkit-scrollbar": {
+    width: "8px",
+   },
+   "::-webkit-scrollbar-track": {
+    background: "#faf5ff", // purple.50
+    borderRadius: "4px",
+   },
+   "::-webkit-scrollbar-thumb": {
+    background: "linear-gradient(to bottom,rgb(212, 175, 249), #9333ea)", // purple.400 to purple.600
+    borderRadius: "4px",
+    border: "1px solid #f3ebff", // purple.100
+   },
+   "::-webkit-scrollbar-thumb:hover": {
+    background: "linear-gradient(to bottom, #a855f7, #7c3aed)", // purple.500 to purple.700
+   },
+   // Firefox scrollbar styling
+   html: {
+    scrollbarWidth: "thin",
+    scrollbarColor: "#c084fc #faf5ff", // purple.400 purple.50
+   },
   },
  },
 });

@@ -13,7 +13,7 @@ export default function AboutPage() {
     <VStack alignItems="start" spacing={0} zIndex={1}>
      <Text
       as="span"
-      fontSize="4xl"
+      fontSize={{ base: "xl", md: "3xl", xl: "4xl" }}
       color="black"
       fontFamily="Inter, sans-serif"
      >
@@ -21,7 +21,7 @@ export default function AboutPage() {
      </Text>
 
      <Text
-      fontSize="6xl"
+      fontSize={{ base: "2xl", md: "4xl", xl: "6xl" }}
       color="black"
       fontFamily="Inter, sans-serif"
       lineHeight="1.1"

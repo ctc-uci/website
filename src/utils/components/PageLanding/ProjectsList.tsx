@@ -10,10 +10,10 @@ export default function HorizontalProjectScroll({
 }: HorizontalProjectScrollProps) {
  return (
   <Box
-   width="100%"
    overflowX="auto"
    overflowY="hidden"
    display="block"
+   position="relative"
    css={{
     "&::-webkit-scrollbar": {
      display: "none",
@@ -22,11 +22,34 @@ export default function HorizontalProjectScroll({
     scrollbarWidth: "none",
    }}
   >
+   {/* Fade overlay on the right side */}
+   <Box
+    position="absolute"
+    top={0}
+    right={0}
+    width="25px"
+    height="100%"
+    background="linear-gradient(to left, rgba(255, 255, 255, 0.9), transparent)"
+    pointerEvents="none"
+    zIndex={1}
+   />
+   <Box
+    position="absolute"
+    top={0}
+    left={0}
+    width={6}
+    height="100%"
+    background="linear-gradient(to right, rgb(255, 255, 255), transparent)"
+    pointerEvents="none"
+    zIndex={1}
+   />
+
    <HStack
     spacing={6}
     align="stretch"
     minWidth="450px"
-    width={{ base: "450px", md: "400px" }}
+    position="relative"
+    width={{ base: "450px", md: "430px" }}
     overflowX="auto"
     paddingY={4}
     paddingX={2}
@@ -36,6 +59,8 @@ export default function HorizontalProjectScroll({
      },
      msOverflowStyle: "none",
      scrollbarWidth: "none",
+     scrollSnapType: "x mandatory",
+     scrollBehavior: "smooth",
     }}
    >
     {projects.map((project, index) => (
@@ -49,6 +74,9 @@ export default function HorizontalProjectScroll({
       padding={6}
       cursor="pointer"
       transition="all 0.2s ease-in-out"
+      css={{
+       scrollSnapAlign: "start",
+      }}
       _hover={{
        transform: "translateY(-2px)",
        boxShadow:
