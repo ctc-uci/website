@@ -1,6 +1,7 @@
 "use client";
 import { VStack, Text } from "@chakra-ui/react";
 import Hero from "@/utils/components/Hero";
+import { ValuesSection } from "@/utils/components";
 
 export default function AboutPage() {
  return (
@@ -33,6 +34,8 @@ export default function AboutPage() {
      </Text>
     </VStack>
    </Hero>
+
+   <ValuesSection />
   </VStack>
  );
 }
