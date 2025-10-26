@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Text, Image, Link, Icon, Flex, VStack } from "@chakra-ui/react";
+import { Box, Text, Image, Link, Flex, VStack } from "@chakra-ui/react";
 import { Profile } from "../../TeamData";
 import { FaLinkedin } from "react-icons/fa6";
 
