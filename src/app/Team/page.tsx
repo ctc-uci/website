@@ -1,6 +1,8 @@
 "use client";
 import Hero from "@/utils/components/Hero";
 import { VStack, Text, Box, Grid, GridItem, Image } from "@chakra-ui/react";
+import MeetTheTeam from "@/utils/components/Team/MeetTheTeam";
+import { Footer } from "@/utils/components/Footer";
 
 export default function TeamPage() {
  const textContent = {
@@ -90,6 +92,8 @@ export default function TeamPage() {
      </GridItem>
     </Grid>
    </Hero>
+   <MeetTheTeam />
+   <Footer />
   </VStack>
  );
 }
