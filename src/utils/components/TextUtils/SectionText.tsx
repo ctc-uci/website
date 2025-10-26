@@ -1,5 +1,6 @@
-import { FadeInUp } from "../AnimationUtils";
 import { Stack, Text, Hide, Show, Spacer } from "@chakra-ui/react";
+
+import { FadeInUp } from "../AnimationUtils";
 
 type SectionTextProps = {
  topText: string;

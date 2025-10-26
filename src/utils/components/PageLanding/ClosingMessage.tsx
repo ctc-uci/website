@@ -1,5 +1,7 @@
 import { Box, Button, Text, VStack } from "@chakra-ui/react";
+
 import { RECRUITMENT_OPEN } from "@/utils/Settings";
+
 export default function ClosingMessage() {
  return (
   <Box

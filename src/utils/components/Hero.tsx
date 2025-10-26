@@ -1,7 +1,8 @@
 "use client";
 import { Box } from "@chakra-ui/react";
-import Navbar from "@/utils/components/Navbar";
 import Image from "next/image";
+
+import Navbar from "@/utils/components/Navbar";
 
 type HeroProps = {
  children: React.ReactNode;

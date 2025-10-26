@@ -1,7 +1,8 @@
 "use client";
 import { VStack, Text, Hide, Show } from "@chakra-ui/react";
-import { SectionGrid, SectionGridItem } from "../GridUtils";
+
 import { FadeInUp, CareersMarque } from "../AnimationUtils";
+import { SectionGrid, SectionGridItem } from "../GridUtils";
 import SectionText from "../TextUtils/SectionText";
 
 export default function LegacySection() {

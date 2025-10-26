@@ -1,4 +1,5 @@
 import { Box, VStack, Text, Image, HStack } from "@chakra-ui/react";
+
 import { Project } from "../../ProjectData";
 
 interface HorizontalProjectScrollProps {

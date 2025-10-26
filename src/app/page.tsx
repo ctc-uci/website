@@ -1,12 +1,13 @@
 "use client";
 import { VStack, Text, Button, Image, Hide } from "@chakra-ui/react";
+
 import { Footer } from "@/utils/components/Footer";
 import Hero from "@/utils/components/Hero";
+import ClosingMessage from "@/utils/components/PageLanding/ClosingMessage";
 import ImpactSection from "@/utils/components/PageLanding/ImpactSection";
+import LandingPageIconBox from "@/utils/components/PageLanding/LandingPageIcon";
 import LegacySection from "@/utils/components/PageLanding/LegacySection";
 import WorkSection from "@/utils/components/PageLanding/WorkSection";
-import ClosingMessage from "@/utils/components/PageLanding/ClosingMessage";
-import LandingPageIconBox from "@/utils/components/PageLanding/LandingPageIcon";
 
 export default function Home() {
  return (

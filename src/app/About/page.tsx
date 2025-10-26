@@ -1,10 +1,11 @@
 "use client";
 import { VStack, Text } from "@chakra-ui/react";
+
+import { AnimatedTyping, ValuesSection } from "@/utils/components";
 import { Footer } from "@/utils/components/Footer";
 import Hero from "@/utils/components/Hero";
-import { AnimatedTyping, ValuesSection } from "@/utils/components";
-import MissionSection from "@/utils/components/PageAbout/MissionSection";
 import HistorySection from "@/utils/components/PageAbout/HistorySection";
+import MissionSection from "@/utils/components/PageAbout/MissionSection";
 
 export default function AboutPage() {
  return (

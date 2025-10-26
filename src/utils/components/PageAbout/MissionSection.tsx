@@ -1,6 +1,7 @@
+import { Image, VStack, Text } from "@chakra-ui/react";
+
 import { SectionGrid, SectionGridItem } from "../GridUtils";
 import SectionText from "../TextUtils/SectionText";
-import { Image, VStack, Text } from "@chakra-ui/react";
 
 export default function MissionSection() {
  return (

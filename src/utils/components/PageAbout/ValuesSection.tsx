@@ -6,6 +6,7 @@ import {
  VStack,
  useBreakpointValue,
 } from "@chakra-ui/react";
+
 import { ValueCard } from "./ValueCard";
 
 const valuesData = [

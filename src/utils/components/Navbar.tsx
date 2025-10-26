@@ -1,6 +1,7 @@
 "use client";
 import { Hide, Show } from "@chakra-ui/react";
 import { usePathname } from "next/navigation";
+
 import DesktopNavbar from "./Navbars/DesktopNavbar";
 import MobileNavbar from "./Navbars/MobileNavbar";
 
