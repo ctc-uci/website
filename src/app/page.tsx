@@ -2,11 +2,11 @@
 import { VStack, Text, Button, Image, Hide } from "@chakra-ui/react";
 import { Footer } from "@/utils/components/Footer";
 import Hero from "@/utils/components/Hero";
-import ImpactSection from "@/utils/components/Landing/ImpactSection";
-import LegacySection from "@/utils/components/Landing/LegacySection";
-import WorkSection from "@/utils/components/Landing/WorkSection";
-import ClosingMessage from "@/utils/components/Landing/ClosingMessage";
-import LandingPageIconBox from "@/utils/components/Landing/LandingPageIcon";
+import ImpactSection from "@/utils/components/PageLanding/ImpactSection";
+import LegacySection from "@/utils/components/PageLanding/LegacySection";
+import WorkSection from "@/utils/components/PageLanding/WorkSection";
+import ClosingMessage from "@/utils/components/PageLanding/ClosingMessage";
+import LandingPageIconBox from "@/utils/components/PageLanding/LandingPageIcon";
 
 export default function Home() {
  return (

@@ -1,7 +1,7 @@
 "use client";
 import Hero from "@/utils/components/Hero";
 import { VStack, Text, Box, Grid, GridItem, Image } from "@chakra-ui/react";
-import MeetTheTeam from "@/utils/components/Team/MeetTheTeam";
+import MeetTheTeam from "@/utils/components/PageTeam/MeetTheTeam";
 import { Footer } from "@/utils/components/Footer";
 
 export default function TeamPage() {
