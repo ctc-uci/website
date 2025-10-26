@@ -21,10 +21,6 @@ export const ValueCard = ({
   <Box
    transform={isMobile ? "none" : `rotate(${rotation}deg)`}
    transition="transform 0.3s ease"
-   _hover={{
-    transform: isMobile ? "scale(1.05)" : `rotate(${rotation}deg) scale(1.05)`,
-   }}
-   cursor="pointer"
   >
    <Box
     w="280px"

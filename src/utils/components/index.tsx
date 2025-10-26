@@ -8,6 +8,9 @@ export { MeetTheTeam as TeamPageExample } from "./PageTeam/MeetTheTeam";
 // About page components
 export { ValueCard, ValuesSection } from "./PageAbout";
 
+// Animation components
+export { AnimatedTyping } from "./AnimationUtils";
+
 // Existing components
 export { Footer } from "./Footer";
 export { default as Hero } from "./Hero";

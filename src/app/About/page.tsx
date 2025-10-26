@@ -1,15 +1,23 @@
 "use client";
 import { VStack, Text } from "@chakra-ui/react";
+import { Footer } from "@/utils/components/Footer";
 import Hero from "@/utils/components/Hero";
-import { ValuesSection } from "@/utils/components";
+import { AnimatedTyping, ValuesSection } from "@/utils/components";
+import MissionSection from "@/utils/components/PageAbout/MissionSection";
+import HistorySection from "@/utils/components/PageAbout/HistorySection";
 
 export default function AboutPage() {
  return (
   <VStack spacing={0}>
    <Hero>
     <VStack alignItems="start" spacing={0} zIndex={1}>
-     <Text fontSize="4xl" color="black" fontFamily="Inter, sans-serif">
-      Nice to meet you!
+     <Text
+      as="span"
+      fontSize="4xl"
+      color="black"
+      fontFamily="Inter, sans-serif"
+     >
+      <AnimatedTyping text="Nice to meet you!" speed={90} />
      </Text>
 
      <Text
@@ -35,7 +43,10 @@ export default function AboutPage() {
     </VStack>
    </Hero>
 
+   <MissionSection />
+   <HistorySection />
    <ValuesSection />
+   <Footer />
   </VStack>
  );
 }
