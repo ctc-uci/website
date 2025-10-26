@@ -1,0 +1,114 @@
+"use client";
+import { VStack, Text, Button, Image, Hide } from "@chakra-ui/react";
+import { Footer } from "@/utils/components/Footer";
+import Hero from "@/utils/components/Hero";
+import ImpactSection from "@/utils/components/Landing/ImpactSection";
+import LegacySection from "@/utils/components/Landing/LegacySection";
+import WorkSection from "@/utils/components/Landing/WorkSection";
+import ClosingMessage from "@/utils/components/Landing/ClosingMessage";
+import LandingPageIconBox from "@/utils/components/Landing/LandingPageIcon";
+
+export default function Home() {
+ return (
+  <VStack spacing={0}>
+   <Hero landing>
+    <>
+     <Hide below="md">
+      <LandingPageIconBox
+       rotation="rotate(-10deg)"
+       positionOverride={{ left: "15%", top: "20%" }}
+       fadeInDelay={0}
+       fadeInDuration={0.8}
+      >
+       <Image
+        src="/assets/LandingPageIcons/code.svg"
+        alt="Code Icon"
+        width="100%"
+        height="100%"
+       />
+      </LandingPageIconBox>
+
+      <LandingPageIconBox
+       rotation="rotate(15deg)"
+       positionOverride={{ right: "20%", top: "20%" }}
+       fadeInDelay={0.2}
+       fadeInDuration={0.8}
+      >
+       <Image
+        src="/assets/LandingPageIcons/heart-handshake.svg"
+        alt="Heart Handshake Icon"
+        width="100%"
+        height="100%"
+       />
+      </LandingPageIconBox>
+
+      <LandingPageIconBox
+       rotation="rotate(-15deg)"
+       positionOverride={{ right: "10%", bottom: "20%" }}
+       fadeInDelay={0.4}
+       fadeInDuration={0.8}
+      >
+       <Image
+        src="/assets/LandingPageIcons/heart-handshake.svg"
+        alt="Heart Handshake Icon"
+        width="100%"
+        height="100%"
+       />
+      </LandingPageIconBox>
+
+      <LandingPageIconBox
+       rotation="rotate(13deg)"
+       positionOverride={{ left: "20%", bottom: "20%" }}
+       fadeInDelay={0.6}
+       fadeInDuration={0.8}
+      >
+       <Image
+        src="/assets/LandingPageIcons/mouse-pointer.svg"
+        alt="Mouse Pointer Icon"
+        width="100%"
+        height="100%"
+       />
+      </LandingPageIconBox>
+     </Hide>
+
+     <VStack alignItems="center" spacing={5} zIndex={1}>
+      <Text
+       fontSize="2xl"
+       color="black"
+       fontFamily="Inter, sans-serif"
+       textAlign="center"
+      >
+       EST. 2020
+      </Text>
+      <Text
+       lineHeight="5.75rem"
+       fontSize="7xl"
+       color="black"
+       fontFamily="Inter, sans-serif"
+       textAlign="center"
+       fontWeight="600"
+      >
+       Commit The <br /> Change
+      </Text>
+      <Text
+       fontSize="2xl"
+       color="black"
+       fontFamily="Inter, sans-serif"
+       textAlign="center"
+      >
+       Creating tech for social good
+      </Text>
+      <Button backgroundColor="ctc.purple" variant="purple" color="white">
+       Learn More
+      </Button>
+     </VStack>
+    </>
+   </Hero>
+   <ImpactSection />
+   <LegacySection />
+   <WorkSection />
+   <ClosingMessage />
+   <Footer />
+  </VStack>
+ );
+}
