@@ -1,6 +1,7 @@
 "use client";
 import { VStack, Text } from "@chakra-ui/react";
 
+import CtcTimeline from "@/utils/components/CtcTimeline";
 import { Footer } from "@/utils/components/Footer";
 import Hero from "@/utils/components/Hero";
 import AlumniFlex from "@/utils/components/PageCareer/AlumniFlex";
@@ -19,6 +20,7 @@ export default function CareerPage() {
    </Hero>
    <AlumniFlex />
    <Testimonials />
+   <CtcTimeline />
    <DemoDay />
    <Footer />
   </VStack>

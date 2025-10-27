@@ -1,13 +1,14 @@
 "use client";
 import { VStack, Text, Box, Grid, GridItem, Image } from "@chakra-ui/react";
 
+import { AnimatedTyping } from "@/utils/components/AnimationUtils/AnimatedTyping";
 import { Footer } from "@/utils/components/Footer";
 import MeetTheTeam from "@/utils/components/PageTeam/MeetTheTeam";
 import ParallaxHero from "@/utils/components/ParallaxHero";
 
 export default function TeamPage() {
  const textContent = {
-  topText: "Hello! we are",
+  topText: "Hello! We are",
   mainText: "CTC",
   bottomText: "'25 - '26",
  };
@@ -59,8 +60,9 @@ export default function TeamPage() {
         fontSize={{ base: "4xl", md: "6xl", lg: "7xl" }}
         color="gray.700"
         fontWeight="bold"
+        as="span"
        >
-        {textContent.bottomText}
+        <AnimatedTyping text={textContent.bottomText} speed={200} />
        </Text>
       )}
      </GridItem>
@@ -83,7 +85,7 @@ export default function TeamPage() {
        justifyContent="center"
       >
        <Image
-        loading="eager"
+        loading="lazy"
         src={imageSrc}
         alt={imageAlt}
         borderRadius="inherit"

@@ -1,9 +1,12 @@
-import React, { useState } from "react";
 import { Box, SimpleGrid, useBreakpointValue, VStack } from "@chakra-ui/react";
+import React, { useState } from "react";
+
 import { Profile } from "../../TeamData";
+import FadeInUp from "../AnimationUtils/FadeInUp";
+
+import { DropdownController } from "./DropdownController";
 import { ProfileCard } from "./ProfileCard";
 import { TabController } from "./TabController";
-import { DropdownController } from "./DropdownController";
 
 interface TeamDisplayProps {
  teamData: Profile[][];
@@ -31,7 +34,9 @@ export const TeamDisplay: React.FC<TeamDisplayProps> = ({
    px={{ base: 20, md: 10 }}
   >
    {profiles.map((profile, index) => (
-    <ProfileCard key={`${profile.name}-${index}`} profile={profile} />
+    <FadeInUp key={`${profile.name}-${index}`} delay={index * 0.05}>
+     <ProfileCard profile={profile} />
+    </FadeInUp>
    ))}
   </SimpleGrid>
  );

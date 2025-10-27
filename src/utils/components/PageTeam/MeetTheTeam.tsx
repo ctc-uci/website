@@ -1,7 +1,9 @@
-import React from "react";
 import { Text, Box, Container, VStack } from "@chakra-ui/react";
-import { TeamDisplay } from "./TeamDisplay";
+import React from "react";
+
 import { BOARD_DATA, CLCHC_DATA, GCF_DATA, ELDR_DATA } from "@/utils/TeamData";
+
+import { TeamDisplay } from "./TeamDisplay";
 
 export const MeetTheTeam: React.FC = () => {
  const labels = ["Board", "CLCHC", "GCF", "ELDR"];

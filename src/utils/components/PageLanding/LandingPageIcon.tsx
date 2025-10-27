@@ -1,7 +1,6 @@
-import { useInView } from "framer-motion";
-import { useRef } from "react";
-import { motion } from "framer-motion";
 import { Box } from "@chakra-ui/react";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 type LandingPageIconBoxProps = {
  children: React.ReactNode;
@@ -47,8 +46,8 @@ export default function LandingPageIconBox({
    }}
   >
    <Box
-    width="124px"
-    height="124px"
+    width={{ base: "100px", md: "124px", xl: "150px" }}
+    height={{ base: "100px", md: "124px", xl: "150px" }}
     backgroundColor="ctc.purple"
     borderRadius="md"
     display="flex"

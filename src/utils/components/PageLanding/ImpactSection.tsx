@@ -1,8 +1,10 @@
 "use client";
-import { VStack, Text, Box } from "@chakra-ui/react";
+import { VStack, Text } from "@chakra-ui/react";
+
 import { IMPACT_STATS } from "@/utils/Settings";
-import { SectionGrid, SectionGridItem } from "../GridUtils";
+
 import AnimatedCounter from "../AnimationUtils/AnimatedCounter";
+import { SectionGrid, SectionGridItem } from "../GridUtils";
 import SectionText from "../TextUtils/SectionText";
 
 export default function ImpactSection() {
@@ -20,23 +22,38 @@ export default function ImpactSection() {
      textColor="white"
      spacing={4}
      width="100%"
+     lineHeight="1"
     >
-     <Box bg="ctc.purple" borderRadius="md" minW="5rem" width="75%">
+     <VStack
+      bg="ctc.purple"
+      borderRadius="md"
+      minW="5rem"
+      width="75%"
+      py={4}
+      spacing={2}
+     >
       <Text fontSize="7xl" fontWeight="bold">
        <AnimatedCounter value={IMPACT_STATS.NPOS_SERVED} suffix="+" />
       </Text>
       <Text fontSize="xl" fontWeight="semibold">
        Software Solutions for Non-Profits{" "}
       </Text>
-     </Box>
-     <Box bg="ctc.purple" borderRadius="md" minW="5rem" width="75%">
+     </VStack>
+     <VStack
+      bg="ctc.purple"
+      borderRadius="md"
+      minW="5rem"
+      width="75%"
+      py={4}
+      spacing={2}
+     >
       <Text fontSize="7xl" fontWeight="bold">
        <AnimatedCounter value={IMPACT_STATS.HOURS_VOLUNTEERED} suffix="+" />
       </Text>
       <Text fontSize="xl" fontWeight="semibold">
        Hours Volunteered
       </Text>
-     </Box>
+     </VStack>
     </VStack>
    </SectionGridItem>
   </SectionGrid>

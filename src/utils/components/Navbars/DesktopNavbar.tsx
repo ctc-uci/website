@@ -58,7 +58,7 @@ function DesktopNavbar({ pathname, navItems }: DesktopNavbarProps) {
 
     {navItems.map((item, index) => {
      const isActive = pathname === item.href;
-     const isWIP = index >= navItems.length - 2; // Last two items
+     const isWIP = index >= navItems.length - 1; // Last two items
      return (
       <ChakraLink
        key={item.href}
