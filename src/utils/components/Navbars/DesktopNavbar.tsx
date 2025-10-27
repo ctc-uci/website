@@ -1,7 +1,5 @@
-import { Box, HStack, Image } from "@chakra-ui/react";
-import React from "react";
+import { Box, HStack, Image, Link as ChakraLink } from "@chakra-ui/react";
 import Link from "next/link";
-import { Link as ChakraLink } from "@chakra-ui/react";
 
 type DesktopNavbarProps = {
  pathname: string;
@@ -58,17 +56,18 @@ function DesktopNavbar({ pathname, navItems }: DesktopNavbarProps) {
      )}
     </ChakraLink>
 
-    {navItems.map((item) => {
+    {navItems.map((item, index) => {
      const isActive = pathname === item.href;
+     const isWIP = index >= navItems.length - 2; // Last two items
      return (
       <ChakraLink
        key={item.href}
-       href={item.href}
+       href={isWIP ? "#" : item.href}
        as={Link}
-       color={isActive ? "white" : "gray.800"}
+       color={isWIP ? "gray.400" : isActive ? "white" : "gray.800"}
        fontWeight="500"
        fontSize="md"
-       bg={isActive ? "ctc.purple" : "transparent"}
+       bg={isActive && !isWIP ? "ctc.purple" : "transparent"}
        borderRadius="full"
        px={4}
        py={2}
@@ -78,12 +77,13 @@ function DesktopNavbar({ pathname, navItems }: DesktopNavbarProps) {
        alignItems="center"
        justifyContent="center"
        _hover={{
-        color: isActive ? "white" : "ctc.purple",
-        bg: isActive ? "ctc.purple" : "purple.100",
+        color: isWIP ? "gray.400" : isActive ? "white" : "ctc.purple",
+        bg: isWIP ? "transparent" : isActive ? "ctc.purple" : "purple.100",
        }}
        transition="all 0.2s"
        textDecoration="none"
        whiteSpace="nowrap"
+       cursor={isWIP ? "not-allowed" : "pointer"}
       >
        {item.label}
       </ChakraLink>

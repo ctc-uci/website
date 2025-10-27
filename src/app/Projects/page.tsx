@@ -1,5 +1,5 @@
 "use client";
-import { VStack, Text, Button } from "@chakra-ui/react";
+import { VStack, Text, Button, Link as ChakraLink } from "@chakra-ui/react";
 
 import { Footer } from "@/utils/components/Footer";
 import Hero from "@/utils/components/Hero";
@@ -24,6 +24,9 @@ export default function OurWorkPage() {
       variant="purple"
       color="white"
       size="lg"
+      as={ChakraLink}
+      target="_blank"
+      href="https://ctc-uci.com/portfolio/CTC%202024-25%20Outreach%20Portfolio.pdf"
      >
       Portfolio
      </Button>

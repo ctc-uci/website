@@ -1,9 +1,11 @@
 "use client";
 import { VStack, Text } from "@chakra-ui/react";
 
-import { CareersMarque } from "@/utils/components/AnimationUtils";
 import { Footer } from "@/utils/components/Footer";
 import Hero from "@/utils/components/Hero";
+import AlumniFlex from "@/utils/components/PageCareer/AlumniFlex";
+import DemoDay from "@/utils/components/PageCareer/DemoDay";
+import Testimonials from "@/utils/components/PageCareer/Testimonials";
 
 export default function CareerPage() {
  return (
@@ -15,7 +17,10 @@ export default function CareerPage() {
      </Text>
     </VStack>
    </Hero>
-   <CareersMarque orientation="horizontal" height="120px" /> <Footer />
+   <AlumniFlex />
+   <Testimonials />
+   <DemoDay />
+   <Footer />
   </VStack>
  );
 }

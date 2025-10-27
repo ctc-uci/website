@@ -97,7 +97,7 @@ const CareersMarque: React.FC<CareersMarqueProps> = ({
          alt={logo.alt}
          maxH={{ base: "40px", md: "60px" }}
          maxW={`${logoWidth}px`}
-         objectFit="contain"
+         objectFit="fill"
          _hover={{
           transform: "scale(1.05)",
           transition: "transform 0.3s ease-in-out",

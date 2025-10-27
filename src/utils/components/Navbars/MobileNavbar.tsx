@@ -1,3 +1,4 @@
+import { HamburgerIcon } from "@chakra-ui/icons";
 import {
  Box,
  useDisclosure,
@@ -10,11 +11,11 @@ import {
  VStack,
  Text,
  IconButton,
+ Link as ChakraLink,
 } from "@chakra-ui/react";
-import { Link as ChakraLink } from "@chakra-ui/react";
-import Link from "next/link";
 import Image from "next/image";
-import { HamburgerIcon } from "@chakra-ui/icons";
+import Link from "next/link";
+
 import { useScrollDirection } from "../../hooks/useScrollDirection";
 
 type MobileNavbarProps = {
@@ -82,28 +83,30 @@ function MobileNavbar({ pathname, navItems }: MobileNavbarProps) {
      </DrawerHeader>
      <DrawerBody bg="purple.200" py={6}>
       <VStack spacing={4} align="stretch">
-       {navItems.map((item) => {
+       {navItems.map((item, index) => {
         const isActive = pathname === item.href;
+        const isWIP = index >= navItems.length - 2; // Last two items
         return (
          <ChakraLink
           key={item.href}
-          href={item.href}
+          href={isWIP ? "#" : item.href}
           as={Link}
-          color={isActive ? "white" : "gray.800"}
+          color={isWIP ? "gray.400" : isActive ? "white" : "gray.800"}
           fontWeight="500"
           fontSize="lg"
-          bg={isActive ? "ctc.purple" : "transparent"}
+          bg={isActive && !isWIP ? "ctc.purple" : "transparent"}
           borderRadius="lg"
           px={6}
           py={4}
           textAlign="center"
           _hover={{
-           color: isActive ? "white" : "ctc.purple",
-           bg: isActive ? "ctc.purple" : "purple.100",
+           color: isWIP ? "gray.400" : isActive ? "white" : "ctc.purple",
+           bg: isWIP ? "transparent" : isActive ? "ctc.purple" : "purple.100",
           }}
           transition="all 0.2s"
           textDecoration="none"
           onClick={onClose}
+          cursor={isWIP ? "not-allowed" : "pointer"}
          >
           {item.label}
          </ChakraLink>
