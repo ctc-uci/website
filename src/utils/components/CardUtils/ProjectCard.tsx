@@ -20,7 +20,6 @@ export default function ProjectCard({
    borderRadius="12px"
    boxShadow="0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)"
    p={6}
-   cursor="pointer"
    transition="all 0.2s ease-in-out"
    css={{
     scrollSnapAlign: "start",
@@ -42,6 +41,7 @@ export default function ProjectCard({
       maxHeight="100%"
       maxWidth="100%"
       objectFit="contain"
+      draggable="false"
      />
     </Box>
 
