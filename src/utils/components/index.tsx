@@ -16,3 +16,6 @@ export { Footer } from "./Footer";
 export { default as Hero } from "./Hero";
 export { default as ParallaxHero } from "./ParallaxHero";
 export { default as Navbar } from "./Navbar";
+
+// Gallery component
+export { Gallery } from "./Gallery";

@@ -42,7 +42,7 @@ function DesktopNavbar({ pathname, navItems }: DesktopNavbarProps) {
      maxW="64px"
      maxH="54px"
      _hover={{ opacity: 0.8 }}
-     transition="opacity 0.2s"
+     transition="opacity 0.05s"
     >
      {pathname === "/" ? (
       <Image
@@ -76,11 +76,32 @@ function DesktopNavbar({ pathname, navItems }: DesktopNavbarProps) {
        display="flex"
        alignItems="center"
        justifyContent="center"
+       position="relative"
+       overflow="hidden"
+       _before={{
+        content: '""',
+        position: "absolute",
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        bg: "purple.100",
+        borderRadius: "full",
+        transform: "scale(0)",
+        transformOrigin: "center",
+        transition: "transform 0.2s ease-out, opacity 0.15s ease-out",
+        zIndex: -1,
+        opacity: 0,
+       }}
        _hover={{
         color: isWIP ? "gray.400" : isActive ? "white" : "ctc.purple",
-        bg: isWIP ? "transparent" : isActive ? "ctc.purple" : "purple.100",
+        bg: isActive && !isWIP ? "ctc.purple" : "transparent",
+        _before: {
+         transform: isWIP || isActive ? "scale(0)" : "scale(1)",
+         opacity: isWIP || isActive ? 0 : 1,
+        },
        }}
-       transition="all 0.2s"
+       transition="color 0.3s ease-out"
        textDecoration="none"
        whiteSpace="nowrap"
        cursor={isWIP ? "not-allowed" : "pointer"}

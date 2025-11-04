@@ -7,7 +7,7 @@ export default function MissionSection() {
  return (
   <SectionGrid>
    <SectionGridItem>
-    <VStack spacing={1} alignItems="start">
+    <VStack spacing={2} alignItems="start">
      <SectionText topText="Our" bottomText="Mission." animated={false} />
      <Text textAlign="left">
       At Commit the Change, our mission is to build end-to-

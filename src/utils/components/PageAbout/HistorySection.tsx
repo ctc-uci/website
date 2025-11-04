@@ -1,7 +1,7 @@
-import React from "react";
+import { VStack, Text, Image } from "@chakra-ui/react";
+
 import { SectionGrid, SectionGridItem } from "../GridUtils";
 import SectionText from "../TextUtils/SectionText";
-import { VStack, Text, Image } from "@chakra-ui/react";
 
 export default function MissionSection() {
  return (
@@ -17,7 +17,7 @@ export default function MissionSection() {
     />
    </SectionGridItem>
    <SectionGridItem>
-    <VStack spacing={0} alignItems="start">
+    <VStack spacing={2} alignItems="start">
      <SectionText topText="Our" bottomText="History." animated={false} />
      <Text textAlign="left">
       Founded in 2020, Commit the Change started as a small group <br /> of

@@ -15,8 +15,8 @@ export default function SectionGrid({
  children,
  maxW = "1200px",
  px = { base: 4, md: 8 },
- pt = { base: 14, md: 12 },
- pb = { base: 14, md: 0 },
+ pt = { base: 14, md: 6 },
+ pb = { base: 14, md: 6 },
  gap = { base: 8, md: 12 },
  minH = { base: "auto", md: "400px" },
 }: SectionGridProps) {

@@ -1,4 +1,4 @@
-import { Text } from "@chakra-ui/react";
+import { Image } from "@chakra-ui/react";
 
 import { SectionGrid, SectionGridItem } from "../GridUtils";
 import SectionText from "../TextUtils/SectionText";
@@ -10,7 +10,14 @@ function DemoDay() {
     <SectionText topText="Demo" bottomText="Day." />
    </SectionGridItem>
    <SectionGridItem>
-    <Text>Demo Day</Text>
+    <Image
+     src="/photos/demo-day.png"
+     alt="Demo Day"
+     width="700px"
+     height="400px"
+     objectFit="cover"
+     borderRadius="lg"
+    />
    </SectionGridItem>
   </SectionGrid>
  );
