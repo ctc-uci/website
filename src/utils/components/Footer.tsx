@@ -116,18 +116,18 @@ const LINKS = [
  },
  {
   label: "About",
-  href: "/about",
+  href: "/About",
+ },
+ {
+  label: "Team",
+  href: "/Team",
  },
  {
   label: "Projects",
-  href: "/projects",
+  href: "/Projects",
  },
  {
-  label: "Apply",
-  href: "/apply",
- },
- {
-  label: "Work with Us",
-  href: "/work-with-us",
+  label: "Career",
+  href: "/Career",
  },
 ];
