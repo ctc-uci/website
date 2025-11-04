@@ -1,3 +1,3 @@
 # CTC Website 25-26
 
-Design Courtey of Design Director/Leads: Claire Phan, Tiffany Yan, Leilani Bascos, Vy Vu 💜
+Design courtey of design director Claire Phan and design leads Tiffany Yan, Leilani Bascos, Vy Vu 💜
