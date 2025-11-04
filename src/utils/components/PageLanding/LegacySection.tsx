@@ -17,7 +17,7 @@ export default function LegacySection() {
 
    <SectionGridItem>
     {/* Right Side */}
-    <VStack alignItems="start" spacing={1}>
+    <VStack alignItems="start" spacing={2}>
      <SectionText topText="Our" bottomText="Legacy." />
 
      <FadeInUp delay={0.3}>

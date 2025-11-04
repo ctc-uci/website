@@ -130,7 +130,7 @@ export default function Gallery({
         width="100%"
         height="100%"
         objectFit="cover"
-        borderRadius="8px"
+        borderRadius="sm"
         bg="gray.200"
        />
       </motion.div>
@@ -165,7 +165,7 @@ export default function Gallery({
          width="100%"
          height="100%"
          objectFit="cover"
-         borderRadius="12px"
+         borderRadius="md"
          boxShadow="0 4px 20px rgba(0, 0, 0, 0.1)"
          bg="gray.200"
         />
@@ -211,7 +211,7 @@ export default function Gallery({
         width="100%"
         height="100%"
         objectFit="cover"
-        borderRadius="8px"
+        borderRadius="sm"
         bg="gray.200"
        />
       </motion.div>

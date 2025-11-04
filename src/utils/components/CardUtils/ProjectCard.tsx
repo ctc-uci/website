@@ -17,7 +17,7 @@ export default function ProjectCard({
    maxWidth={"325px"}
    width={{ base: "100%", md: "300px" }}
    backgroundColor="white"
-   borderRadius="12px"
+   borderRadius="lg"
    boxShadow="0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)"
    p={6}
    transition="all 0.2s ease-in-out"
@@ -32,7 +32,7 @@ export default function ProjectCard({
      height={presentationDisplay ? "160px" : "120px"}
      display="flex"
      justifyContent="center"
-     borderRadius="8px"
+     borderRadius="sm"
      overflow="hidden"
     >
      <Image

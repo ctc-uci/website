@@ -70,7 +70,7 @@ export default function HorizontalProjectScroll({
       minWidth="300px"
       maxWidth="300px"
       backgroundColor="white"
-      borderRadius="12px"
+      borderRadius="md"
       boxShadow="0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)"
       padding={6}
       cursor="pointer"
@@ -91,7 +91,7 @@ export default function HorizontalProjectScroll({
         height="120px"
         display="flex"
         justifyContent="center"
-        borderRadius="8px"
+        borderRadius="sm"
         overflow="hidden"
        >
         <Image

@@ -15,6 +15,7 @@ import {
 } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
+import { useState, useEffect } from "react";
 
 import { useScrollDirection } from "../../hooks/useScrollDirection";
 
@@ -25,6 +26,21 @@ type MobileNavbarProps = {
 function MobileNavbar({ pathname, navItems }: MobileNavbarProps) {
  const { isOpen, onOpen, onClose } = useDisclosure();
  const scrollDirection = useScrollDirection();
+ const [isAtTop, setIsAtTop] = useState(true);
+
+ useEffect(() => {
+  const handleScroll = () => {
+   // Consider "at top" if scroll position is within 10px of the top
+   // This accounts for bounce/overscroll effects on mobile
+   setIsAtTop(window.scrollY <= 10);
+  };
+
+  // Check initial position
+  handleScroll();
+
+  window.addEventListener("scroll", handleScroll, { passive: true });
+  return () => window.removeEventListener("scroll", handleScroll);
+ }, []);
  return (
   <>
    <Box
@@ -42,7 +58,7 @@ function MobileNavbar({ pathname, navItems }: MobileNavbarProps) {
     borderBottomRadius="sm"
     boxShadow="0 0 10px 0 rgba(0, 0, 0, 0.1)"
     transform={
-     scrollDirection === "down" ? "translateY(-100%)" : "translateY(0)"
+     isAtTop || scrollDirection === "up" ? "translateY(0)" : "translateY(-100%)"
     }
    >
     {/* Home Logo */}
