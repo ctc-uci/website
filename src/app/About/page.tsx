@@ -3,10 +3,12 @@ import { VStack, Text } from "@chakra-ui/react";
 
 import { AnimatedTyping } from "@/utils/components";
 import { Footer } from "@/utils/components/Footer";
+import { Gallery } from "@/utils/components/Gallery";
 import Hero from "@/utils/components/Hero";
 import { ValuesSection } from "@/utils/components/PageAbout";
 import HistorySection from "@/utils/components/PageAbout/HistorySection";
 import MissionSection from "@/utils/components/PageAbout/MissionSection";
+import { photos } from "@/utils/GallaryPhotos";
 
 export default function AboutPage() {
  return (
@@ -48,6 +50,7 @@ export default function AboutPage() {
    <MissionSection />
    <HistorySection />
    <ValuesSection />
+   <Gallery images={photos} />
    <Footer />
   </VStack>
  );
