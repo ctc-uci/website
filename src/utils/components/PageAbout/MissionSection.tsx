@@ -1,6 +1,7 @@
 import { Image, VStack, Text } from "@chakra-ui/react";
 
 import { SectionGrid, SectionGridItem } from "../GridUtils";
+import BreakText from "../TextUtils/BreakText";
 import SectionText from "../TextUtils/SectionText";
 
 export default function MissionSection() {
@@ -11,10 +12,10 @@ export default function MissionSection() {
      <SectionText topText="Our" bottomText="Mission." animated={false} />
      <Text textAlign="left">
       At Commit the Change, our mission is to build end-to-
-      <br />
-      end, high-quality products for non-profit organizations,
-      <br /> while empowering UC Irvine designers and developers
-      <br /> to create technology with purpose.
+      <BreakText />
+      end, high-quality products for non-profit organizations, <BreakText />{" "}
+      while empowering UC Irvine designers and developers <BreakText /> to
+      create technology with purpose.
      </Text>
     </VStack>
    </SectionGridItem>

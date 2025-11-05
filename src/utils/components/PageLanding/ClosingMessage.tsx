@@ -15,10 +15,14 @@ export default function ClosingMessage() {
    overflow="hidden"
   >
    <VStack spacing={4} alignItems="center" justifyContent="center">
-    <Text fontSize="7xl" fontWeight="semibold" textAlign="center">
+    <Text
+     fontSize={{ base: "4xl", sm: "7xl" }}
+     fontWeight="semibold"
+     textAlign="center"
+    >
      Create Tech With Us!
     </Text>
-    <Text fontSize="xl" textAlign="center">
+    <Text fontSize={{ base: "xs", sm: "xl" }} textAlign="center">
      {RECRUITMENT_OPEN
       ? "Applications are currently open!"
       : "*Applications are currently closed and will reopen in the Fall"}
@@ -28,6 +32,8 @@ export default function ClosingMessage() {
      variant="purple"
      color="white"
      size="lg"
+     as="a"
+     href="/Recruitment"
     >
      How to Join
     </Button>

@@ -8,6 +8,7 @@ import Hero from "@/utils/components/Hero";
 import { ValuesSection } from "@/utils/components/PageAbout";
 import HistorySection from "@/utils/components/PageAbout/HistorySection";
 import MissionSection from "@/utils/components/PageAbout/MissionSection";
+import BreakText from "@/utils/components/TextUtils/BreakText";
 import { photos } from "@/utils/GallaryPhotos";
 
 export default function AboutPage() {
@@ -18,6 +19,7 @@ export default function AboutPage() {
      <Text
       as="span"
       fontSize={{ base: "xl", md: "3xl", xl: "4xl" }}
+      pl={{ base: 4, sm: 0 }}
       color="black"
       fontFamily="Inter, sans-serif"
      >
@@ -26,14 +28,15 @@ export default function AboutPage() {
 
      <Text
       fontSize={{ base: "2xl", md: "4xl", xl: "6xl" }}
+      pl={{ base: 4, sm: 0 }}
       color="black"
       fontFamily="Inter, sans-serif"
       lineHeight="1.1"
      >
       We are a collaborative development
-      <br />
+      <BreakText />
       team at UC Irvine designing and
-      <br />
+      <BreakText />
       developing{" "}
       <Text as="span" fontWeight="bold">
        technology

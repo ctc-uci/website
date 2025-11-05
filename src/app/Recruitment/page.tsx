@@ -1,7 +1,10 @@
 "use client";
 import { VStack, Text } from "@chakra-ui/react";
+
 import Hero from "@/utils/components/Hero";
+import BreakText from "@/utils/components/TextUtils/BreakText";
 import { RECRUITMENT_OPEN } from "@/utils/Settings";
+
 export default function RecruitmentPage() {
  return (
   <VStack spacing={0}>
@@ -16,8 +19,8 @@ export default function RecruitmentPage() {
       </Text>
      ) : (
       <Text fontSize="xl" textAlign="center">
-       Applications are currently closed and will reopen in the Fall. <br />{" "}
-       Follow us on social media to stay up to date!
+       Applications are currently closed and will reopen in the Fall.{" "}
+       <BreakText /> Follow us on social media to stay up to date!
       </Text>
      )}
     </VStack>

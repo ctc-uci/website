@@ -85,7 +85,7 @@ export default function TeamPage() {
        justifyContent="center"
       >
        <Image
-        loading="lazy"
+        loading="eager"
         src={imageSrc}
         alt={imageAlt}
         borderRadius="inherit"

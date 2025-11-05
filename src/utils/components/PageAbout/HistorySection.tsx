@@ -1,6 +1,7 @@
 import { VStack, Text, Image } from "@chakra-ui/react";
 
 import { SectionGrid, SectionGridItem } from "../GridUtils";
+import BreakText from "../TextUtils/BreakText";
 import SectionText from "../TextUtils/SectionText";
 
 export default function MissionSection() {
@@ -20,15 +21,16 @@ export default function MissionSection() {
     <VStack spacing={2} alignItems="start">
      <SectionText topText="Our" bottomText="History." animated={false} />
      <Text textAlign="left">
-      Founded in 2020, Commit the Change started as a small group <br /> of
-      undergraduate students with a shared love for <br />
-      coding and finding fulfillment through positive <br /> social impacts on
-      their communities.
-      <br />
-      <br />
+      Founded in 2020, Commit the Change started as a small group <BreakText />{" "}
+      of undergraduate students with a shared love for <BreakText />
+      coding and finding fulfillment through positive <BreakText /> social
+      impacts on their communities.
+      <BreakText />
+      <BreakText />
       After merging with Blueprint in 2021, Commit the
-      <br /> Change is now an established student organization at <br />
-      UC Irvine with a team of skilled designers and <br /> developers.
+      <BreakText /> Change is now an established student organization at{" "}
+      <BreakText />
+      UC Irvine with a team of skilled designers and <BreakText /> developers.
      </Text>
     </VStack>
    </SectionGridItem>

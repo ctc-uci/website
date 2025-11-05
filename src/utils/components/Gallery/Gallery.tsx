@@ -56,19 +56,20 @@ export default function Gallery({
 
  return (
   <VStack
-   spacing={{ base: 6, md: 8 }}
+   spacing={{ base: 8, md: 8 }}
    width="100%"
-   py={8}
+   py={{ base: 10, md: 8, lg: 8 }}
    onMouseEnter={handleMouseEnter}
    onMouseLeave={handleMouseLeave}
   >
    {title && (
     <Text
-     fontSize="5xl"
+     fontSize={{ base: "6xl", md: "5xl" }}
      fontWeight="bold"
      color="black"
      fontFamily="Inter, sans-serif"
      textAlign="center"
+     mt={{ base: 1, md: 0 }}
     >
      {title}
     </Text>
@@ -81,11 +82,11 @@ export default function Gallery({
     justifyContent="center"
     alignItems="center"
     overflow="hidden"
-    px={{ base: 4, md: 8 }}
+    px={{ base: 2, md: 8 }}
    >
     {/* Container for all images */}
     <HStack
-     spacing={{ base: 2, md: 4 }}
+     spacing={{ base: 3, md: 4 }}
      alignItems="center"
      justifyContent="center"
      width="100%"
@@ -94,11 +95,11 @@ export default function Gallery({
     >
      {/* Previous image (partially visible on left) - clickable */}
      <Box
-      flex={{ base: "0 0 15%", md: "0 0 20%" }}
+      flex={{ base: "0 0 20%", md: "0 0 20%" }}
       display="flex"
       justifyContent="flex-end"
       overflow="hidden"
-      height={{ base: "150px", md: "250px", lg: "350px" }}
+      height={{ base: "200px", md: "250px", lg: "350px" }}
       cursor="pointer"
       onClick={prevImage}
       _hover={{
@@ -143,7 +144,7 @@ export default function Gallery({
       display="flex"
       justifyContent="center"
       alignItems="center"
-      height={{ base: "200px", md: "300px", lg: "400px" }}
+      height={{ base: "300px", md: "300px", lg: "400px" }}
      >
       <AnimatePresence mode="wait">
        <motion.div
@@ -153,9 +154,9 @@ export default function Gallery({
          height: "100%",
          position: "relative",
         }}
-        initial={{ opacity: 0, scale: 0.9 }}
+        initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
-        exit={{ opacity: 0, scale: 0.9 }}
+        exit={{ opacity: 0, scale: 0.95 }}
         transition={{ duration: 0.2, ease: "easeOut" }}
        >
         <Box
@@ -166,7 +167,7 @@ export default function Gallery({
          height="100%"
          objectFit="cover"
          borderRadius="md"
-         boxShadow="0 4px 20px rgba(0, 0, 0, 0.1)"
+         boxShadow="0 4px 20px rgba(0, 0, 0, 0.12)"
          bg="gray.200"
         />
        </motion.div>
@@ -175,11 +176,11 @@ export default function Gallery({
 
      {/* Next image (partially visible on right) - clickable */}
      <Box
-      flex={{ base: "0 0 15%", md: "0 0 20%" }}
+      flex={{ base: "0 0 20%", md: "0 0 20%" }}
       display="flex"
       justifyContent="flex-start"
       overflow="hidden"
-      height={{ base: "150px", md: "250px", lg: "350px" }}
+      height={{ base: "200px", md: "250px", lg: "350px" }}
       cursor="pointer"
       onClick={nextImage}
       _hover={{

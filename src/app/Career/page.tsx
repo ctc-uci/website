@@ -13,7 +13,11 @@ export default function CareerPage() {
   <VStack spacing={0}>
    <Hero>
     <VStack alignItems="start" spacing={0} zIndex={1}>
-     <Text fontSize="7xl" fontWeight="semibold" fontFamily="Inter, sans-serif">
+     <Text
+      fontSize={{ base: "4xl", sm: "7xl" }}
+      fontWeight="semibold"
+      fontFamily="Inter, sans-serif"
+     >
       Why CTC?
      </Text>
     </VStack>
