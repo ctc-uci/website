@@ -91,16 +91,22 @@ export default function Gallery({
      alignItems="center"
      justifyContent="center"
      width="100%"
-     maxWidth="100%"
+     maxWidth={{ base: "100%", lg: "1200px", xl: "1400px", "2xl": "1500px" }}
+     mx="auto"
      position="relative"
     >
      {/* Previous image (partially visible on left) - clickable */}
      <Box
-      flex={{ base: "0 0 20%", md: "0 0 20%" }}
+      flex={{ base: "0 0 20%", md: "0 0 20%", lg: "0 0 28%", xl: "0 0 30%" }}
       display="flex"
       justifyContent="flex-end"
       overflow="hidden"
-      height={{ base: "200px", md: "250px", lg: "350px" }}
+      height={{
+       base: "200px",
+       md: "250px",
+       lg: "400px",
+       xl: "450px",
+      }}
       cursor="pointer"
       onClick={prevImage}
       _hover={{
@@ -141,11 +147,20 @@ export default function Gallery({
      {/* Current image (center, fully visible) */}
      <Box
       position="relative"
-      flex={{ base: "0 0 60%", md: "0 0 50%" }}
+      flex={{
+       base: "0 0 60%",
+       md: "0 0 60%",
+       lg: "0 0 55%",
+      }}
       display="flex"
       justifyContent="center"
       alignItems="center"
-      height={{ base: "300px", md: "300px", lg: "400px" }}
+      height={{
+       base: "300px",
+       md: "300px",
+       lg: "460px",
+       xl: "500px",
+      }}
      >
       <AnimatePresence mode="wait">
        <motion.div
@@ -173,7 +188,7 @@ export default function Gallery({
           src={visible.current}
           alt={`Image ${currentIndex + 1}`}
           fill
-          sizes="(max-width: 768px) 60vw, 50vw"
+          sizes="(max-width: 768px) 60vw, (max-width: 1280px) 44vw, 40vw"
           style={{ objectFit: "cover" }}
           priority={false}
          />
@@ -184,11 +199,16 @@ export default function Gallery({
 
      {/* Next image (partially visible on right) - clickable */}
      <Box
-      flex={{ base: "0 0 20%", md: "0 0 20%" }}
+      flex={{ base: "0 0 20%", md: "0 0 20%", lg: "0 0 28%", xl: "0 0 30%" }}
       display="flex"
       justifyContent="flex-start"
       overflow="hidden"
-      height={{ base: "200px", md: "250px", lg: "350px" }}
+      height={{
+       base: "200px",
+       md: "250px",
+       lg: "400px",
+       xl: "450px",
+      }}
       cursor="pointer"
       onClick={nextImage}
       _hover={{
