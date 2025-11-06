@@ -89,7 +89,6 @@ function DesktopNavbar({ pathname, navItems }: DesktopNavbarProps) {
         borderRadius: "full",
         transform: "scale(0)",
         transformOrigin: "center",
-        transition: "transform 0.2s ease-out, opacity 0.15s ease-out",
         zIndex: -1,
         opacity: 0,
        }}

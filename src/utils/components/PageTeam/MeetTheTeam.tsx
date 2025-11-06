@@ -19,7 +19,11 @@ export const MeetTheTeam: React.FC = () => {
   <Container maxW="7xl" py={12}>
    <VStack spacing={8} align="stretch">
     <Box textAlign="center">
-     <Text fontSize="7xl" fontWeight="bold" mb={4}>
+     <Text
+      fontSize={{ base: "4xl", md: "6xl", lg: "7xl" }}
+      fontWeight="bold"
+      mb={4}
+     >
       Meet the Team
      </Text>
     </Box>

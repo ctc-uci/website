@@ -65,7 +65,7 @@ export default function Gallery({
   >
    {title && (
     <Text
-     fontSize={{ base: "6xl", md: "5xl" }}
+     fontSize={{ base: "4xl", lg: "5xl" }}
      fontWeight="bold"
      color="black"
      fontFamily="Inter, sans-serif"
