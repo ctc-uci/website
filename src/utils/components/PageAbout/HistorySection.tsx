@@ -1,21 +1,53 @@
-import { VStack, Text, Image } from "@chakra-ui/react";
+"use client";
+import { VStack, Text, Image, Box } from "@chakra-ui/react";
+import React, { useState } from "react";
 
 import { SectionGrid, SectionGridItem } from "../GridUtils";
 import BreakText from "../TextUtils/BreakText";
 import SectionText from "../TextUtils/SectionText";
 
 export default function MissionSection() {
+ const [overlayOpacity, setOverlayOpacity] = useState(1);
+
+ const handleOverlayClick = () => {
+  setOverlayOpacity((prev) => Math.max(0, Number((prev - 0.02).toFixed(2))));
+ };
  return (
   <SectionGrid>
    <SectionGridItem>
-    <Image
-     src="/photos/who-are-we.jpg"
-     alt="History"
+    <Box
+     position="relative"
      height={{ base: 300, md: 350, mdlg: 500, xl: 600, "2xl": 700 }}
-     objectFit="cover"
+     width="100%"
+     overflow="hidden"
      borderRadius="lg"
      boxShadow="lg"
-    />
+    >
+     {/* Base image */}
+     <Image
+      src="/photos/club-collaboration.jpg"
+      alt="Club collaboration"
+      position="absolute"
+      inset={0}
+      width="100%"
+      height="100%"
+      objectFit="cover"
+     />
+     {/* Overlay image with click-to-reveal */}
+     <Image
+      src="/photos/who-are-we.jpg"
+      alt="Who are we overlay"
+      position="absolute"
+      inset={0}
+      width="100%"
+      height="100%"
+      objectFit="cover"
+      opacity={overlayOpacity}
+      onClick={handleOverlayClick}
+      cursor="pointer"
+      title="Keep clicking to reveal the photo!"
+     />
+    </Box>
    </SectionGridItem>
    <SectionGridItem>
     <VStack spacing={2} alignItems="start">
