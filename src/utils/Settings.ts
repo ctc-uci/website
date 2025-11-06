@@ -2,9 +2,9 @@ import { COMPANY_LOGOS } from "./CompanyLogos";
 
 const RECRUITMENT_OPEN: boolean = false;
 
-const DESIGNER_FORM: string = "";
+const DESIGNER_FORM_URL: string = "";
 
-const DEVELOPER_FORM: string = "";
+const DEVELOPER_FORM_URL: string = "";
 
 const IMPACT_STATS: {
  NPOS_SERVED: number;
@@ -14,10 +14,16 @@ const IMPACT_STATS: {
  HOURS_VOLUNTEERED: 2000,
 };
 
+const SCHOOL_YEAR_START: string = "2025";
+
+const SCHOOL_YEAR_END: string = "2026";
+
 export {
  RECRUITMENT_OPEN,
+ SCHOOL_YEAR_START,
+ SCHOOL_YEAR_END,
  IMPACT_STATS,
  COMPANY_LOGOS,
- DESIGNER_FORM,
- DEVELOPER_FORM,
+ DESIGNER_FORM_URL,
+ DEVELOPER_FORM_URL,
 };

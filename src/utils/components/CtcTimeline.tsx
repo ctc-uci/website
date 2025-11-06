@@ -1,6 +1,8 @@
 "use client";
 import { Box, VStack, Text, Button, Flex, Container } from "@chakra-ui/react";
 
+import { SCHOOL_YEAR_END, SCHOOL_YEAR_START } from "../Settings";
+
 interface TimelineEvent {
  date: string;
  title: string;
@@ -11,34 +13,34 @@ interface TimelineEvent {
 const CtcTimeline = () => {
  const designEvents: TimelineEvent[] = [
   {
-   date: "November 2025",
+   date: `November ${SCHOOL_YEAR_START}`,
    title: "Design Bootcamp",
   },
   {
-   date: "December - January 2026",
+   date: `December - January ${SCHOOL_YEAR_END}`,
    title: "Research & Lo-fis Wireframes",
   },
   {
-   date: "January - March 2026",
+   date: `January - March ${SCHOOL_YEAR_END}`,
    title: "Mid-fi & Hi-fi Wireframes",
   },
   {
-   date: "March - April 2026",
+   date: `March - April ${SCHOOL_YEAR_END}`,
    title: "User Testing & Dev Handoff",
   },
  ];
 
  const developmentEvents: TimelineEvent[] = [
   {
-   date: "November 2025",
+   date: `November ${SCHOOL_YEAR_START}`,
    title: "Developer Bootcamp",
   },
   {
-   date: "December - January 2025",
+   date: `December - January ${SCHOOL_YEAR_START}`,
    title: "SQL Tables & Database",
   },
   {
-   date: "February - May 2026",
+   date: `February - May ${SCHOOL_YEAR_END}`,
    title: "Coding & Debugging",
   },
  ];
@@ -74,10 +76,10 @@ const CtcTimeline = () => {
      {/* Timeline Content */}
      <Box position="relative" zIndex={2}>
       {/* Top Center Event */}
-      <Flex justify="center" mb={8}>
+      <Flex justify="center" align="end" textAlign={"center"} mb={8}>
        <TimelineCard
         event={{
-         date: "October 2025",
+         date: `September ${SCHOOL_YEAR_START}`,
          title: "Recruitment Process",
          hasButton: true,
          buttonText: "Learn More",
@@ -136,7 +138,7 @@ const CtcTimeline = () => {
       </Flex>
 
       {/* Bottom Center Event */}
-      <Flex justify="center">
+      <Flex justify="center" textAlign={"center"}>
        <TimelineCard
         event={{
          date: "June 2026",
