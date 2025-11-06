@@ -1,6 +1,7 @@
 "use client";
 import { Box, Text, VStack, HStack } from "@chakra-ui/react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 import { useState, useEffect, useCallback } from "react";
 
 interface GalleryProps {
@@ -160,16 +161,23 @@ export default function Gallery({
         transition={{ duration: 0.2, ease: "easeOut" }}
        >
         <Box
-         as="img"
-         src={visible.current}
-         alt={`Image ${currentIndex + 1}`}
+         position="relative"
          width="100%"
          height="100%"
-         objectFit="cover"
          borderRadius="md"
+         overflow="hidden"
          boxShadow="0 4px 20px rgba(0, 0, 0, 0.12)"
          bg="gray.200"
-        />
+        >
+         <Image
+          src={visible.current}
+          alt={`Image ${currentIndex + 1}`}
+          fill
+          sizes="(max-width: 768px) 60vw, 50vw"
+          style={{ objectFit: "cover" }}
+          priority={false}
+         />
+        </Box>
        </motion.div>
       </AnimatePresence>
      </Box>
