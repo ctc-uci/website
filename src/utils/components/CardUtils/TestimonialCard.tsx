@@ -9,7 +9,7 @@ import {
  useBreakpointValue,
 } from "@chakra-ui/react";
 
-import { EasterEggType } from "@/utils/constants/AlumniTestimonials";
+import { EasterEggType } from "@/utils/constants/alumni-testimonials";
 
 interface TestimonialCardProps {
  name: string;

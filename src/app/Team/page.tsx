@@ -5,6 +5,7 @@ import { AnimatedTyping } from "@/utils/components/AnimationUtils/AnimatedTyping
 import { Footer } from "@/utils/components/Footer";
 import MeetTheTeam from "@/utils/components/PageTeam/MeetTheTeam";
 import ParallaxHero from "@/utils/components/ParallaxHero";
+import { HERO_TEXT_SIZE } from "@/utils/components/styles/style-constants";
 
 export default function TeamPage() {
  const textContent = {
@@ -47,7 +48,7 @@ export default function TeamPage() {
        </Text>
       )}
       <Text
-       fontSize={{ base: "4xl", md: "6xl", lg: "7xl" }}
+       fontSize={HERO_TEXT_SIZE}
        fontWeight="bold"
        color="black"
        lineHeight="1.1"
@@ -57,7 +58,7 @@ export default function TeamPage() {
       </Text>
       {textContent.bottomText && (
        <Text
-        fontSize={{ base: "4xl", md: "6xl", lg: "7xl" }}
+        fontSize={HERO_TEXT_SIZE}
         color="gray.700"
         fontWeight="bold"
         as="span"

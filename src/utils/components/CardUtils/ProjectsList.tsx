@@ -1,7 +1,7 @@
 import { Box, HStack } from "@chakra-ui/react";
 import React, { useRef, useState } from "react";
 
-import { Project } from "../../constants/ProjectData";
+import { Project } from "../../constants/project-data";
 
 import ProjectCard from "./ProjectCard";
 

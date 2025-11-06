@@ -6,7 +6,7 @@ import {
  CLCHC_DATA,
  GCF_DATA,
  ELDR_DATA,
-} from "@/utils/constants/TeamData";
+} from "@/utils/constants/team-data";
 
 import { TeamDisplay } from "./TeamDisplay";
 

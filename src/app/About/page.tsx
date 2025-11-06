@@ -9,7 +9,7 @@ import { ValuesSection } from "@/utils/components/PageAbout";
 import HistorySection from "@/utils/components/PageAbout/HistorySection";
 import MissionSection from "@/utils/components/PageAbout/MissionSection";
 import BreakText from "@/utils/components/TextUtils/BreakText";
-import { photos } from "@/utils/constants/GallaryPhotos";
+import { photos } from "@/utils/constants/gallary-photos";
 
 export default function AboutPage() {
  return (

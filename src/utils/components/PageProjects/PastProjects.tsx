@@ -1,6 +1,6 @@
 import { Text, VStack } from "@chakra-ui/react";
 
-import { PREVIOUS_DATA } from "@/utils/constants/ProjectData";
+import { PREVIOUS_DATA } from "@/utils/constants/project-data";
 
 import { ProjectsList } from "../CardUtils";
 import { SectionGrid, SectionGridItem } from "../GridUtils";

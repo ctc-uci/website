@@ -5,19 +5,19 @@ import { Footer } from "@/utils/components/Footer";
 import Hero from "@/utils/components/Hero";
 import CurrentProjects from "@/utils/components/PageProjects/CurrentProjects";
 import PastProjects from "@/utils/components/PageProjects/PastProjects";
-import BreakText from "@/utils/components/TextUtils/BreakText";
+import { HERO_TEXT_SIZE } from "@/utils/components/styles/style-constants";
 
 export default function OurWorkPage() {
  return (
   <VStack spacing={0}>
    <Hero>
     <VStack alignItems="center" spacing={5} zIndex={1}>
-     <Text fontSize={{ base: "4xl", sm: "7xl" }} fontWeight="semibold">
+     <Text fontSize={HERO_TEXT_SIZE} fontWeight="semibold">
       Our Projects
      </Text>
-     <Text fontSize={{ base: "xs", sm: "xl" }} textAlign="center">
+     <Text fontSize={{ base: "sm", md: "xl", lg: "2xl" }} textAlign="center">
       Since 2020, we’ve partnered with nonprofits to create quality
-      <BreakText />
+      <br />
       software and positively impact communities.
      </Text>
      <Button

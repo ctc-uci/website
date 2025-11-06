@@ -2,7 +2,7 @@
 import { VStack } from "@chakra-ui/react";
 
 import TestimonialCard from "@/utils/components/CardUtils/TestimonialCard";
-import { ALUMNI_TESTIMONIALS } from "@/utils/constants/AlumniTestimonials";
+import { ALUMNI_TESTIMONIALS } from "@/utils/constants/alumni-testimonials";
 
 function Testimonials() {
  return (

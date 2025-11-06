@@ -2,8 +2,7 @@ import { Box, Text, Image, Link, Flex, VStack } from "@chakra-ui/react";
 import React from "react";
 import { FaLinkedin } from "react-icons/fa6";
 
-import { Profile } from "../../constants/TeamData";
-
+import { Profile } from "../../constants/team-data";
 
 interface ProfileCardProps {
  profile: Profile;

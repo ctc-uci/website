@@ -1,6 +1,6 @@
 import { Box, VStack, Text, Image, HStack } from "@chakra-ui/react";
 
-import { Project } from "../../constants/ProjectData";
+import { Project } from "../../constants/project-data";
 
 interface HorizontalProjectScrollProps {
  projects: Project[];
