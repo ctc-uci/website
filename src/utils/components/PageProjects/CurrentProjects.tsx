@@ -1,6 +1,6 @@
 import { Text, Stack, VStack } from "@chakra-ui/react";
 
-import { PROJECT_DATA } from "@/utils/ProjectData";
+import { PROJECT_DATA } from "@/utils/constants/ProjectData";
 
 import { ProjectCard } from "../CardUtils";
 

@@ -1,7 +1,7 @@
 import { Box, SimpleGrid, useBreakpointValue, VStack } from "@chakra-ui/react";
 import React, { useState } from "react";
 
-import { Profile } from "../../TeamData";
+import { Profile } from "../../constants/TeamData";
 import FadeInUp from "../AnimationUtils/FadeInUp";
 
 import { DropdownController } from "./DropdownController";

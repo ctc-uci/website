@@ -1,6 +1,6 @@
 import { Box, VStack, Text, Image } from "@chakra-ui/react";
 
-import { Project } from "../../ProjectData";
+import { Project } from "../../constants/ProjectData";
 
 interface ProjectCardProps {
  project: Project;

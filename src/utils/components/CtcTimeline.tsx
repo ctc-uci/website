@@ -1,7 +1,7 @@
 "use client";
 import { Box, VStack, Text, Button, Flex, Container } from "@chakra-ui/react";
 
-import { SCHOOL_YEAR_END, SCHOOL_YEAR_START } from "../Settings";
+import { SCHOOL_YEAR_END, SCHOOL_YEAR_START } from "../constants/Settings";
 
 interface TimelineEvent {
  date: string;

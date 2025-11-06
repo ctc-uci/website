@@ -1,4 +1,4 @@
-import { PROJECT_DATA, PREVIOUS_DATA } from "../../ProjectData";
+import { PROJECT_DATA, PREVIOUS_DATA } from "../../constants/ProjectData";
 import { ProjectsList } from "../CardUtils";
 import { SectionGrid, SectionGridItem } from "../GridUtils";
 import SectionText from "../TextUtils/SectionText";

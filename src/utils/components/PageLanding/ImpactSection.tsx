@@ -1,7 +1,7 @@
 "use client";
 import { VStack, Text } from "@chakra-ui/react";
 
-import { IMPACT_STATS } from "@/utils/Settings";
+import { IMPACT_STATS } from "@/utils/constants/Settings";
 
 import AnimatedCounter from "../AnimationUtils/AnimatedCounter";
 import { SectionGrid, SectionGridItem } from "../GridUtils";

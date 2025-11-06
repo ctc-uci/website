@@ -3,7 +3,7 @@ import { VStack, Text } from "@chakra-ui/react";
 
 import Hero from "@/utils/components/Hero";
 import BreakText from "@/utils/components/TextUtils/BreakText";
-import { RECRUITMENT_OPEN } from "@/utils/Settings";
+import { RECRUITMENT_OPEN } from "@/utils/constants/Settings";
 
 export default function RecruitmentPage() {
  return (

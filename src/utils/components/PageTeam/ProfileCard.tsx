@@ -1,7 +1,9 @@
-import React from "react";
 import { Box, Text, Image, Link, Flex, VStack } from "@chakra-ui/react";
-import { Profile } from "../../TeamData";
+import React from "react";
 import { FaLinkedin } from "react-icons/fa6";
+
+import { Profile } from "../../constants/TeamData";
+
 
 interface ProfileCardProps {
  profile: Profile;

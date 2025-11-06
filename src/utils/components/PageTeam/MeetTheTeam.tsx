@@ -1,7 +1,12 @@
 import { Text, Box, Container, VStack } from "@chakra-ui/react";
 import React from "react";
 
-import { BOARD_DATA, CLCHC_DATA, GCF_DATA, ELDR_DATA } from "@/utils/TeamData";
+import {
+ BOARD_DATA,
+ CLCHC_DATA,
+ GCF_DATA,
+ ELDR_DATA,
+} from "@/utils/constants/TeamData";
 
 import { TeamDisplay } from "./TeamDisplay";
 
