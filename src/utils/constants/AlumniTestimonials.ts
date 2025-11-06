@@ -18,7 +18,7 @@ export interface Testimonial {
 export const ALUMNI_TESTIMONIALS: Testimonial[] = [
  {
   name: "Gayathri Yedavalli",
-  role: ["IVP '25", "Developer '24", "Designer '23,'24"],
+  role: ["IVP '25", "Developer '24", "Designer '23, '24"],
   company: "",
   linkedin: "https://www.linkedin.com/in/gayathri-yedavalli/",
   year: ["2023", "2024", "2025"],
@@ -31,7 +31,7 @@ export const ALUMNI_TESTIMONIALS: Testimonial[] = [
  },
  {
   name: "Zion Mateo",
-  role: ["Developer '25"],
+  role: ["Developer '24, '25", "DJ '25"],
   company: "",
   linkedin: "https://www.linkedin.com/in/zionmateo/",
   year: ["2024", "2025"],
@@ -39,7 +39,7 @@ export const ALUMNI_TESTIMONIALS: Testimonial[] = [
   easterEgg: EasterEggType.HIGHLIGHT_NAME,
   easterEggText: "DJ Noiz",
   testimonial:
-   "As a developer for two years at Commit the Change, I think this club effectively encapsulates the idea of empowering communities through technology. The fun & social camaraderie I've had with everyone has been such an irreplaceable college experience, highly recommend! ",
+   "As a developer for two years at Commit the Change, I think this club encapsulates the spirit of empowering communities through technology. The fun people I’ve met through the projects has made this club such an irreplaceable college experience for me.",
   image: "/alumni/zion-mateo.jpg",
  },
 ];
