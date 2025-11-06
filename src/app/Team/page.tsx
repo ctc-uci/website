@@ -13,7 +13,7 @@ export default function TeamPage() {
   mainText: "CTC",
   bottomText: "'25 - '26",
  };
- const imageSrc = "/assets/about.jpeg";
+ const imageSrc = "/photos/about.png";
  const imageAlt = "lol";
  return (
   <VStack spacing={0}>
