@@ -26,6 +26,30 @@ export default function Gallery({
   setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
  }, [images.length]);
 
+ // Preload adjacent images for faster navigation
+ useEffect(() => {
+  if (images.length === 0) return;
+
+  const prevIndex = (currentIndex - 1 + images.length) % images.length;
+  const nextIndex = (currentIndex + 1) % images.length;
+
+  // Preload next and previous images using link prefetch
+  const preloadImage = (src: string) => {
+   // Check if link already exists to avoid duplicates
+   const existingLink = document.querySelector(`link[href="${src}"]`);
+   if (existingLink) return;
+
+   const link = document.createElement("link");
+   link.rel = "preload";
+   link.as = "image";
+   link.href = src;
+   document.head.appendChild(link);
+  };
+
+  if (images[prevIndex]) preloadImage(images[prevIndex]);
+  if (images[nextIndex]) preloadImage(images[nextIndex]);
+ }, [currentIndex, images]);
+
  // Auto-rotation effect
  useEffect(() => {
   if (!isAutoRotating || images.length <= 1) return;
@@ -123,6 +147,7 @@ export default function Gallery({
         height: "100%",
         display: "flex",
         justifyContent: "flex-end",
+        position: "relative",
        }}
        initial={{ opacity: 0, x: -20 }}
        animate={{ opacity: 0.5, x: 0 }}
@@ -132,15 +157,22 @@ export default function Gallery({
        whileTap={{ scale: 0.98 }}
       >
        <Box
-        as="img"
-        src={visible.prev}
-        alt="Previous"
+        position="relative"
         width="100%"
         height="100%"
-        objectFit="cover"
         borderRadius="sm"
         bg="gray.200"
-       />
+        overflow="hidden"
+       >
+        <Image
+         src={visible.prev}
+         alt="Previous"
+         fill
+         sizes="(max-width: 768px) 20vw, (max-width: 1280px) 28vw, 30vw"
+         style={{ objectFit: "cover" }}
+         loading="eager"
+        />
+       </Box>
       </motion.div>
      </Box>
 
@@ -190,7 +222,8 @@ export default function Gallery({
           fill
           sizes="(max-width: 768px) 60vw, (max-width: 1280px) 44vw, 40vw"
           style={{ objectFit: "cover" }}
-          priority={false}
+          priority={true}
+          loading="eager"
          />
         </Box>
        </motion.div>
@@ -225,6 +258,7 @@ export default function Gallery({
         height: "100%",
         display: "flex",
         justifyContent: "flex-start",
+        position: "relative",
        }}
        initial={{ opacity: 0, x: 20 }}
        animate={{ opacity: 0.5, x: 0 }}
@@ -234,15 +268,22 @@ export default function Gallery({
        whileTap={{ scale: 0.98 }}
       >
        <Box
-        as="img"
-        src={visible.next}
-        alt="Next"
+        position="relative"
         width="100%"
         height="100%"
-        objectFit="cover"
         borderRadius="sm"
         bg="gray.200"
-       />
+        overflow="hidden"
+       >
+        <Image
+         src={visible.next}
+         alt="Next"
+         fill
+         sizes="(max-width: 768px) 20vw, (max-width: 1280px) 28vw, 30vw"
+         style={{ objectFit: "cover" }}
+         loading="eager"
+        />
+       </Box>
       </motion.div>
      </Box>
     </HStack>
