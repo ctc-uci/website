@@ -7,6 +7,7 @@ import FadeInUp from "../AnimationUtils/FadeInUp";
 import { DropdownController } from "./DropdownController";
 import { ProfileCard } from "./ProfileCard";
 import { TabController } from "./TabController";
+import { TabTransition } from "./TabTransition";
 
 interface TeamDisplayProps {
  teamData: Profile[][];
@@ -34,7 +35,7 @@ export const TeamDisplay: React.FC<TeamDisplayProps> = ({
    px={{ base: 20, md: 10 }}
   >
    {profiles.map((profile, index) => (
-    <FadeInUp key={`${profile.name}-${index}`} delay={index * 0.05}>
+    <FadeInUp key={`${profile.name}-${index}`} delay={index * 0.03}>
      <ProfileCard profile={profile} />
     </FadeInUp>
    ))}
@@ -60,7 +61,9 @@ export const TeamDisplay: React.FC<TeamDisplayProps> = ({
       activeTab={activeTab}
       onTabChange={handleTabChange}
      />
-     {renderProfileGrid(teamData[activeTab])}
+     <TabTransition activeTab={activeTab}>
+      {renderProfileGrid(teamData[activeTab])}
+     </TabTransition>
     </>
    )}
   </VStack>
