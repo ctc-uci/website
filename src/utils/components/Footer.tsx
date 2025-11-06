@@ -81,14 +81,7 @@ export function Footer() {
       </ChakraLink>
      ))}
     </VStack>
-    <Text
-     position="absolute"
-     left="50%"
-     bottom={5}
-     sx={{ transform: "translateX(-50%)" }}
-     fontWeight="bold"
-     fontSize="sm"
-    >
+    <Text position="absolute" right={3} bottom={1} fontSize="sm">
      Made with 💜 CTC &apos;25 - &apos;26
     </Text>
    </HStack>

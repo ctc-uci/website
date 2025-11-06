@@ -41,8 +41,30 @@ function DesktopNavbar({ pathname, navItems }: DesktopNavbarProps) {
      minH="54px"
      maxW="64px"
      maxH="54px"
-     _hover={{ opacity: 0.8 }}
-     transition="opacity 0.05s"
+     position="relative"
+     overflow="hidden"
+     _before={{
+      content: '""',
+      position: "absolute",
+      top: 0,
+      left: 0,
+      right: 0,
+      bottom: 0,
+      bg: "purple.100",
+      borderRadius: "2xl",
+      transform: "scale(0)",
+      transformOrigin: "center",
+      zIndex: -1,
+      opacity: 0,
+     }}
+     _hover={{
+      bg: pathname === "/" ? "ctc.purple" : "transparent",
+      _before: {
+       transform: pathname === "/" ? "scale(0)" : "scale(1)",
+       opacity: pathname === "/" ? 0 : 1,
+      },
+     }}
+     transition="color 0.3s ease-out"
     >
      {pathname === "/" ? (
       <Image

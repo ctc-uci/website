@@ -2,7 +2,7 @@
 import { Box, Text, VStack, HStack } from "@chakra-ui/react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 
 interface GalleryProps {
  images: string[];
@@ -17,6 +17,8 @@ export default function Gallery({
 }: GalleryProps) {
  const [currentIndex, setCurrentIndex] = useState(0);
  const [isAutoRotating, setIsAutoRotating] = useState(true);
+ const [isInView, setIsInView] = useState(false);
+ const galleryRef = useRef<HTMLDivElement>(null);
 
  const nextImage = useCallback(() => {
   setCurrentIndex((prev) => (prev + 1) % images.length);
@@ -62,6 +64,49 @@ export default function Gallery({
  const handleMouseEnter = () => setIsAutoRotating(false);
  const handleMouseLeave = () => setIsAutoRotating(true);
 
+ // Check if gallery is in view using Intersection Observer
+ useEffect(() => {
+  const currentRef = galleryRef.current;
+  if (!currentRef) return;
+
+  const observer = new IntersectionObserver(
+   (entries) => {
+    entries.forEach((entry) => {
+     setIsInView(entry.isIntersecting);
+    });
+   },
+   {
+    threshold: 0.5, // Gallery is considered "in view" when 50% is visible
+   }
+  );
+
+  observer.observe(currentRef);
+
+  return () => {
+   if (currentRef) {
+    observer.unobserve(currentRef);
+   }
+  };
+ }, []);
+
+ // Arrow key navigation when gallery is in view
+ useEffect(() => {
+  if (!isInView) return;
+
+  const handleKeyDown = (e: KeyboardEvent) => {
+   if (e.key === "ArrowLeft") {
+    e.preventDefault();
+    prevImage();
+   } else if (e.key === "ArrowRight") {
+    e.preventDefault();
+    nextImage();
+   }
+  };
+
+  window.addEventListener("keydown", handleKeyDown);
+  return () => window.removeEventListener("keydown", handleKeyDown);
+ }, [isInView, prevImage, nextImage]);
+
  // Get visible images (prev, current, next)
  const getVisibleImages = () => {
   const prevIndex = (currentIndex - 1 + images.length) % images.length;
@@ -81,6 +126,7 @@ export default function Gallery({
 
  return (
   <VStack
+   ref={galleryRef}
    spacing={{ base: 8, md: 8 }}
    width="100%"
    py={{ base: 10, md: 8, lg: 8 }}
