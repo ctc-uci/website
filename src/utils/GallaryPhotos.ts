@@ -1,11 +1,11 @@
 export const photos: string[] = [
  "/photos/corgi-beach.png",
- "/photos/disney-land.jpg",
- "/photos/beach-cleanup-s2t.jpg",
+ "/photos/disney-land.png",
+ "/photos/beach-cleanup-s2t.png",
  "/photos/board-christmas.png",
  "/photos/valentines-day.png",
- "/photos/josh-lipton.jpg",
+ "/photos/josh-lipton.png",
  "/photos/tacobell-cantina.png",
- "/photos/tacos-los-cholos.jpg",
- "/photos/field-day.jpg",
+ "/photos/tacos-los-cholos.png",
+ "/photos/field-day.png",
 ];
