@@ -1,5 +1,3 @@
-import { COMPANY_LOGOS } from "./CompanyLogos";
-
 const RECRUITMENT_OPEN: boolean = false;
 
 const DESIGNER_FORM_URL: string = "";
@@ -23,7 +21,6 @@ export {
  SCHOOL_YEAR_START,
  SCHOOL_YEAR_END,
  IMPACT_STATS,
- COMPANY_LOGOS,
  DESIGNER_FORM_URL,
  DEVELOPER_FORM_URL,
 };

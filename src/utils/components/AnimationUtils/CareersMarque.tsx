@@ -2,7 +2,7 @@ import { Box, HStack, Image, VStack } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import React from "react";
 
-import { COMPANY_LOGOS } from "@/utils/constants/Settings";
+import { COMPANY_LOGOS } from "@/utils/constants/CompanyLogos";
 
 const MotionBox = motion(Box);
 

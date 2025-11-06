@@ -9,12 +9,16 @@ import {
  useBreakpointValue,
 } from "@chakra-ui/react";
 
+import { EasterEggType } from "@/utils/constants/AlumniTestimonials";
+
 interface TestimonialCardProps {
  name: string;
  role: string;
  company: string;
  testimonial: string;
  image?: string;
+ easterEgg?: EasterEggType;
+ easterEggText?: string;
 }
 
 export default function TestimonialCard({
@@ -23,79 +27,74 @@ export default function TestimonialCard({
  company,
  testimonial,
  image,
+ easterEgg,
+ easterEggText,
 }: TestimonialCardProps) {
  const isMobile = useBreakpointValue({ base: true, md: false });
+
+ // Compact profile display shared by both layouts
+ const ProfileInfo = (
+  <>
+   <Text
+    fontSize={isMobile ? "md" : "lg"}
+    fontWeight="bold"
+    color="gray.800"
+    textAlign={isMobile ? "center" : "left"}
+   >
+    {name}{" "}
+    <Text as="span" fontWeight="normal" color="white">
+     {easterEgg === EasterEggType.HIGHLIGHT_NAME ? easterEggText : ""}
+    </Text>
+   </Text>
+   <Text
+    fontSize={isMobile ? "sm" : "md"}
+    color="gray.600"
+    textAlign={isMobile ? "center" : "left"}
+   >
+    <Text as="span" fontWeight="semibold">
+     {company}
+    </Text>{" "}
+    {role}
+   </Text>
+  </>
+ );
 
  return (
   <Box
    width="100%"
    maxWidth="800px"
-   backgroundColor="white"
+   bg="white"
    borderRadius="16px"
-   boxShadow="0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)"
-   padding={isMobile ? 6 : 0}
+   boxShadow="0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06)"
+   p={isMobile ? 6 : 0}
    transition="all 0.2s ease-in-out"
   >
    {isMobile ? (
-    // Mobile Layout: Avatar, Name, Role on top; Testimonial on bottom
-    <VStack spacing={4} align="center">
-     {/* Profile Section */}
-     <VStack spacing={2} align="center">
+    <VStack spacing={4} align="start">
+     <HStack spacing={4} align="center">
       <Avatar size="xl" name={name} src={image} bg="gray.200" />
-      <VStack spacing={0} align="center">
-       <Text
-        fontSize="md"
-        fontWeight="bold"
-        color="gray.800"
-        textAlign="center"
-       >
-        {name}
-       </Text>
-       <Text fontSize="sm" color="gray.600" textAlign="center">
-        <Text as="span" fontWeight="semibold">
-         {company}
-        </Text>{" "}
-        | {role}
-       </Text>
+      <VStack spacing={0} align="start">
+       {ProfileInfo}
       </VStack>
-     </VStack>
-
-     {/* Testimonial Text */}
-     <Text fontSize="md" color="gray.700" lineHeight="1.6" textAlign="center">
+     </HStack>
+     <Text fontSize="md" color="gray.700" lineHeight="1.6" textAlign="left">
       {testimonial}
      </Text>
     </VStack>
    ) : (
-    // Desktop Layout: Horizontal layout with rectangular image
     <HStack spacing={6} align="start">
-     {/* Profile Image */}
      <Box flexShrink={0}>
       <Image
        src={image}
        alt={name}
        borderLeftRadius="md"
        objectFit="cover"
-       width="150px"
-       height="200px"
+       w="150px"
+       h="200px"
       />
      </Box>
-
-     {/* Text Content */}
      <VStack spacing={2} align="start" flex={1}>
-      {/* Name */}
-      <Text fontSize="lg" fontWeight="bold" color="gray.800">
-       {name}
-      </Text>
-
-      {/* Company | Role */}
-      <Text fontSize="md" color="gray.600">
-       <Text as="span" fontWeight="semibold">
-        {company}
-       </Text>{" "}
-       | {role}
-      </Text>
-
-      {/* Testimonial */}
+      {ProfileInfo}
       <Text fontSize="md" color="gray.700" lineHeight="1.6">
        {testimonial}
       </Text>
