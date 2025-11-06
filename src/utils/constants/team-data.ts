@@ -170,7 +170,7 @@ export const CLCHC_DATA: Profile[] = [
   name: "Ira Dharia",
   role: "Developer",
   linkedin: "",
-  image: "/team/ira-dharia.jpg",
+  image: "/team/ira-dharia.png",
  },
  {
   name: "Jacob Horne",
@@ -432,7 +432,7 @@ export const ELDR_DATA: Profile[] = [
   name: "Leo Siu",
   role: "Developer",
   linkedin: "",
-  image: "/team/leo-siu.jpg",
+  image: "/team/leo-siu.png",
  },
  {
   name: "Mehek Bhatnagar",
