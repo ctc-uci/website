@@ -216,7 +216,7 @@ export default function Gallery({
         opacity: 0.8,
        },
       }}
-      transition="all 0.2s"
+      transition="all 0.167s"
      >
       <motion.div
        key={`next-${currentIndex}`}
