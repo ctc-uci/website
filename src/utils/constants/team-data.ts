@@ -408,7 +408,7 @@ export const ELDR_DATA: Profile[] = [
   name: "Carson Davis",
   role: "Developer",
   linkedin: "",
-  image: "",
+  image: "/team/carson-davis.jpeg",
  },
  {
   name: "Darren Zhao",
@@ -426,7 +426,7 @@ export const ELDR_DATA: Profile[] = [
   name: "Justin Tran",
   role: "Developer",
   linkedin: "",
-  image: "",
+  image: "/team/justin-tran.jpeg",
  },
  {
   name: "Leo Siu",
@@ -456,7 +456,7 @@ export const ELDR_DATA: Profile[] = [
   name: "Sindhuja Gorti",
   role: "Developer",
   linkedin: "",
-  image: "/",
+  image: "/team/sindhuja-gorti.jpg",
  },
  {
   name: "Yousef Khan",
