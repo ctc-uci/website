@@ -29,7 +29,7 @@ export const ProfileCard: React.FC<ProfileCardProps> = ({ profile }) => {
      height="100%"
      objectFit="cover"
      fallbackSrc="/team/placeholder.jpg"
-     loading="eager"
+     loading="lazy"
     />
 
     {/* Overlay with gradient */}

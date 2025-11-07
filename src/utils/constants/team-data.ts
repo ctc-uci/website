@@ -16,7 +16,7 @@ export const BOARD_DATA: Profile[] = [
   name: "Ryan Su",
   role: "Internal Vice President",
   linkedin: "https://www.linkedin.com/in/ryan-m-su/",
-  image: "/team/ryan-su.jpeg",
+  image: "/team/ryan-su.png",
  },
  {
   name: "Jolene Chou",
@@ -76,7 +76,7 @@ export const BOARD_DATA: Profile[] = [
   name: "Lindsay Lim",
   role: "Outreach Director",
   linkedin: "https://www.linkedin.com/in/lindsay-lim-4b29332a2/",
-  image: "/team/lindsay-lim.jpeg",
+  image: "/team/lindsay-lim.png",
  },
  {
   name: "Jerry Nguyen",
@@ -164,7 +164,7 @@ export const CLCHC_DATA: Profile[] = [
   name: "Grace Yan",
   role: "Developer",
   linkedin: "",
-  image: "/team/grace-yan.jpg",
+  image: "/team/grace-yan.png",
  },
  {
   name: "Ira Dharia",
@@ -176,7 +176,7 @@ export const CLCHC_DATA: Profile[] = [
   name: "Jacob Horne",
   role: "Developer",
   linkedin: "",
-  image: "/team/jacob-horne.jpg",
+  image: "/team/jacob-horne.jpeg",
  },
  {
   name: "Jennifer Yan",
@@ -188,7 +188,7 @@ export const CLCHC_DATA: Profile[] = [
   name: "Lindsay Lim",
   role: "Developer",
   linkedin: "",
-  image: "/team/lindsay-lim.jpeg",
+  image: "/team/lindsay-lim.png",
  },
  {
   name: "Meredith Lo",
@@ -271,7 +271,7 @@ export const GCF_DATA: Profile[] = [
   name: "Aditi Varia",
   role: "Developer",
   linkedin: "",
-  image: "/team/aditi-varia.jpg",
+  image: "/team/aditi-varia.png",
  },
  {
   name: "Ananth Kini",
@@ -289,7 +289,7 @@ export const GCF_DATA: Profile[] = [
   name: "Daiki Narimoto",
   role: "Developer",
   linkedin: "",
-  image: "/team/daiki-narimoto.jpg",
+  image: "/team/daiki-narimoto.png",
  },
  {
   name: "Derrick Thrower",
@@ -301,7 +301,7 @@ export const GCF_DATA: Profile[] = [
   name: "Gina Do",
   role: "Developer",
   linkedin: "",
-  image: "/team/gina-do.jpg",
+  image: "/team/gina-do.png",
  },
  {
   name: "Harrison Tran",
@@ -319,7 +319,7 @@ export const GCF_DATA: Profile[] = [
   name: "Pradosh Thirunavukkarasu",
   role: "Developer",
   linkedin: "",
-  image: "/team/pradosh-thirunavukkarasu.jpg",
+  image: "/team/pradosh-thirunavukkarasu.png",
  },
  {
   name: "Shayan Halder",
@@ -358,7 +358,7 @@ export const ELDR_DATA: Profile[] = [
   name: "Joshua Sullivan",
   role: "Tech Lead",
   linkedin: "https://www.linkedin.com/in/joshua-micah-sullivan",
-  image: "/team/joshua-sullivan.JPG",
+  image: "/team/joshua-sullivan.png",
  },
  // Designers (alphabetical)
  {
