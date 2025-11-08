@@ -414,7 +414,7 @@ export const ELDR_DATA: Profile[] = [
   name: "Darren Zhao",
   role: "Developer",
   linkedin: "",
-  image: "",
+  image: "/team/darren-zhao.jpg",
  },
  {
   name: "Jay Chan",
@@ -444,7 +444,7 @@ export const ELDR_DATA: Profile[] = [
   name: "Nandita Paranjape",
   role: "Developer",
   linkedin: "",
-  image: "",
+  image: "/team/nandita-paranjape.png",
  },
  {
   name: "Rafael Firme",
