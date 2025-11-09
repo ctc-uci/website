@@ -8,6 +8,7 @@ import { DropdownController } from "./DropdownController";
 import { ProfileCard } from "./ProfileCard";
 import { TabController } from "./TabController";
 import { TabTransition } from "./TabTransition";
+import { useImagePreloader } from "./useImagePreloader";
 
 interface TeamDisplayProps {
  teamData: Profile[][];
@@ -19,6 +20,9 @@ export const TeamDisplay: React.FC<TeamDisplayProps> = ({
  labels,
 }) => {
  const [activeTab, setActiveTab] = useState(0);
+
+ // Preload all images on mount for instant tab switching
+ useImagePreloader(teamData);
 
  // Use breakpoint to determine if we should show tabs or dropdown
  const showTabs = useBreakpointValue({ base: false, md: true });
@@ -35,7 +39,7 @@ export const TeamDisplay: React.FC<TeamDisplayProps> = ({
    px={{ base: 20, md: 10 }}
   >
    {profiles.map((profile, index) => (
-    <FadeInUp key={`${profile.name}-${index}`} delay={index * 0.03}>
+    <FadeInUp key={`${profile.name}-${index}`} delay={index * 0.02}>
      <ProfileCard profile={profile} />
     </FadeInUp>
    ))}

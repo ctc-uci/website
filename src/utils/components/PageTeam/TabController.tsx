@@ -1,5 +1,5 @@
 "use client";
-import { Tabs, TabList, Tab } from "@chakra-ui/react";
+import { Box, Tabs, TabList, Tab } from "@chakra-ui/react";
 import React from "react";
 
 import { TabTransition } from "./TabTransition";
@@ -54,7 +54,22 @@ export const TabController: React.FC<TabControllerProps> = ({
      ))}
     </TabList>
    </Tabs>
+   {/* Render visible tab with transition */}
    <TabTransition activeTab={activeTab}>{children[activeTab]}</TabTransition>
+   {/* Preload images from all tabs by rendering them off-screen */}
+   <Box
+    position="absolute"
+    top="-9999px"
+    left="-9999px"
+    width="1px"
+    height="1px"
+    overflow="hidden"
+    aria-hidden="true"
+   >
+    {children.map((child, index) =>
+     index !== activeTab ? <Box key={index}>{child}</Box> : null
+    )}
+   </Box>
   </>
  );
 };
