@@ -91,6 +91,7 @@ export default function TeamPage() {
         alt={imageAlt}
         borderRadius="inherit"
         style={{ objectFit: "contain" }}
+        fetchPriority="high"
        />
       </Box>
      </GridItem>
