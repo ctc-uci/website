@@ -14,9 +14,64 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
- title: "Commit the Change",
+ title: {
+  default: "Commit the Change",
+  template: "%s | Commit the Change",
+ },
  description:
   "Commit the Change is a community of software engineers and designers who are passionate about building software that helps people live better lives.",
+ keywords: [
+  "Commit the Change",
+  "CTC",
+  "UC Irvine",
+  "social good",
+  "nonprofit technology",
+  "software development",
+  "web development",
+  "design",
+  "UCI",
+ ],
+ authors: [{ name: "Commit the Change" }],
+ creator: "Commit the Change",
+ publisher: "Commit the Change",
+ metadataBase: new URL(
+  process.env.NEXT_PUBLIC_SITE_URL || "https://ctc-uci.com"
+ ),
+ openGraph: {
+  type: "website",
+  locale: "en_US",
+  url: "/",
+  siteName: "Commit the Change",
+  title: "Commit the Change",
+  description:
+   "Commit the Change is a community of software engineers and designers who are passionate about building software that helps people live better lives.",
+  images: [
+   {
+    url: "/assets/ctc.svg",
+    width: 1200,
+    height: 630,
+    alt: "Commit the Change",
+   },
+  ],
+ },
+ twitter: {
+  card: "summary_large_image",
+  title: "Commit the Change",
+  description:
+   "Commit the Change is a community of software engineers and designers who are passionate about building software that helps people live better lives.",
+  images: ["/assets/ctc.svg"],
+ },
+ robots: {
+  index: true,
+  follow: true,
+  googleBot: {
+   index: true,
+   follow: true,
+   "max-video-preview": -1,
+   "max-image-preview": "large",
+   "max-snippet": -1,
+  },
+ },
  icons: {
   icon: "/assets/ctc.svg",
   shortcut: "/assets/ctc.svg",
