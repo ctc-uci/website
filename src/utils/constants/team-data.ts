@@ -373,7 +373,7 @@ export const ELDR_DATA: Profile[] = [
   name: "Cortney Ngo",
   role: "Designer",
   linkedin: "https://www.linkedin.com/in/cortneynngo/",
-  image: "/team/cortney-ngo.jpg",
+  image: "/team/cortney-ngo.png",
  },
  {
   name: "Julianna Nacorda",
