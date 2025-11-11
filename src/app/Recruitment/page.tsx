@@ -9,7 +9,7 @@ export default function RecruitmentPage() {
  return (
   <VStack spacing={0}>
    <Hero>
-    <VStack alignItems="center" spacing={5} zIndex={1}>
+    <VStack alignItems="center" spacing={{ base: 3, md: 5 }} zIndex={1}>
      <Text
       fontSize={{ base: "4xl", md: "6xl", lg: "7xl" }}
       fontWeight="semibold"
@@ -18,11 +18,19 @@ export default function RecruitmentPage() {
       Recruitment
      </Text>
      {RECRUITMENT_OPEN ? (
-      <Text fontSize="xl" textAlign="center">
+      <Text
+       fontSize={{ base: "sm", md: "xl", lg: "2xl" }}
+       paddingX={{ base: 3, md: 0 }}
+       textAlign="center"
+      >
        Applications are currently open!
       </Text>
      ) : (
-      <Text fontSize="xl" textAlign="center">
+      <Text
+       fontSize={{ base: "sm", md: "xl", lg: "2xl" }}
+       paddingX={{ base: 3, md: 0 }}
+       textAlign="center"
+      >
        Applications are currently closed and will reopen in the Fall.{" "}
        <BreakText /> Follow us on social media to stay up to date!
       </Text>

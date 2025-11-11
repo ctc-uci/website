@@ -6,18 +6,23 @@ import Hero from "@/utils/components/Hero";
 import CurrentProjects from "@/utils/components/PageProjects/CurrentProjects";
 import PastProjects from "@/utils/components/PageProjects/PastProjects";
 import { HERO_TEXT_SIZE } from "@/utils/components/styles/style-constants";
+import BreakText from "@/utils/components/TextUtils/BreakText";
 
 export default function OurWorkPage() {
  return (
   <VStack spacing={0}>
    <Hero>
-    <VStack alignItems="center" spacing={5} zIndex={1}>
+    <VStack alignItems="center" spacing={{ base: 3, md: 5 }} zIndex={1}>
      <Text fontSize={HERO_TEXT_SIZE} fontWeight="semibold">
       Our Projects
      </Text>
-     <Text fontSize={{ base: "sm", md: "xl", lg: "2xl" }} textAlign="center">
+     <Text
+      fontSize={{ base: "sm", md: "xl", lg: "2xl" }}
+      paddingX={{ base: 3, md: 0 }}
+      textAlign="center"
+     >
       Since 2020, we’ve partnered with nonprofits to create quality
-      <br />
+      <BreakText />
       software and positively impact communities.
      </Text>
      <Button
