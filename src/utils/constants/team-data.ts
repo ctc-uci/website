@@ -93,7 +93,7 @@ export const BOARD_DATA: Profile[] = [
  {
   name: "Bowen Wang",
   role: "Community Development",
-  linkedin: "https://www.linkedin.com/in/bowen-wang-41b623251/",
+  linkedin: "https://www.linkedin.com/in/bowenwang0815/",
   image: "/team/bowen-wang.jpg",
  },
 ];
@@ -220,7 +220,7 @@ export const GCF_DATA: Profile[] = [
  {
   name: "Leilani Bascos",
   role: "Design Lead",
-  linkedin: "https://www.linkedin.com/in/lelanibasco/",
+  linkedin: "https://www.linkedin.com/in/leilani-bascos-026554305/",
   image: "/team/leilani-bascos.jpg",
  },
  {
