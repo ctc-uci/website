@@ -13,12 +13,7 @@ import { TeamDisplay } from "./TeamDisplay";
 export const MeetTheTeam: React.FC = () => {
  const labels = ["Board", "CLCHC", "GCF", "ELDR"];
 
- const teamData = [
-  BOARD_DATA.filter((x) => x.role !== "Designer"),
-  CLCHC_DATA.filter((x) => x.role !== "Designer"),
-  GCF_DATA.filter((x) => x.role !== "Designer"),
-  ELDR_DATA.filter((x) => x.role !== "Designer"),
- ];
+ const teamData = [BOARD_DATA, CLCHC_DATA, GCF_DATA, ELDR_DATA];
 
  return (
   <Container maxW="7xl" py={12}>

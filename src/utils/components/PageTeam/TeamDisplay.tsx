@@ -39,7 +39,7 @@ export const TeamDisplay: React.FC<TeamDisplayProps> = ({
    px={{ base: 20, md: 10 }}
   >
    {profiles.map((profile, index) => (
-    <FadeInUp key={`${profile.name}-${index}`} delay={index * 0.02}>
+    <FadeInUp key={`${profile.name}-${index}`} delay={index * 0.03}>
      <ProfileCard profile={profile} />
     </FadeInUp>
    ))}
