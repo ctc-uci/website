@@ -47,7 +47,7 @@ export const metadata: Metadata = {
    "Commit the Change is a community of software engineers and designers who are passionate about building software that helps people live better lives.",
   images: [
    {
-    url: "/assets/ctc.svg",
+    url: "/favicon.ico",
     width: 1200,
     height: 630,
     alt: "Commit the Change",
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
   title: "Commit the Change",
   description:
    "Commit the Change is a community of software engineers and designers who are passionate about building software that helps people live better lives.",
-  images: ["/assets/ctc.svg"],
+  images: ["/favicon.ico"],
  },
  robots: {
   index: true,
@@ -73,9 +73,9 @@ export const metadata: Metadata = {
   },
  },
  icons: {
-  icon: "/assets/ctc.svg",
-  shortcut: "/assets/ctc.svg",
-  apple: "/assets/ctc.svg",
+  icon: "/favicon.ico",
+  shortcut: "/favicon.ico",
+  apple: "/favicon.ico",
  },
 };
 
