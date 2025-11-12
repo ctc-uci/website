@@ -120,8 +120,8 @@ export const CLCHC_DATA: Profile[] = [
  {
   name: "Evie Ngo",
   role: "Designer",
-  linkedin: "",
-  image: "/team/placeholder.png",
+  linkedin: "https://www.linkedin.com/in/eviebngo/",
+  image: "/team/evie-ngo.png",
  },
  {
   name: "Jacobi Glenn",
@@ -342,7 +342,6 @@ export const GCF_DATA: Profile[] = [
   image: "/team/sophie-choi.png",
  },
 ];
-
 export const ELDR_DATA: Profile[] = [
  {
   name: "Vy Vu",
@@ -364,10 +363,10 @@ export const ELDR_DATA: Profile[] = [
  },
  // Designers (alphabetical)
  {
-  name: "Ali Zadi",
+  name: "Ali Zaidi",
   role: "Designer",
-  linkedin: "",
-  image: "/team/placeholder.png",
+  linkedin: "https://www.linkedin.com/in/ali-zaidi-profile/",
+  image: "/team/ali-zaidi.jpg",
  },
  {
   name: "Cortney Ngo",
