@@ -1,6 +1,8 @@
-# CTC Website 25-26
+# CTC Website 
 
 Design courtey of design director Claire Phan and design leads Tiffany Yan, Leilani Bascos, Vy Vu 💜
+
+Previous website found [here](https://github.com/ctc-uci/website-24-25). Shout out to Tech Director ('24-'25) Kevin Wu 💖
 
 ### Webmaster Notes
 
