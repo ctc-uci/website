@@ -389,8 +389,8 @@ export const ELDR_DATA: Profile[] = [
  {
   name: "Sahana Chockali",
   role: "Designer",
-  linkedin: "",
-  image: "/team/placeholder.png",
+  linkedin: "https://www.linkedin.com/in/sahanachockalingam/",
+  image: "/team/sahana-chockali.jpg",
  },
  // Developers (alphabetical)
  {
