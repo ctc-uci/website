@@ -387,7 +387,7 @@ export const ELDR_DATA: Profile[] = [
   image: "team/kylie-nguyen.png",
  },
  {
-  name: "Sahana Chockali",
+  name: "Sahana Chockalingam",
   role: "Designer",
   linkedin: "https://www.linkedin.com/in/sahanachockalingam/",
   image: "/team/sahana-chockali.jpg",
