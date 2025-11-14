@@ -1,10 +1,52 @@
-import { Box, HStack, Image, Link as ChakraLink } from "@chakra-ui/react";
+import { Box, HStack, Image, Link as ChakraLink, Tooltip } from "@chakra-ui/react";
 import Link from "next/link";
 
 type DesktopNavbarProps = {
  pathname: string;
  navItems: { label: string; href: string }[];
 };
+
+function RecruitmentTooltip({ linkContent, href }: { linkContent: React.ReactNode, href: string }) {
+ return (
+  <Tooltip 
+   key={href} 
+   label={
+    <Box textAlign="center" whiteSpace="pre-line">
+      Applications{"\n"}reopen in the Fall!
+    </Box>
+   }
+   offset={[0, 5]}
+   openDelay={250}
+   closeDelay={100}
+   placement="bottom"
+   bg="ctc.purple"
+   color="white"
+   borderRadius="md"
+   px={4}
+   py={2}
+   motionProps={{
+   initial: { opacity: 0, y: -8, scale: 0.9 },
+   animate: { opacity: 1, y: 0, scale: 1.0 },
+   exit: { opacity: 0, y: 6, scale: 1.0 },
+    transition: { duration: 0.2, ease: "easeOut" },
+   }}
+  >
+    <Box 
+     as="span" 
+     display="inline-block" 
+     cursor="none"
+     sx={{
+      "*": {
+      cursor: "s-resize !important",
+     },
+    }}
+    >
+      {linkContent}
+    </Box>
+  </Tooltip>
+ )
+}
+
 function DesktopNavbar({ pathname, navItems }: DesktopNavbarProps) {
  return (
   <Box
@@ -81,9 +123,8 @@ function DesktopNavbar({ pathname, navItems }: DesktopNavbarProps) {
     {navItems.map((item, index) => {
      const isActive = pathname === item.href;
      const isWIP = index >= navItems.length - 1; // Last two items
-     return (
+     const linkContent = (
       <ChakraLink
-       key={item.href}
        href={isWIP ? "#" : item.href}
        as={Link}
        color={isWIP ? "gray.400" : isActive ? "white" : "gray.800"}
@@ -129,6 +170,12 @@ function DesktopNavbar({ pathname, navItems }: DesktopNavbarProps) {
       >
        {item.label}
       </ChakraLink>
+     );
+
+     return isWIP && item.href === "/Recruitment" ? (
+      <RecruitmentTooltip linkContent={linkContent} href={item.href} key={item.href} />
+     ) : (
+      <Box key={item.href}>{linkContent}</Box>
      );
     })}
    </HStack>
