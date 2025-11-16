@@ -3,12 +3,21 @@ import { Box, VStack, Text, Button, Flex, Container } from "@chakra-ui/react";
 
 import { SCHOOL_YEAR_END, SCHOOL_YEAR_START } from "../constants/Settings";
 
-interface TimelineEvent {
- date: string;
- title: string;
- hasButton?: boolean;
- buttonText?: string;
-}
+type TimelineEvent =
+ | {
+     date: string;
+     title: string;
+     hasButton: true;
+     buttonText: string;
+     buttonAction: () => void;
+   }
+ | {
+     date: string;
+     title: string;
+     hasButton?: false;
+     buttonText?: never;
+     buttonAction?: never;
+   };
 
 const CtcTimeline = () => {
  const designEvents: TimelineEvent[] = [
@@ -83,6 +92,9 @@ const CtcTimeline = () => {
          title: "Recruitment Process",
          hasButton: true,
          buttonText: "Learn More",
+         buttonAction: () => {
+          window.location.href = "/Recruitment";
+         },
         }}
         isCenter={true}
        />
@@ -192,6 +204,7 @@ const TimelineCard = ({ event, side, isCenter }: TimelineCardProps) => {
        fontSize="xs"
        _hover={{ bg: "purple.700" }}
        _active={{ bg: "purple.800" }}
+       onClick={event.buttonAction}
       >
        {event.buttonText}
       </Button>
@@ -246,6 +259,7 @@ const TimelineCard = ({ event, side, isCenter }: TimelineCardProps) => {
       fontSize="xs"
       _hover={{ bg: "purple.700" }}
       _active={{ bg: "purple.800" }}
+      onClick={event.buttonAction}
      >
       {event.buttonText}
      </Button>
