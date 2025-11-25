@@ -78,18 +78,17 @@ function DesktopNavbar({ pathname, navItems }: DesktopNavbarProps) {
      )}
     </ChakraLink>
 
-    {navItems.map((item, index) => {
+    {navItems.map((item) => {
      const isActive = pathname === item.href;
-     const isWIP = index >= navItems.length - 1; // Last two items
      return (
       <ChakraLink
        key={item.href}
-       href={isWIP ? "#" : item.href}
+       href={item.href}
        as={Link}
-       color={isWIP ? "gray.400" : isActive ? "white" : "gray.800"}
+       color={isActive ? "white" : "gray.800"}
        fontWeight="500"
        fontSize="md"
-       bg={isActive && !isWIP ? "ctc.purple" : "transparent"}
+       bg={isActive ? "ctc.purple" : "transparent"}
        borderRadius="full"
        px={4}
        py={2}
@@ -115,17 +114,17 @@ function DesktopNavbar({ pathname, navItems }: DesktopNavbarProps) {
         opacity: 0,
        }}
        _hover={{
-        color: isWIP ? "gray.400" : isActive ? "white" : "ctc.purple",
-        bg: isActive && !isWIP ? "ctc.purple" : "transparent",
+        color: isActive ? "white" : "ctc.purple",
+        bg: isActive ? "ctc.purple" : "transparent",
         _before: {
-         transform: isWIP || isActive ? "scale(0)" : "scale(1)",
-         opacity: isWIP || isActive ? 0 : 1,
+         transform: isActive ? "scale(0)" : "scale(1)",
+         opacity: isActive ? 0 : 1,
         },
        }}
        transition="color 0.3s ease-out"
        textDecoration="none"
        whiteSpace="nowrap"
-       cursor={isWIP ? "not-allowed" : "pointer"}
+       cursor={"pointer"}
       >
        {item.label}
       </ChakraLink>

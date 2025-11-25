@@ -1,9 +1,11 @@
 "use client";
 import { VStack, Text } from "@chakra-ui/react";
 
+import { Footer } from "@/utils/components";
 import Hero from "@/utils/components/Hero";
 import BreakText from "@/utils/components/TextUtils/BreakText";
 import { RECRUITMENT_OPEN } from "@/utils/constants/Settings";
+
 
 export default function RecruitmentPage() {
  return (
@@ -32,11 +34,29 @@ export default function RecruitmentPage() {
        textAlign="center"
       >
        Applications are currently closed and will reopen in the Fall.{" "}
-       <BreakText /> Follow us on social media to stay up to date!
+       <BreakText /> Follow us on{" "}
+       <a
+        href="https://www.instagram.com/ctc.uci/"
+        target="_blank"
+        rel="noopener noreferrer"
+       >
+        <Text
+         as="span"
+         color="ctc.purple"
+         textDecoration="underline"
+         fontWeight="bold"
+         _hover={{ color: "purple.500" }}
+         transition="color 0.3s ease-out"
+        >
+         social media
+        </Text>
+       </a>{" "}
+       to stay up to date!
       </Text>
      )}
     </VStack>
    </Hero>
+   <Footer />
   </VStack>
  );
 }
