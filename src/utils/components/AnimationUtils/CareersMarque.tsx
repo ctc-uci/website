@@ -15,6 +15,7 @@ interface Logo {
 interface CareersMarqueProps {
  orientation?: "vertical" | "horizontal";
  height?: string;
+ direction?: "left" | "right";
 }
 
 // Sample logos - replace with your actual logo data
@@ -23,12 +24,13 @@ const logos: Logo[] = COMPANY_LOGOS;
 const CareersMarque: React.FC<CareersMarqueProps> = ({
  orientation = "vertical",
  height = "360px",
+ direction = "left",
 }) => {
  // Duplicate the logos array for seamless looping
  const duplicatedLogos = [...logos, ...logos];
 
  // Calculate animation duration based on number of logos
- const duration = logos.length * 3; // 3 seconds per logo
+ const duration = logos.length * 2.5; // 3 seconds per logo
 
  // Horizontal marquee
  if (orientation === "horizontal") {
@@ -71,7 +73,7 @@ const CareersMarque: React.FC<CareersMarqueProps> = ({
 
     <MotionBox
      animate={{
-      x: [0, -totalWidth], // Move horizontally
+      x: direction === "left" ? [0, -totalWidth] : [-totalWidth, 0],
      }}
      transition={{
       x: {
