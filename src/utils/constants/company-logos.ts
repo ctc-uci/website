@@ -71,7 +71,32 @@ export const COMPANY_LOGOS: Logo[] = [
  },
  {
   id: "14",
+  src: "/companies/aveva.png",
+  alt: "Aveva",
+ },
+ {
+  id: "15",
+  src: "/companies/capital-one.png",
+  alt: "Capital One",
+ },
+ {
+  id: "16",
+  src: "/companies/roblox.png",
+  alt: "Roblox",
+ },
+ {
+  id: "17",
   src: "/companies/salesforce.png",
   alt: "Salesforce",
+ },
+ {
+  id: "18",
+  src: "/companies/sofi.webp",
+  alt: "SoFi",
+ },
+ {
+  id: "19",
+  src: "/companies/ixl.png",
+  alt: "Ixl",
  },
 ];
