@@ -15,15 +15,18 @@ const inter = Inter({
 
 export const metadata: Metadata = {
  title: {
-  default: "Commit the Change",
+  default: "Commit the Change | UC Irvine Tech for Social Good",
   template: "%s | Commit the Change",
  },
  description:
-  "Commit the Change is a community of software engineers and designers who are passionate about building software that helps people live better lives.",
+  "Commit the Change (CTC) is a UC Irvine student organization of software engineers and designers building technology for nonprofits and social good.",
  keywords: [
   "Commit the Change",
   "CTC",
+  "CTC UCI",
+  "ctc-uci",
   "UC Irvine",
+  "UCI student organization",
   "social good",
   "nonprofit technology",
   "software development",
@@ -42,9 +45,9 @@ export const metadata: Metadata = {
   locale: "en_US",
   url: "/",
   siteName: "Commit the Change",
-  title: "Commit the Change",
+  title: "Commit the Change | UC Irvine Tech for Social Good",
   description:
-   "Commit the Change is a community of software engineers and designers who are passionate about building software that helps people live better lives.",
+   "Commit the Change (CTC) is a UC Irvine student organization of software engineers and designers building technology for nonprofits and social good.",
   images: [
    {
     url: "/favicon.ico",
@@ -56,9 +59,9 @@ export const metadata: Metadata = {
  },
  twitter: {
   card: "summary_large_image",
-  title: "Commit the Change",
+  title: "Commit the Change | UC Irvine Tech for Social Good",
   description:
-   "Commit the Change is a community of software engineers and designers who are passionate about building software that helps people live better lives.",
+   "Commit the Change (CTC) is a UC Irvine student organization of software engineers and designers building technology for nonprofits and social good.",
   images: ["/favicon.ico"],
  },
  robots: {
