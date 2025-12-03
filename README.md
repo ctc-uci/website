@@ -6,6 +6,6 @@ Previous website found [here](https://github.com/ctc-uci/website-24-25). Shout o
 
 ### Webmaster Notes
 
-The website is intentionally designed to need as minimal changes as possible where many of your changes should be contained in the images director (`/public`) and in the `/utils/constants` directory
+The website is intentionally designed to need as minimal changes as possible where many of your changes should be contained in the images director (`/public`) and in the [ `/utils/constants`](https://github.com/ctc-uci/website/tree/main/src/utils/constants) directory
 
 The bulk of your work should just be updating images :D
