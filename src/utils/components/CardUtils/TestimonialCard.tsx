@@ -8,6 +8,7 @@ import {
  Image,
  useBreakpointValue,
 } from "@chakra-ui/react";
+import { useState } from "react";
 
 import { EasterEggType } from "@/utils/constants/alumni-testimonials";
 
@@ -19,6 +20,7 @@ interface TestimonialCardProps {
  image?: string;
  easterEgg?: EasterEggType;
  easterEggText?: string;
+ easterEggImage?: string;
 }
 
 export default function TestimonialCard({
@@ -29,8 +31,16 @@ export default function TestimonialCard({
  image,
  easterEgg,
  easterEggText,
+ easterEggImage,
 }: TestimonialCardProps) {
  const isMobile = useBreakpointValue({ base: true, md: false });
+ const [overlayOpacity, setOverlayOpacity] = useState(1);
+ const hasImageReveal =
+  easterEgg === EasterEggType.IMAGE_REVEAL && easterEggImage && image;
+
+ const handleOverlayClick = () => {
+  setOverlayOpacity((prev) => Math.max(0, Number((prev - 0.02).toFixed(2))));
+ };
 
  // Compact profile display shared by both layouts
  const ProfileInfo = (
@@ -72,7 +82,42 @@ export default function TestimonialCard({
    {isMobile ? (
     <VStack spacing={4} align="start">
      <HStack spacing={4} align="center">
-      <Avatar size="xl" name={name} src={image} bg="gray.200" />
+      {hasImageReveal ? (
+       <Box
+        position="relative"
+        flexShrink={0}
+        w="80px"
+        h="80px"
+        overflow="hidden"
+        borderRadius="full"
+        onClick={handleOverlayClick}
+        cursor="pointer"
+        title="Keep clicking to reveal the photo!"
+       >
+        <Image
+         src={easterEggImage}
+         alt={name}
+         position="absolute"
+         inset={0}
+         width="100%"
+         height="100%"
+         objectFit="cover"
+        />
+        <Image
+         src={image}
+         alt=""
+         position="absolute"
+         inset={0}
+         width="100%"
+         height="100%"
+         objectFit="cover"
+         opacity={overlayOpacity}
+         pointerEvents="none"
+        />
+       </Box>
+      ) : (
+       <Avatar size="xl" name={name} src={image} bg="gray.200" />
+      )}
       <VStack spacing={0} align="start">
        {ProfileInfo}
       </VStack>
@@ -84,14 +129,48 @@ export default function TestimonialCard({
    ) : (
     <HStack spacing={6} align="start">
      <Box flexShrink={0}>
-      <Image
-       src={image}
-       alt={name}
-       borderLeftRadius="md"
-       objectFit="cover"
-       w="150px"
-       h="200px"
-      />
+      {hasImageReveal ? (
+       <Box
+        position="relative"
+        w="150px"
+        h="200px"
+        overflow="hidden"
+        borderLeftRadius="md"
+        onClick={handleOverlayClick}
+        cursor="pointer"
+        title="Keep clicking to reveal the photo!"
+       >
+        <Image
+         src={easterEggImage}
+         alt={name}
+         position="absolute"
+         inset={0}
+         width="100%"
+         height="100%"
+         objectFit="cover"
+        />
+        <Image
+         src={image}
+         alt=""
+         position="absolute"
+         inset={0}
+         width="100%"
+         height="100%"
+         objectFit="cover"
+         opacity={overlayOpacity}
+         pointerEvents="none"
+        />
+       </Box>
+      ) : (
+       <Image
+        src={image}
+        alt={name}
+        borderLeftRadius="md"
+        objectFit="cover"
+        w="150px"
+        h="200px"
+       />
+      )}
      </Box>
      <VStack spacing={2} align="start" flex={1}>
       {ProfileInfo}

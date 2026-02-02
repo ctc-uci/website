@@ -17,6 +17,7 @@ function Testimonials() {
      image={testimonial.image}
      easterEgg={testimonial.easterEgg}
      easterEggText={testimonial.easterEggText}
+     easterEggImage={testimonial.easterEggImage}
     />
    ))}
   </VStack>
