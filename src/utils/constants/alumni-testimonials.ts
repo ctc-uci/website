@@ -1,5 +1,6 @@
 export enum EasterEggType {
  HIGHLIGHT_NAME = "highlight_name",
+ IMAGE_REVEAL = "image_reveal",
 }
 
 export interface Testimonial {
@@ -12,6 +13,7 @@ export interface Testimonial {
  year?: string[];
  easterEgg?: EasterEggType;
  easterEggText?: string;
+ easterEggImage?: string;
  graduationYear?: string;
 }
 
@@ -41,5 +43,16 @@ export const ALUMNI_TESTIMONIALS: Testimonial[] = [
   testimonial:
    "As a developer for two years at Commit the Change, I think this club encapsulates the spirit of empowering communities through technology. The fun people I’ve met through the projects has made this club such an irreplaceable college experience for me.",
   image: "/alumni/zion-mateo.jpg",
+ },
+ {
+  name: "Maithy Le",
+  role: ["Outreach Director '23", "Developer '22-'25"],
+  company: "",
+  year: ["2022", "2023", "2024", "2025"],
+  easterEgg: EasterEggType.IMAGE_REVEAL,
+  easterEggImage: "/alumni/maithy-le-reveal.png",
+  testimonial:
+   "Joining CTC was the most pivotal point in my college experience and I'd recommend this for anyone seeking community while growing your technical skills. It was really fulfilling growing in these areas while also being able to contribute to meaningful causes with their volunteer events!",
+  image: "/alumni/maithy-le.png",
  },
 ];
