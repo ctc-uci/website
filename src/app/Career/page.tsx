@@ -1,6 +1,7 @@
 "use client";
 import { VStack, Text } from "@chakra-ui/react";
 
+import { CareersMarque } from "@/utils/components/AnimationUtils";
 import CtcTimeline from "@/utils/components/CtcTimeline";
 import { Footer } from "@/utils/components/Footer";
 import Hero from "@/utils/components/Hero";
@@ -25,6 +26,13 @@ export default function CareerPage() {
    </Hero>
    <AlumniFlex />
    <Testimonials />
+   <VStack spacing={6} py={10} width="full">
+    <CareersMarque
+     orientation="horizontal"
+     height="80px"
+     whichHalf="second"
+    />
+   </VStack>
    <CtcTimeline />
    <DemoDay />
    <Footer />
