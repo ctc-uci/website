@@ -20,71 +20,80 @@ import {
 export function Footer() {
  return (
   <Center w="100%" bgColor="ctc.purple">
-   <HStack
-    sx={{
-     paddingX: { base: 5, xl: 100 },
-     paddingY: 16,
-     backgroundColor: "ctc.purple",
-     justifyContent: "space-between",
-     alignItems: "center",
-     width: "100%",
-     color: "white",
-    }}
-   >
-    <Hide below="md">
-     <VStack spacing={6}>
-      <Image src={"/assets/ctc-white.svg"} sx={{ height: 20 }} alt="ctc logo" />
-      <Text sx={{ fontWeight: "semibold", fontSize: "xl", color: "white" }}>
-       Tech with Purpose.
+   <VStack w="100%" spacing={8}>
+    <HStack
+     sx={{
+      paddingX: { base: 5, xl: 100 },
+      paddingTop: 16,
+      paddingBottom: 8,
+      backgroundColor: "ctc.purple",
+      justifyContent: "space-between",
+      alignItems: "center",
+      width: "100%",
+      color: "white",
+     }}
+    >
+     <Hide below="md">
+      <VStack spacing={6}>
+       <Image src={"/assets/ctc-white.svg"} sx={{ height: 20 }} alt="ctc logo" />
+       <Text sx={{ fontWeight: "semibold", fontSize: "xl", color: "white" }}>
+        Tech with Purpose.
+       </Text>
+      </VStack>
+     </Hide>
+
+     <VStack
+      sx={{
+       fontWeight: "medium",
+       alignItems: "start",
+       justifyContent: "start",
+       height: "100%",
+      }}
+     >
+      <Text fontWeight={700}>CONTACT US</Text>
+      <Text
+       as="a"
+       href="mailto:ctc@uci.edu"
+       color="white"
+       _hover={{ textDecoration: "underline" }}
+      >
+       ctc@uci.edu
       </Text>
      </VStack>
-    </Hide>
 
-    <VStack
-     sx={{
-      fontWeight: "medium",
-      alignItems: "start",
-      justifyContent: "start",
-      height: "100%",
-     }}
-    >
-     <Text fontWeight={700}>CONTACT US</Text>
-     <Text
-      as="a"
-      href="mailto:ctc@uci.edu"
-      color="white"
-      _hover={{ textDecoration: "underline" }}
+     <VStack
+      columnGap={5}
+      sx={{
+       color: "white",
+       fontWeight: "medium",
+       display: { base: "none", md: "grid" },
+      }}
      >
-      ctc@uci.edu
-     </Text>
-    </VStack>
+      {LINKS.map((link) => (
+       <ChakraLink key={link.label} as={Link} href={link.href} color="white">
+        {link.label}
+       </ChakraLink>
+      ))}
+     </VStack>
 
-    <VStack
-     columnGap={5}
-     sx={{
-      color: "white",
-      fontWeight: "medium",
-      display: { base: "none", md: "grid" },
-     }}
+     <VStack>
+      {ICONS.map((icon) => (
+       <ChakraLink key={icon.href} as={Link} href={icon.href}>
+        <Icon as={icon.icon} sx={{ width: 5, height: 5, color: "white" }} />
+       </ChakraLink>
+      ))}
+     </VStack>
+    </HStack>
+    <Text 
+     textAlign="center" 
+     fontSize="xs" 
+     color="white"
+     fontWeight="normal"
+     pb={4}
     >
-     {LINKS.map((link) => (
-      <ChakraLink key={link.label} as={Link} href={link.href} color="white">
-       {link.label}
-      </ChakraLink>
-     ))}
-    </VStack>
-
-    <VStack>
-     {ICONS.map((icon) => (
-      <ChakraLink key={icon.href} as={Link} href={icon.href}>
-       <Icon as={icon.icon} sx={{ width: 5, height: 5, color: "white" }} />
-      </ChakraLink>
-     ))}
-    </VStack>
-    <Text position="absolute" right={3} bottom={1} fontSize="sm">
      Made with 💜 CTC &apos;25 - &apos;26
     </Text>
-   </HStack>
+   </VStack>
   </Center>
  );
 }
