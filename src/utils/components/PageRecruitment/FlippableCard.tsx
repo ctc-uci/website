@@ -22,10 +22,10 @@ export default function FlippableCard({
   <Box
    width="421px"
    height="354px"
-   perspective="1000px"
    cursor="pointer"
    onClick={() => setIsFlipped(!isFlipped)}
    flexShrink={0}
+   style={{ perspective: "1000px" }}
   >
    <motion.div
     style={{
@@ -42,7 +42,6 @@ export default function FlippableCard({
      position="absolute"
      width="100%"
      height="100%"
-     backfaceVisibility="hidden"
      borderRadius="xl"
      padding={7}
      boxShadow="0px 8px 16px 0px rgba(24, 24, 27, 0.1), 0px 0px 1px 0px rgba(212, 212, 216, 0.3) inset"
@@ -51,7 +50,10 @@ export default function FlippableCard({
      flexDirection="column"
      alignItems="center"
      justifyContent="center"
-     style={{ WebkitBackfaceVisibility: "hidden" }}
+     style={{
+      WebkitBackfaceVisibility: "hidden",
+      backfaceVisibility: "hidden",
+     }}
     >
      {frontImage && (
       <Image
@@ -84,7 +86,6 @@ export default function FlippableCard({
      position="absolute"
      width="100%"
      height="100%"
-     backfaceVisibility="hidden"
      borderRadius="xl"
      padding={7}
      boxShadow="0px 8px 16px 0px rgba(24, 24, 27, 0.1), 0px 0px 1px 0px rgba(212, 212, 216, 0.3) inset"
@@ -95,6 +96,7 @@ export default function FlippableCard({
      justifyContent="center"
      style={{
       WebkitBackfaceVisibility: "hidden",
+      backfaceVisibility: "hidden",
       transform: "rotateY(180deg)",
      }}
     >
