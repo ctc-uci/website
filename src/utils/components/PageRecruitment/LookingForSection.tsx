@@ -30,12 +30,22 @@ export default function LookingForSection() {
     <FlippableCard
      frontImage="/assets/pencil.png"
      label="Designers"
-     backText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."
+     backTitle="Designers"
+     backBullets={[
+      "Will work in a cross functional team",
+      "Use Figma and the design process (research, wireframing, prototyping, usability testing) to create innovative designs for non-profit organizations",
+      "All levels are welcome",
+     ]}
     />
     <FlippableCard
      frontImage="/assets/desktop.png"
      label="Developers"
-     backText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."
+     backTitle="Developers"
+     backBullets={[
+      "Will utilize frontend technologies (React, Javascript/Typescript, HTML, and CSS/SASS)",
+      "Work with backend technologies (APIs, databases, & middleware)",
+      "Implement real-life applications",
+     ]}
     />
    </HStack>
   </VStack>

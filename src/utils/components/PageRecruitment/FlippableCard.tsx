@@ -1,5 +1,5 @@
 "use client";
-import { Box, Image, Text } from "@chakra-ui/react";
+import { Box, Image, Text, List, ListItem } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
@@ -7,6 +7,8 @@ interface FlippableCardProps {
  frontImage?: string;
  backImage?: string;
  backText?: string;
+ backTitle?: string;
+ backBullets?: string[];
  label?: string;
 }
 
@@ -14,6 +16,8 @@ export default function FlippableCard({
  frontImage,
  backImage,
  backText,
+ backTitle,
+ backBullets,
  label,
 }: FlippableCardProps) {
  const [isFlipped, setIsFlipped] = useState(false);
@@ -111,7 +115,40 @@ export default function FlippableCard({
        mb={4}
       />
      )}
-     {backText && (
+     {backTitle && (
+      <Text
+       fontFamily="body"
+       fontWeight="semibold"
+       fontSize="2xl"
+       lineHeight="32px"
+       letterSpacing="0%"
+       textAlign="center"
+       verticalAlign="middle"
+       mb={4}
+      >
+       {backTitle}
+      </Text>
+     )}
+     {backBullets && backBullets.length > 0 && (
+      <List spacing={2} px={4} textAlign="left" width="100%">
+       {backBullets.map((bullet, index) => (
+        <ListItem
+         key={index}
+         fontFamily="body"
+         fontWeight="normal"
+         fontSize="sm"
+         lineHeight="20px"
+         letterSpacing="0%"
+         verticalAlign="middle"
+         listStyleType="disc"
+         ml={4}
+        >
+         {bullet}
+        </ListItem>
+       ))}
+      </List>
+     )}
+     {backText && !backTitle && !backBullets && (
       <Text
        fontSize="md"
        textAlign="center"
