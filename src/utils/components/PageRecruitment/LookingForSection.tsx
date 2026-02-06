@@ -9,7 +9,7 @@ export default function LookingForSection() {
    {/* Header */}
    <Box textAlign="center">
     <Text
-     fontFamily="body"
+     fontFamily="Inter, sans-serif"
      fontWeight="medium"
      fontSize="5xl"
      lineHeight="60px"
@@ -22,18 +22,17 @@ export default function LookingForSection() {
 
    {/* Cards Container */}
    <HStack
-    spacing="20px"
+    spacing={5}
     justifyContent="center"
     flexWrap="wrap"
-    gap="20px"
    >
     <FlippableCard
      frontImage="/assets/pencil.png"
      label="Designers"
      backTitle="Designers"
      backBullets={[
-      "Will work in a cross functional team",
-      "Use Figma and the design process (research, wireframing, prototyping, usability testing) to create innovative designs for non-profit organizations",
+      "work in a cross functional team",
+      "use Figma and the design process (research, wireframing, prototyping, usability testing) to create innovative designs for non-profit organizations",
       "All levels are welcome",
      ]}
     />
@@ -42,9 +41,9 @@ export default function LookingForSection() {
      label="Developers"
      backTitle="Developers"
      backBullets={[
-      "Will utilize frontend technologies (React, Javascript/Typescript, HTML, and CSS/SASS)",
-      "Work with backend technologies (APIs, databases, & middleware)",
-      "Implement real-life applications",
+      "will utilize frontend technologies (React, Javascript/Typescript, HTML, and CSS/SASS)",
+      "work with backend technologies (APIs, databases, & middleware)",
+      "implement real-life applications",
      ]}
     />
    </HStack>

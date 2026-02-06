@@ -24,8 +24,10 @@ export default function FlippableCard({
 
  return (
   <Box
-   width="421px"
-   height="354px"
+   width={{ base: "100%", md: "421px" }}
+   maxW="421px"
+   height={{ base: "auto", md: "354px" }}
+   minH={{ base: "300px", md: "354px" }}
    cursor="pointer"
    onClick={() => setIsFlipped(!isFlipped)}
    flexShrink={0}
@@ -72,7 +74,7 @@ export default function FlippableCard({
      )}
      {label && (
       <Text
-       fontFamily="body"
+       fontFamily="Inter, sans-serif"
        fontWeight="semibold"
        fontSize="2xl"
        lineHeight="32px"
@@ -117,7 +119,7 @@ export default function FlippableCard({
      )}
      {backTitle && (
       <Text
-       fontFamily="body"
+       fontFamily="Inter, sans-serif"
        fontWeight="semibold"
        fontSize="2xl"
        lineHeight="32px"
@@ -134,7 +136,7 @@ export default function FlippableCard({
        {backBullets.map((bullet, index) => (
         <ListItem
          key={index}
-         fontFamily="body"
+         fontFamily="Inter, sans-serif"
          fontWeight="normal"
          fontSize="sm"
          lineHeight="20px"
