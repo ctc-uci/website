@@ -3,6 +3,7 @@ import { VStack, Text } from "@chakra-ui/react";
 
 import { Footer } from "@/utils/components";
 import Hero from "@/utils/components/Hero";
+import LookingForSection from "@/utils/components/PageRecruitment/LookingForSection";
 import BreakText from "@/utils/components/TextUtils/BreakText";
 import { RECRUITMENT_OPEN } from "@/utils/constants/Settings";
 
@@ -56,6 +57,7 @@ export default function RecruitmentPage() {
      )}
     </VStack>
    </Hero>
+   <LookingForSection />
    <Footer />
   </VStack>
  );
