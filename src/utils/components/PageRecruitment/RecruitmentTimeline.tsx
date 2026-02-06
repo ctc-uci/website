@@ -1,41 +1,10 @@
 "use client";
 import { Box, VStack, Text, Flex, Container } from "@chakra-ui/react";
 
-interface TimelineEvent {
-  date: string;
-  title: string;
-}
-
-const recruitmentEvents: TimelineEvent[] = [
-  {
-    date: "September 21, 2025",
-    title: "Applications Open at 12am",
-  },
-  {
-    date: "September 22, 2025",
-    title: "CTC at AIF",
-  },
-  {
-    date: "September 25, 2025",
-    title: "Meet the Club",
-  },
-  {
-    date: "October 3, 2025",
-    title: "Game Night",
-  },
-  {
-    date: "October 5–10, 2025",
-    title: "Skill Showcases",
-  },
-  {
-    date: "October 13–18, 2025",
-    title: "Coffee Chats",
-  },
-  {
-    date: "October 20–25, 2025",
-    title: "Final Decision Results",
-  },
-];
+import {
+  RECRUITMENT_EVENTS,
+  RecruitmentEvent,
+} from "@/utils/constants/recruitment-events";
 
 export const RecruitmentTimeline = () => {
   return (
@@ -59,12 +28,12 @@ export const RecruitmentTimeline = () => {
 
         {/* Timeline Container */}
         <Box position="relative">
-          {recruitmentEvents.map((event, index) => (
+          {RECRUITMENT_EVENTS.map((event, index) => (
             <TimelineItem
               key={index}
               event={event}
               isFirst={index === 0}
-              isLast={index === recruitmentEvents.length - 1}
+              isLast={index === RECRUITMENT_EVENTS.length - 1}
             />
           ))}
         </Box>
@@ -74,7 +43,7 @@ export const RecruitmentTimeline = () => {
 };
 
 interface TimelineItemProps {
-  event: TimelineEvent;
+  event: RecruitmentEvent;
   isFirst: boolean;
   isLast: boolean;
 }
