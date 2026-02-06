@@ -99,4 +99,49 @@ export const COMPANY_LOGOS: Logo[] = [
   src: "/companies/ixl.png",
   alt: "Ixl",
  },
+ {
+  id: "20",
+  src: "/companies/adobe.png",
+  alt: "Adobe",
+ },
+ {
+  id: "21",
+  src: "/companies/spacex.png",
+  alt: "SpaceX",
+ },
+ {
+  id: "22",
+  src: "/companies/blue-origin.png",
+  alt: "Blue Origin",
+ },
+ {
+  id: "23",
+  src: "/companies/expedia.png",
+  alt: "Expedia",
+ },
+ {
+  id: "24",
+  src: "/companies/blackrock.png",
+  alt: "BlackRock",
+ },
+ {
+  id: "25",
+  src: "/companies/apple.png",
+  alt: "Apple",
+ },
+ {
+  id: "26",
+  src: "/companies/jp-morgan.png",
+  alt: "JPMorgan",
+ },
+ {
+  id: "27",
+  src: "/companies/yc.png",
+  alt: "Y Combinator",
+ },
+ {
+  id: "28",
+  src: "/companies/nvidia.png",
+  alt: "Nvidia",
+ },
 ];
