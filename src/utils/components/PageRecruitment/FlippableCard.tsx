@@ -24,13 +24,12 @@ export default function FlippableCard({
 
  return (
   <Box
-   width={{ base: "100%", md: "421px" }}
-   maxW="421px"
-   height={{ base: "auto", md: "354px" }}
-   minH={{ base: "300px", md: "354px" }}
+   width="421px"
+   height="354px"
    cursor="pointer"
    onClick={() => setIsFlipped(!isFlipped)}
    flexShrink={0}
+   m="20px"
    style={{ perspective: "1000px" }}
   >
    <motion.div
@@ -48,7 +47,7 @@ export default function FlippableCard({
      position="absolute"
      width="100%"
      height="100%"
-     borderRadius="xl"
+     borderRadius="2xl"
      padding={7}
      boxShadow="0px 8px 16px 0px rgba(24, 24, 27, 0.1), 0px 0px 1px 0px rgba(212, 212, 216, 0.3) inset"
      bg="white"
@@ -92,7 +91,7 @@ export default function FlippableCard({
      position="absolute"
      width="100%"
      height="100%"
-     borderRadius="xl"
+     borderRadius="2xl"
      padding={7}
      boxShadow="0px 8px 16px 0px rgba(24, 24, 27, 0.1), 0px 0px 1px 0px rgba(212, 212, 216, 0.3) inset"
      bg="white"
