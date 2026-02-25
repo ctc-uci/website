@@ -8,7 +8,7 @@ function AlumniFlex() {
    <Text fontSize="6xl" fontWeight="semibold" textAlign="center">
     Alumni Destinations
    </Text>
-   <CareersMarque orientation="horizontal" height="120px" />
+   <CareersMarque orientation="horizontal" height="80px" whichHalf="first" />
   </VStack>
  );
 }
