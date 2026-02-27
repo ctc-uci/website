@@ -9,6 +9,7 @@ import {
 export const RecruitmentTimeline = () => {
  return (
   <Container
+   w="100%"
    maxW="container.md"
    py={{ base: 8, md: 16 }}
    px={{ base: 4, md: 8 }}
