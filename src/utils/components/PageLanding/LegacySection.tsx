@@ -11,7 +11,7 @@ export default function LegacySection() {
    {/* Left Side */}
    <Hide below="md">
     <SectionGridItem>
-     <CareersMarque />
+     <CareersMarque whichHalf="first" />
     </SectionGridItem>
    </Hide>
 
