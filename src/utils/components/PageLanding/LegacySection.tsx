@@ -30,7 +30,7 @@ export default function LegacySection() {
 
    <Show below="md">
     <SectionGridItem>
-     <CareersMarque />
+     <CareersMarque whichHalf="first" />
     </SectionGridItem>
    </Show>
   </SectionGrid>
