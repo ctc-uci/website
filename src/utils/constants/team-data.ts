@@ -161,6 +161,12 @@ export const CLCHC_DATA: Profile[] = [
   image: "/team/bowen-wang.jpg",
  },
  {
+  name: "Colin Kwon",
+  role: "Developer",
+  linkedin: "https://www.linkedin.com/in/colin-kwon-22a190324/",
+  image: "/team/colin-kwon.jpg",
+ },
+ {
   name: "Grace Yan",
   role: "Developer",
   linkedin: "https://www.linkedin.com/in/grace-yan89/",
