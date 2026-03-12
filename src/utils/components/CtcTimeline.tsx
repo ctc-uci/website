@@ -65,7 +65,7 @@ const CtcTimeline = () => {
      textAlign="center"
      mb={8}
     >
-     A year in CTC
+        What you&#39;ll learn in CTC
     </Text>
 
     {/* Timeline Container */}
