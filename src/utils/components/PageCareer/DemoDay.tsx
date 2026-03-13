@@ -10,9 +10,7 @@ function DemoDay() {
    <SectionGridItem>
     <VStack alignItems="start" spacing={6}>
      <SectionText topText="Demo" bottomText="Day." />
-     <Button as={NextLink} href="/DemoDay" bg="ctc.purple" color="white" _hover={{ bg: "purple.700" }}
-       _active={{ bg: "purple.800" }}
->
+     <Button as={NextLink} href="/DemoDay" variant="purple">
       Learn More
      </Button>
     </VStack>

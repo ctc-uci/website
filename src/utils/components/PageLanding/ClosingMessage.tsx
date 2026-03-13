@@ -28,9 +28,7 @@ export default function ClosingMessage() {
       : "*Applications are currently closed and will reopen in the Fall"}
     </Text>
     <Button
-     backgroundColor="ctc.purple"
      variant="purple"
-     color="white"
      size="lg"
      as="a"
      href="/Recruitment"
