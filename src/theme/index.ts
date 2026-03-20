@@ -39,13 +39,13 @@ export const theme = extendTheme({
   Button: {
    variants: {
     purple: {
-     bg: "purple.500",
+     bg: "ctc.purple",
      color: "white",
      _hover: {
-      bg: "purple.600",
+      bg: "purple.700",
      },
      _active: {
-      bg: "purple.700",
+      bg: "purple.800",
      },
     },
     "purple.outline": {

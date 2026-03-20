@@ -4,6 +4,7 @@ import { VStack, Text, Box } from "@chakra-ui/react";
 import { Footer } from "@/utils/components";
 import Hero from "@/utils/components/Hero";
 import LookingForSection from "@/utils/components/PageRecruitment/LookingForSection";
+import RecruitmentFAQ from "@/utils/components/PageRecruitment/RecruitmentFAQ";
 import { RecruitmentTimeline } from "@/utils/components/PageRecruitment/RecruitmentTimeline";
 import BreakText from "@/utils/components/TextUtils/BreakText";
 import { RECRUITMENT_OPEN } from "@/utils/constants/Settings";
@@ -61,6 +62,7 @@ export default function RecruitmentPage() {
       <Box bg="white" w="100%">
         <RecruitmentTimeline />
       </Box>
+      <RecruitmentFAQ />
       <Footer />
     </VStack>
   );

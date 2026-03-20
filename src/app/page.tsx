@@ -98,9 +98,7 @@ export default function Home() {
      <Button
       as="a"
       href="/About"
-      backgroundColor="ctc.purple"
       variant="purple"
-      color="white"
      >
       Learn More
      </Button>

@@ -26,9 +26,7 @@ export default function OurWorkPage() {
       software and positively impact communities.
      </Text>
      <Button
-      backgroundColor="ctc.purple"
       variant="purple"
-      color="white"
       size="lg"
       as={ChakraLink}
       target="_blank"

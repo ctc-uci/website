@@ -65,7 +65,7 @@ const CtcTimeline = () => {
      textAlign="center"
      mb={8}
     >
-     A year in CTC
+        What you&#39;ll learn in CTC
     </Text>
 
     {/* Timeline Container */}
@@ -198,12 +198,9 @@ const TimelineCard = ({ event, side, isCenter }: TimelineCardProps) => {
      </Text>
      {event.hasButton && (
       <Button
-       bg="ctc.purple"
-       color="white"
+       variant="purple"
        size="xs"
        fontSize="xs"
-       _hover={{ bg: "purple.700" }}
-       _active={{ bg: "purple.800" }}
        onClick={event.buttonAction}
       >
        {event.buttonText}
@@ -253,12 +250,9 @@ const TimelineCard = ({ event, side, isCenter }: TimelineCardProps) => {
     </Text>
     {event.hasButton && (
      <Button
-      bg="ctc.purple"
-      color="white"
+      variant="purple"
       size="xs"
       fontSize="xs"
-      _hover={{ bg: "purple.700" }}
-      _active={{ bg: "purple.800" }}
       onClick={event.buttonAction}
      >
       {event.buttonText}

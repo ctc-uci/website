@@ -12,7 +12,7 @@ interface GalleryProps {
 
 export default function Gallery({
  images,
- title = "Community",
+ title = "Our Community",
  autoRotateInterval = 5000,
 }: GalleryProps) {
  const [currentIndex, setCurrentIndex] = useState(0);
