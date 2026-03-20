@@ -24,12 +24,13 @@ export default function FlippableCard({
 
  return (
   <Box
-   width="421px"
-   height="354px"
+   w="421px"
+   maxW="100%"
+   h="354px"
    cursor="pointer"
    onClick={() => setIsFlipped(!isFlipped)}
    flexShrink={0}
-   m="20px"
+   m={{ base: 2, md: 3 }}
    style={{ perspective: "1000px" }}
   >
    <motion.div

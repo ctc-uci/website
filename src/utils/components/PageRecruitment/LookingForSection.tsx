@@ -1,11 +1,9 @@
 "use client";
-import { Box, HStack, Text, VStack, useBreakpointValue } from "@chakra-ui/react";
+import { Box, HStack, Text, VStack } from "@chakra-ui/react";
 
 import FlippableCard from "./FlippableCard";
 
 export default function LookingForSection() {
- const isMobile = useBreakpointValue({ base: true, md: false });
-
  return (
   <VStack
    spacing={{ base: 8, md: 12 }}
@@ -42,8 +40,8 @@ export default function LookingForSection() {
      label="Designers"
      backTitle="Designers"
      backBullets={[
-      "work in a cross functional team",
-      "use Figma and the design process (research, wireframing, prototyping, usability testing) to create innovative designs for non-profit organizations",
+      "Work in a cross-functional team",
+      "Use Figma and the design process (research, wireframing, prototyping, usability testing) to create innovative designs for non-profit organizations",
       "All levels are welcome",
      ]}
     />
@@ -52,9 +50,9 @@ export default function LookingForSection() {
      label="Developers"
      backTitle="Developers"
      backBullets={[
-      "will utilize frontend technologies (React, Javascript/Typescript, HTML, and CSS/SASS)",
-      "work with backend technologies (APIs, databases, & middleware)",
-      "implement real-life applications",
+      "Utilize frontend technologies (React, JavaScript/TypeScript, HTML, and CSS/SASS)",
+      "Work with backend technologies (APIs, databases, & middleware)",
+      "Implement real-life applications",
      ]}
     />
    </HStack>
