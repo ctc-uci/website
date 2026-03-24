@@ -24,9 +24,9 @@ export default function FlippableCard({
 
  return (
   <Box
-   w="421px"
+   w="480px"
    maxW="100%"
-   h="354px"
+   h="404px"
    cursor="pointer"
    onClick={() => setIsFlipped(!isFlipped)}
    flexShrink={0}
@@ -49,7 +49,7 @@ export default function FlippableCard({
      width="100%"
      height="100%"
      borderRadius="2xl"
-     padding={7}
+     padding={8}
      boxShadow="0px 8px 16px 0px rgba(24, 24, 27, 0.1), 0px 0px 1px 0px rgba(212, 212, 216, 0.3) inset"
      bg="white"
      display="flex"
@@ -65,8 +65,8 @@ export default function FlippableCard({
       <Image
        src={frontImage}
        alt="Card front"
-       width="161px"
-       height="166px"
+       width="184px"
+       height="189px"
        objectFit="contain"
        opacity={1}
        mb={label ? 4 : 0}
@@ -76,8 +76,8 @@ export default function FlippableCard({
       <Text
        fontFamily="Inter, sans-serif"
        fontWeight="semibold"
-       fontSize="2xl"
-       lineHeight="32px"
+       fontSize="3xl"
+       lineHeight="36px"
        letterSpacing="0%"
        textAlign="center"
        verticalAlign="middle"
@@ -93,7 +93,7 @@ export default function FlippableCard({
      width="100%"
      height="100%"
      borderRadius="2xl"
-     padding={7}
+     padding={8}
      boxShadow="0px 8px 16px 0px rgba(24, 24, 27, 0.1), 0px 0px 1px 0px rgba(212, 212, 216, 0.3) inset"
      bg="white"
      display="flex"
@@ -110,8 +110,8 @@ export default function FlippableCard({
       <Image
        src={backImage}
        alt="Card back"
-       width="161px"
-       height="166px"
+       width="184px"
+       height="189px"
        objectFit="contain"
        opacity={1}
        mb={4}
@@ -121,8 +121,8 @@ export default function FlippableCard({
       <Text
        fontFamily="Inter, sans-serif"
        fontWeight="semibold"
-       fontSize="2xl"
-       lineHeight="32px"
+       fontSize="3xl"
+       lineHeight="36px"
        letterSpacing="0%"
        textAlign="center"
        verticalAlign="middle"
@@ -132,14 +132,14 @@ export default function FlippableCard({
       </Text>
      )}
      {backBullets && backBullets.length > 0 && (
-      <List spacing={2} px={4} textAlign="left" width="100%">
+      <List spacing={2.5} px={4} textAlign="left" width="100%">
        {backBullets.map((bullet, index) => (
         <ListItem
          key={index}
          fontFamily="Inter, sans-serif"
          fontWeight="normal"
-         fontSize="sm"
-         lineHeight="20px"
+         fontSize="md"
+         lineHeight="22px"
          letterSpacing="0%"
          verticalAlign="middle"
          listStyleType="disc"
