@@ -30,7 +30,7 @@ export default function LookingForSection() {
 
    {/* Cards Container */}
    <HStack
-    spacing={20}
+    spacing={{ base: 15, lg: 20 }}
     justifyContent="center"
     flexWrap="wrap"
     width="100%"

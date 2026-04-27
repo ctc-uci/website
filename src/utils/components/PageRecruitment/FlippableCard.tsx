@@ -24,9 +24,9 @@ export default function FlippableCard({
 
  return (
   <Box
-   w="480px"
-   maxW="100%"
-   h="404px"
+   w={{ base: "100%", md: "421px" }}
+   maxW="421px"
+   h={{ base: "320px", md: "351px" }}
    cursor="pointer"
    onClick={() => setIsFlipped(!isFlipped)}
    flexShrink={0}
@@ -49,7 +49,7 @@ export default function FlippableCard({
      width="100%"
      height="100%"
      borderRadius="2xl"
-     padding={8}
+     padding={{ base: 6, md: 8 }}
      boxShadow="0px 8px 16px 0px rgba(24, 24, 27, 0.1), 0px 0px 1px 0px rgba(212, 212, 216, 0.3) inset"
      bg="white"
      display="flex"
@@ -65,19 +65,19 @@ export default function FlippableCard({
       <Image
        src={frontImage}
        alt="Card front"
-       width="184px"
-       height="189px"
+       width={{ base: "140px", md: "184px" }}
+       height={{ base: "150px", md: "189px" }}
        objectFit="contain"
        opacity={1}
-       mb={label ? 4 : 0}
+       mb={label ? { base: 3, md: 4 } : 0}
       />
      )}
      {label && (
       <Text
        fontFamily="Inter, sans-serif"
        fontWeight="semibold"
-       fontSize="3xl"
-       lineHeight="36px"
+       fontSize={{ base: "2xl", md: "3xl" }}
+       lineHeight={{ base: "30px", md: "36px" }}
        letterSpacing="0%"
        textAlign="center"
        verticalAlign="middle"
@@ -93,7 +93,7 @@ export default function FlippableCard({
      width="100%"
      height="100%"
      borderRadius="2xl"
-     padding={8}
+     padding={{ base: 6, md: 8 }}
      boxShadow="0px 8px 16px 0px rgba(24, 24, 27, 0.1), 0px 0px 1px 0px rgba(212, 212, 216, 0.3) inset"
      bg="white"
      display="flex"
@@ -110,8 +110,8 @@ export default function FlippableCard({
       <Image
        src={backImage}
        alt="Card back"
-       width="184px"
-       height="189px"
+       width={{ base: "140px", md: "184px" }}
+       height={{ base: "150px", md: "189px" }}
        objectFit="contain"
        opacity={1}
        mb={4}
@@ -121,24 +121,29 @@ export default function FlippableCard({
       <Text
        fontFamily="Inter, sans-serif"
        fontWeight="semibold"
-       fontSize="3xl"
-       lineHeight="36px"
+       fontSize={{ base: "2xl", md: "3xl" }}
+       lineHeight={{ base: "30px", md: "36px" }}
        letterSpacing="0%"
        textAlign="center"
        verticalAlign="middle"
-       mb={4}
+       mb={{ base: 3, md: 4 }}
       >
        {backTitle}
       </Text>
      )}
      {backBullets && backBullets.length > 0 && (
-      <List spacing={2.5} px={4} textAlign="left" width="100%">
+      <List
+       spacing={{ base: 2, md: 2.5 }}
+       px={{ base: 3, md: 4 }}
+       textAlign="left"
+       width="100%"
+      >
        {backBullets.map((bullet, index) => (
         <ListItem
          key={index}
          fontFamily="Inter, sans-serif"
          fontWeight="normal"
-         fontSize="md"
+         fontSize={{ base: "sm", md: "md" }}
          lineHeight="22px"
          letterSpacing="0%"
          verticalAlign="middle"
@@ -152,7 +157,7 @@ export default function FlippableCard({
      )}
      {backText && !backTitle && !backBullets && (
       <Text
-       fontSize="md"
+       fontSize={{ base: "sm", md: "md" }}
        textAlign="center"
        color="gray.700"
        px={4}
