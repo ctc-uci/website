@@ -5,10 +5,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Commands
 
 ```bash
-npm run dev          # Start development server
-npm run build        # Production build
-npm run lint         # Run ESLint
-npm run lint:fix     # Auto-fix ESLint issues
+yarn dev          # Start development server
+yarn build        # Production build
+yarn lint         # Run ESLint
+yarn lint:fix     # Auto-fix ESLint issues
 ```
 
 Pre-commit hooks run ESLint automatically via Husky + lint-staged on all staged `*.{js,jsx,ts,tsx}` files.
@@ -20,20 +20,21 @@ Pre-commit hooks run ESLint automatically via Husky + lint-staged on all staged 
 ### Key principle
 
 Most updates should only touch two places:
+
 - `/public/` — images (team photos, project logos, company logos, etc.)
 - `/src/utils/constants/` — all site content as typed TypeScript data
 
 ### Content data files (`/src/utils/constants/`)
 
-| File | What it controls |
-|------|-----------------|
-| `Settings.ts` | `RECRUITMENT_OPEN` toggle, form URLs, impact stats, school year |
-| `project-data.ts` | Current projects (CLCHC, GCF, ELDR) and historical projects |
-| `team-data.ts` | Board member profiles; project-team members are in separate arrays |
-| `alumni-testimonials.ts` | Alumni profiles, testimonials, featured companies |
-| `company-logos.ts` | Company logos shown on Career page |
-| `recruitment-events.ts` | Recruitment timeline events |
-| `gallary-photos.ts` | Gallery photo references (note: intentional misspelling in filename) |
+| File                     | What it controls                                                     |
+| ------------------------ | -------------------------------------------------------------------- |
+| `Settings.ts`            | `RECRUITMENT_OPEN` toggle, form URLs, impact stats, school year      |
+| `project-data.ts`        | Current projects (CLCHC, GCF, ELDR) and historical projects          |
+| `team-data.ts`           | Board member profiles; project-team members are in separate arrays   |
+| `alumni-testimonials.ts` | Alumni profiles, testimonials, featured companies                    |
+| `company-logos.ts`       | Company logos shown on Career page                                   |
+| `recruitment-events.ts`  | Recruitment timeline events                                          |
+| `gallary-photos.ts`      | Gallery photo references (note: intentional misspelling in filename) |
 
 ### Component organization (`/src/utils/components/`)
 
@@ -64,3 +65,7 @@ Most updates should only touch two places:
 - Imports must be ordered: builtin → external → internal → parent → sibling → index
 - Imports within each group must be alphabetized
 - Unused imports are errors (auto-fixed by lint-staged on commit)
+
+```
+
+```
