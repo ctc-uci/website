@@ -31,7 +31,7 @@ export default function ClosingMessage() {
      variant="purple"
      size="lg"
      as="a"
-     href="/Recruitment"
+     href="/recruitment"
     >
      How to Join
     </Button>

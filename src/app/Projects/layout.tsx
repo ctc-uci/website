@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: "Our Projects | Commit the Change",
   description:
    "Explore the projects created by Commit the Change. Since 2020, we've partnered with nonprofits to create quality software.",
-  url: "/Projects",
+  url: "/projects",
  },
  twitter: {
   title: "Our Projects | Commit the Change",

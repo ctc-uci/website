@@ -128,18 +128,18 @@ const LINKS = [
  },
  {
   label: "About",
-  href: "/About",
+  href: "/about",
  },
  {
   label: "Team",
-  href: "/Team",
+  href: "/team",
  },
  {
   label: "Projects",
-  href: "/Projects",
+  href: "/projects",
  },
  {
   label: "Career",
-  href: "/Career",
+  href: "/career",
  },
 ];

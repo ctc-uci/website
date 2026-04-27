@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   title: "Demo Day | Commit the Change",
   description:
    "See the products our teams build for nonprofits and social good organizations.",
-  url: "/DemoDay",
+  url: "/demoday",
  },
  twitter: {
   title: "Demo Day | Commit the Change",

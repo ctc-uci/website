@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: "Recruitment | Commit the Change",
   description:
    "Join Commit the Change at UC Irvine! Apply to be part of our team of developers and designers creating technology for social good.",
-  url: "/Recruitment",
+  url: "/recruitment",
  },
  twitter: {
   title: "Recruitment | Commit the Change",
