@@ -85,6 +85,7 @@ export const metadata: Metadata = {
   shortcut: "/favicon.ico",
   apple: "/favicon.ico",
  },
+ themeColor: "#e9d5ff",
 };
 
 const jsonLd = {
