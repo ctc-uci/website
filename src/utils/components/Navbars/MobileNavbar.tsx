@@ -99,30 +99,29 @@ function MobileNavbar({ pathname, navItems }: MobileNavbarProps) {
      </DrawerHeader>
      <DrawerBody bg="purple.200" py={6}>
       <VStack spacing={4} align="stretch">
-       {navItems.map((item, index) => {
+       {navItems.map((item) => {
         const isActive = pathname === item.href;
-        const isWIP = index >= navItems.length - 1; // Last two items
         return (
          <ChakraLink
           key={item.href}
-          href={isWIP ? "#" : item.href}
+          href={item.href}
           as={Link}
-          color={isWIP ? "gray.400" : isActive ? "white" : "gray.800"}
+          color={isActive ? "white" : "gray.800"}
           fontWeight="500"
           fontSize="lg"
-          bg={isActive && !isWIP ? "ctc.purple" : "transparent"}
+          bg={isActive ? "ctc.purple" : "transparent"}
           borderRadius="lg"
           px={6}
           py={4}
           textAlign="center"
           _hover={{
-           color: isWIP ? "gray.400" : isActive ? "white" : "ctc.purple",
-           bg: isWIP ? "transparent" : isActive ? "ctc.purple" : "purple.100",
+           color: isActive ? "white" : "ctc.purple",
+           bg: isActive ? "ctc.purple" : "purple.100",
           }}
           transition="all 0.2s"
           textDecoration="none"
           onClick={onClose}
-          cursor={isWIP ? "not-allowed" : "pointer"}
+          cursor="pointer"
          >
           {item.label}
          </ChakraLink>

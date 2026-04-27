@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   template: "%s | Commit the Change",
  },
  description:
-  "Commit the Change (CTC) is a UC Irvine student organization of software engineers and designers building technology for nonprofits and social good.",
+  "CTC UCI — Commit the Change is a UC Irvine student organization of software engineers and designers building technology for nonprofits and social good.",
  keywords: [
   "Commit the Change",
   "CTC",
@@ -33,6 +33,8 @@ export const metadata: Metadata = {
   "web development",
   "design",
   "UCI",
+  "Commit the Change UCI",
+  "tech for good UCI",
  ],
  authors: [{ name: "Commit the Change" }],
  creator: "Commit the Change",
@@ -40,14 +42,17 @@ export const metadata: Metadata = {
  metadataBase: new URL(
   process.env.NEXT_PUBLIC_SITE_URL || "https://ctc-uci.com"
  ),
+ alternates: {
+  canonical: "https://ctc-uci.com",
+ },
  openGraph: {
   type: "website",
   locale: "en_US",
-  url: "/",
+  url: "https://ctc-uci.com",
   siteName: "Commit the Change",
   title: "Commit the Change | UC Irvine Tech for Social Good",
   description:
-   "Commit the Change (CTC) is a UC Irvine student organization of software engineers and designers building technology for nonprofits and social good.",
+   "CTC UCI — Commit the Change is a UC Irvine student organization of software engineers and designers building technology for nonprofits and social good.",
   images: [
    {
     url: "/favicon.ico",
@@ -61,7 +66,7 @@ export const metadata: Metadata = {
   card: "summary_large_image",
   title: "Commit the Change | UC Irvine Tech for Social Good",
   description:
-   "Commit the Change (CTC) is a UC Irvine student organization of software engineers and designers building technology for nonprofits and social good.",
+   "CTC UCI — Commit the Change is a UC Irvine student organization of software engineers and designers building technology for nonprofits and social good.",
   images: ["/favicon.ico"],
  },
  robots: {
@@ -80,6 +85,35 @@ export const metadata: Metadata = {
   shortcut: "/favicon.ico",
   apple: "/favicon.ico",
  },
+ themeColor: "#e9d5ff",
+};
+
+const jsonLd = {
+ "@context": "https://schema.org",
+ "@type": "Organization",
+ name: "Commit the Change",
+ alternateName: ["CTC", "CTC UCI", "Commit the Change UCI"],
+ url: "https://ctc-uci.com",
+ logo: "https://ctc-uci.com/favicon.ico",
+ description:
+  "Commit the Change (CTC) is a UC Irvine student organization of software engineers and designers building technology for nonprofits and social good.",
+ email: "ctc@uci.edu",
+ foundingLocation: {
+  "@type": "Place",
+  name: "University of California, Irvine",
+  address: {
+   "@type": "PostalAddress",
+   addressLocality: "Irvine",
+   addressRegion: "CA",
+   addressCountry: "US",
+  },
+ },
+ sameAs: [
+  "https://www.linkedin.com/company/commit-the-change-uci/",
+  "https://www.facebook.com/ctc.uci/",
+  "https://www.instagram.com/ctc.uci/",
+  "https://medium.com/@committhechange.uci",
+ ],
 };
 
 export default function RootLayout({
@@ -89,6 +123,12 @@ export default function RootLayout({
 }>) {
  return (
   <html lang="en">
+   <head>
+    <script
+     type="application/ld+json"
+     dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+    />
+   </head>
    <body className={inter.variable}>
     <EmotionRegistry>
      <ChakraProvider theme={theme}>{children}</ChakraProvider>

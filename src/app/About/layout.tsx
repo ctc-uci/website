@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: "About Us | Commit the Change",
   description:
    "Learn about Commit the Change, a collaborative development team at UC Irvine designing and developing technology for social good.",
-  url: "/About",
+  url: "/about",
  },
  twitter: {
   title: "About Us | Commit the Change",
@@ -32,4 +32,3 @@ export default function AboutLayout({
 }) {
  return <>{children}</>;
 }
-

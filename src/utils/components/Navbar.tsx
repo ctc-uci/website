@@ -9,11 +9,11 @@ const Navbar = () => {
  const pathname = usePathname();
 
  const navItems = [
-  { label: "About", href: "/About" },
-  { label: "Team", href: "/Team" },
-  { label: "Projects", href: "/Projects" },
-  { label: "Career", href: "/Career" },
-  { label: "Recruitment", href: "/Recruitment" },
+  { label: "About", href: "/about" },
+  { label: "Team", href: "/team" },
+  { label: "Projects", href: "/projects" },
+  { label: "Career", href: "/career" },
+  { label: "Recruitment", href: "/recruitment" },
  ];
 
  return (

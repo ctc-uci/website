@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: "Why CTC? | Commit the Change",
   description:
    "Discover why students choose Commit the Change at UC Irvine. Learn about career opportunities and alumni success stories.",
-  url: "/Career",
+  url: "/career",
  },
  twitter: {
   title: "Why CTC? | Commit the Change",
