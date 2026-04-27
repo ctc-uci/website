@@ -35,7 +35,11 @@ export function Footer() {
     >
      <Hide below="md">
       <VStack spacing={6}>
-       <Image src={"/assets/ctc-white.svg"} sx={{ height: 20 }} alt="ctc logo" />
+       <Image
+        src={"/assets/ctc-white.svg"}
+        sx={{ height: 20 }}
+        alt="ctc logo"
+       />
        <Text sx={{ fontWeight: "semibold", fontSize: "xl", color: "white" }}>
         Tech with Purpose.
        </Text>
@@ -84,9 +88,9 @@ export function Footer() {
       ))}
      </VStack>
     </HStack>
-    <Text 
-     textAlign="center" 
-     fontSize="xs" 
+    <Text
+     textAlign="center"
+     fontSize="xs"
      color="white"
      fontWeight="normal"
      pb={4}
