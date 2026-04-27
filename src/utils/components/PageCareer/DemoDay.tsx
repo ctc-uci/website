@@ -10,7 +10,7 @@ function DemoDay() {
    <SectionGridItem>
     <VStack alignItems="start" spacing={6}>
      <SectionText topText="Demo" bottomText="Day." />
-     <Button as={NextLink} href="/DemoDay" variant="purple">
+     <Button as={NextLink} href="/demoday" variant="purple">
       Learn More
      </Button>
     </VStack>

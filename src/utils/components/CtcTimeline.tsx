@@ -93,7 +93,7 @@ const CtcTimeline = () => {
          hasButton: true,
          buttonText: "Learn More",
          buttonAction: () => {
-          window.location.href = "/Recruitment";
+          window.location.href = "/recruitment";
          },
         }}
         isCenter={true}

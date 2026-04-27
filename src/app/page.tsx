@@ -97,7 +97,7 @@ export default function Home() {
      </Text>
      <Button
       as="a"
-      href="/About"
+      href="/about"
       variant="purple"
      >
       Learn More
