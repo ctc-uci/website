@@ -15,6 +15,7 @@ export default function RecruitmentPage() {
       <Hero>
         <VStack alignItems="center" spacing={{ base: 3, md: 5 }} zIndex={1}>
           <Text
+            as="h1"
             fontSize={{ base: "4xl", md: "6xl", lg: "7xl" }}
             fontWeight="semibold"
             fontFamily="Inter, sans-serif"

@@ -39,6 +39,7 @@ export default function TeamPage() {
      >
       {textContent.topText && (
        <Text
+       as="h2"
         fontSize={{ base: "lg", md: "xl" }}
         color="gray.700"
         mb={2}
@@ -48,6 +49,7 @@ export default function TeamPage() {
        </Text>
       )}
       <Text
+       as="h1"
        fontSize={HERO_TEXT_SIZE}
        fontWeight="bold"
        color="black"

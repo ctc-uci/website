@@ -70,6 +70,7 @@ export default function Home() {
 
     <VStack alignItems="center" spacing={5} zIndex={1}>
      <Text
+      as="h2"
       fontSize={{ base: "xl", md: "2xl" }}
       color="black"
       fontFamily="Inter, sans-serif"
@@ -78,6 +79,7 @@ export default function Home() {
       EST. 2020
      </Text>
      <Text
+      as="h1"
       lineHeight="5.75rem"
       fontSize={HERO_TEXT_SIZE}
       color="black"
@@ -88,6 +90,7 @@ export default function Home() {
       Commit The <br /> Change
      </Text>
      <Text
+      as="h2"
       fontSize={{ base: "xl", md: "2xl" }}
       color="black"
       fontFamily="Inter, sans-serif"

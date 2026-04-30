@@ -18,6 +18,8 @@ export default function AboutPage() {
     <VStack alignItems="start" spacing={0} zIndex={1}>
      <Text
       as="span"
+      role="heading"
+      aria-level={2}
       fontSize={{ base: "xl", md: "3xl", xl: "4xl" }}
       pl={{ base: 4, sm: 0 }}
       color="black"
@@ -27,6 +29,7 @@ export default function AboutPage() {
      </Text>
 
      <Text
+      as="h1"
       fontSize={{ base: "2xl", md: "4xl", xl: "6xl" }}
       pl={{ base: 4, sm: 0 }}
       color="black"
