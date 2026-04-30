@@ -13,7 +13,7 @@ export default function OurWorkPage() {
   <VStack spacing={0}>
    <Hero>
     <VStack alignItems="center" spacing={{ base: 3, md: 5 }} zIndex={1}>
-     <Text fontSize={HERO_TEXT_SIZE} fontWeight="semibold">
+     <Text as="h1" fontSize={HERO_TEXT_SIZE} fontWeight="semibold">
       Our Projects
      </Text>
      <Text

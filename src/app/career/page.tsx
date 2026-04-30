@@ -16,6 +16,7 @@ export default function CareerPage() {
    <Hero>
     <VStack alignItems="start" spacing={0} zIndex={1}>
      <Text
+      as="h1"
       fontSize={HERO_TEXT_SIZE}
       fontWeight="semibold"
       fontFamily="Inter, sans-serif"
