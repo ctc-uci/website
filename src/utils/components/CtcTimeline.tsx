@@ -1,22 +1,22 @@
 "use client";
 import { Box, VStack, Text, Button, Flex, Container } from "@chakra-ui/react";
 
-import { SCHOOL_YEAR_END, SCHOOL_YEAR_START } from "../constants/Settings";
+import { SCHOOL_YEAR_END, SCHOOL_YEAR_START } from "@/utils/constants/settings";
 
 type TimelineEvent =
  | {
-     date: string;
-     title: string;
-     hasButton: true;
-     buttonText: string;
-     buttonAction: () => void;
+    date: string;
+    title: string;
+    hasButton: true;
+    buttonText: string;
+    buttonAction: () => void;
    }
  | {
-     date: string;
-     title: string;
-     hasButton?: false;
-     buttonText?: never;
-     buttonAction?: never;
+    date: string;
+    title: string;
+    hasButton?: false;
+    buttonText?: never;
+    buttonAction?: never;
    };
 
 const CtcTimeline = () => {
@@ -65,7 +65,7 @@ const CtcTimeline = () => {
      textAlign="center"
      mb={8}
     >
-        What you&#39;ll learn in CTC
+     What you&#39;ll learn in CTC
     </Text>
 
     {/* Timeline Container */}
