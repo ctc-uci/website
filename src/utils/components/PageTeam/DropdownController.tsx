@@ -1,5 +1,5 @@
-import React from "react";
 import { Select, Box, Text } from "@chakra-ui/react";
+import React from "react";
 
 interface DropdownControllerProps {
  labels: string[];
