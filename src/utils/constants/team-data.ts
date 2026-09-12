@@ -148,20 +148,7 @@ export const PD_TEAM_DATA: Profile[] = [
         image: "/team/leo-siu.jpg",
     },
 ]
-
-export const LEAD_DATA: Profile[] = [
-    {
-        name: "Kailee Kaocharoen",
-        role: "Design Lead",
-        linkedin: "https://www.linkedin.com/in/kailee-kaocharoen/",
-        image: "/team/kailee-kaocharoen.jpg",
-    },
-    {
-        name: "Kylie Nguyen",
-        role: "Design Lead",
-        linkedin: "https://www.linkedin.com/in/kylie-minh-tam-nguyen/",
-        image: "/team/kylie-nguyen.jpg",
-    },
+export const HUB_DATA: Profile[] = [
     {
         name: "Jolene Chou",
         role: "Design Lead",
@@ -169,16 +156,26 @@ export const LEAD_DATA: Profile[] = [
         image: "/team/jolene-chou.jpg",
     },
     {
-        name: "Derrick Thrower",
+        name: "Ananth Kini",
         role: "Tech Lead",
-        linkedin: "https://www.linkedin.com/in/derrickthrower/",
-        image: "/team/derrick-thrower.jpg",
+        linkedin: "https://www.linkedin.com/in/ananth-kini-7a69a4283/",
+        image: "/team/ananth-kini.jpg",
     },
     {
-        name: "Harrison Tran",
+        name: "Yousef Khan",
         role: "Tech Lead",
-        linkedin: "https://www.linkedin.com/in/harrison-tran-547213294/",
-        image: "/team/harrison-tran.jpeg",
+        linkedin: "https://www.linkedin.com/in/theyousefkhan/",
+        image: "/team/yousef-khan.jpeg",
+    },
+
+]
+
+export const UPL_DATA: Profile[] = [
+    {
+        name: "Kylie Nguyen",
+        role: "Design Lead",
+        linkedin: "https://www.linkedin.com/in/kylie-minh-tam-nguyen/",
+        image: "/team/kylie-nguyen.jpg",
     },
     {
         name: "Allison Huang",
@@ -192,16 +189,25 @@ export const LEAD_DATA: Profile[] = [
         linkedin: "https://www.linkedin.com/in/shyel-singh/",
         image: "/team/shyel-singh.jpeg",
     },
+]
+
+export const WELLS_DATA: Profile[] = [
     {
-        name: "Yousef Khan",
-        role: "Tech Lead",
-        linkedin: "https://www.linkedin.com/in/theyousefkhan/",
-        image: "/team/yousef-khan.jpeg",
+        name: "Kailee Kaocharoen",
+        role: "Design Lead",
+        linkedin: "https://www.linkedin.com/in/kailee-kaocharoen/",
+        image: "/team/kailee-kaocharoen.jpg",
     },
     {
-        name: "Ananth Kini",
+        name: "Derrick Thrower",
         role: "Tech Lead",
-        linkedin: "https://www.linkedin.com/in/ananth-kini-7a69a4283/",
-        image: "/team/ananth-kini.jpg",
+        linkedin: "https://www.linkedin.com/in/derrickthrower/",
+        image: "/team/derrick-thrower.jpg",
+    },
+    {
+        name: "Harrison Tran",
+        role: "Tech Lead",
+        linkedin: "https://www.linkedin.com/in/harrison-tran-547213294/",
+        image: "/team/harrison-tran.jpeg",
     },
 ]
