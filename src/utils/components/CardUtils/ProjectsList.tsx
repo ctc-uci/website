@@ -1,5 +1,6 @@
-import { Box, HStack } from "@chakra-ui/react";
-import React, { useRef, useState } from "react";
+import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
+import { Box, HStack, IconButton } from "@chakra-ui/react";
+import React, { useEffect, useRef, useState } from "react";
 
 import { Project } from "../../constants/project-data";
 
@@ -22,6 +23,40 @@ export default function HorizontalProjectScroll({
  const lastMoveTimeRef = useRef<number>(0);
  const velocityRef = useRef<number>(0);
  const rafIdRef = useRef<number | null>(null);
+ // Tracks whether there is more content to reveal on either side, so we can
+ // show/hide the scroll affordances (arrows + fades) accordingly.
+ const [canScrollLeft, setCanScrollLeft] = useState(false);
+ const [canScrollRight, setCanScrollRight] = useState(false);
+
+ const updateScrollState = () => {
+  const el = scrollRef.current;
+  if (!el) return;
+  setCanScrollLeft(el.scrollLeft > 4);
+  setCanScrollRight(
+   el.scrollLeft < el.scrollWidth - el.clientWidth - 4
+  );
+ };
+
+ useEffect(() => {
+  updateScrollState();
+  const el = scrollRef.current;
+  if (!el) return undefined;
+
+  const handleResize = () => updateScrollState();
+  window.addEventListener("resize", handleResize);
+  return () => window.removeEventListener("resize", handleResize);
+   
+ }, [projects]);
+
+ const scrollByAmount = (direction: "left" | "right") => {
+  const el = scrollRef.current;
+  if (!el) return;
+  const amount = Math.min(el.clientWidth * 0.8, 340);
+  el.scrollBy({
+   left: direction === "left" ? -amount : amount,
+   behavior: "smooth",
+  });
+ };
 
  const handleMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
   if (!scrollRef.current) return;
@@ -125,6 +160,7 @@ export default function HorizontalProjectScroll({
    overflowY="hidden"
    display="block"
    position="relative"
+   role="group"
    css={{
     "&::-webkit-scrollbar": {
      display: "none",
@@ -133,26 +169,70 @@ export default function HorizontalProjectScroll({
     scrollbarWidth: "none",
    }}
   >
-   {/* Fade overlay on the right side */}
+   {/* Fade overlay on the right side, hinting there is more to scroll */}
    <Box
     position="absolute"
     top={0}
     right={0}
-    width="25px"
+    width={{ base: "36px", md: "56px" }}
     height="100%"
-    background="linear-gradient(to left, rgba(255, 255, 255, 0.9), transparent)"
+    background="linear-gradient(to left, rgba(255, 255, 255, 0.95), transparent)"
     pointerEvents="none"
     zIndex={1}
+    opacity={canScrollRight ? 1 : 0}
+    transition="opacity 0.2s ease-in-out"
    />
    <Box
     position="absolute"
     top={0}
     left={0}
-    width={6}
+    width={{ base: "24px", md: "40px" }}
     height="100%"
     background="linear-gradient(to right, rgb(255, 255, 255), transparent)"
     pointerEvents="none"
     zIndex={1}
+    opacity={canScrollLeft ? 1 : 0}
+    transition="opacity 0.2s ease-in-out"
+   />
+
+   {/* Left/right arrow buttons make the horizontal scroll affordance obvious */}
+   <IconButton
+    aria-label="Scroll left"
+    icon={<ChevronLeftIcon boxSize={6} />}
+    onClick={() => scrollByAmount("left")}
+    position="absolute"
+    left={{ base: 0, md: 1 }}
+    top="50%"
+    transform="translateY(-50%)"
+    zIndex={2}
+    borderRadius="full"
+    size="sm"
+    boxShadow="md"
+    bg="white"
+    opacity={canScrollLeft ? 1 : 0}
+    pointerEvents={canScrollLeft ? "auto" : "none"}
+    visibility={canScrollLeft ? "visible" : "hidden"}
+    transition="opacity 0.2s ease-in-out"
+    _hover={{ bg: "gray.100" }}
+   />
+   <IconButton
+    aria-label="Scroll right"
+    icon={<ChevronRightIcon boxSize={6} />}
+    onClick={() => scrollByAmount("right")}
+    position="absolute"
+    right={{ base: 0, md: 1 }}
+    top="50%"
+    transform="translateY(-50%)"
+    zIndex={2}
+    borderRadius="full"
+    size="sm"
+    boxShadow="md"
+    bg="white"
+    opacity={canScrollRight ? 1 : 0}
+    pointerEvents={canScrollRight ? "auto" : "none"}
+    visibility={canScrollRight ? "visible" : "hidden"}
+    transition="opacity 0.2s ease-in-out"
+    _hover={{ bg: "gray.100" }}
    />
 
    <HStack
@@ -171,6 +251,7 @@ export default function HorizontalProjectScroll({
     paddingY={4}
     paddingX={2}
     ref={scrollRef}
+    onScroll={updateScrollState}
     onMouseDown={handleMouseDown}
     onMouseMove={handleMouseMove}
     onMouseLeave={endDrag}
