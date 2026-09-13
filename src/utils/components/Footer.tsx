@@ -95,7 +95,7 @@ export function Footer() {
      fontWeight="normal"
      pb={4}
     >
-     Made with 💜 CTC &apos;25 - &apos;26
+     Made with 💜 CTC &apos;26 - &apos;27
     </Text>
    </VStack>
   </Center>

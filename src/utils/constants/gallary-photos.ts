@@ -1,4 +1,6 @@
 export const photos: string[] = [
+ "/photos/club-retreat.JPG",
+ "/photos/duning.jpg",
  "/photos/corgi-beach.png",
  "/photos/beach-cleanup-s2t.png",
  "/photos/pnp-tour.png",
