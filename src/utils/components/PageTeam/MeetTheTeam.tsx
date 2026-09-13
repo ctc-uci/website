@@ -14,7 +14,7 @@ import { TeamDisplay } from "./TeamDisplay";
 export const MeetTheTeam: React.FC = () => {
   const labels = ["Board", "PD Team", "HUB", "UPL", "WELLS"];
 
-  const teamData = [BOARD_DATA, PD_TEAM_DATA, HUB_DATA, WELLS_DATA, UPL_DATA];
+  const teamData = [BOARD_DATA, PD_TEAM_DATA, HUB_DATA, UPL_DATA, WELLS_DATA];
 
   return (
     <Container maxW="7xl" py={12}>
