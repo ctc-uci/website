@@ -31,9 +31,9 @@ interface EventConfig {
 // Configure your recruitment events here
 // ============================================
 const RECRUITMENT_EVENT_CONFIG: EventConfig[] = [
-  { month: "September", startDay: 20, title: "Applications Open at 12am" },
+  { month: "September", startDay: 20, title: "Applications Open at 11:59 pm" },
   { month: "September", startDay: 22, title: "CTC at AIF" },
-  { month: "September", startDay: 23, title: "Meet the Club" },
+  { month: "September", startDay: 24, title: "Meet the Club" },
   { month: "October", startDay: 2, title: "Game Night" },
   { month: "October", startDay: 4, endDay: 9, title: "Skill Showcases" },
   { month: "October", startDay: 12, endDay: 16, title: "Coffee Chats" },
