@@ -21,7 +21,7 @@ import { useScrollDirection } from "../../hooks/useScrollDirection";
 
 type MobileNavbarProps = {
  pathname: string;
- navItems: { label: string; href: string }[];
+ navItems: { label: string; href: string; isCta?: boolean }[];
 };
 function MobileNavbar({ pathname, navItems }: MobileNavbarProps) {
  const { isOpen, onOpen, onClose } = useDisclosure();
@@ -103,11 +103,11 @@ function MobileNavbar({ pathname, navItems }: MobileNavbarProps) {
         const isActive = pathname === item.href;
         return (
          <ChakraLink
-          key={item.href}
+          key={item.href + item.label}
           href={item.href}
           as={Link}
           color={isActive ? "white" : "gray.800"}
-          fontWeight="500"
+          fontWeight={item.isCta ? "bold" : "500"}
           fontSize="lg"
           bg={isActive ? "ctc.purple" : "transparent"}
           borderRadius="lg"

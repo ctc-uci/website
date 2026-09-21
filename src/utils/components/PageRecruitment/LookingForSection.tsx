@@ -1,7 +1,30 @@
 "use client";
-import { Box, HStack, Text, VStack } from "@chakra-ui/react";
+import { Box, HStack, Link as ChakraLink, Text, VStack } from "@chakra-ui/react";
+
+import {
+ DESIGNER_FORM_URL,
+ DEVELOPER_FORM_URL,
+ RECRUITMENT_OPEN,
+} from "@/utils/constants/settings";
 
 import FlippableCard from "./FlippableCard";
+
+function ApplyNowLink({ href }: { href: string }) {
+ return (
+  <ChakraLink
+   href={href}
+   target="_blank"
+   rel="noopener noreferrer"
+   color="ctc.purple"
+   fontWeight="bold"
+   textDecoration="underline"
+   onClick={(e) => e.stopPropagation()}
+   _hover={{ color: "purple.500" }}
+  >
+   Apply now!
+  </ChakraLink>
+ );
+}
 
 export default function LookingForSection() {
  return (
@@ -43,6 +66,9 @@ export default function LookingForSection() {
       "Work in a cross-functional team",
       "Use Figma and the design process (research, wireframing, prototyping, usability testing) to create innovative designs for non-profit organizations",
       "All levels are welcome",
+      ...(RECRUITMENT_OPEN
+       ? [<ApplyNowLink key="apply" href={DESIGNER_FORM_URL} />]
+       : []),
      ]}
     />
     <FlippableCard
@@ -53,6 +79,9 @@ export default function LookingForSection() {
       "Utilize frontend technologies (React, JavaScript/TypeScript, HTML, and CSS/SASS)",
       "Work with backend technologies (APIs, databases, & middleware)",
       "Implement real-life applications",
+      ...(RECRUITMENT_OPEN
+       ? [<ApplyNowLink key="apply" href={DEVELOPER_FORM_URL} />]
+       : []),
      ]}
     />
    </HStack>

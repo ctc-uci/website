@@ -13,7 +13,7 @@ const Navbar = () => {
   { label: "Team", href: "/team" },
   { label: "Projects", href: "/projects" },
   { label: "Career", href: "/career" },
-  { label: "Recruitment", href: "/recruitment" },
+  { label: "Apply to CTC!", href: "/recruitment", isCta: true },
  ];
 
  return (

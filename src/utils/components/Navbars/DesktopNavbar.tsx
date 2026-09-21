@@ -3,7 +3,7 @@ import Link from "next/link";
 
 type DesktopNavbarProps = {
  pathname: string;
- navItems: { label: string; href: string }[];
+ navItems: { label: string; href: string; isCta?: boolean }[];
 };
 function DesktopNavbar({ pathname, navItems }: DesktopNavbarProps) {
  return (
@@ -82,11 +82,11 @@ function DesktopNavbar({ pathname, navItems }: DesktopNavbarProps) {
      const isActive = pathname === item.href;
      return (
       <ChakraLink
-       key={item.href}
+       key={item.href + item.label}
        href={item.href}
        as={Link}
        color={isActive ? "white" : "gray.800"}
-       fontWeight="500"
+       fontWeight={item.isCta ? "bold" : "500"}
        fontSize="md"
        bg={isActive ? "ctc.purple" : "transparent"}
        borderRadius="full"
@@ -99,6 +99,7 @@ function DesktopNavbar({ pathname, navItems }: DesktopNavbarProps) {
        justifyContent="center"
        position="relative"
        overflow="hidden"
+       whiteSpace="nowrap"
        _before={{
         content: '""',
         position: "absolute",
@@ -123,7 +124,6 @@ function DesktopNavbar({ pathname, navItems }: DesktopNavbarProps) {
        }}
        transition="color 0.3s ease-out"
        textDecoration="none"
-       whiteSpace="nowrap"
        cursor={"pointer"}
       >
        {item.label}

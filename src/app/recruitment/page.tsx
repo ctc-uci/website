@@ -1,5 +1,5 @@
 "use client";
-import { VStack, Text, Box } from "@chakra-ui/react";
+import { VStack, Text, Box, Button, HStack } from "@chakra-ui/react";
 
 import { Footer } from "@/utils/components";
 import Hero from "@/utils/components/Hero";
@@ -7,7 +7,11 @@ import LookingForSection from "@/utils/components/PageRecruitment/LookingForSect
 import RecruitmentFAQ from "@/utils/components/PageRecruitment/RecruitmentFAQ";
 import { RecruitmentTimeline } from "@/utils/components/PageRecruitment/RecruitmentTimeline";
 import BreakText from "@/utils/components/TextUtils/BreakText";
-import { RECRUITMENT_OPEN } from "@/utils/constants/settings";
+import {
+ RECRUITMENT_OPEN,
+ DESIGNER_FORM_URL,
+ DEVELOPER_FORM_URL,
+} from "@/utils/constants/settings";
 
 export default function RecruitmentPage() {
  return (
@@ -22,13 +26,48 @@ export default function RecruitmentPage() {
       Recruitment
      </Text>
      {RECRUITMENT_OPEN ? (
-      <Text
-       fontSize={{ base: "sm", md: "xl", lg: "2xl" }}
-       paddingX={{ base: 3, md: 0 }}
-       textAlign="center"
-      >
-       Applications are currently open!
-      </Text>
+      <>
+       <Text
+        fontSize={{ base: "sm", md: "xl", lg: "2xl" }}
+        paddingX={{ base: 3, md: 0 }}
+        textAlign="center"
+       >
+        Applications are currently open, and will close{" "}
+        <Text as="span" fontWeight="bold">
+         Saturday, September 26th @ 11:59 PM
+        </Text>
+        .
+       </Text>
+       <Text
+        fontSize={{ base: "sm", md: "xl", lg: "2xl" }}
+        paddingX={{ base: 3, md: 0 }}
+        textAlign="center"
+       >
+        We encourage everyone of all skill levels to apply!
+       </Text>
+       <HStack spacing={{ base: 3, md: 5 }} flexWrap="wrap" justify="center">
+        <Button
+         variant="purple"
+         size="lg"
+         as="a"
+         href={DESIGNER_FORM_URL}
+         target="_blank"
+         rel="noopener noreferrer"
+        >
+         Designer Application
+        </Button>
+        <Button
+         variant="purple"
+         size="lg"
+         as="a"
+         href={DEVELOPER_FORM_URL}
+         target="_blank"
+         rel="noopener noreferrer"
+        >
+         Developer Application
+        </Button>
+       </HStack>
+      </>
      ) : (
       <Text
        fontSize={{ base: "sm", md: "xl", lg: "2xl" }}

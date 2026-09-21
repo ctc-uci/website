@@ -23,10 +23,23 @@ export default function ClosingMessage() {
      Create Tech With Us!
     </Text>
     <Text fontSize={{ base: "xs", sm: "xl" }} textAlign="center">
-     {RECRUITMENT_OPEN
-      ? "Applications are currently open!"
-      : "*Applications are currently closed and will reopen in the Fall"}
+     {RECRUITMENT_OPEN ? (
+      <>
+       Applications are currently open, and will close{" "}
+       <Text as="span" fontWeight="bold">
+        Saturday, September 26th @ 11:59 PM
+       </Text>
+       .
+      </>
+     ) : (
+      "*Applications are currently closed and will reopen in the Fall"
+     )}
     </Text>
+    {RECRUITMENT_OPEN && (
+     <Text fontSize={{ base: "xs", sm: "xl" }} textAlign="center">
+      We encourage everyone of all skill levels to apply!
+     </Text>
+    )}
     <Button variant="purple" size="lg" as="a" href="/recruitment">
      How to Join
     </Button>

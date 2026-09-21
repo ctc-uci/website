@@ -1,14 +1,14 @@
 "use client";
 import { Box, Image, Text, List, ListItem } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { ReactNode, useState } from "react";
 
 interface FlippableCardProps {
  frontImage?: string;
  backImage?: string;
  backText?: string;
  backTitle?: string;
- backBullets?: string[];
+ backBullets?: ReactNode[];
  label?: string;
 }
 
