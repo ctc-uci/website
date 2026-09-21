@@ -4,16 +4,16 @@ import {
   BOARD_DATA,
   PD_TEAM_DATA,
   HUB_DATA,
-  WELLS_DATA,
-  UPL_DATA
+  UPL_DATA,
+  WELLS_DATA
 } from "@/utils/constants/team-data";
 
 const ALL_GROUPS = {
   board: BOARD_DATA,
   pd: PD_TEAM_DATA,
   hub: HUB_DATA,
-  wells: WELLS_DATA,
   UPL: UPL_DATA,
+  wells: WELLS_DATA
 } as const;
 
 type GroupKey = keyof typeof ALL_GROUPS;

@@ -132,7 +132,7 @@ export const PD_TEAM_DATA: Profile[] = [
     {
         name: "Gina Do",
         role: "Developer",
-        linkedin: "linkedin.com/in/gina-nhu-do",
+        linkedin: "https://www.linkedin.com/in/gina-nhu-do",
         image: "/team/gina-do.jpeg",
     },
     {
