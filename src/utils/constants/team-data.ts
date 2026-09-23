@@ -3,6 +3,7 @@ export interface Profile {
     role: string;
     linkedin?: string;
     image: string;
+    cropCenter?: boolean;
 }
 
 export const BOARD_DATA: Profile[] = [
@@ -35,6 +36,7 @@ export const BOARD_DATA: Profile[] = [
         role: "Technical Director",
         linkedin: "https://www.linkedin.com/in/joshua-micah-sullivan/",
         image: "/team/joshua-sullivan.jpg",
+        cropCenter: false,
     },
     {
         name: "Tiffany Jiang Yan",
@@ -83,6 +85,7 @@ export const BOARD_DATA: Profile[] = [
         role: "Education Director",
         linkedin: "https://www.linkedin.com/in/elliott-escalante-97510324a/",
         image: "/team/elliott-escalante.jpg",
+        cropCenter: false,
     },
     {
         name: "Leilani Bascos",
@@ -95,6 +98,7 @@ export const BOARD_DATA: Profile[] = [
         role: "Community Development",
         linkedin: "https://www.linkedin.com/in/isaacnguyen33/",
         image: "/team/isaac-nguyen.jpeg",
+        cropCenter: false,
     },
     {
         name: "Pradosh Thirunavukkarasu",
@@ -116,6 +120,7 @@ export const PD_TEAM_DATA: Profile[] = [
         role: "Technical Director",
         linkedin: "https://www.linkedin.com/in/joshua-micah-sullivan/",
         image: "/team/joshua-sullivan.jpg",
+        cropCenter: false,
     },
     {
         name: "Tiffany Jiang Yan",

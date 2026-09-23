@@ -28,6 +28,11 @@ export const ProfileCard: React.FC<ProfileCardProps> = ({ profile }) => {
      width="100%"
      height="100%"
      objectFit="cover"
+     objectPosition={
+      profile.cropCenter === false
+       ? { base: "top center", md: "center" }
+       : "center"
+     }
      fallbackSrc="/team/placeholder.jpg"
      loading="eager"
     />
