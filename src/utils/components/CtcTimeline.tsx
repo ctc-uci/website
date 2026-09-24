@@ -4,263 +4,267 @@ import { Box, VStack, Text, Button, Flex, Container } from "@chakra-ui/react";
 import { SCHOOL_YEAR_END, SCHOOL_YEAR_START } from "@/utils/constants/settings";
 
 type TimelineEvent =
- | {
+  | {
     date: string;
     title: string;
     hasButton: true;
     buttonText: string;
     buttonAction: () => void;
-   }
- | {
+  }
+  | {
     date: string;
     title: string;
     hasButton?: false;
     buttonText?: never;
     buttonAction?: never;
-   };
+  };
 
 const CtcTimeline = () => {
- const designEvents: TimelineEvent[] = [
-  {
-   date: `November ${SCHOOL_YEAR_START}`,
-   title: "Design Bootcamp",
-  },
-  {
-   date: `December - January ${SCHOOL_YEAR_END}`,
-   title: "Research & Lo-fis Wireframes",
-  },
-  {
-   date: `January - March ${SCHOOL_YEAR_END}`,
-   title: "Mid-fi & Hi-fi Wireframes",
-  },
-  {
-   date: `March - April ${SCHOOL_YEAR_END}`,
-   title: "User Testing & Dev Handoff",
-  },
- ];
+  const designEvents: TimelineEvent[] = [
+    {
+      date: `November ${SCHOOL_YEAR_START}`,
+      title: "Design Bootcamp",
+    },
+    {
+      date: `December - January ${SCHOOL_YEAR_END}`,
+      title: "Research & Lo-fis Wireframes",
+    },
+    {
+      date: `January - March ${SCHOOL_YEAR_END}`,
+      title: "Mid-fi & Hi-fi Wireframes",
+    },
+    {
+      date: `March - April ${SCHOOL_YEAR_END}`,
+      title: "User Testing & Dev Handoff",
+    },
+  ];
 
- const developmentEvents: TimelineEvent[] = [
-  {
-   date: `November ${SCHOOL_YEAR_START}`,
-   title: "Developer Bootcamp",
-  },
-  {
-   date: `December - January ${SCHOOL_YEAR_START}`,
-   title: "SQL Tables & Database",
-  },
-  {
-   date: `February - May ${SCHOOL_YEAR_END}`,
-   title: "Coding & Debugging",
-  },
- ];
+  const developmentEvents: TimelineEvent[] = [
+    {
+      date: `November ${SCHOOL_YEAR_START}`,
+      title: "Developer Bootcamp",
+    },
+    {
+      date: `December - January ${SCHOOL_YEAR_START}`,
+      title: "SQL Tables & Database",
+    },
+    {
+      date: `February - May ${SCHOOL_YEAR_END}`,
+      title: "Full-stack Implementation",
+    },
+    {
+      date: `May - June ${SCHOOL_YEAR_END}`,
+      title: "Bug Bashes & Debugging",
+    },
+  ];
 
- return (
-  <Container maxW="600px" py={8}>
-   <VStack spacing={0} align="stretch">
-    {/* Title */}
-    <Text
-     fontSize="2xl"
-     fontWeight="bold"
-     color="black"
-     textAlign="center"
-     mb={8}
-    >
-     What you&#39;ll learn in CTC
-    </Text>
-
-    {/* Timeline Container */}
-    <Box position="relative" minH="700px">
-     {/* Central Timeline Line */}
-     <Box
-      position="absolute"
-      left="50%"
-      top="0"
-      bottom="0"
-      width="3px"
-      bg="ctc.purple"
-      transform="translateX(-50%)"
-      zIndex={1}
-     />
-
-     {/* Timeline Content */}
-     <Box position="relative" zIndex={2}>
-      {/* Top Center Event */}
-      <Flex justify="center" align="end" textAlign={"center"} mb={8}>
-       <TimelineCard
-        event={{
-         date: `September ${SCHOOL_YEAR_START}`,
-         title: "Recruitment Process",
-         hasButton: true,
-         buttonText: "Learn More",
-         buttonAction: () => {
-          window.location.href = "/recruitment";
-         },
-        }}
-        isCenter={true}
-       />
-      </Flex>
-
-      {/* Main Timeline Sections */}
-      <Flex justify="space-between" align="flex-start" gap={4} mb={8}>
-       {/* Left Side - Design */}
-       <Box flex="1" maxW="240px">
+  return (
+    <Container maxW="600px" py={8}>
+      <VStack spacing={0} align="stretch">
+        {/* Title */}
         <Text
-         fontSize="lg"
-         fontWeight="bold"
-         color="black"
-         mb={6}
-         textAlign="right"
+          fontSize="2xl"
+          fontWeight="bold"
+          color="black"
+          textAlign="center"
+          mb={8}
         >
-         Design
+          What you&#39;ll learn in CTC
         </Text>
-        <VStack spacing={6} align="stretch">
-         {designEvents.map((event, index) => (
-          <TimelineCard
-           key={index}
-           event={event}
-           side="left"
-           isCenter={false}
-          />
-         ))}
-        </VStack>
-       </Box>
 
-       {/* Right Side - Development */}
-       <Box flex="1" maxW="240px">
-        <Text
-         fontSize="lg"
-         fontWeight="bold"
-         color="black"
-         mb={6}
-         textAlign="left"
-        >
-         Development
-        </Text>
-        <VStack spacing={6} align="stretch">
-         {developmentEvents.map((event, index) => (
-          <TimelineCard
-           key={index}
-           event={event}
-           side="right"
-           isCenter={false}
+        {/* Timeline Container */}
+        <Box position="relative" minH="700px">
+          {/* Central Timeline Line */}
+          <Box
+            position="absolute"
+            left="50%"
+            top="0"
+            bottom="0"
+            width="3px"
+            bg="ctc.purple"
+            transform="translateX(-50%)"
+            zIndex={1}
           />
-         ))}
-        </VStack>
-       </Box>
-      </Flex>
 
-      {/* Bottom Center Event */}
-      <Flex justify="center" textAlign={"center"}>
-       <TimelineCard
-        event={{
-         date: "June 2026",
-         title: "Deployment",
-        }}
-        isCenter={true}
-       />
-      </Flex>
-     </Box>
-    </Box>
-   </VStack>
-  </Container>
- );
+          {/* Timeline Content */}
+          <Box position="relative" zIndex={2}>
+            {/* Top Center Event */}
+            <Flex justify="center" align="end" textAlign={"center"} mb={8}>
+              <TimelineCard
+                event={{
+                  date: `September ${SCHOOL_YEAR_START}`,
+                  title: "Recruitment Process",
+                  hasButton: true,
+                  buttonText: "Learn More",
+                  buttonAction: () => {
+                    window.location.href = "/recruitment";
+                  },
+                }}
+                isCenter={true}
+              />
+            </Flex>
+
+            {/* Main Timeline Sections */}
+            <Flex justify="space-between" align="flex-start" gap={4} mb={8}>
+              {/* Left Side - Design */}
+              <Box flex="1" maxW="240px">
+                <Text
+                  fontSize="lg"
+                  fontWeight="bold"
+                  color="black"
+                  mb={6}
+                  textAlign="right"
+                >
+                  Design
+                </Text>
+                <VStack spacing={6} align="stretch">
+                  {designEvents.map((event, index) => (
+                    <TimelineCard
+                      key={index}
+                      event={event}
+                      side="left"
+                      isCenter={false}
+                    />
+                  ))}
+                </VStack>
+              </Box>
+
+              {/* Right Side - Development */}
+              <Box flex="1" maxW="240px">
+                <Text
+                  fontSize="lg"
+                  fontWeight="bold"
+                  color="black"
+                  mb={6}
+                  textAlign="left"
+                >
+                  Development
+                </Text>
+                <VStack spacing={6} align="stretch">
+                  {developmentEvents.map((event, index) => (
+                    <TimelineCard
+                      key={index}
+                      event={event}
+                      side="right"
+                      isCenter={false}
+                    />
+                  ))}
+                </VStack>
+              </Box>
+            </Flex>
+
+            {/* Bottom Center Event */}
+            <Flex justify="center" textAlign={"center"}>
+              <TimelineCard
+                event={{
+                  date: "June 2026",
+                  title: "Deployment",
+                }}
+                isCenter={true}
+              />
+            </Flex>
+          </Box>
+        </Box>
+      </VStack>
+    </Container>
+  );
 };
 
 interface TimelineCardProps {
- event: TimelineEvent;
- side?: "left" | "right";
- isCenter: boolean;
+  event: TimelineEvent;
+  side?: "left" | "right";
+  isCenter: boolean;
 }
 
 const TimelineCard = ({ event, side, isCenter }: TimelineCardProps) => {
- if (isCenter) {
+  if (isCenter) {
+    return (
+      <Box position="relative">
+        {/* Event Card */}
+        <Box
+          bg="purple.100"
+          borderRadius="md"
+          p={4}
+          boxShadow="sm"
+          maxW="200px"
+          mx="auto"
+        >
+          <Text fontSize="xs" color="gray.600" mb={1}>
+            {event.date}
+          </Text>
+          <Text
+            fontSize="sm"
+            fontWeight="bold"
+            color="black"
+            mb={event.hasButton ? 3 : 0}
+          >
+            {event.title}
+          </Text>
+          {event.hasButton && (
+            <Button
+              variant="purple"
+              size="xs"
+              fontSize="xs"
+              onClick={event.buttonAction}
+            >
+              {event.buttonText}
+            </Button>
+          )}
+        </Box>
+      </Box>
+    );
+  }
+
   return (
-   <Box position="relative">
-    {/* Event Card */}
-    <Box
-     bg="purple.100"
-     borderRadius="md"
-     p={4}
-     boxShadow="sm"
-     maxW="200px"
-     mx="auto"
-    >
-     <Text fontSize="xs" color="gray.600" mb={1}>
-      {event.date}
-     </Text>
-     <Text
-      fontSize="sm"
-      fontWeight="bold"
-      color="black"
-      mb={event.hasButton ? 3 : 0}
-     >
-      {event.title}
-     </Text>
-     {event.hasButton && (
-      <Button
-       variant="purple"
-       size="xs"
-       fontSize="xs"
-       onClick={event.buttonAction}
+    <Box position="relative" display="flex" alignItems="center">
+      {/* Connecting Line */}
+      <Box
+        position="absolute"
+        top="50%"
+        width="80px"
+        height="2px"
+        bg="ctc.purple"
+        zIndex={0}
+        transform="translateY(-50%)"
+        {...(side === "left" ? { left: "50%" } : { right: "50%" })}
+      />
+
+      {/* Event Card */}
+      <Box
+        bg="purple.100"
+        borderRadius="md"
+        p={4}
+        boxShadow="sm"
+        maxW="180px"
+        ml={side === "left" ? "auto" : "0"}
+        mr={side === "right" ? "auto" : "0"}
+        position="relative"
+        zIndex={1}
       >
-       {event.buttonText}
-      </Button>
-     )}
+        <Text fontSize="xs" color="gray.600" mb={1}>
+          {event.date}
+        </Text>
+        <Text
+          fontSize="sm"
+          fontWeight="bold"
+          color="black"
+          mb={event.hasButton ? 3 : 0}
+        >
+          {event.title}
+        </Text>
+        {event.hasButton && (
+          <Button
+            variant="purple"
+            size="xs"
+            fontSize="xs"
+            onClick={event.buttonAction}
+          >
+            {event.buttonText}
+          </Button>
+        )}
+      </Box>
     </Box>
-   </Box>
   );
- }
-
- return (
-  <Box position="relative" display="flex" alignItems="center">
-   {/* Connecting Line */}
-   <Box
-    position="absolute"
-    top="50%"
-    width="80px"
-    height="2px"
-    bg="ctc.purple"
-    zIndex={0}
-    transform="translateY(-50%)"
-    {...(side === "left" ? { left: "50%" } : { right: "50%" })}
-   />
-
-   {/* Event Card */}
-   <Box
-    bg="purple.100"
-    borderRadius="md"
-    p={4}
-    boxShadow="sm"
-    maxW="180px"
-    ml={side === "left" ? "auto" : "0"}
-    mr={side === "right" ? "auto" : "0"}
-    position="relative"
-    zIndex={1}
-   >
-    <Text fontSize="xs" color="gray.600" mb={1}>
-     {event.date}
-    </Text>
-    <Text
-     fontSize="sm"
-     fontWeight="bold"
-     color="black"
-     mb={event.hasButton ? 3 : 0}
-    >
-     {event.title}
-    </Text>
-    {event.hasButton && (
-     <Button
-      variant="purple"
-      size="xs"
-      fontSize="xs"
-      onClick={event.buttonAction}
-     >
-      {event.buttonText}
-     </Button>
-    )}
-   </Box>
-  </Box>
- );
 };
 
 export default CtcTimeline;
