@@ -175,7 +175,7 @@ export const HUB_DATA: Profile[] = [
 
 ]
 
-export const UPL_DATA: Profile[] = [
+export const UP_DATA: Profile[] = [
     {
         name: "Kylie Nguyen",
         role: "Design Lead",
