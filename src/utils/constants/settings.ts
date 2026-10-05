@@ -1,4 +1,4 @@
-const RECRUITMENT_OPEN: boolean = true;
+const RECRUITMENT_OPEN: boolean = false;
 
 const DESIGNER_FORM_URL: string =
   "https://docs.google.com/forms/d/e/1FAIpQLSf_Q2WEOXSTx_i53XBUIDDApEKZVBObpCM-CPWC8s0zSVq8_A/viewform?usp=dialog";
