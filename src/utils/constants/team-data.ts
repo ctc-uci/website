@@ -187,7 +187,8 @@ export const HUB_DATA: Profile[] = [
     {
         name: "Haley Nguyen",
         role: "Designer",
-        image: "/team/margaret-galvez.jpg",
+        linkedin: "https://www.linkedin.com/in/emma-narvaez32", // TODO: CHANGE
+        image: "/team/margaret-galvez.jpg", // TODO: CHANGE
     },
     {
         name: "Jason Zhang",
@@ -334,7 +335,7 @@ export const UP_DATA: Profile[] = [
         name: "Colin Kwon",
         role: "Developer",
         linkedin: "https://www.linkedin.com/in/colin-kwon-22a190324/",
-        image: "/team/margaret-galvez.jpg",
+        image: "/team/margaret-galvez.jpg", // TODO: Change
     },
     {
         name: "Emily Johnson",
