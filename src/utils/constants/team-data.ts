@@ -184,12 +184,12 @@ export const HUB_DATA: Profile[] = [
         linkedin: "https://www.linkedin.com/in/emma-narvaez32",
         image: "/team/emma_narvaez.jpg",
     },
-    {
-        name: "Haley Nguyen",
-        role: "Designer",
-        linkedin: "https://www.linkedin.com/in/emma-narvaez32", // TODO: CHANGE
-        image: "/team/margaret-galvez.jpg", // TODO: CHANGE
-    },
+    // {
+    //     name: "Haley Nguyen",
+    //     role: "Designer",
+    //     linkedin: "https://www.linkedin.com/in/emma-narvaez32", // TODO: CHANGE
+    //     image: "/team/margaret-galvez.jpg", // TODO: CHANGE
+    // },
     {
         name: "Jason Zhang",
         role: "Designer",
@@ -331,12 +331,12 @@ export const UP_DATA: Profile[] = [
         linkedin: "https://www.linkedin.com/in/adarsh-venkateswaran",
         image: "/team/adarsh_venkateswaran.jpeg",
     },
-    {
-        name: "Colin Kwon",
-        role: "Developer",
-        linkedin: "https://www.linkedin.com/in/colin-kwon-22a190324/",
-        image: "/team/margaret-galvez.jpg", // TODO: Change
-    },
+    // {
+    //     name: "Colin Kwon",
+    //     role: "Developer",
+    //     linkedin: "https://www.linkedin.com/in/colin-kwon-22a190324/",
+    //     image: "/team/margaret-galvez.jpg", // TODO: Change
+    // },
     {
         name: "Emily Johnson",
         role: "Developer",
