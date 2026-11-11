@@ -9,36 +9,36 @@ import { HERO_TEXT_SIZE } from "@/utils/components/styles/style-constants";
 import BreakText from "@/utils/components/TextUtils/BreakText";
 
 export default function OurWorkPage() {
- return (
-  <VStack spacing={0}>
-   <Hero>
-    <VStack alignItems="center" spacing={{ base: 3, md: 5 }} zIndex={1}>
-     <Text fontSize={HERO_TEXT_SIZE} fontWeight="semibold">
-      Our Projects
-     </Text>
-     <Text
-      fontSize={{ base: "sm", md: "xl", lg: "2xl" }}
-      paddingX={{ base: 3, md: 0 }}
-      textAlign="center"
-     >
-      Since 2020, we’ve partnered with nonprofits to create quality
-      <BreakText />
-      software and positively impact communities.
-     </Text>
-     <Button
-      variant="purple"
-      size="lg"
-      as={ChakraLink}
-      target="_blank"
-      href="https://ctc-uci.com/portfolio/CTC%202024-25%20Outreach%20Portfolio.pdf"
-     >
-      Portfolio
-     </Button>
+  return (
+    <VStack spacing={0}>
+      <Hero>
+        <VStack alignItems="center" spacing={{ base: 3, md: 5 }} zIndex={1}>
+          <Text fontSize={HERO_TEXT_SIZE} fontWeight="semibold">
+            Our Projects
+          </Text>
+          <Text
+            fontSize={{ base: "sm", md: "xl", lg: "2xl" }}
+            paddingX={{ base: 3, md: 0 }}
+            textAlign="center"
+          >
+            Since 2020, we’ve partnered with nonprofits to create quality
+            <BreakText />
+            software and positively impact communities.
+          </Text>
+          <Button
+            variant="purple"
+            size="lg"
+            as={ChakraLink}
+            target="_blank"
+            href="/portfolio/CTC%202025-26%20Outreach%20Portfolio.pdf"
+          >
+            Portfolio
+          </Button>
+        </VStack>
+      </Hero>
+      <CurrentProjects />
+      <PastProjects />
+      <Footer />
     </VStack>
-   </Hero>
-   <CurrentProjects />
-   <PastProjects />
-   <Footer />
-  </VStack>
- );
+  );
 }
