@@ -331,12 +331,12 @@ export const UP_DATA: Profile[] = [
         linkedin: "https://www.linkedin.com/in/adarsh-venkateswaran",
         image: "/team/adarsh_venkateswaran.jpeg",
     },
-    // {
-    //     name: "Colin Kwon",
-    //     role: "Developer",
-    //     linkedin: "https://www.linkedin.com/in/colin-kwon-22a190324/",
-    //     image: "/team/margaret-galvez.jpg", // TODO: Change
-    // },
+    {
+        name: "Colin Kwon",
+        role: "Developer",
+        linkedin: "https://www.linkedin.com/in/colin-kwon-22a190324/",
+        image: "/team/colin_kwon.jpg",
+    },
     {
         name: "Emily Johnson",
         role: "Developer",
