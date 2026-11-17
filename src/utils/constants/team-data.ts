@@ -184,12 +184,12 @@ export const HUB_DATA: Profile[] = [
         linkedin: "https://www.linkedin.com/in/emma-narvaez32",
         image: "/team/emma_narvaez.webp",
     },
-    // {
-    //     name: "Haley Nguyen",
-    //     role: "Designer",
-    //     linkedin: "https://www.linkedin.com/in/emma-narvaez32", // TODO: CHANGE
-    //     image: "/team/margaret-galvez.webp", // TODO: CHANGE
-    // },
+    {
+        name: "Haley Nguyen",
+        role: "Designer",
+        linkedin: "https://www.linkedin.com/in/haleynguyenn",
+        image: "/team/haley_nguyen.webp",
+    },
     {
         name: "Jason Zhang",
         role: "Designer",
@@ -223,7 +223,7 @@ export const HUB_DATA: Profile[] = [
     {
         name: "Avinav Shrestha",
         role: "Developer",
-        linkedin: "https://www.linkedin.com/in/avinav-shrestha",
+        linkedin: "https://www.linkedin.com/in/avinav-shrestha-236b7623a/",
         image: "/team/avinav_shrestha.webp",
     },
     {
